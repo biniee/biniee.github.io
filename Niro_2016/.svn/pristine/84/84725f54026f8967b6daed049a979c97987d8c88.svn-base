@@ -1,0 +1,162 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title>Kia NIRO</title>
+	<meta name="title" content="Kia NIRO">
+	<meta name="Description" content="THE SMART SUV NIRO">
+	<meta name="keywords" content="Kia NIRO">
+	<meta name="kia_metrics_pagename" content="NIRO|360vr"/>
+	<meta property="og:image" content="http://niro.kia.com/resource/images/thumb_kakao_400_210.png"/>
+	<meta property="og:title" content="Kia NIRO"/>
+	<meta property="og:description" content="THE SMART SUV NIRO"/>
+	<link rel ="shortcut icon" href = ""/>
+
+	<link rel="stylesheet" href="../resource/styles/slick.css">
+	<link rel="stylesheet" href="../resource/styles/jquery.fullpage.min.css">
+	<link rel="stylesheet" href="../resource/styles/style.css">
+
+
+	<script type="text/javascript" src="../resource/scripts/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../resource/scripts/jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="../resource/scripts/slick.min.js"></script>
+	<script type="text/javascript" src="../resource/scripts/jquery.reel.js"></script>
+
+	<script type="text/javascript">
+		var dtmDataLayer = {};
+	</script>
+	<script src="//assets.adobedtm.com/24e76ab8fc605d575172ed593e3da587e23b5b9c/satelliteLib-de20507e1a1c0f12a499cf5101634e39f2eee580.js"></script>
+
+</head>
+<body>
+<!--NSmart Track Tag Script-->
+<script type='text/javascript'>
+callbackFn = function() {};
+var _nsmart = _nsmart || [];
+_nsmart.host = _nsmart.host || (('https:' == document.location.protocol) ? 'https://' : 'http://');
+_nsmart.push([11183, 26510]); // 캠페인 번호와 페이지 번호를 배열 객체로 전달
+document.write(unescape("%3Cscript src='" + _nsmart.host + "n00.nsmartad.com/etc?id=10' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!--NSmart Track Tag Script End..-->
+
+<div class="wrap">
+	<header id="header">
+		<div>
+			<h1><a href="../index.html"><img src="../resource/images/logo_h1.png" alt="NIRO"/></a></h1>
+			<nav id="menu">
+				<ul>
+					<li class="whos"><a href="../mr.niro/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|whoisniro'; _satellite.track('internal_link')">Who's Mr.NIRO</a></li>
+					<li class="features"><a href="../features/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|features'; _satellite.track('internal_link')">FEATURES</a></li>
+					<li class="vr active"><a href="../360vr/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|360vr'; _satellite.track('internal_link')">360 VR</a></li>
+					<li class="media"><a href="../multimedia/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|multimedia'; _satellite.track('internal_link')">MULTIMEDIA</a></li>
+					<li class="brand"><a href="../brandstory/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|brandstory'; _satellite.track('internal_link')">BRAND STORY</a></li>
+				</ul>
+			</nav>
+			<a class="btn-calc" href="../calculator/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|account'; _satellite.track('internal_link')"><img src="../resource/images/btn_calc.png" alt="실구매 계산기"></a>
+		</div>
+	</header>
+
+
+	<div id="fullpage">
+		<section class="section vr" id="section0">
+			<div>
+				<div class="box-title">
+					<h2><img src="../resource/images/tit_360vr.png" alt="360VR"></h2>
+					<p><img src="../resource/images/txt_360vr.png" alt="차량 이미지를 좌 &middot; 우로 돌려 보실 수 있습니다"></p>
+				</div>
+				<div class="box-reel">
+					<div>
+						<img src="../resource/images/vr/white/1.png" class="reel"
+							data-cw="true"
+							data-images="../resource/images/vr/white/#.png|1..36">
+					</div>
+					<div class="select-color">
+						<ul>
+							<li class="active" data-title="스노우 화이트 펄"><button class="white" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|360vr view';_satellite.track('internal_link');"><span>스노우 화이트 펄</span></button><i>스노우 화이트 펄</i></li>
+							<li data-title="실키 실버"><button class="silver" type="button"  onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|360vr view';_satellite.track('internal_link');"><span>실키 실버</span></button><i>실키 실버</i></li>
+							<li data-title="메탈 스트림"><button class="metal" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|360vr view';_satellite.track('internal_link');"><span>메탈 스트림</span></button><i>메탈 스트림</i></li>
+							<li data-title="리치 에스프레소"><button class="brown" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|360vr view';_satellite.track('internal_link');"><span>리치 에스프레소</span></button><i>리치 에스프레소</i></li>
+							<li data-title="그래비티 블루"><button class="blue" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|360vr view';_satellite.track('internal_link');"><span>그래비티 블루</span></button><i>그래비티 블루</i></li>
+							<li data-title="오로라 블랙펄"><button class="black" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|360vr view';_satellite.track('internal_link');"><span>오로라 블랙펄</span></button><i>오로라 블랙펄</i></li>
+						</ul>
+					</div>
+					<p class="notice"><i></i>상기 이미지 색상은 실제 색상과 차이가 있을 수 있습니다.</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer id="footer">
+		<div>
+			<div class="logo">
+				<h1><a href="http://www.kia.com/kr/vehicles/niro/features.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacom'; _satellite.track('internal_link');">KIA</a></h1>
+				<span>Best Global Brand 2014 기아자동차 14년 인터브랜드 선정 Best Global Brand 74위</span>
+			</div>
+			<ul class="menu-local">
+				<li><a href="http://www.kia.com/kr/vehicles/niro/specification.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomspecification'; _satellite.track('internal_link');">제원</a></li>
+				<li><a href="http://www.kia.com/content/dam/kwcms/kr/ko/files/XDE/price/price_niro.pdf" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomprice_niro'; _satellite.track('internal_link');">가격</a></li>
+				<li><a href="http://www.kia.com/kr/shopping-tools/build-your-car/simple.trim.car=XDE.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomshopping_tools'; _satellite.track('internal_link');">견적</a></li>
+				<li><a href="http://www.kia.com/kr/shopping-tools/branch/branch-list.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|BranchList'; _satellite.track('internal_link');">영업점안내</a></li>
+			</ul>
+			<dl>
+				<dt>사업자 : </dt>
+				<dd>기아자동차(주)</dd>
+				<dt>대표 :</dt>
+				<dd>이형근,박한우</dd>
+				<dt>사업자등록번호 :</dt>
+				<dd>119-81-02316/dd>
+				<dt>주소</dt>
+				<dd><address>137-938 서울특별시 서초구 헌릉로 12 (양재동)</address></dd>
+				<dt>고객센터</dt>
+				<dd>080-200-2000</dd>
+			</dl>
+			<span>COPYRIGHT (C) 2015 KIA MOTORS CORP. ALL RIGHT RESERVED.</span>
+			<ul class="menu-social">
+				<li><a href="https://www.facebook.com/kia.co.kr" target="_blank">페이스북</a></li>
+				<li><a href="https://instagram.com/kiamotors.kr/" target="_blank">인스타그램</a></li>
+				<li><a href="https://www.youtube.com/user/withFUNKIA" target="_blank">유투브</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
+
+
+	<script>
+	(function() {
+		/*
+		// fullpage : http://alvarotrigo.com/fullPage/
+		$('#fullpage').fullpage({
+			sectionsColor: ['#0f1012'],
+			scrollBar: true,
+			autoScrolling: false,
+			normalScrollElements: '#section0',
+			fitToSection: false,
+			recordHistory:false
+		});
+		*/
+
+		$('.select-color button').on('click', function() {
+			var color = $(this).attr('class');
+			$(this).closest('li').addClass('active')
+				.siblings().removeClass('active');
+
+				$('img.reel').attr('src', function() {
+					return $('img.reel').attr('src').replace(/\/vr\/([a-z]+)\//, '/vr/'+ color +'/');
+				}).reel("images", '../resource/images/vr/'+ color +'/#.png|1..36');
+		});
+	})();
+	</script>
+	<script type="text/javascript">_satellite.pageBottom();</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-75680250-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+</body>
+</html>

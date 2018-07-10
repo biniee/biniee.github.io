@@ -1,0 +1,32 @@
+{
+	"isSucceed":true,
+	"errors":null,
+	"body":{
+		"data":{
+			"oilPrice":{
+				"diesel":1089.46,
+				"gasoline":1340.43
+			},
+			"bonds":{
+				"SEJONG":1.62,
+				"CHANGWON":1.62,
+				"JEONBUK":1.56,
+				"DAEGU":1.56,
+				"JEJU":1.62,
+				"GYEONGBUK":1.56,
+				"BUSAN":1.2,
+				"DAEJEON":1.56,
+				"GYEONGNAM":1.61,
+				"CHUNGBUK":1.56,
+				"CHUNGNAM":1.56,
+				"GWANGJU":1.56,
+				"SEOUL":2.68,
+				"KYONGGI":1.56,
+				"JEONNAM":1.56,
+				"ULSAN":1.6,
+				"GANGWON":1.57,
+				"INCHEON":1.62
+			}
+		}
+	}
+}

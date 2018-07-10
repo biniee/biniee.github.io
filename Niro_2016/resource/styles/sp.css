@@ -1,0 +1,117 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.sp-detail{max-width:1920px;margin:0 auto;min-width:1200px;}
+.sp-detail .cts-top{height:379px;position: relative;overflow:hidden;}
+.sp-detail .cts-top .sp-wrap{width:1200px;margin:0 auto;position:absolute;height:379px;top:0;left:50%;margin-left:-600px}
+.sp-detail .contents{font-family: 'Noto Sans KR', sans-serif}
+.sp-detail .btn_ts_drive a{display:block;width:100%;height:140px;background:url('../images/sp/btn_test_drive.png') no-repeat center center;}
+
+.sp-detail .cts-top .sp-bg{position:absolute;top:0;left:50%;margin-left:-960px;max-width:1920px;}
+.sp-detail .cts-top .sp-bg li{display:none;}
+.sp-detail .cts-top .sp-bg li.on{display:block;}
+
+.sp-detail .cts-top ul.tab{width:1080px;padding:0 60px;border-bottom:1px #56595c solid;height:78px;line-height:78px;}
+.sp-detail .cts-top .tab li{float:left;width:11.1%;text-align:center;}
+.sp-detail .cts-top .tab li a{font-size:18px;color:#aaa;height:78px;display:inline-block;padding:0 5px;}
+.sp-detail .cts-top .tab li.on a{color:#FFF;border-bottom:1px #FFF solid;}
+.sp-detail .cts-top .sp-btn{position:absolute;top:50%;margin:-30px 0 0 0;width:200px;height:60px;line-height:72px}
+.sp-detail .cts-top .sp-btn a{font-size:0;text-indent:-9999px;display:inline-block;width:60px;height:60px;}
+.sp-detail .cts-top .sp-btn span{font-size:18px;color:#aaa;display:inline-block;margin:0 15px;}
+.sp-detail .cts-top .sp-prev{left:0;}
+.sp-detail .cts-top .sp-prev a{background: url('../images/sp/btnLeft.png') no-repeat;}
+.sp-detail .cts-top .sp-next{right:0;text-align:right;}
+.sp-detail .cts-top .sp-next a{background: url('../images/sp/btnRight.png') no-repeat;}
+.sp-detail .btn-top{position:fixed;top:50%;right:50px;z-index:999;}
+
+#sp-pst .con-wrap{width:1200px;margin:0 auto;overflow:hidden;padding-top:100px;}
+#sp-pst .con-wrap2{width:600px;}
+#sp-pst img{display:block;}
+#sp-pst .left,#sp-pst .right{float:left;}
+#sp-pst p{color:#222222;font-size:18px;font-weight:300;line-height:32px;letter-spacing: -1px;word-break:keep-all;}
+#sp-pst h4.quiz{font-size:24px;color:#25347f;letter-spacing:-1px;padding:65px 0 25px 0}
+#sp-pst p.reply{font-size:40px;color:#25347f;letter-spacing:-1.2px;line-height:50px;margin-bottom:30px;}
+#sp-pst .imgArea{width:100%;clear:both;}
+#sp-pst .img-info{padding:5px 0 0 0 !important;font-size:14px;font-weight:300;color:#222;}
+#sp-pst .left .con-wrap2{float:right;}
+#sp-pst .txt-bd{margin-top:40px;font-size:22px;color:#25347f;font-weight:400;padding-left:25px;border-left:3px #25347f solid;letter-spacing:-1.7px;}
+#sp-pst .con1{background:#e4e4e4;padding-bottom:100px;}
+#sp-pst .con1 .left{width:600px;height:679px;background:url('../images/sp/sp-sub2-01.png') no-repeat 0 0;margin-right:60px;}
+#sp-pst .con1 h2{font-size:40px;color:#25347f;word-break:keep-all;letter-spacing:-1.5px;padding-top:55px;}
+#sp-pst .con1 .right{width:540px;}
+#sp-pst .con1 .right .txt1{margin-bottom:35px;}
+#sp-pst .con2{background:#fff;overflow: hidden;}
+#sp-pst .con2 .left,#sp-pst .con2 .right{min-width:600px;width:50%;}
+#sp-pst .con2 .left .imgArea{height:580px;background:url('../images/sp/sp-sub2-04.png') no-repeat right 0;}
+#sp-pst .con2 .left p.txt{padding-right:60px;}
+#sp-pst .con2 .right .imgArea{height:573px;background:url('../images/sp/sp-sub2-03.png') no-repeat left 0;}
+#sp-pst .con2 .con-wrap2{height:573px;}
+#sp-pst .con2 .right .con-wrap2{background:url('../images/sp/img_quotes.png') no-repeat 30px 185px;}
+#sp-pst .con2 .right p{padding:30px 0 0 60px;line-height:29px;}
+#sp-pst .con3{padding-bottom:100px;background:#e4e4e4}
+#sp-pst .con3 .left,#sp-pst .con3 .right{width:600px;padding-top:60px;}
+#sp-pst .con3 .left p{padding:35px 60px 35px 0px;}
+#sp-pst .con3 .mb{margin-bottom:55px;}
+#sp-pst .con3 .right .bg{background:url('../images/sp/sp-sub2-06.png') no-repeat 0 0 ;width:600px;height:634px;margin-top:35px}
+#sp-pst .con3 .right .txt1{padding:135px 0 0 60px;}
+#sp-pst .con3 .right .txt-bd{margin:35px 0 0 60px;}
+#sp-pst .con3>.con-wrap>img{padding:100px 0 40px ;}
+#sp-pst .con3 .left p.txt1{padding:0 60px 0 0;}
+#sp-pst .con3 .left p.txt-bd{padding:0 60px 0 25px;}
+#sp-pst .con4{background:#fff;overflow: hidden;}
+#sp-pst .con4 .left,#sp-pst .con4 .right{min-width:600px;width:50%;}
+#sp-pst .con4 .left .imgArea{height:675px;background:url('../images/sp/sp-sub2-10.png') no-repeat right 0;}
+#sp-pst .con4 .left p{padding-right:60px;margin-bottom:25px;}
+#sp-pst .con4 .left .con-wrap2{height:520px;background:url('../images/sp/img_quotes.png') no-repeat 0px 235px;padding-top:65px;padding-left:20px}
+#sp-pst .con4 .right .imgArea{height:585px;background:url('../images/sp/sp-sub2-11.png') no-repeat left 0;}
+#sp-pst .con4 .right .con-wrap2{height:675px;}
+#sp-pst .con4 .right p{padding-left:60px;}
+#sp-pst .con4 h4{padding-left:60px;}
+#sp-pst .con5{background:#e1e1e1;padding-bottom:100px;}
+#sp-pst .con5 .left,#sp-pst .con5 .right{width:600px}
+#sp-pst .con5 .left{height:382px;background:url('../images/sp/sp-sub2-12.png') no-repeat right 0;}
+#sp-pst .con5 h2{font-size:40px;color:#25347f;letter-spacing:-1.5px;margin-top:80px}
+#sp-pst .con5 .right p{margin-left:60px}
+#sp-pst .con5 .right p.txt1{margin-top:20px;}
+#sp-pst.pst-05 .con1{position:relative;}
+#sp-pst.pst-05 .con1 .left{background: url('../images/sp/sp-sub5-01.png') no-repeat 0 0;height:auto;}
+#sp-pst.pst-05 .con1 .reply+p{margin-top:460px}
+#sp-pst.pst-05 .con1:before{content:'';display:block;top:880px;left:50%;margin-left:-630px;background:url('../images/sp/img_quotes.png') no-repeat 0 0;width:160px;height:135px;position:absolute;}
+#sp-pst.pst-05 .con1 .right .txt2{margin:40px 0 100px}
+#sp-pst.pst-05 .con2 .right .imgArea{background:url('../images/sp/sp-sub5-03.png') no-repeat 0 0;height:575px;}
+#sp-pst.pst-05 .con2 .left h3{font-size:40px;color:#25347f;letter-spacing:-1.2px;line-height:50px;margin:70px 0 25px}
+#sp-pst.pst-05 .con2 .left .imgArea{background:url('../images/sp/sp-sub5-04.png') no-repeat 0 0;height:530px;}
+#sp-pst.pst-05 .con2 .right .txt-bd{margin-left:60px;padding-top:0;padding-left:28px}
+#sp-pst.pst-05 .con2 .right .con-wrap2{height:auto;background-position:20px 60px;padding-top:123px}
+#sp-pst.pst-05 .con3 .left{padding-top:0;}
+#sp-pst.pst-05 .con3 .left .quiz{padding:0}
+#sp-pst.pst-05 .con3 .left .reply{padding:20px 0 0 0;margin-bottom:50px;}
+#sp-pst.pst-05 .con3 .left .reply+p{padding:0 50px 0 0;}
+#sp-pst.pst-05 .con3 .left .txt-bd{margin:50px 0 130px}
+#sp-pst.pst-05 .con3 .right .txt1{padding:100px 0 0 60px}
+#sp-pst.pst-05 .con3 .left h2{font-size:40px;color:#25347f;letter-spacing:-1.2px;line-height:50px;margin:70px 0 25px}
+#sp-pst.pst-06 .con1 .left{background:url('../images/sp/sp-sub6-01.png') no-repeat;width:600px;height:793px;}
+#sp-pst.pst-06 .con1 .right .txt2{margin:35px 0 0 0}
+#sp-pst.pst-06 .con2 .right .imgArea{background:url('../images/sp/sp-sub6-03.png') no-repeat 0 0;height:624px}
+#sp-pst.pst-06 .con2 .left p{padding-right:60px;}
+#sp-pst.pst-06 .con2 .left p.txt1{margin:65px 0 30px}
+#sp-pst.pst-06 .con2 .left p.txt2{color:#25347f;margin-bottom:30px;font-weight:500}
+#sp-pst.pst-06 .con3 .left{background:url('../images/sp/sp-sub6-04.png') no-repeat 0 0;padding-top:0;}
+#sp-pst.pst-06 .con3 .left .quiz{padding:55px 0 20px;}
+#sp-pst.pst-06 .con3 .left .reply{padding:0 0 438px}
+#sp-pst.pst-06 .con3 .left .reply+p{padding:0 60px 70px 0px}
+#sp-pst.pst-06 .con3 .right{padding:0;background:url('../images/sp/img_quotes.png') no-repeat 20px 1120px;}
+#sp-pst.pst-06 .con3 .right .txt1{padding:0 0 40px 60px}
+#sp-pst.pst-06 .con3 .right .txt-bd{margin:0 0 0 60px;}
+#sp-pst.pst-06 .con3 .right .txt2{padding:40px 0 130px 60px}
+#sp-pst.pst-06 .con3 .right img+.txt-bd{margin:165px 0 0 60px}
+#sp-pst.pst-06 .con4 .left .imgArea{background:url('../images/sp/sp-sub6-07.png') no-repeat; height:577px}
+#sp-pst.pst-06 .con4 .right .con-wrap2{height:auto;}
+#sp-pst.pst-06 .con5{background:#FFF;overflow: hidden;position:relative;padding-bottom:0;}
+#sp-pst.pst-06 .con5 .left{min-width:600px;width:50%}
+#sp-pst.pst-06 .con5 .left .txt-bd{margin:105px 60px 30px 0}
+#sp-pst.pst-06 .con5 .left .txt{padding:0 60px 0 0}
+#sp-pst.pst-06 .con5 .right{min-width:600px;width:50%}
+#sp-pst.pst-06 .con5 .right .imgArea{background:url('../images/sp/sp-sub6-08.png') no-repeat;height:536px;}
+#sp-pst.pst-06 .con5 .left{background:none;height:auto;}
+#sp-pst.pst-06 .con5:before{content:'';display:block;top:20px;left:50%;margin-left:-630px;background:url('../images/sp/img_quotes.png') no-repeat 0 0;width:160px;height:135px;position:absolute;}

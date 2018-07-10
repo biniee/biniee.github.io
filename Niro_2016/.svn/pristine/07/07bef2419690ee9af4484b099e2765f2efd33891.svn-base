@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,
+		body,
+		#document {
+			height:100%;
+			margin:0;
+			padding:0;
+		}
+		body {
+			font-family:sans-serif;
+		}
+		#document:after {
+			content:'';
+			display:block;
+			clear:both;
+		}
+		#options {
+			box-sizing:border-box;
+			float:left;
+			width:20%;
+			padding:10px;
+		}
+		#options input[type="text"],
+		#options textarea {width:100%; box-sizing:border-box;}
+		#viewer {
+			overflow:auto;
+			box-sizing:border-box;
+			float:left;
+			width:80%;
+			height:100%;
+			padding:10px;
+			background-size:15px auto;
+			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2P88uXLfwY0wMPDw4guxjgUFKI7GsTH5m4M3w1ChQD84idS8+tzhQAAAABJRU5ErkJggg==);
+		}
+	</style>
+</head>
+<body>
+<div id="document">
+	<div id="options">
+		<fieldset>
+			<legend>Options</legend>
+			<form action="">
+				<p>
+					<label for="start">start</label>
+					<input type="text" id="start" name="start" value="1">
+				</p>
+				<p>
+					<label for="width">width</label>
+					<input type="text" id="width" name="width" value="100">
+				</p>
+				<p>
+					<label for="height">height</label>
+					<input type="text" id="height" name="height" value="100">
+				</p>
+				<p>
+					<label for="horizontalNum">가로 갯수</label>
+					<input type="text" id="horizontalNum" name="horizontalNum" value="10">
+				</p>
+				<p>
+					<label>
+						<input type="radio" name="type" value="pattern" checked> pattern
+					</label>
+					<label>
+						<input type="radio" name="type" value=""> 직접입력
+					</label>
+				</p>
+				<p>
+					<label for="number"><input type="checkbox" id="number" name="number">번호</label>
+				</p>
+				<div>
+					<label for="pattern">url</label>
+					<input type="text" id="pattern" name="pattern">
+					<input type="text" id="length" name="length" value="2">
+				</div>
+				<p>
+					<label for="urls">url</label>
+					<textarea id="urls" name="urls" rows="8" cols="40"></textarea>
+				</p>
+				<p>
+					<button type="button" id="submit" name="button">submit</button>
+				</p>
+			</form>
+		</fieldset>
+	</div>
+	<div id="viewer"><canvas id="c" width="640" height="640"></canvas></div>
+</div>
+<script>
+(function() {
+	var _ = function(obj) {
+			return document.querySelector(obj);
+		},
+		maxWidth = 0,
+		maxHeight = 0;
+
+	_('#submit').addEventListener('click', function(e) {
+		var $element = _('#c'),
+			ctx = $element.getContext('2d'),
+			img = [],
+			s = _('#start').value,
+			w = _('#width').value,
+			h = _('#height').value,
+			l = _('[name="type"]').value == 'pattern' ? _('#length').value : 0,
+			max = Math.min(_('#horizontalNum').value, l),
+			imgPattern = _('[name="type"]').value == 'pattern' ?
+				function() {
+					var re = /\{{2,3}([^{}]+(?=\}{2,3}))\}{2,3}/g,
+						reArray = re.exec(_('#pattern').value);
+					return reArray;
+				} :
+				0;
+		// http://192.168.205.73:82/launching/resource/images/vr/silver/{{((i <= 9) ? '0'+i : i) }}.png
+		var d = 2;
+		var j = 0,
+			a = 0;
+
+		var line = new Image();
+		line.src = 'http://192.168.204.40/Projects/com.kia.niro/trunk/niro/vr/bg_vr.png';
+		
+		
+
+		for(var i=0; i<=l; i+=d) {
+			img[i] = new Image();
+			if(a >= max) {
+				a = 0;
+				if(a == 0) ++j;
+			}
+			++a;
+
+			img[i].src = 'http://192.168.204.40/Projects/com.kia.niro/trunk/niro/vr/4SS_L/4SS_L_00'+ ((i <= 9) ? '0'+i : i) +'.png';//
+			img[i].onload = (function(i, a, j) {
+				return function() {
+					ctx.fillStyle = "#0f1012";
+					ctx.fillRect(parseInt((a-1) * w), parseInt(j * h), w, h);
+					
+
+					ctx.drawImage(img[i], parseInt((a-1) * w), parseInt(j * h), w, h);
+
+					if(_('#number').checked == true) {
+						ctx.font = '40pt Calibri';
+						ctx.fillStyle = 'red';
+						ctx.fillText(((i + 1) / d), parseInt((a-1) * w), parseInt(j * h) + 40);
+					}
+
+					ctx.drawImage(line, parseInt((a-1) * w), parseInt(j * h) - 10, w, h);
+				};
+			})(i, a, j);
+
+		}
+		maxWidth = (max * w);
+		maxHeight = (j * h);
+
+		$element.width = maxWidth;
+		$element.height = maxHeight;
+	});
+
+})();
+</script>
+</body>
+</html>

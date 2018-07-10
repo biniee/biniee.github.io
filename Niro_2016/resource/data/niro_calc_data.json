@@ -1,0 +1,181 @@
+{
+	"buyingRate" : {
+		"SEOUL" : 9
+		, "BUSAN" : 4
+		, "DAEGU" : 4
+		, "INCHEON" : 0
+		, "KYONGGI" : 0
+		, "DAEJEON" : 6
+		, "SEJONG" : 6
+		, "GANGWON" : 6
+		, "GWANGJU" : 6
+		, "JEONBUK" : 6
+		, "JEONNAM" : 6
+		, "CHUNGBUK" : 6
+		, "CHUNGNAM" : 4
+		, "GYEONGBUK" : 6
+		, "GYEONGNAM" : 4
+		, "ULSAN" : 6
+		, "CHANGWON" : 4
+		, "JEJU" : 3
+	}
+	, "cars" : {
+		"NIRO" : {
+			"name" : "니로"
+			, "models" : {
+				"hybrid" : {
+					"name" : "가솔린,전기"
+					, "trims" : {
+						"luxury" : {
+							"name" : "럭셔리"
+							, "oilType" : "gasoline"
+							, "mileage" : 19.5
+							, "price" : 23350000
+							, "subsidy" : -1000000
+						}
+						, "prestige" : {
+							"name" : "프레스티지"
+							, "oilType" : "gasoline"
+							, "mileage" : 19.5
+							, "price" : 25450000
+							, "subsidy" : -1000000
+						}
+						, "noblesse" : {
+							"name" : "노블레스"
+							, "oilType" : "gasoline"
+							, "mileage" : 19.5
+							, "price" : 27550000
+							, "subsidy" : -1000000
+						}
+					}
+				}
+			}
+		}
+		, "TRAX" : {
+			"name" : "트랙스"
+			, "models" : {
+				"diesel" : {
+					"name" : "1.6 디젤"
+					, "trims" : {
+						"ls" : {
+							"name" : "LS 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 14.7
+							, "price" : 20850000
+							, "subsidy" : 0
+						}
+						, "ls_deluxe" : {
+							"name" : "LS 디럭스 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 14.7
+							, "price" : 21450000
+							, "subsidy" : 0
+						}
+						, "lt" : {
+							"name" : "LT 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 14.7
+							, "price" : 23550000
+							, "subsidy" : 0
+						}
+						, "lt_leather" : {
+							"name" : "LT 디럭스 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 14.7
+							, "price" : 24350000
+							, "subsidy" : 0
+						}
+						, "ltz" : {
+							"name" : "LTZ 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 14.7
+							, "price" : 25800000
+							, "subsidy" : 0
+						}
+					}
+				}
+			}
+		}
+		, "TIVOLI" : {
+			"name" : "티볼리"
+			, "models" : {
+				"diesel" : {
+					"name" : "1.6 디젤"
+					, "trims" : {
+						"tx" : {
+							"name" : "(디젤) TX 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 14.7
+							, "price" : 20600000
+							, "subsidy" : 0
+						}
+						, "lx" : {
+							"name" : "(디젤) LX 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 14.7
+							, "price" : 23460000
+							, "subsidy" : 0
+						}
+					}
+				}
+				, "diesel_4wd" : {
+					"name" : "1.6 디젤 4WD"
+					, "trims" : {
+						"tx" : {
+							"name" : "(디젤 4WD) TX 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 13.9
+							, "price" : 22400000
+							, "subsidy" : 0
+						}
+						, "lx" : {
+							"name" : "(디젤 4WD) LX 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 13.9
+							, "price" : 25260000
+							, "subsidy" : 0
+						}
+					}
+				}
+			}
+		}
+		, "QM3" : {
+			"name" : "QM3"
+			, "models" : {
+				"diesel" : {
+					"name" : "1.5 디젤"
+					, "trims" : {
+						"se" : {
+							"name" : "SE 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 17.7
+							, "price" : 21950000
+							, "subsidy" : 0
+						}
+						, "le" : {
+							"name" : "LE 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 17.7
+							, "price" : 22950000
+							, "subsidy" : 0
+						}
+						, "re" : {
+							"name" : "RE 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 17.7
+							, "price" : 23950000
+							, "subsidy" : 0
+						}
+						, "re_signature" : {
+							"name" : "RE SIGNATURE 자동"
+							, "oilType" : "diesel"
+							, "mileage" : 17.7
+							, "price" : 24800000
+							, "subsidy" : 0
+						}
+					}
+				}
+			}
+		}
+	}
+}

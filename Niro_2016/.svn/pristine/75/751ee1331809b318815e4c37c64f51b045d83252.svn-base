@@ -1,0 +1,459 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title>Kia NIRO</title>
+	<meta name="title" content="Kia NIRO">
+	<meta name="Description" content="THE SMART SUV NIRO">
+	<meta name="keywords" content="Kia NIRO">
+	<meta name="kia_metrics_pagename" content="NIRO|features"/>
+	<meta property="og:image" content="http://niro.kia.com/resource/images/thumb_kakao_400_210.png"/>
+	<meta property="og:title" content="Kia NIRO"/>
+	<meta property="og:description" content="THE SMART SUV NIRO"/>
+	<link rel ="shortcut icon" href = ""/>
+
+	<link rel="stylesheet" href="../resource/styles/slick.css">
+	<link rel="stylesheet" href="../resource/styles/jquery.fullpage.min.css">
+	<link rel="stylesheet" href="../resource/styles/style.css">
+
+
+	<script type="text/javascript" src="../resource/scripts/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../resource/scripts/jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="../resource/scripts/slick.min.js"></script>
+	<script type="text/javascript">
+		var dtmDataLayer = {};
+	</script>
+	<script src="//assets.adobedtm.com/24e76ab8fc605d575172ed593e3da587e23b5b9c/satelliteLib-de20507e1a1c0f12a499cf5101634e39f2eee580.js"></script>
+
+</head>
+<body>
+<!--NSmart Track Tag Script-->
+<script type='text/javascript'>
+callbackFn = function() {};
+var _nsmart = _nsmart || [];
+_nsmart.host = _nsmart.host || (('https:' == document.location.protocol) ? 'https://' : 'http://');
+_nsmart.push([11183, 26510]); // 캠페인 번호와 페이지 번호를 배열 객체로 전달
+document.write(unescape("%3Cscript src='" + _nsmart.host + "n00.nsmartad.com/etc?id=10' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!--NSmart Track Tag Script End..-->
+
+<div class="wrap">
+	<header id="header">
+		<div>
+			<h1><a href="../index.html"><img src="../resource/images/logo_h1.png" alt="NIRO"/></a></h1>
+			<nav id="menu">
+				<ul>
+					<li class="whos"><a href="../mr.niro/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|whoisniro'; _satellite.track('internal_link')">Who's Mr.NIRO</a></li>
+					<li class="features active"><a href="../features/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|features'; _satellite.track('internal_link')">FEATURES</a></li>
+					<li class="vr"><a href="../360vr/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|360vr'; _satellite.track('internal_link')">360 VR</a></li>
+					<li class="media"><a href="../multimedia/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|multimedia'; _satellite.track('internal_link')">MULTIMEDIA</a></li>
+					<li class="brand"><a href="../brandstory/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|brandstory'; _satellite.track('internal_link')">BRAND STORY</a></li>
+				</ul>
+			</nav>
+			<a class="btn-calc" href="../calculator/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|account'; _satellite.track('internal_link')"><img src="../resource/images/btn_calc.png" alt="실구매 계산기"></a>
+		</div>
+	</header>
+
+	<div id="nav-feature">
+		<span class="features">FEATURE</span>
+		<ul>
+			<li data-menuanchor="exterior" class="active"><a class="exterior" href="#section0">EXTERIOR</a></li>
+			<li data-menuanchor="interior"><a class="interior" href="#section1">INTERIOR</a></li>
+			<li data-menuanchor="space"><a class="space" href="#section2">SPACE</a></li>
+			<li data-menuanchor="fundriving" ><a class="fundriving" href="#section3">FUN DRIVING</a></li>
+			<li data-menuanchor="safety"><a class="safety" href="#section4">SAFETY</a></li>
+			<li data-menuanchor="smart" ><a class="smart" href="#section5">SMART</a></li>
+			<li data-menuanchor="benefit" ><a class="benefit" href="#section6">GUARANTEE UP 프로그램</a></li>
+		</ul>
+		<a class="btn-top" href="#"><img src="../resource/images/btn_top.png" alt="TOP"></a>
+	</div>
+
+	<div id="fullpage" class="features">
+		<section class="section exterior" id="section0">
+
+			<div class="contents">
+				<i class="bg"><span class="txt-notice"><img src="../resource/images/txt_features_notice.png" alt="상기 사양구성은 차급 및 선택 사양에 따라 다르게 적용됩니다."></span></i>
+				<div class="box-title">
+					<h2>THE EXTERIOR</h2>
+				</div>
+				<div class="box-layer">
+					<button class="btn-layer exterior0" data-target="#exterior0" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+					<button class="btn-layer exterior1" data-target="#exterior1" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+					<button class="btn-layer exterior2" data-target="#exterior2" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+					<button class="btn-layer exterior3" data-target="#exterior3" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+					<button class="btn-layer exterior4" data-target="#exterior4" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+					<button class="btn-layer exterior5" data-target="#exterior5" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+
+					<div class="layer exterior0" id="exterior0">
+						<div class="box-title">
+							<h3>리피터 일체형 전동접이 아웃사이드 미러 </h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_exterior0.jpg" alt="">
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+
+					<div class="layer exterior1" id="exterior1">
+						<div class="box-title">
+							<h3>HID 헤드 램프 & LED 라이트 가이드 </h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_exterior1.jpg" alt="">
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+
+					<div class="layer exterior2" id="exterior2">
+						<div class="box-title">
+							<h3>18인치 휠 & 타이어  </h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_exterior2.jpg" alt="">
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+
+					<div class="layer exterior3" id="exterior3">
+						<div class="box-title">
+							<h3>안개등 & LED DRL</h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_exterior3.jpg" alt="">
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+
+					<div class="layer exterior4" id="exterior4">
+						<div class="box-title">
+							<h3>ED 리어 콤비네이션 램프  </h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_exterior4.jpg" alt="">
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+
+					<div class="layer exterior5" id="exterior5">
+						<div class="box-title">
+							<h3>리어 와이퍼 마운트 일체형 후방 카메라</h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_exterior5.jpg" alt="">
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+				</div>
+
+			</div>
+		</section>
+		<section class="section interior" id="section1">
+
+			<div class="contents">
+				<i class="bg"><span class="txt-notice"><img src="../resource/images/txt_features_notice.png" alt="상기 사양구성은 차급 및 선택 사양에 따라 다르게 적용됩니다."></span></i>
+				<div class="box-title">
+					<h2>THE INTERIOR</h2>
+				</div>
+				<div class="box-layer">
+					<button class="btn-layer interior0" data-target="#interior1" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+					<button class="btn-layer interior1" data-target="#interior2" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+					<button class="btn-layer interior2" data-target="#interior0" type="button" onclick="dtmDataLayer.internal_link= 'conversion|microsite|2016niro|web|features view';_satellite.track('internal_link');"><img src="../resource/images/btn_layer_features.png" alt=""></button>
+
+					<div class="layer interior1" id="interior1">
+						<div class="box-title">
+							<h3>KRELL 프리미엄 사운드 시스템</h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_interior1.jpg" alt="">
+							<div class="box-txt">
+								<p>마크 레빈슨과 더불어 미국 대표적인 하이엔드 오디오 시스템 브랜드 'KRELL'과 기술 제휴를 통해 원음에 가까운 파워풀하고 웅장한 입체적 사운드 제공)</p>
+							</div>
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+					<div class="layer interior0" id="interior0">
+						<div class="box-title">
+							<h3>내비게이션 </h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_interior0.jpg" alt="">
+							<div class="box-txt">
+								<p>8인치 광시야각 정전식 터치 스크린을 적용하여 시인성과 조작감이 뛰어나며 SD 카드방식으로 간편하게 지도 업데이트가 가능합니다.  또한 최신 IT 통신기술을 적용하여 안전보안 및 차량진단 뿐만 아니라, 스마트폰 연동을 통해 더 편안하고 즐거운 드라이빙을 지원하는 서비스를  이용하실 수 있습니다.</p>
+							</div>
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+
+					<div class="layer interior2" id="interior2">
+						<div class="box-title">
+							<h3>휴대폰 무선충전 시스템</h3>
+						</div>
+						<div>
+							<img src="../resource/images/layer_img_interior2.jpg" alt="">
+							<div class="box-txt">
+								<p>별도의 유선 케이블 없이 충전 패드 위에 올려 놓기만 해도 휴대폰을 충전할 수 있는 첨단 편의장치입니다. </p>
+								<span>※ 스마트폰 기종에 따라 별도 충전용 수신장치가 필요할 수 있으며 수신장치 장착 불가 기종은 이용이 어려울 수 있습니다. </span>
+							</div>
+						</div>
+						<div class="box-btns">
+							<button type="button" class="btn-layer-close">닫기</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+				</div>
+
+				<div class="list-img">
+					<ul>
+
+						<li><img src="../resource/images/img_interior0.jpg" alt="블랙칼라 패키지(가죽/인조가죽 시트)"></li>
+						<li><img src="../resource/images/img_interior1.jpg" alt="크레이 투톤 인테리어(가죽/인조가죽 시트)"></li>
+						<li><img src="../resource/images/img_interior2.jpg" alt="운전석/동승석 통풍시트  시트 내 통풍 팬을 이용해 바람을 발생시켜 쾌적함을 높여 줍니다. "></li>
+						<li><img src="../resource/images/img_interior3.jpg" alt="1,2열 히티드 시트  1, 2열 시트 내 열선을 적용하여 따뜻한 착좌감을 제공합니다."></li>
+						<li><img src="../resource/images/img_interior4.jpg" alt="운전석 10ways 파워시트  시트의 위치를 전동식으로 조절할 수 있어 안락한 착좌감을  제공합니다. "></li>
+						<li><img src="../resource/images/img_interior5.jpg" alt="리어 에어벤트 & 파워 아웃렛  뒷좌석에서도 번거로움 없이 다양한 IT 기기 및  저용량 전자기기의 전원을 직접 연결할 수 있습니다."></li>
+						<li><img src="../resource/images/img_interior6.jpg" alt="리어 암레스트"></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="section space" id="section2">
+			<div class="contents">
+				<i class="bg"></i>
+				<div class="box-title">
+					<h2>SPACE</h2>
+				</div>
+				<div class="list-img">
+					<ul>
+						<li><img src="../resource/images/img_space0.jpg" alt="러기지 공간(MAX) 1,425 리터 2열 백 전체 폴딩 및 러기지 스크린 탈거 상태 VAD 기준"></li>
+						<li><img src="../resource/images/img_space1.jpg" alt="시트 배리에이션 2열 분할 폴딩 등의 편리한 시트 기능이 승차 인원 수와 적재물의 양에 따라 공간을 자유롭게 활용할 수 있게 해드립니다."></li>
+						<li><img src="../resource/images/img_space2.jpg" alt="2단 러기지 보드 & 언더 트레이 러기지 보드의 높낮이를 2단으로 조절할 수 있어 러기지 공간의 활용이 자유로워졌습니다."></li>
+						<li><img src="../resource/images/img_space3.jpg" alt="러기지 스크린 탈부착 가능한 스크린을 통해 2열과 러기지 공간을 분리하여 깔끔하게 적재물을 보관할 수 있습니다."></li>
+						<li><img src="../resource/images/img_space4.jpg" alt="러기지네트 운전 중 적재물이 흔들리거나 파손되지 않도록 러기지 네트를 적용하였습니다."></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="section fundriving" id="section3">
+			<div class="contents">
+				<i class="bg"></i>
+				<div class="box-title">
+					<h2>FUN DRIVING</h2>
+					<p>하이브리드 전용 카파 1.6엔진과 6단 DCT, 1.56kmh 배터리, 전기모터로 강력한 힘과 효율적인 드라이빙을 완성합니다.</p>
+				</div>
+				<div class="list-img">
+					<ul>
+						<li><img src="../resource/images/img_fundriving0.jpg" alt="">
+							<span class="none">마력 105ps(엔진)/43.5ps(모터-32w 환산 시) 토크 15kgm(엔진)/17.3kgfm(모터-170Nm 환산 시)</span>
+							<ul class="none">
+								<li>HEV 전용 카파 1.6 GDI 엔진 : 최고출력 105ps / 최대토크 15kgf.m 성능과 연료 효율성이 강화된 하이브리드 전용 엔진</li>
+								<li>HEV 전용 6 DCT :빠른 변속 응답성과 우수한 직결감이 강점인 DCT를 하이브리드에 최적화 하여 새롭게 개발</li>
+								<li>전기모터 :최고출력 43.5ps / 최대토크 17.3kgf.m직결감이 강점인 DCT를 하이브리드에 최적화 하여 새롭게 개발</li>
+								<li>배터리 :최대용량 1.56kWh4중 안전 설계로 안전성을 확보한 리튬이온 폴리머 배터리 장착</li>
+							</ul>
+						</li>
+						<li><img src="../resource/images/img_fundriving1.jpg" alt="후륜 멀티링크 서스펜션 배터리를 하방에 위치하여 무게중심을 낮춘 저중심 설계로 주행 안정성을 높이고, 후륜 멀티링크 서스펜션을 적용하여 도로의 악조건에서도 편안한 승차감은 물론, 안정적이고 민첩한 드라이빙 성능을 제공합니다"></li>
+						<li><img src="../resource/images/img_fundriving2.jpg" alt="미쉐린 타이어 세계적인 기업 미쉐린의 기술을 기반으로 연비중심 ENERGY Saver & 성능 중심 Primacy MXM4 타이어를 적용하였습니다."></li>
+						<li><img src="../resource/images/img_fundriving3.jpg" alt="알로이 페달"></li>
+						<li><img src="../resource/images/img_fundriving4.jpg" alt="주행모드 통합제어 시스템 & 기어노브 기어 노브 좌우 이동만으로 스포츠 & 에코 모드 전환이 가능하여 DCT 직결감 증대 및 다이내믹한 변속 패턴을 구현하였습니다. "></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="section safety" id="section4">
+			<div class="contents">
+				<div class="box-title">
+					<h2>SAFETY</h2>
+				</div>
+				<div class="list-img">
+					<ul>
+						<li><img src="../resource/images/img_safety0.jpg" alt=""><span class="none">7에어백 시스템 : 운전석 / 동승석 에어백에 충돌 속도에 따라 에어백 전개 압력을 최적화하는 시스템을 장착하였으며, 운전석 무릎, 커튼, 프론트 / 사이드까지 7개의 에어백을 적용하여 안전성이 뛰어납니다.</span><span class="none">운전석/동승석 어드밴스드 에어백  : 동승석에 유아 시트를 사용하여 유아를 탑승시키거나 승객이 없을 경우 동승석 에어백이 미작동 되며, 충돌 정도에 따라 에어백의 팽창 압력을 저압팽창과 고압팽창으로 구분하여 에어백의 전개를 제어하는 어드밴스드 에어백을 적용하여 탑승자를 보합니다.</span></li>
+						<li><img src="../resource/images/img_safety1.jpg" alt="후측방 경보 시스템"></li>
+						<li><img src="../resource/images/img_safety2.jpg" alt="긴급 제동시스템 (AEB) "></li>
+						<li><img src="../resource/images/img_safety3.jpg" alt=""><span class="none">1) 차선이탈 경보시스템 (LDWS) 차량이 운전자의 방향 지시등 조작 없이 차선을 이탈한 경우 경보음을 발생시켜 운전자에게 주의를 주는 시스템입니다. ※ 자차속도 60km/h 이상에서 (스위치 ON) 작동 </span><span class="none">2) 스마트 크루즈 컨트롤 (SCC) 운전자가 설정한 속도를 유지시켜 주는 것은 물론, 차량 전방에 장착된 레이더 센서를 이용하여 선행하는 차량과의 거리를 설정한 차간거리로 유지시켜 주며, 선행차가 멈출 경우 자동으로 정지하고, 선행차 출발 시 간단한 조작만으로 재출발을 지원는 첨단 능동형 자동항법시스템입니다.</span></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="section smart" id="section5">
+			<div class="contents">
+				<div class="box-title">
+					<h2>SMART</h2>
+				</div>
+				<div class="list-img">
+					<ul>
+						<li>
+							<img src="../resource/images/img_smart0.jpg" alt="">
+							<ol class="none">
+								<li>출발/저속주행_모터구동 : 엔진구동과 동시에 모터가 힘을 배가시켜 가속 및 등판 시 강력한 가속 성능을 제공합니다.</li>
+								<li>가속/등판_엔진구동&모터보조 : 엔진의 구동 없이 모터만으로 구동하여 연료 소비가 없으며, 엔진 소음 또한 없어 정숙합니다</li>
+								<li>중/고속 정속_엔진or모터구동 : 엔진 또는 모터로 구동시키며, 배터리 잔량이 적정수준 이하일 경우 충전합니다.</li>
+								<li>감속_배터리 충전 : 감속 시 엔진을 정지하며, 회생제동 시스템으로 제동 시 발생되는 에너지를 활용하여 배터리를 자동으로 충전합니다.</li>
+								<li>정지 : 정차 시 엔진과 모터가 정지되어 배기가스 발생 및 연료소모가 없습니다.</li>
+							</ol>
+						</li>
+						<li>
+							<img src="../resource/images/img_smart1.jpg" alt="">
+							<ul class="none">
+								<li>ECO-DAS (연비운전 지원 시스템) :정밀 지도가 탑재된 내비게이션을 활용한 연비운전 지원 시스템입니다.</li>
+								<li>관성주행 안내 : 내비게이션으로부터 주행 경로 및 도로 정보를 분석하여 전방 감속 상황이 예측되는 경우, 운전자에게 가속페달에 발을 떼는 시점을 미리 알려줌으로써, 불필요한 연료 소모를 줄이고 브레이크 사용을 최소화하여 연비를 향상시키도록 안내합니다.
+									<ul>
+										<li>작동 조건 : 내비게이션 장착 시 (7/8인치), 내비게이션 목적지 설정 시 활성화</li>
+										<li>주행 모드 : ECO 모드 Only 작동 영역 : 60 ~ 160km/h</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<p class="txt-helper"><img src="../resource/images/txt_smart0.jpg" alt="※ 상기 차량 이미지와 사양 구성은 차종, 차급 및 선택사양에 따라 다르게 적용되며 색상은 실제와 차이가 있을 수 있습니다."></p>
+				</div>
+			</div>
+		</section>
+		<section class="section benefit" id="section6">
+			<div class="contents">
+				<div class="box-title">
+					<h2>GUARANTEE UP 프로그램</h2>
+				</div>
+				<div class="list-txt">
+					<div class="item">
+						<img src="../resource/images/txt_benefit0.png" alt="">
+						<ol>
+							<li>
+								<strong>배터리 평생 보증</strong>
+								<span>최초 구매 고객 중 순수 개인 고객 대상 (법인/리스/개인사업자 제외)</span>
+							</li>
+							<li>
+								<strong>HEV 부품 10년 20만 km 무상보증</strong>
+								<span>대상 부품 : 구동모터, 인버터,직류변환장치, HPCU(Hybrid Power Control Unit)※ 일반 부품 3년 6만km 무상 보증</span>
+							</li>
+							<li>
+								<strong>중고차 가격 보장</strong>
+								<span>구입 후 최장 3년 중고차 가격 62% 보장 (1년 75%, 2년 68%)</span>
+							</li>
+							<li>
+								<strong>30일 이내 차종 교환</strong>
+								<span>최초 등록 후 25일 경과 ~ 30일 이내 불만족시 자사 타SUV로차종 교환 (주행거리 500㎞ 이상 ~ 2,000㎞ 이하 등 자세한사항은 이용동의서 참조)교환가능차종 : 스포티지, 쏘렌토, 모하비(상급차량 선택 시 차액 고객 부담)</span>
+							</li>
+						</ol>
+						<ul class="notice">
+							<li>※ 차종교환 프로그램, 중고차 가격보장은 이용동의서 및 약정서를 작성한 개인고객에 한함 </li>
+							<li>※ 상기 혜택은 관련 법규 및 당사 상황에 따라 변경될 수 있으니 자세한 사항은 가까운 지점/대리점 및 홈페이지 (<a href="http://www.kia.com" target="_blank">www.kia.com</a>) 참조</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<footer id="footer">
+		<div>
+			<div class="logo">
+				<h1><a href="http://www.kia.com/kr/vehicles/niro/features.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacom'; _satellite.track('internal_link');">KIA</a></h1>
+				<span>Best Global Brand 2014 기아자동차 14년 인터브랜드 선정 Best Global Brand 74위</span>
+			</div>
+			<ul class="menu-local">
+				<li><a href="http://www.kia.com/kr/vehicles/niro/specification.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomspecification'; _satellite.track('internal_link');">제원</a></li>
+				<li><a href="http://www.kia.com/content/dam/kwcms/kr/ko/files/XDE/price/price_niro.pdf" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomprice_niro'; _satellite.track('internal_link');">가격</a></li>
+				<li><a href="http://www.kia.com/kr/shopping-tools/build-your-car/simple.trim.car=XDE.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomshopping_tools'; _satellite.track('internal_link');">견적</a></li>
+				<li><a href="http://www.kia.com/kr/shopping-tools/branch/branch-list.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|BranchList'; _satellite.track('internal_link');">영업점안내</a></li>
+			</ul>
+			<dl>
+				<dt>사업자 : </dt>
+				<dd>기아자동차(주)</dd>
+				<dt>대표 :</dt>
+				<dd>이형근,박한우</dd>
+				<dt>사업자등록번호 :</dt>
+				<dd>119-81-02316/dd>
+				<dt>주소</dt>
+				<dd><address>137-938 서울특별시 서초구 헌릉로 12 (양재동)</address></dd>
+				<dt>고객센터</dt>
+				<dd>080-200-2000</dd>
+			</dl>
+			<span>COPYRIGHT (C) 2015 KIA MOTORS CORP. ALL RIGHT RESERVED.</span>
+			<ul class="menu-social">
+				<li><a href="https://www.facebook.com/kia.co.kr" target="_blank">페이스북</a></li>
+				<li><a href="https://instagram.com/kiamotors.kr/" target="_blank">인스타그램</a></li>
+				<li><a href="https://www.youtube.com/user/withFUNKIA" target="_blank">유투브</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
+
+<script type="text/javascript">
+	$(function() {
+		var $scrollElement = (/webkit/i).test(navigator.appVersion) ? $('body') : $('html');
+		// fullpage : http://alvarotrigo.com/fullPage/
+		$('#fullpage').fullpage({
+			menu: '#nav-feature',
+			anchors: ['exterior', 'interior','space','fundriving', 'safety','smart','benefit'],
+			lockAnchors: true,
+			scrollBar: true,
+			fitToSection: false,
+			recordHistory: false,
+			autoScrolling: false
+		});
+
+		$.extend($.easing,{ easeInOutCubic: function (x, t, b, c, d) {if ((t/=d/2) < 1) return c/2*t*t*t + b;return c/2*((t-=2)*t*t + 2) + b;}});
+
+		$('#nav-feature ul a').on('click', function(e) {
+			e.preventDefault();
+
+			var $anchors = $(this),
+				$offsetTop = $(this.hash).offset().top;
+
+			$scrollElement.animate({
+				'scrollTop': $offsetTop
+			}, 700, 'easeInOutCubic', function() {
+				window.location.hash = $anchors.parent().data('menuanchor');
+			});
+		});
+
+		$('.btn-layer').on('click', function() {
+			$($(this).data('target')).addClass('active');
+			return false;
+		});
+
+		$('.layer').on('click', '.btn-layer-close', function() {
+			$(this).closest('.layer').removeClass('active');
+			return false;
+		});
+	});
+</script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75680250-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

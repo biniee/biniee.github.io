@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title>Kia NIRO</title>
+	<meta name="title" content="Kia NIRO">
+	<meta name="Description" content="THE SMART SUV NIRO">
+	<meta name="keywords" content="Kia NIRO">
+	<meta name="kia_metrics_pagename" content="NIRO|calculator"/>
+	<meta property="og:image" content="http://niro.kia.com/resource/images/thumb_kakao_400_210.png"/>
+	<meta property="og:title" content="Kia NIRO"/>
+	<meta property="og:description" content="THE SMART SUV NIRO"/>
+	<link rel ="shortcut icon" href = ""/>
+
+	<link rel="stylesheet" href="../resource/styles/slick.css">
+	<link rel="stylesheet" href="../resource/styles/jquery.fullpage.min.css">
+	<link rel="stylesheet" href="../resource/styles/style.css">
+
+	<script type="text/javascript" src="../resource/scripts/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../resource/scripts/jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="../resource/scripts/slick.min.js"></script>
+	<script type="text/javascript" src="../resource/scripts/underscore.js"></script>
+	<script type="text/javascript">
+		var dtmDataLayer = {};
+	</script>
+	<script src="//assets.adobedtm.com/24e76ab8fc605d575172ed593e3da587e23b5b9c/satelliteLib-de20507e1a1c0f12a499cf5101634e39f2eee580.js"></script>
+</head>
+<body>
+<!--NSmart Track Tag Script-->
+<script type='text/javascript'>
+callbackFn = function() {};
+var _nsmart = _nsmart || [];
+_nsmart.host = _nsmart.host || (('https:' == document.location.protocol) ? 'https://' : 'http://');
+_nsmart.push([11183, 26510]); // 캠페인 번호와 페이지 번호를 배열 객체로 전달
+document.write(unescape("%3Cscript src='" + _nsmart.host + "n00.nsmartad.com/etc?id=10' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!--NSmart Track Tag Script End..-->
+
+<div class="wrap">
+	<header id="header">
+		<div>
+			<h1><a href="../index.html"><img src="../resource/images/logo_h1.png" alt="NIRO"/></a></h1>
+			<nav id="menu">
+				<ul>
+					<li class="whos"><a href="../mr.niro/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|whoisniro'; _satellite.track('internal_link')">Who's Mr.NIRO</a></li>
+					<li class="features"><a href="../features/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|features'; _satellite.track('internal_link')">FEATURES</a></li>
+					<li class="vr"><a href="../360vr/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|360vr'; _satellite.track('internal_link')">360 VR</a></li>
+					<li class="media"><a href="../multimedia/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|multimedia'; _satellite.track('internal_link')">MULTIMEDIA</a></li>
+					<li class="brand"><a href="../brandstory/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|brandstory'; _satellite.track('internal_link')">BRAND STORY</a></li>
+				</ul>
+			</nav>
+			<a class="btn-calc" href="../calculator/index.html" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|top|account'; _satellite.track('internal_link')"><img src="../resource/images/btn_calc.png" alt="실구매 계산기"></a>
+		</div>
+	</header>
+
+
+
+	<section class="section calculator" id="section0">
+		<div class="contents">
+			<div class="box-title">
+				<h2><img src="../resource/images/tit_calculator.png" alt="소형 SUV 실구매가 계산하기"></h2>
+				<p>니로와 경쟁 차량의 경제성을 비교해보세요!</p>
+			</div>
+
+			<!-- 계산 -->
+			<div class="box-calc">
+				<!-- 선택 -->
+				<div class="box-select">
+					<ol class="steps">
+						<li class="active" data-steps="1"><!-- 활성화시 active , 선택이 끝나면 complete -->
+							<p class="tit">01 지역 선택</p>
+							<div class="box-region">
+								<div class="map">
+									<button type="button" class="btn-region"></button><!--  -->
+									<span class="selected-region"><i class="icon-pin"></i></span>
+									<span class="none-select"><span>지역 선택</span></span>
+								</div>
+							</div>
+						</li>
+						<li data-steps="2"><!-- 비활성화시 dim, 활성화시 active , 선택이 끝나면 complete-->
+							<p class="tit">02 니로 트림 선택</p>
+							<div class="house-brand">
+								<img src="../resource/images/img_niro.png" alt="니로 차량 이미지">
+								<ul class="box-trim" id="select-niro-trim">
+									<!-- NOTE: 니로 트림 -->
+								</ul>
+							</div>
+						</li>
+						<li data-steps="3"><!-- 비활성화시 dim, 활성화시 active , 선택이 끝나면 complete-->
+							<p class="tit">03 경쟁 차량 선택</p>
+							<div class="competitor">
+								<ul class="box-car">
+									<li>
+										<button type="button" class="btn-add-car">차량 추가</button>
+									</li>
+									<li>
+										<button type="button" class="btn-add-car">차량 추가</button>
+									</li>
+									<li>
+										<button type="button" class="btn-add-car">차량 추가</button>
+									</li>
+								</ul>
+							</div>
+							<p class="notice">경쟁 차량은 최대 3개까지 추가 가능합니다. </p>
+						</li>
+					</ol>
+					<p class="notice">비교하고 싶으신 타사 차량을 선택한 후 <strong>[경제성 비교하기]</strong> 버튼을 클릭해주세요</p>
+					<button type="button" class="btn-reset">선택 초기화</button>
+					<button type="submit" class="btn-compare" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|calculator-btn|compare'; _satellite.track('internal_link');">경제성 비교하기</button>
+					<button type="type" class="open-model-info">비교 모델 참고</button>
+					<div class="layer layer-model-info">
+						<img src="../resource/images/layer_model_cnt.jpg" alt="">
+						<div class="none">
+							<h3>비교 모델 참고</h3>
+							<table>
+								<thead>
+									<tr>
+										<th>니로</th>
+										<th colspan="3">비교 모델</th>
+									</tr>
+									<tr>
+										<th>티볼리</th>
+										<th>QM3</th>
+										<th>트랙스</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>럭셔리</th>
+										<td>LX</td>
+										<td>LE</td>
+										<td>LT</td>
+									</tr>
+									<tr>
+										<th>프레스티지</th>
+										<td>LX</td>
+										<td>RE</td>
+										<td>LT레더</td>
+									</tr>
+									<tr>
+										<th>노블레스</th>
+										<td rowspan="3">니로 노블레스 트림은 소형 SUV내 비교 모델이 없습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>※ 비교 모델은 기아자동차 사내 기준에 따라 모델 별 사양 가치 등을 종합적으로 판단하여 선정하였습니다.</p>
+						</div>
+						<button type="button" class="close">닫기</button>
+					</div>
+					<i class="dim"></i>
+				</div>
+				<!-- //선택 -->
+
+				<!-- 결과 -->
+				<div class="box-result" style="display:none;">
+					<div class="guide-graph">
+						<span class="selling-price"><i></i><span>판매가</span></span>
+						<span class="acquisition-tax"><i></i><span>취득세</span></span>
+						<span class="discount"><i></i><span>공채할인</span></span>
+					</div>
+
+					<div class="box-graph" id="graph"></div>
+					<ul class="notice">
+						<li>위 비교정보는 각 제조업체의 카다로그 및 홈페이지에 공개된 자료를 바탕으로 작성하였습니다.</li>
+						<li>수시로 최신정보를 갱신하고 있으나 간혹 변경이 늦어지는 경우도 있으므로 최종 정보는 해당 업체 홈페이지를 확인하시기 바랍니다.</li>
+						<li>본 이미지는 참조용으로 구입 시점과 제조사 수시 변경으로 판매차량과 다를 수 있으니 해당 모델 판매점에 확인바랍니다.</li>
+						<li>정부 보조금은 차량 출고 후 개별 신청을 통해 지급됩니다.<a href="http://hybridbonus.or.kr" target="_blank"><img src="../resource/images/btn_hybridbonus.png" alt="보조금 신청"></a></li>
+					</ul>
+					<button type="button" class="btn-reset">선택 초기화</button>
+				</div>
+				<!-- //결과 -->
+			</div>
+			<!-- //계산 -->
+
+			<!-- 자세히보기 -->
+			<div class="box-detail" style="display:none;">
+				<button type="button" class="btn-detail"><img src="../resource/images/btn_detail.png" alt="자세히보기"></button>
+
+				<div class="detail-content" style="display:none;">
+					<div class="box-title">
+						<h3><img src="../resource/images/tit_detail.png" alt="소형 SUV 실구매가 계산하기"></h3>
+					</div>
+					<div class="box-table">
+						<div id="detail"></div>
+
+						<div class="list-notice">
+							<ul>
+								<li>위 비교정보는 각 제조업체의 카다로그 및 홈페이지에 공개된 자료를 바탕으로 작성하였습니다.</li>
+								<li>수시로 최신정보를 갱신하고 있으나 간혹 변경이 늦어지는 경우도 있으므로 최종 정보는 해당 업체 홈페이지를 확인하시기 바랍니다.</li>
+								<li>본 이미지는 참조용으로 구입 시점과 제조사 수시 변경으로 판매차량과 다를 수 있으니 해당 모델 판매점에 확인바랍니다.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-title">
+						<h3><img src="../resource/images/tit_benefit.png" alt="HEV 추가혜택"></h3>
+					</div>
+					<div class="box-benefit">
+						<ul>
+							<li>남산터널 혼잡통행료 면제</li>
+							<li>서울 공영주차장 50%</li>
+							<li>공공기관 HEV 전용 주차장 이용</li>
+							<li>승용차 요일제 적용대상 제외</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //자세히보기 -->
+		</div>
+	</section>
+
+	<footer id="footer">
+		<div>
+			<div class="logo">
+				<h1><a href="http://www.kia.com/kr/vehicles/niro/features.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacom'; _satellite.track('internal_link');">KIA</a></h1>
+				<span>Best Global Brand 2014 기아자동차 14년 인터브랜드 선정 Best Global Brand 74위</span>
+			</div>
+			<ul class="menu-local">
+				<li><a href="http://www.kia.com/kr/vehicles/niro/specification.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomspecification'; _satellite.track('internal_link');">제원</a></li>
+				<li><a href="http://www.kia.com/content/dam/kwcms/kr/ko/files/XDE/price/price_niro.pdf" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomprice_niro'; _satellite.track('internal_link');">가격</a></li>
+				<li><a href="http://www.kia.com/kr/shopping-tools/build-your-car/simple.trim.car=XDE.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|kiacomshopping_tools'; _satellite.track('internal_link');">견적</a></li>
+				<li><a href="http://www.kia.com/kr/shopping-tools/branch/branch-list.html" target="_blank" onclick="dtmDataLayer.internal_link = 'promotion|2016niro|web|footer|BranchList'; _satellite.track('internal_link');">영업점안내</a></li>
+			</ul>
+			<dl>
+				<dt>사업자 : </dt>
+				<dd>기아자동차(주)</dd>
+				<dt>대표 :</dt>
+				<dd>이형근,박한우</dd>
+				<dt>사업자등록번호 :</dt>
+				<dd>119-81-02316/dd>
+				<dt>주소</dt>
+				<dd><address>137-938 서울특별시 서초구 헌릉로 12 (양재동)</address></dd>
+				<dt>고객센터</dt>
+				<dd>080-200-2000</dd>
+			</dl>
+			<span>COPYRIGHT (C) 2015 KIA MOTORS CORP. ALL RIGHT RESERVED.</span>
+			<ul class="menu-social">
+				<li><a href="https://www.facebook.com/kia.co.kr" target="_blank">페이스북</a></li>
+				<li><a href="https://instagram.com/kiamotors.kr/" target="_blank">인스타그램</a></li>
+				<li><a href="https://www.youtube.com/user/withFUNKIA" target="_blank">유투브</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
+
+<!-- layer popup -->
+<div class="layer layer-region"><!-- active -->
+<form action="post" id="regions">
+	<div class="box-title">
+		<h3>지역 선택</h3>
+	</div>
+	<div class="select-region">
+		<dl>
+			<dt>도시철도채권</dt>
+			<dd>
+				<ul>
+					<li><input type="radio" name="regions" id="region0" value="SEOUL"><label for="region0">서울</label></li>
+					<li><input type="radio" name="regions" id="region1" value="BUSAN"><label for="region1">부산</label></li>
+					<li><input type="radio" name="regions" id="region2" value="DAEGU"><label for="region2">대구</label></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>지역개발채권</dt>
+			<dd>
+				<ul>
+					<li><input type="radio" name="regions" id="region3" value="GYEONGNAM"><label for="region3">경남</label></li>
+					<li><input type="radio" name="regions" id="region4" value="CHANGWON"><label for="region4">창원</label></li>
+					<li><input type="radio" name="regions" id="region5" value="INCHEON"><label for="region5">인천</label></li>
+					<li><input type="radio" name="regions" id="region6" value="CHUNGBUK"><label for="region6">충북</label></li>
+					<li><input type="radio" name="regions" id="region7" value="KYONGGI"><label for="region7">경기</label></li>
+					<li><input type="radio" name="regions" id="region8" value="GANGWON"><label for="region8">강원</label></li>
+					<li><input type="radio" name="regions" id="region9" value="GWANGJU"><label for="region9">광주</label></li>
+					<li><input type="radio" name="regions" id="region10" value="DAEJEON"><label for="region10">대전</label></li>
+					<li><input type="radio" name="regions" id="region11" value="ULSAN"><label for="region11">울산</label></li>
+					<li><input type="radio" name="regions" id="region12" value="JEONNAM"><label for="region12">전남</label></li>
+					<li><input type="radio" name="regions" id="region13" value="JEONBUK"><label for="region13">전북</label></li>
+					<li><input type="radio" name="regions" id="region14" value="GYEONGBUK"><label for="region14">경북</label></li>
+					<li><input type="radio" name="regions" id="region15" value="SEJONG"><label for="region15">세종</label></li>
+					<li><input type="radio" name="regions" id="region16" value="CHUNGNAM"><label for="region16">충남</label></li>
+					<li><input type="radio" name="regions" id="region17" value="JEJU"><label for="region17">제주</label></li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+	<div class="box-btns">
+		<button type="submit" class="btn-confirm"><img src="../resource/images/btn_confirm.png" alt="확인"></button>
+		<button type="button" class="btn-layer-close">닫기</button>
+	</div>
+</form>
+</div>
+<div class="dim"></div>
+
+<div class="layer layer-add-car"><!-- active -->
+	<div class="select-car">
+	</div>
+	<p class="guide"><img src="../../resource/images/layer_model_cnt.jpg" alt=""></p>
+	<div class="box-btns">
+		<button type="button" class="btn-confirm"><img src="../resource/images/btn_confirm.png" alt="확인"></button>
+		<button type="button" class="btn-layer-close">닫기</button>
+	</div>
+
+</div>
+<div class="dim"></div>
+
+
+<script type="text/javascript" src="../resource/scripts/calc.js"></script>
+<script type="text/template" id="select-noro">
+	<% _.each(niro, function(niro, key, list) { %>
+		<li>
+			<input type="radio" id="radio-<%=key%>" name="select-niro" value="<%=key%>">
+			<label for="radio-<%=key%>">
+				<i></i>
+				<strong class="model"><%=niro.name%></strong>
+				<span class="price"><%=setPrice(niro.price)%>원</span>
+			</label>
+		</li>
+	<% }); %>
+</script>
+<script type="text/template" id="select-other">
+	<div class="box-title">
+		<h3>차량 추가</h3>
+		<p id="compete-guide"><%=guide.compete%></p>
+	</div>
+	<div class="step car">
+		<button type="button" class="btn-select">차량 선택</button>
+		<ul>
+			<% _.each(car, function(car, key, list) { %>
+				<% if(key != 'NIRO') { %>
+				<li><input type="radio" name="cars" id="car-<%=key%>" value="<%=key%>" data-name="<%=car.name%>"><label for="car-<%=key%>"><%=car.name%></label></li>
+				<% } %>
+			<% }); %>
+		</ul>
+	</div>
+	<div class="step model">
+		<button type="button" class="btn-select">모델명 선택</button>
+		<ul id="add-model"></ul>
+	</div>
+	<div class="step trim">
+		<button type="button" class="btn-select">트림 선택</button>
+		<ul id="add-trim"></ul>
+	</div>
+</script>
+<script type="text/template" id="select-model">
+<% _.each(model, function(model, key, list) { %>
+	<li><input type="radio" name="model" id="model-<%=key%>" value="<%=key%>" data-name="<%=model.name%>"><label for="model-<%=key%>"><%=model.name%></label></li>
+<% }); %>
+</script>
+<script type="text/template" id="select-trim">
+<% _.each(trim, function(trim, key, list) { %>
+	<li><input type="radio" name="trim" id="trim-<%=key%>" value="<%=key%>" data-name="<%=trim.name%>"><label for="trim-<%=key%>"><%=trim.name%></label></li>
+<% }); %>
+</script>
+<script type="text/template" id="selected-car">
+<div class="car">
+	<span class="img"><img src="../resource/images/img_<%=car%>.png" alt="트랙스"></span>
+	<span class="txt">
+		<strong class="model"><%=name%> <%=data.name%></strong>
+		<span class="price"><%=setPrice(data.price)%>원</span>
+	</span>
+</div>
+</script>
+
+<script type="text/template" id="result-car">
+<%
+_.each(data.cars, function(car, key, list) {
+	var price = parseFloat(car.data.price),
+		acquisition = (key == 0) ? Math.floor(price / 1.1 * 0.07 - 1400000) : Math.floor(price / 1.1 * 0.07),
+		bond = (key == 0) ? Math.floor((price / 1.1 * (buyingRate[data.region] / 100) - 2000000) * (live.bonds[data.region] / 100)) : Math.floor((price / 1.1 * (buyingRate[data.region] / 100)) * (live.bonds[data.region] / 100)),
+		fuelCosts = Math.floor(100000 / car.data.mileage * live.oilPrice[car.data.oilType]),
+		subsidy = parseFloat(car.data.subsidy),
+		total = Math.max(price, 0) + Math.max(acquisition, 0) + Math.max(bond, 0) + subsidy,
+		carImage = (car.car == 'niro') ? car.car + '_result' : car.car,
+		mP = (car.car == 'niro') ? -20 : -22; //mP = (car.car == 'niro') ? -20 : -25;
+	%>
+	<% if(key == 0) { %>
+	<div class="car niro">
+	<% } else { %>
+	<div class="car">
+	<% } %>
+		<div class="info">
+			<span class="txt">
+				<strong class="model"><%=car.name%></strong>
+				<span class="trim"><%=car.data.name%></span>
+			</span>
+			<span class="img"><img src="../resource/images/img_<%=carImage%>.png" alt="<%=car.name%>" ></span>
+		</div>
+		<div class="graph">
+			<span class="selling-price" data-price="<%=price%>" data-percent="<%=(price / 1000000 * 2.7) + mP%>">
+				<i></i>
+				<span class="tooltips">판매가<strong><%=setPrice(price)%>원</strong></span>
+			</span>
+			<span class="acquisition-tax" data-price="<%=acquisition%>" data-percent="<%=(acquisition >= 0) ? Math.max((acquisition * 3.8 / 1000000), 0.8) : 0%>">
+				<i></i>
+				<span class="tooltips">취득세<strong><%=setPrice(acquisition)%>원</strong></span>
+			</span>
+			<span class="discount" data-price="<%=bond%>" data-percent="<%=(bond >= 0) ? Math.max((bond * 3.8 / 1000000), 0.8) : 0%>">
+				<i></i>
+				<span class="tooltips">공채할인<strong><%=setPrice(bond)%>원</strong></span>
+			</span>
+			<% if(key == 0) { %>
+			<span class="subsidy" style="display:none; width:34px;" data-price="<%=subsidy%>" data-percent="<%=Math.max((Math.abs(subsidy) * 4.2 / 1000000), 0.8)%>">
+				<i></i>
+				<span class="tooltips">하이브리드 정부보조금 <strong>-100만원</strong></span>
+			</span>
+			<% } %>
+		</div>
+		<span class="total-price"><%=setPrice(total)%>원</span>
+	</div>
+<% }); %>
+</script>
+
+<script type="text/template" id="detail-car">
+<%
+var price = [],
+	acquisition = [],
+	bond = [],
+	fuelCosts = [],
+	subsidy = [],
+	purchase = [],
+	total = [];
+
+_.each(data.cars, function(car, key, list) {
+	price[key] = Math.floor(parseFloat(car.data.price));
+	acquisition[key] = (key == 0) ? Math.floor(price[key] / 1.1 * 0.07 - 1400000) : Math.floor(price[key] / 1.1 * 0.07);
+	bond[key] = (key == 0) ? Math.floor((price[key] / 1.1 * (buyingRate[data.region] / 100) - 2000000) * (live.bonds[data.region] / 100)) : Math.floor((price[key] / 1.1 * (buyingRate[data.region] / 100)) * (live.bonds[data.region] / 100));
+	fuelCosts[key] = Math.floor(100000 / car.data.mileage * live.oilPrice[car.data.oilType]);
+	subsidy[key] = parseFloat(car.data.subsidy);
+	purchase[key] = Math.max(price[key], 0) + Math.max(acquisition[key], 0) + Math.max(bond[key], 0) + subsidy[key];
+	total[key] = Math.max(purchase[key], 0) + Math.max(fuelCosts[key], 0);
+
+});
+%>
+<table>
+	<colgroup>
+		<col style="width:80px;">
+		<col style="width:80px;">
+		<col>
+		<% _.each(data.cars, function(car, key, list) { %>
+		<col style="width:140px;" />
+		<% }); %>
+	</colgroup>
+	<thead>
+		<tr>
+			<th colspan="3">차종 구분</th>
+			<% _.each(data.cars, function(car, key, list) {
+				carImage = (car.car == 'niro') ? car.car + '_result' : car.car;
+			%>
+			<th>
+				<span class="img"><img src="../resource/images/img_<%=carImage%>.png" alt="niro" ></span>
+				<%=car.name%> <%=car.data.name%>
+			</th>
+			<% }); %>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td colspan="3">실 구매가 (1) + (2) + (3)</td>
+			<% _.each(data.cars, function(car, key, list) { %>
+			<td><%=setPrice(purchase[key])%></td>
+			<% }); %>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td>(1) 구입비</td>
+			<td>판매가</td>
+			<td class="align-left">하이브리드 세제감면혜택이 반영된 금액
+				<div>
+					<dl class="desc">
+						<dt>개소세</dt>
+						<dd>제조원가의 3.5%</dd>
+						<dd>하이브리드 차량은 최대 100만원까지 감면</dd>
+					</dl>
+					<dl class="desc">
+						<dt>교육세</dt>
+						<dd>개소세의 30%</dd>
+						<dd>하이브리드 차량은 최대 30만원까지 감면</dd>
+					</dl>
+				</div>
+			</td>
+			<% _.each(data.cars, function(car, key, list) { %>
+			<td><%=setPrice(price[key])%></td>
+			<% }); %>
+		</tr>
+		<tr>
+			<td rowspan="2">(2) 등록비</td>
+			<td>취득세</td>
+			<td class="align-left">승용차 공급가의 7%
+				<div>
+					<p class="desc">하이브리드 차량은 최대 140만원까지 감면</p>
+				</div>
+			</td>
+			<% _.each(data.cars, function(car, key, list) { %>
+			<td><%=setPrice(acquisition[key])%></td>
+			<% }); %>
+		</tr>
+		<tr>
+			<td>공채할인</td>
+			<td class="align-left">선택하신 지역 기준입니다.
+				<div>
+					<p class="desc">공채 매입율 : 2016년 03월 기준</p>
+					<p class="desc">공채 할인율 출처 : <a href="http://marketdata.krx.co.kr/mdi#document=05020401" target="_blank">한국증권거래소</a></p>
+					<p class="desc">공채 할인율 3/28 기준</p>
+				</div>
+				<p class="seperate">1500cc이상 ~ 1600cc 미만 기준</p>
+				<div>
+					<span class="desc"> 공채매입 : 도시철도채권 200만원 한도/
+						지역개발채권 150만 원 한도</span>
+				</div>
+			</td>
+			<% _.each(data.cars, function(car, key, list) { %>
+			<td><%=setPrice(bond[key])%></td>
+			<% }); %>
+		</tr>
+		<tr>
+			<td>(3) 지원비</td>
+			<td>정부구매<br>보조금</td>
+			<td class="align-left">
+				<div>
+					<p class="desc">하이브리드 차량에 지원되는
+					정부구매 보조금입니다. (100만원)</p>
+					<span class="desc">정부 구매 보조금은 차량 출고 후 개별 신청을 통해 지급됩니다.</span>
+					<a href="http://hybridbonus.or.kr" target="_blank"><img src="../resource/images/btn_hybridbonus.png" alt="보조금 신청"></a>
+				</div>
+			</td>
+			<% _.each(data.cars, function(car, key, list) { %>
+			<td>
+				<% if(key == 0) { %>
+				-<%=setPrice(subsidy[key] * -1)%>
+				<% } else { %>
+				<%=setPrice(subsidy[key] * -1)%>
+				<% } %>
+			</td>
+			<% }); %>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<colgroup>
+		<col style="width:80px;">
+		<col style="width:80px;">
+		<col>
+		<% _.each(data.cars, function(car, key, list) { %>
+		<col style="width:140px;" />
+		<% }); %>
+	</colgroup>
+	<tbody>
+		<tr>
+			<td rowspan="2">유류비</td>
+			<td colspan="2">공인연비(km/l)</td>
+			<% _.each(data.cars, function(car, key, list) { %>
+			<td><%=car.data.mileage%></td>
+			<% }); %>
+		</tr>
+		<tr>
+			<td>유류비</td>
+			<td class="align-left">10만 km 주행 시 유류비(원)
+				<div>
+					<p class="desc"><a href="http://www.petronet.co.kr/v3/index.jsp" target="_blank">한국석유공사</a>에서 공시한
+					전국 유류가격 평균값 적용</p>
+					<p class="desc">유류비 3/28 기준</p>
+				</div>
+			</td>
+			<% _.each(data.cars, function(car, key, list) { %>
+			<td><%=setPrice(fuelCosts[key])%></td>
+			<% }); %>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="3">10만 Km 구매 시 경제성 비교 = 실구매가 + 유류비</td>
+			<% _.each(data.cars, function(car, key, list) { %>
+			<td><%=setPrice(total[key])%></td>
+			<% }); %>
+		</tr>
+	</tfoot>
+</table>
+</script>
+<script>
+$('.open-model-info').on('click', function() {
+	$('.layer-model-info').addClass('active')
+		.on('click', '.close', function() {
+			$('.layer-model-info').removeClass('active');
+		});
+
+	return false;
+});
+</script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75680250-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

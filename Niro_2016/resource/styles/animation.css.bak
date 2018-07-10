@@ -1,0 +1,430 @@
+@charset "utf-8";
+
+
+/* main animation : mordern browers */
+
+.no-transition .main .box-layer .border .before {top:55px; opacity:0;}
+.no-transition .main .box-layer .border .after {bottom:65px; opacity:0;}
+
+.transition .main .box-layer .border .before{
+	-webkit-transform:translateY(60px);
+	transform:translateY(60px);
+
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;
+
+	animation-duration: 0.7s;
+	-webkit-animation-duration: 0.7s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+}
+.transition .main .box-layer .border .after{
+	-webkit-transform:translateY(-60px);
+	transform:translateY(-60px);
+
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;
+
+	animation-duration: 0.7s;
+	-webkit-animation-duration: 0.7s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+
+}
+
+
+@keyframes slideUp {
+	0% {
+		transform:translateY(60px)
+	}
+	100% {
+		transform:translateY(0px)
+	}
+}
+@-webkit-keyframes slideUp{
+	0% {
+		transform:translateY(60px)
+	}
+	100% {
+		transform:translateY(0px)
+	}
+}
+@keyframes slideDown {
+	0% {
+		transform:translateY(-60px)
+	}
+	100% {
+		transform:translateY(0px)
+	}
+}
+@-webkit-keyframes slideDown{
+	0% {
+		transform:translateY(-60px)
+	}
+	100% {
+		transform:translateY(0px)
+	}
+}
+
+.main .box-layer .border .img{
+	opacity:0;
+	-webkit-filter: blur(5px);
+
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+
+	animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+
+}
+
+.main .box-layer .border .txt{
+	opacity:0;
+	-webkit-filter: blur(5px);
+
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+
+	animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity:0;
+		-webkit-filter: blur(5px);
+	}
+	100% {
+		opacity:1;
+		-webkit-filter: blur(0px)
+	}
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity:0;
+		-webkit-filter: blur(5px);
+	}
+	100% {
+		opacity:1;
+		-webkit-filter: blur(0px)
+	}
+}
+
+.repeat {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+
+	animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+
+	-webkit-animation: line 3s linear 3s forwards infinite;
+	animation: line 3s linear 3s forwards infinite
+
+}
+
+.repeat1 {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+
+	-webkit-animation: line 3s linear 3.2s forwards  infinite;
+	animation: line 3s linear 3.2s forwards infinite
+
+}
+
+
+.main .box-layer .layer .light{position:absolute; display:block; width:240px; height:45px; }
+.main .box-layer.whos .layer .light{right:54px; bottom:70px; }
+.main .box-layer.feature .layer .light{left:60px; bottom:75px;}
+
+.path {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+
+	-webkit-animation: line 3s linear alternate;
+	animation: line 3s linear alternate;
+
+	 -webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+.path1 {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+
+	-webkit-animation: line 3s linear alternate;
+	animation: line 3s linear alternate;
+
+	animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
+
+	 -webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+@keyframes line {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.bg-top{position:absolute; top:-8px; z-index:5; left:50%; width:14400px; height:175px; margin-left:-720px; background:url('../images/bg_main_top.png') no-repeat 0 0;}
+/*
+.path-top {
+	stroke-dasharray: 2000;
+	stroke-dashoffset: 0;
+
+	-webkit-animation: line2 2s linear ;
+	animation: line2 2s linear alternate;
+
+	 -webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+.path-top1 {
+	stroke-dasharray: 2000;
+	stroke-dashoffset: 2000;
+
+	-webkit-animation: line2 2s linear ;
+	animation: line2 2s linear alternate;
+
+	animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
+
+	 -webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+@keyframes line2 {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+*/
+/* 자동차 마스크 */
+.no-mask .mask{display:none;}
+.img-mask{display:none;}
+.no-mask .img-mask{display:block;}
+
+.mask h2{
+	position: relative;
+	width:397px;
+	height: 123px;
+	text-align:center;
+	margin:0 auto;
+	background: ;
+	-webkit-filter: drop-shadow(1px 1px 2px rgba(0,0,0,.5));
+
+	-webkit-animation: mask 4s ease-out infinite;
+	animation: mask 4s ease-out  infinite;
+
+}
+
+.mask h2:after{
+	content:'';
+	position: absolute;
+	pointer-events: none;
+	top:0; left:0; right:0; bottom: 0;
+	background: radial-gradient(0 0,circle farthest-side, rgba(255,255,255,0) 60%,rgba(255,255,255,.8) 80%,rgba(255,255,255,0) 100%) no-repeat;
+	background: radial-gradient(circle farthest-side at 0 0, rgba(255,255,255,0) 60%,rgba(255,255,255,.8) 80%,rgba(255,255,255,0) 100%) no-repeat;
+	background-position: inherit;
+
+	-webkit-mask: url('../images/tit_main.png') center;
+	mask: url('#mask-firefox');
+
+}
+
+@keyframes mask {
+  0% {
+    background-position: -410px 0;
+  }
+  50%{
+    background-position: 50px 0;
+  }
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+/* 메인 레이어 안의 좌측 상단 라인 */
+.wrap-line{
+	position:absolute; left:52px; top:88px;
+}
+
+.wrap-line .line{
+	stroke-dasharray: 1000;
+	-webkit-animation: line1 8s linear forwards ;
+	animation: line1 8s linear forwards ;
+
+}
+.wrap-line .line2{
+	stroke-dasharray: 1000;
+	-webkit-animation: line1 4s linear forwards ;
+	animation: line1 4s linear forwards ;
+}
+
+@keyframes line1 {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 버튼 위로 지나가는 빛  */
+
+.btn-play1 .flash{
+	position:absolute; left:-10px; top:-17px;
+	opacity:0;
+	-webkit-animation: move 2s linear 1s forwards infinite;
+	animation: move 2s linear 1s forwards infinite
+}
+
+.btn-play2 .flash{
+	position:absolute; left:-10px; top:-17px;
+	opacity:0;
+	-webkit-animation: move 2s linear 1s forwards infinite;
+	animation: move 2s linear 1s forwards infinite
+}
+
+.btn-whos .flash{
+	position:absolute; left:-10px; top:-17px;
+	opacity:0;
+	-webkit-animation: move 2s linear 1s forwards infinite;
+	animation: move 2s linear 1s forwards infinite
+}
+
+.btn-feature .flash{
+	position:absolute; left:-10px; top:-17px;
+	opacity:0;
+	-webkit-animation: move 2s linear 2s forwards infinite;
+	animation: move 2s linear 2s forwards infinite
+}
+
+@keyframes move {
+  0 {
+
+  }
+  59%{
+	opacity:0;
+  }
+  60% {
+	opacity:1;
+    left:-10px;
+  }
+  100%{
+	opacity:1;
+	left:140px
+  }
+}
+
+
+.btn-animation i {display:block; position:absolute; width:138px; height:52px; background-image:url('../images/btn_light.png'); opacity:0;}
+.btn-animation .a {top:0; left:0; margin-top:-1px;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+
+	-webkit-animation: btn-line 3s linear 0s forwards  infinite;
+	animation: btn-line 3s linear 0s forwards infinite;
+}
+.btn-animation .b {bottom:-100%; right:-75%; margin-bottom:-6px;
+	-webkit-transform:translate(-50%, -50%) rotate(-180deg);
+	transform:translate(-50%, -50%) rotate(-180deg);
+
+	-webkit-animation: btn-line2 3s linear 1.5s forwards  infinite;
+	animation: btn-line2 3s linear 1.5s forwards infinite;
+	/*opacity:1;*/
+
+}
+
+@keyframes btn-line {
+	0% {
+		opacity:0;
+		transform:translate(-50%, -50%);
+	}
+	0.1% {
+		opacity:0.8;
+		transform:translate(-50%, -50%);
+	}
+	25% {
+		opacity:1;
+		transform:translate(25%, -50%);
+	}
+	50% {
+		opacity:0.8;
+		transform:translate(90%, -50%);
+	}
+	100% {
+		opacity:0;
+		transform:translate(100%, -50%);
+	}
+}
+@keyframes btn-line2 {
+	0% {
+		opacity:0;
+		transform:translate(-50%, -50%) rotate(-180deg);
+	}
+	0.1% {
+		opacity:0.8;
+		transform:translate(-75%, -50%) rotate(-180deg);
+	}
+	25% {
+		opacity:1;
+		transform:translate(-150%, -50%) rotate(-180deg);
+	}
+	50% {
+		opacity:0.8;
+		transform:translate(-215%, -50%) rotate(-180deg);
+	}
+	100% {
+		opacity:0;
+		transform:translate(-215%, -50%) rotate(-180deg);
+	}
+}
