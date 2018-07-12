@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin:0; padding:0; border:0; font:inherit; vertical-align:baseline; font-weight:normal;}
+address,em {font-style:normal; font-weight:normal;}
+strong{font-weight:bold}
+input,button,select {font-family:inherit; margin:0; padding:0; vertical-align:middle; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main{display:block;}
+ol,ul,li {list-style:none;}
+button{margin:0; padding:0; border:0; background-color:transparent; -webkit-appearance:button; cursor:pointer;}
+a{text-decoration:none; color:#666;}
+a:hover {}
+img{display:block;border:none;width:100%;}
+button:focus,
+input:focus,
+a:focus {outline:thin dotted; outline:none; outline-offset:-2px;}
+[tabindex="-1"]:focus {outline:none;}
+.hidden{display:none;}
+
+/* z-index
+
+header:10
+footer:10
+popup : 100
+layer : 200
+
+*/

@@ -1,0 +1,325 @@
+@charset 'utf-8';
+@import 'common.css';
+@import 'font.css';
+
+/* layout
+************************************************************************************************/
+html,body{background:#000;min-width:1280px;width: 100%;font-family:'JosefinSans';}
+article{width:100%;margin:0 auto;overflow:hidden;}
+article .wrap{max-width:1920px;width:100%;margin:0 auto;min-width:1280px;position:relative;}
+
+/* navigation */
+nav{width:100%;height:80px;background:#080808;line-height:80px;min-width: 1280px;}
+nav.top{position:fixed;top:0;left:0;display:none;z-index:100;}
+nav.btm{}
+nav ul{text-align:center; height:80px}
+nav ul li{display:inline-block;zoom:1;*display:inline;height:80px}
+nav ul li a{color:#CCC;font-size:14px;padding:0 27px}
+nav ul li a.on{color:#b19c73}
+
+/* footer */
+footer{height:72px;background:#060606;line-height:72px;text-align:center;}
+footer span{color:#555;font-size:14px;padding-left:68px;background:url('../images/icn_kia.png') no-repeat left center;display:inline-block;zoom:1;*display:inline;margin:0 auto;}
+
+/* popup */
+.popup {position:fixed; top:0; right:0; bottom:0; left:0; z-index:100; background-color:#000;}
+.popup iframe {width:100%; height:100%;}
+.popup .btn-close{position:absolute; right:0; top:0; width:46px; height:46px; font:0/0 a; background:url('../images/icn_close.png') no-repeat center center}
+
+
+br.mobile{display:none;}
+/* main
+************************************************************************************************/
+#main{background:url('../images/main_visual02.jpg') no-repeat center;background-size:cover;height:900px;}
+.main-visual .logo{background:url('../images/ck_logo.png') no-repeat 0 0;width:386px;height:45px;font-size:0;text-indent:-999px;position:absolute;top:220px;left:50%;margin-left:-33.3%}
+
+/* films
+************************************************************************************************/
+#films{position:relative;min-width:1280px;}
+.films-mobile{display:none;}
+.films-pc{max-width:1920px;margin:0 auto;position:relative;}
+.ep-list{overflow:hidden;position:relative;}
+.ep-list li{float:left;position:relative;}
+.films-pc .ep-list li:before{content:'';background:#000;width:100%;height:100%;position:absolute;top:0;left:0;opacity:0.8;filter:alpha(opacity=80);z-index:5}
+.films-pc .ep-list a{display:none;position:absolute;left:56.7%;z-index:10}
+.films-pc .ep-list li .play{margin-left:-100px;top:413px}
+.films-pc .ep-list li .down{margin-left:-150px;top:860px;font-size:14px;color:#FFF;letter-spacing: 1px;border:1px #FFF solid;padding:17px 25px;pointer-events:none;}
+.ep-list span{display:block;position:absolute;}
+
+/* 20161223 수정 */
+.films-pc .ep-list .ep-open{overflow:hidden;float:left;position:relative;width:25%;height:1000px;transition:.5s;-webkit-transition:.5s;}
+.films-pc .ep-list .ep-open .bg{overflow:hidden;width:100%;height:100%;}
+.films-pc .ep-list .ep-open .bg>img{width:auto;height:100%;position:absolute;top:50%;
+  transition: width 0.5s , height 0.5s , margin 0.5s , left 0.5s;
+  -moz-transition: width 0.5s , height 0.5s , margin 0.5s , left 0.5s;
+  -ms-transition: width 0.5s , height 0.5s , margin 0.5s , left 0.5s;
+  -o-transition: width 0.5s , height 0.5s , margin 0.5s , left 0.5s;
+  -webkit-transition: width 0.5s , height 0.5s , margin 0.5s , left 0.5s;}
+.films-pc .ep-list .ep-open:hover:before{opacity:0.4;filter:alpha(opacity=40);z-index:5}
+.films-pc .ep-list .ep-open:hover .bg>img{width:auto;height:110%;}
+.films-pc .ep-list .ep-open:hover h3{display:none;}
+.films-pc .ep-list .ep-open:hover a{display:block;}
+.films-pc .ep-list .ep01 .bg>img{left:30%;margin:-500px 0 0 -830px;}
+.films-pc .ep-list .ep02 .bg>img{right:-5%;margin:-500px -100px 0 0;}
+.films-pc .ep-list .ep03 .bg>img{top:0;right:0;}
+.films-pc .ep-list .ep04 {position:absolute;right:0;}
+.films-pc .ep-list .ep04 .bg>img{top:0;right:0;}
+.films-pc .ep-list .ep01:hover .bg>img{margin:-550px 0 0 -913px;left:30%;}
+.films-pc .ep-list .ep02:hover .bg>img{margin:-550px -100px 0 50px;right:-5%;}
+.films-pc .ep-list .ep03:hover .bg>img{margin:-50px 0 0 -20px;}
+.films-pc .ep-list .ep04:hover .bg>img{margin:-50px 0 0 -20px;}
+/*  //20161223 수정  */
+
+.ep-list .tit{top:33.3%;left:50%;font-size:18px;color:#FFF;border-bottom:3px #FFF solid;margin-left:-27px;padding-bottom:10px;z-index: 10}
+.ep-list .tit + span{top:38.8%;left:50%;margin-left:-46px;font-size:90px;color:#FFF;font-weight:700;font-family:'TeXGyreAdventor';z-index:10}
+/* 20161223 수정
+.ep-list .ep04{position:absolute;width:13.5%;height:1000px;top:0;right:0;background:url('../images/films/films_visual04_off.jpg') no-repeat;background-size:cover;}
+.ep-list .ep04 .tit{top:33.3%;left:50%;margin-left:0;color:#444444;border-bottom:3px #444444 solid;margin-left:-27px}
+.ep-list .ep04 .tit + span{top:38.8%;left:50%;margin-left:-19.2px;color:#444444;margin-left:-50px}
+.ep-list+p{position:absolute;top:45.5%;right:0;width:17.3%;z-index:10}
+/*  //20161223 수정  */
+
+/* live webcast
+************************************************************************************************/
+#live{background: url('../images/live/live_bg.png') no-repeat center bottom;background-size:cover;height:1000px;text-align:center;}
+h2.live{font-size:18px;color:#FFF;border-bottom:3px #FFF solid;display:inline-block;zoom:1;*display:inline;padding:140px 0 13px;font-weight:700;letter-spacing: 1.8px;}
+.video{width:906px;height:534px;margin:30px auto 30px;}
+.video iframe{width:100%;height:100%;}
+.video ul{margin:20px auto 0;width:906px;height:534px}
+.video li{display:none;}
+.video li.active{display:block;}
+.video .mobile{display:none;}
+.video-list {padding-top:10px;}
+.video-list li{display:inline-block;padding:0 40px;color:#555;border-right:1px solid #555;}
+.video-list li:last-child{border:none;}
+.video-list li span{font-size:20px;font-weight:bold;letter-spacing:2px;cursor:pointer;}
+.video-list li a.vd_dwn{display:block;width:27px;height:23px;margin-left:15px;background:url('../images/live/btn_dwn.png') no-repeat center center;font-size:0;text-indent:-999px;float:right;}
+.video-list li.active span{color:#b19c73;}
+.video-list li.active a.vd_dwn{background:url('../images/live/btn_dwn_active.png') no-repeat center center;}
+
+/* gallery
+************************************************************************************************/
+/*#gallery{background:url('../images/gallery/gallery_bg.jpg') no-repeat center bottom;background-size:cover;height:1000px;text-align:center;}*/
+#gallery{text-align:center;height:auto;}
+h2.gallery{font-size:18px;color:#FFF;border-bottom:3px #FFF solid;display:inline-block;zoom:1;*display:inline;padding:76px 0 13px;font-weight:700;letter-spacing: 1.8px}
+#gallery .comsonTxt{margin-top:75px}
+#gallery .gal_list{display:none;min-height:928px;}
+#gallery .gal_list.on{display:block;background:url('../images/gallery/gallery_bg02.jpg') no-repeat 0 0;background-size:cover;}
+#gallery .gal_list .txt{margin-top:145px;}
+#gallery .gal_list .txt p{font-size:16px;color:#707070;line-height:25px;}
+#gallery .btns_gal_list{padding-top:65px;}
+#gallery .btns_gal_list li{width:100%;height:141px;border-top:1px solid #272727;box-sizing:border-box;line-height:140px;position:relative;}
+#gallery .btns_gal_list li.btn_pht div{position:absolute;transform:translateY(-50%);top:50%;left:0;right:0;}
+#gallery .btns_gal_list li.btn_pht{line-height:30px;vertical-align:middle}
+#gallery .btns_gal_list li.btn_pht span{color:#FFF;font-size:32px;font-weight:bold;letter-spacing:2px;display:inline-block;width:100%;}
+#gallery .btns_gal_list li.btn_pht a{display:none;font-weight:300;font-size:29px;margin:20px 22px 0;}
+#gallery .btns_gal_list li.btn_pht:hover span{color:#b19c73}
+#gallery .btns_gal_list li.btn_pht:hover a{display:inline-block;}
+#gallery .btns_gal_list li a{display:block;font-size:32px;font-weight:bold;color:#fff;letter-spacing:2px;}
+#gallery .btn_pifo{border-bottom:1px solid #272727;width:100%;height:141px;border-top:1px solid #272727;box-sizing:border-box;line-height:140px;}
+#gallery .btns_gal_list li.off{font-size:32px;font-weight:bold;letter-spacing:2px;color:#2b2b2b;cursor:pointer;}
+#gallery .btns_gal_list li a:hover{color:#b19c73;}
+.btns_gal_list .btn_pht:hover{background:url('../images/gallery/bg_photos.jpg') no-repeat center center;}
+.btns_gal_list .btn_vd:hover{background:url('../images/gallery/bg_videos.jpg') no-repeat center center;}
+#gallery .btn_pifo:hover{background:url('../images/gallery/bg_pro_info.jpg') no-repeat center center;}
+#gallery .btn_pifo a{display:block;font-size:32px;font-weight:bold;color:#fff;letter-spacing:2px;}
+#gallery .btn_pifo a:hover{color:#b19c73;}
+
+#gallery h3{position:absolute;display:inline-block;left:50%;padding:65px 0 10px 0;font-size:18px;color:#FFF;border-bottom:3px #FFF solid;zoom:1;transform:translateX(-50%);z-index:1;}
+#gallery #gal-cnt{display:none;min-height:928px;}
+#gallery #gal-cnt.on{display:block;background:#040404}
+
+.gal .box_btns{margin:50px 0;position:relative;}
+#gallery .pages{display:inline-block;}
+#gallery .pages a{margin:0 5px;}
+#gallery .btn_page{display:inline-block;width:52px;height:52px;background:url('../images/gallery/btn_page.png')}
+#gallery .btn_page.prev{background-position:0 0;}
+#gallery .btn_page.next{background-position:-68px 0;}
+
+#gallery .btn_bottom{overflow:hidden;display:inline-block;position:absolute;right:10%;top:4px;}
+#gallery .btn_bottom li{float:left;}
+#gallery .btn_bottom a{display:inline-block;padding:15px 17px;font-size:12px;font-weight:bold;color:#999;border:1px solid #363636;letter-spacing:1px;}
+#gallery .btn_bottom a.back{background:#363636;}
+#gallery .btn_bottom a.back:before{content:'';display:inline-block;width:6px;height:11px;padding:0 9px;background:url('../images/gallery/arrow_back.png') no-repeat;vertical-align:middle;}
+
+#gallery .box_btns .down{position:absolute;left:10%;display:inline-block;font-size:20px;color:#b19c73;padding-right:37px;background:url('../images/live/btn_dwn_active.png') no-repeat center right;height:23px;top:14px}
+
+#gallery .pop_list .down{position:absolute;left:0;display:inline-block;font-size:20px;color:#b19c73;padding-right:37px;background:url('../images/live/btn_dwn_active.png') no-repeat center right;height:23px;bottom:-60px}
+/* photos slide
+************************************************************************************************/
+.photos {height:1020px;padding-top:80px;}
+.photos .wrap_photos_slide{position:relative;height:615px;margin-top:145px;}
+.photos .wrap_photos_slide .photos_slide{position:absolute;width:8619px;height:620px;left:0;transition:.5s;-webkit-transition:.5s;}
+.photos .wrap_photos_slide .photos_slide li{position:absolute;display:inline-block;}
+.photos .wrap_photos_slide .photos_slide li > a {display:block;background-size:cover;background-position:center;}
+.photos .wrap_photos_slide .photos_slide img{display:none;}
+.photos .box_btns .btn_bottom li:first-child{display:none;}
+.photos .photos_popup img{display:block;margin:0 auto;width:100%;}
+#eu_spec .wrap_photos_slide .photos_slide{width:10616px;}
+#us_spec .wrap_photos_slide .photos_slide{width:8619px;}
+
+.photos .pUs01 a{width:358px;height:480px;background-image:url('../images/gallery/US Spec/01_3.3-Twin-Turbo-V6-Lambda-II_US-Spec.png');}
+.photos .pUs01{bottom:0;left:0px;}
+.photos .pUs02 a{width:250px;height:250px;background-image:url('../images/gallery/US Spec/02_Kia-Stinger-GT-Detail-(1)_US-Spec.png');}
+.photos .pUs02{bottom:0;left:368px;}
+.photos .pUs03 a{width:358px;height:540px;background-image:url('../images/gallery/US Spec/03_Kia-Stinger-GT-Detail-(2)_US-Spec.png');}
+.photos .pUs03{bottom:220px;left:628px;}
+.photos .pUs04 a{width:540px;height:210px;background-image:url('../images/gallery/US Spec/04_Kia-Stinger-GT-Dynamic-(2)_US-Spec.png');}
+.photos .pUs04{bottom:0;left:628px;}
+.photos .pUs05 a{width:400px;height:400px;background-image:url('../images/gallery/US Spec/05_Kia-Stinger-GT-Dynamic-(1)_US-Spec.png');}
+.photos .pUs05{bottom:220px;left:996px;}
+.photos .pUs06 a{width:250px;height:250px;background-image:url('../images/gallery/US Spec/06_Kia-Stinger-GT-Dynamic-(4)_US-Spec.png');}
+.photos .pUs06{bottom:370px;left:1406px;}
+.photos .pUs07 a{width:475px;height:360px;background-image:url('../images/gallery/US Spec/07_Kia-Stinger-GT-Dynamic-(3)_US-Spec.png');}
+.photos .pUs07{bottom:0;left:1406px;}
+.photos .pUs08 a{width:506px;height:480px;background-image:url('../images/gallery/US Spec/08_Kia-Stinger-GT-Dynamic-(5)_US-Spec.png');}
+.photos .pUs08{bottom:140px;left:1891px;}
+.photos .pUs09 a{width:358px;height:480px;background-image:url('../images/gallery/US Spec/09_Kia-Stinger-GT-Dynamic-(6)_US-Spec.png');}
+.photos .pUs09{bottom:0;left:2407px;}
+.photos .pUs10 a{width:250px;height:250px;background-image:url('../images/gallery/US Spec/10_Kia-Stinger-GT-Dynamic-(7)_US-Spec.png');}
+.photos .pUs10{bottom:0;left:2775px;}
+.photos .pUs11 a{width:358px;height:540px;background-image:url('../images/gallery/US Spec/11_Kia-Stinger-GT-Exterior-(2)_US-Spec.png');}
+.photos .pUs11{bottom:220px;left:3035px;}
+.photos .pUs12 a{width:540px;height:210px;background-image:url('../images/gallery/US Spec/12_Kia-Stinger-GT-Exterior-(4)_US-Spec.png');}
+.photos .pUs12{bottom:0;left:3035px;}
+.photos .pUs13 a{width:400px;height:400px;background-image:url('../images/gallery/US Spec/13_Kia-Stinger-GT-Exterior-(1)_US-Spec.png');}
+.photos .pUs13{bottom:220px;left:3405px;}
+.photos .pUs14 a{width:250px;height:250px;background-image:url('../images/gallery/US Spec/14_Kia-Stinger-GT-Exterior-(3)_US-Spec.png');}
+.photos .pUs14{bottom:370px;left:3815px;}
+.photos .pUs15 a{width:475px;height:360px;background-image:url('../images/gallery/US Spec/15_Kia-Stinger-GT-Exterior-(5)_US-Spec.png');}
+.photos .pUs15{bottom:0;left:3815px;}
+.photos .pUs16 a{width:506px;height:480px;background-image:url('../images/gallery/US Spec/16_Kia-Stinger-GT-Interior-(1)_US-Spec.png');}
+.photos .pUs16{bottom:140px;left:4300px;}
+.photos .pUs17 a{width:358px;height:480px;background-image:url('../images/gallery/US Spec/17_Kia-Stinger-GT-Interior-(3)_US-Spec.png');}
+.photos .pUs17{bottom:0;left:4816px;}
+.photos .pUs18 a{width:250px;height:250px;background-image:url('../images/gallery/US Spec/18_Kia-Stinger-GT-Interior-(6)_US-Spec.png');}
+.photos .pUs18{bottom:0;left:5184px;}
+.photos .pUs19 a{width:358px;height:540px;background-image:url('../images/gallery/US Spec/19_Kia-Stinger-GT-Interior-(2)_US-Spec.png');}
+.photos .pUs19{bottom:220px;left:5444px;}
+.photos .pUs20 a{width:540px;height:210px;background-image:url('../images/gallery/US Spec/20_Kia-Stinger-GT-Interior-(4)_US-Spec.png');}
+.photos .pUs20{bottom:0;left:5444px;}
+.photos .pUs21 a{width:540px;height:210px;background-image:url('../images/gallery/US Spec/21_Kia-Stinger-GT-Interior-(5)_US-Spec.png');}
+.photos .pUs21{bottom:220px;left:5812px;}
+.photos .pUs22 a{width:250px;height:250px;background-image:url('../images/gallery/US Spec/22_Kia-Stinger-GT-Studio-(1)_US-Spec.png');}
+.photos .pUs22{bottom:370px;left:6222px;}
+.photos .pUs23 a{width:475px;height:360px;background-image:url('../images/gallery/US Spec/23_Kia-Stinger-GT-Studio-(2)_US-Spec.png');}
+.photos .pUs23{bottom:0;left:6222px;}
+.photos .pUs24 a{width:506px;height:480px;background-image:url('../images/gallery/US Spec/24_Kia-Stinger-GT-Studio-(8)_US-Spec.png');}
+.photos .pUs24{bottom:140px;left:6707px;}
+.photos .pUs25 a{width:358px;height:480px;background-image:url('../images/gallery/US Spec/25_Kia-Stinger-GT-Studio-(6)_US-Spec.png');}
+.photos .pUs25{bottom:0;left:7223px;}
+.photos .pUs26 a{width:250px;height:250px;background-image:url('../images/gallery/US Spec/26_Kia-Stinger-GT-Studio-(5)_US-Spec.png');background-position:bottom right;}
+.photos .pUs26{bottom:0;left:7591px;}
+.photos .pUs27 a{width:358px;height:540px;background-image:url('../images/gallery/US Spec/27_Kia-Stinger-GT-Studio-(7)_US-Spec.png');}
+.photos .pUs27{bottom:220;left:7851px;}
+.photos .pUs28 a{width:540px;height:210px;background-image:url('../images/gallery/US Spec/28_Kia-Stinger-GT-Studio-(3)_US-Spec.png');}
+.photos .pUs28{bottom:0;left:7851px;}
+.photos .pUs29 a{width:400px;height:400px;background-image:url('../images/gallery/US Spec/29_Kia-Stinger-GT-Studio-(4)_US-Spec.png');}
+.photos .pUs29{bottom:220px;left:8219px;}
+
+
+.photos .pUe01 a{width:358px;height:480px;background-image:url('../images/gallery/EU Spec/01_3.3-Twin-Turbo-V6-Lambda-II_EU-Spec.jpg');}
+.photos .pUe01{bottom:0;left:0px;}
+.photos .pUe02 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/02_Kia-Stinger-GT-Detail-(1)_EU-Spec.jpg');}
+.photos .pUe02{bottom:0;left:368px;}
+.photos .pUe03 a{width:358px;height:540px;background-image:url('../images/gallery/EU Spec/03_Kia-Stinger-GT-Detail-(2)_EU-Spec.jpg');}
+.photos .pUe03{bottom:220px;left:628px;}
+.photos .pUe04 a{width:540px;height:210px;background-image:url('../images/gallery/EU Spec/04_Kia-Stinger-GT-Detail-(3)_EU-Spec.jpg');}
+.photos .pUe04{bottom:0;left:628px;}
+.photos .pUe05 a{width:400px;height:400px;background-image:url('../images/gallery/EU Spec/05_Kia-Stinger-GT-Detail-(4)_EU-Spec.jpg');}
+.photos .pUe05{bottom:220px;left:996px;}
+.photos .pUe06 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/06_Kia-Stinger-GT-Detail-(5)_EU-Spec.jpg');}
+.photos .pUe06{bottom:370px;left:1406px;}
+.photos .pUe07 a{width:475px;height:360px;background-image:url('../images/gallery/EU Spec/07_Kia-Stinger-GT-Detail-(6)_EU-Spec.jpg');}
+.photos .pUe07{bottom:0;left:1406px;}
+.photos .pUe08 a{width:506px;height:480px;background-image:url('../images/gallery/EU Spec/08_Kia-Stinger-GT-Detail-(7)_EU-Spec.jpg');}
+.photos .pUe08{bottom:140px;left:1891px;}
+.photos .pUe09 a{width:358px;height:480px;background-image:url('../images/gallery/EU Spec/09_Kia-Stinger-GT-Dynamic-(1)_EU-Spec.jpg');}
+.photos .pUe09{bottom:0;left:2407px;}
+.photos .pUe10 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/10_Kia-Stinger-GT-Dynamic-(2)_EU-Spec.jpg');}
+.photos .pUe10{bottom:0;left:2775px;}
+.photos .pUe11 a{width:358px;height:540px;background-image:url('../images/gallery/EU Spec/11_Kia-Stinger-GT-Dynamic-(3)_EU-Spec.jpg');}
+.photos .pUe11{bottom:220px;left:3035px;}
+.photos .pUe12 a{width:540px;height:210px;background-image:url('../images/gallery/EU Spec/12_Kia-Stinger-GT-Exterior-(1)_EU-Spec.jpg');}
+.photos .pUe12{bottom:0;left:3035px;}
+.photos .pUe13 a{width:400px;height:400px;background-image:url('../images/gallery/EU Spec/13_Kia-Stinger-GT-Exterior-(2)_EU-Spec.jpg');}
+.photos .pUe13{bottom:220px;left:3405px;}
+.photos .pUe14 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/14_Kia-Stinger-GT-Exterior-(3)_EU-Spec.jpg');}
+.photos .pUe14{bottom:370px;left:3815px;}
+.photos .pUe15 a{width:475px;height:360px;background-image:url('../images/gallery/EU Spec/15_Kia-Stinger-GT-Exterior-(4)_EU-Spec.jpg');}
+.photos .pUe15{bottom:0;left:3815px;}
+.photos .pUe16 a{width:506px;height:480px;background-image:url('../images/gallery/EU Spec/16_Kia-Stinger-GT-Exterior-(5)_EU-Spec.jpg');}
+.photos .pUe16{bottom:140px;left:4300px;}
+.photos .pUe17 a{width:358px;height:480px;background-image:url('../images/gallery/EU Spec/17_Kia-Stinger-GT-Exterior-(6)_EU-Spec.jpg');}
+.photos .pUe17{bottom:0;left:4816px;}
+.photos .pUe18 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/18_Kia-Stinger-GT-Exterior-(7)_EU-Spec.jpg');}
+.photos .pUe18{bottom:0;left:5184px;}
+.photos .pUe19 a{width:358px;height:540px;background-image:url('../images/gallery/EU Spec/19_Kia-Stinger-GT-Exterior-(8)_EU-Spec.jpg');}
+.photos .pUe19{bottom:220px;left:5444px;}
+.photos .pUe20 a{width:540px;height:210px;background-image:url('../images/gallery/EU Spec/20_Kia-Stinger-GT-Exterior-(10)_EU-Spec.jpg');}
+.photos .pUe20{bottom:0;left:5444px;}
+.photos .pUe21 a{width:400px;height:210px;background-image:url('../images/gallery/EU Spec/21_Kia-Stinger-GT-Exterior-(9)_EU-Spec.jpg');}
+.photos .pUe21{bottom:220px;left:5812px;}
+.photos .pUe22 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/22_Kia-Stinger-GT-Exterior-(11)_EU-Spec.jpg');}
+.photos .pUe22{bottom:370px;left:6222px;}
+.photos .pUe23 a{width:475px;height:360px;background-image:url('../images/gallery/EU Spec/23_Kia-Stinger-GT-Exterior-(12)_EU-Spec.jpg');}
+.photos .pUe23{bottom:0;left:6222px;}
+.photos .pUe24 a{width:506px;height:480px;background-image:url('../images/gallery/EU Spec/24_Kia-Stinger-GT-Interior-(1)_EU-Spec.jpg');}
+.photos .pUe24{bottom:140px;left:6707px;}
+.photos .pUe25 a{width:358px;height:480px;background-image:url('../images/gallery/EU Spec/25_Kia-Stinger-GT-Interior-(2)_EU-Spec.jpg');}
+.photos .pUe25{bottom:0;left:7223px;}
+.photos .pUe26 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/26_Kia-Stinger-GT-Interior-(3)_EU-Spec.jpg');background-position:bottom right;}
+.photos .pUe26{bottom:0;left:7591px;}
+.photos .pUe27 a{width:358px;height:540px;background-image:url('../images/gallery/EU Spec/27_Kia-Stinger-GT-Studio-(1)_EU-Spec.jpg');}
+.photos .pUe27{bottom:220;left:7851px;}
+.photos .pUe28 a{width:540px;height:210px;background-image:url('../images/gallery/EU Spec/28_Kia-Stinger-GT-Studio-(2)_EU-Spec.jpg');}
+.photos .pUe28{bottom:0;left:7851px;}
+.photos .pUe29 a{width:400px;height:400px;background-image:url('../images/gallery/EU Spec/29_Kia-Stinger-GT-Studio-(3)_EU-Spec.jpg');}
+.photos .pUe29{bottom:220px;left:8219px;}
+.photos .pUe30 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/30_Kia-Stinger-GT-Studio-(4)_EU-Spec.jpg');}
+.photos .pUe30{bottom:370px;left:8629px;}
+.photos .pUe31 a{width:475px;height:360px;background-image:url('../images/gallery/EU Spec/31_Kia-Stinger-GT-Studio-(5)_EU-Spec.jpg');}
+.photos .pUe31{bottom:0;left:8629px;}
+.photos .pUe32 a{width:506px;height:480px;background-image:url('../images/gallery/EU Spec/32_Kia-Stinger-GT-Studio-(6)_EU-Spec.jpg');}
+.photos .pUe32{bottom:140px;left:9114px;}
+.photos .pUe33 a{width:358px;height:480px;background-image:url('../images/gallery/EU Spec/33_Kia-Stinger-GT-Studio-(7)_EU-Spec.jpg');}
+.photos .pUe33{bottom:0;left:9630px;}
+.photos .pUe34 a{width:250px;height:250px;background-image:url('../images/gallery/EU Spec/34_Kia-Stinger-GT-Studio-(8)_EU-Spec.jpg');}
+.photos .pUe34{bottom:0;left:9998px;}
+.photos .pUe35 a{width:358px;height:540px;background-image:url('../images/gallery/EU Spec/35_Kia-Stinger-GT-Studio-(9)_EU-Spec.jpg');}
+.photos .pUe35{bottom:220px;left:10258px;}
+
+.photos_popup{display:none;max-width:960px;margin:0 auto;position:absolute;left:50%;margin-left:-480px;top:220px;width:100%;}
+.photos_popup .pop_wrap{width:960px;position:absolute;z-index:2}
+.photos_popup:before{content:'';display:block;width:100%;height:100%;background:#000;opacity:.6;position:fixed;top:0;left:0;z-index:1}
+.photos_popup li{width:960px !important;height:600px;background:#000;}
+.photos_popup .bx-viewport{padding-bottom:60px;}
+.photos_popup .bx-prev{position:absolute;top:50%;left:0;background:url('../images/gallery/btns_gallery.png') no-repeat 0 0;width:23px;height:45px;margin:-23px 0 0 -63px;font-size:0;text-indent:-999px;transform:translateY(-100%);}
+.photos_popup .bx-next{position:absolute;top:50%;right:0;background:url('../images/gallery/btns_gallery.png') no-repeat -23px 0;width:23px;height:45px;margin:-23px -63px 0 0;font-size:0;text-indent:-999px;transform:translateY(-100%);}
+.photos_popup button{position:absolute;width:60px;height:60px;top:0;right:0;background:url('../images/icn_close.png');text-indent:-9999px;z-index:60;}
+.photos_popup .bx-default-pager{text-align:right;color:#FFF;margin-top:40px;position:absolute;bottom:0;right:0;}
+.photos_popup .bx-default-pager span{font-size:18px;color:#FFF;font-weight:700;}
+.photos_popup .bx-default-pager i{display:inline-block;width:30px;height:1px;background:#666;margin:0 5px;vertical-align:5px}
+.photos_popup .bx-default-pager i+span{font-size:18px;color:#666666;font-weight:300;}
+.photos_popup.euPop li img{width:auto;height:100%;}
+
+#videos img{width:auto;}
+#videos {height:1020px;padding-top:80px}
+#videos .wrap_videos_slide{position:relative;height:760px;margin-top:145px;}
+#videos .videos_slide{position:absolute;width:1910px;height:760px;left:0px;transition:.5s;-webkit-transition:.5s;}
+#videos .videos_slide li{position:absolute;display:inline-block;}
+#videos .videos_slide li img.mobile{display:none;}
+#videos .videos_slide a.play:before{content:'';background:url('../images/films/icn-play.png') no-repeat center center;background-size:95px;display:block;width:95px;height:95px;position:absolute;top:50%;left:50%;margin:-47px 0 0 -47px;z-index:5}
+#videos .videos_slide .v01{bottom:140px;left:0;}
+#videos .videos_slide .v02{bottom:454px;left:181px;}
+#videos .videos_slide .v03{bottom:0;left:550px;}
+#videos .videos_slide .v04{bottom:0;left:1100px;}
+#videos .videos_slide .v05{bottom:220px;left:731px;}
+#videos .videos_slide .v06{bottom:410px;left:1435px;}
+#videos .videos_slide .v07{bottom:120px;left:1920px;}
+#videos .videos_slide .v08{bottom:366px;left:1660px;}
+#videos .videos_slide .down{display:block;position:absolute;width:27px;height:23px;background:url('../images/live/btn_dwn_active.png') no-repeat 0 0;bottom:10px;right:10px;z-index:30;}
+
+@media only screen and (min-width:1919px){
+  #videos .box_btns .pages{display:none}
+}

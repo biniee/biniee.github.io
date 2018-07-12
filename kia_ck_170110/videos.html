@@ -1,0 +1,78 @@
+<article id="videos" class="g-tab">
+  <h3>VIDEOS</h3>
+  <div class="wrap_videos_slide wrap_slide">
+    <ul class="videos_slide slide">
+      <li class="v01 left">
+        <a href="" class="play" data-url="https://www.youtube.com/embed/RLVj0eyp73k" onclick="ga('send', 'event', 'button', 'click', 'playGalleryVideo1');"><img src="resources/images/gallery/video_img_01.jpg" alt="video image"></a>
+        <a href="resources/video/Press Reel.mp4" class="down" download onclick="ga('send', 'event', 'button', 'click', 'downloadGalleryVideo1');"></a>
+      </li>
+      <li class="v02">
+        <a href="" class="play" data-url="https://www.youtube.com/embed/lLylXYJR9VE" onclick="ga('send', 'event', 'button', 'click', 'playGalleryVideo2');"><img src="resources/images/gallery/video_img_02.jpg" alt="video image"></a>
+        <a href="resources/video/STINGER - STILL DRIVE.mp4" class="down" download onclick="ga('send', 'event', 'button', 'click', 'downloadGalleryVideo2');"></a>
+      </li>
+      <li class="v03 left">
+        <a href="" class="play" data-url="https://www.youtube.com/embed/4p__3tykDOo" onclick="ga('send', 'event', 'button', 'click', 'playGalleryVideo3');">
+          <img src="resources/images/gallery/video_img_04.jpg" alt="video image" class="pc">
+          <img src="resources/images/mobile/gallery/video_img_04.jpg" alt="video image" class="mobile">
+        </a>
+        <a href="resources/video/TheCurveAhead–Episode1(TwistsAndTurns).mp4" class="down" download onclick="ga('send', 'event', 'button', 'click', 'downloadGalleryVideo3');"></a>
+      </li>
+      <li class="v04">
+        <a href="" class="play" data-url="https://www.youtube.com/embed/dcNkDJDftZU" onclick="ga('send', 'event', 'button', 'click', 'playGalleryVideo4');"><img src="resources/images/gallery/video_img_05.jpg" alt="video image"></a>
+        <a href="resources/video/The Curve Ahead-Episode2(The Fastest-accelerating Kia).mp4" class="down" download onclick="ga('send', 'event', 'button', 'click', 'downloadGalleryVideo4');"></a>
+      </li>
+      <li class="v05 left">
+        <a href="" class="play" data-url="https://www.youtube.com/embed/XKEHn-pLucw" onclick="ga('send', 'event', 'button', 'click', 'playGalleryVideo5');"><img src="resources/images/gallery/video_img_03.jpg" alt="video image"></a>
+        <a href="resources/video/The Curve Ahead Episode3(The Silhouette).mp4" class="down" download onclick="ga('send', 'event', 'button', 'click', 'downloadGalleryVideo5');"></a>
+      </li>
+      <li class="v06">
+        <a href="" class="play" data-url="https://www.youtube.com/embed/zbxujmnmxYg" onclick="ga('send', 'event', 'button', 'click', 'playGalleryVideo6');"><img src="resources/images/gallery/video_img_06.jpg" alt="video image"></a>
+        <a href="resources/video/The Curve Ahead  Episode 4 (Attention to detail).mp4" class="down" download onclick="ga('send', 'event', 'button', 'click', 'downloadGalleryVideo6');"></a>
+      </li>
+      <!--li class="v07">
+        <a href="" class="play" data-url="https://www.youtube.com/embed/XKEHn-pLucw" onclick="ga('send', 'event', 'button', 'click', 'playGalleryVideo7');"><img src="resources/images/gallery/video_img_08.jpg" alt="video image"></a>
+        <a href="" class="down" download></a>
+      </li>
+      <li class="v08 left">
+        <a href="" class="play" data-url="https://www.youtube.com/embed/XKEHn-pLucw" onclick="ga('send', 'event', 'button', 'click', 'playGalleryVideo8');"><img src="resources/images/gallery/video_img_07.jpg" alt="video image"></a>
+        <a href="" class="down" download></a>
+      </li-->
+    </ul>
+  </div>
+
+  <div class="box_btns">
+    <div class="pages">
+      <a href="" onclick="clickPrev(); return false;" class="btn_page prev"></a>
+      <a href="" onclick="clickNext(); return false;" class="btn_page next"></a>
+    </div>
+    <ul class="btn_bottom">
+      <li><a href="" onclick="gBack(); return false;" class="back">BACK</a></li>
+      <!--li><a href="" onclick="gCtrl('photos.html'); return false;">PHOTOS</a></li>
+      <li><a href="" onclick="gCtrl('infomation.html'); return false;">PRODUCT INFOMATION</a></li-->
+    </ul>
+    <a href="resources/video/The Curve Ahead Videos.zip" onclick="ga('send', 'event', 'button', 'click', 'downloadAllGalleryVideo');" class="down">Download All</a>
+  </div>
+
+</article>
+<script type="text/javascript">
+  $(function(){
+    $('.play').on('click', function(e) {
+      var url = $(this).data('url') + '?autoplay=1&showinfo=0&fs=0&rel=0&wmode=transparent',
+        $wrap = $('<div><button type="button" class="btn-close"><span>close</span></button></div>').addClass('popup').appendTo('body'),
+        scrollTop = $(window).scrollTop();
+
+      $('html').addClass('show-popup');
+
+      $wrap.append('<iframe src="" frameborder="0" allowfullscreen></iframe>')
+        .find('iframe').attr({src:url});
+
+      $wrap.on('click', '.btn-close', function() {
+        $(this).closest('.popup').remove();
+        $('html').removeClass('show-popup');
+
+        $(window).scrollTop(scrollTop);
+      });
+      e.preventDefault();
+    });
+  });
+</script>

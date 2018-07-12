@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+@font-face { font-family: 'JosefinSans'; font-weight:300; font-style: normal; src: local('JosefinSans-Light'), local('JosefinSans Light'),
+	url(../fonts/JosefinSans-Light.eot),
+	url(../fonts/JosefinSans-Light.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/JosefinSans-Light.woff) format('woff'),
+	url(../fonts/JosefinSans-Light.ttf) format('truetype');
+}
+@font-face { font-family: 'TeXGyreAdventor'; font-weight:300; font-style: normal; src: local('texgyreadventor-regular'), local('texgyreadventor regular'),
+	url(../fonts/TeXGyreAdventor-Regular.eot),
+	url(../fonts/TeXGyreAdventor-Regular.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/TeXGyreAdventor-Regular.woff) format('woff'),
+	url(../fonts/texgyreadventor-regular.otf) format('opentype');
+}
