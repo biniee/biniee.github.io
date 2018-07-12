@@ -1,0 +1,123 @@
+<li {{#unless isAvailableStock}}class="sold-out"{{/unless}}
+    data-entry-number="{{entryNumber}}"
+    data-product-code="{{product.code}}"
+    data-product-base-code="{{product.baseProductCode}}"
+    data-is-pickup-item="{{isPickupItem}}"
+    data-is-set-cart-item="{{isSetCartItem}}"
+    data-total-base-price="{{totalBasePrice.price}}"
+    data-delivery-cost="{{deliveryCost.price}}"
+    data-total-employee-discounts="{{totalEmployeeDiscounts.price}}"
+    data-total-discounts="{{totalDiscounts.price}}"
+    data-total-real-price="{{totalRealPrice.price}}">
+    <div class="top">
+        <div class="ch-area">
+            <div class="check">
+                <input type="checkbox" id="prod_{{entryNumber}}" class="cartItemCheckbox" {{#if isChecked}}checked="checked"{{/if}} {{#unless isAvailableStock}}disabled="disabled"{{/unless}} />
+                <label for="prod_{{entryNumber}}"></label>
+            </div>
+            <label for="prod_{{entryNumber}}">{{#if isPickupItem}}매장픽업{{else}}택배배송{{/if}}</label>
+        </div>
+        <a href="#" class="btn-del deleteCartItemBtn">상품삭제</a>
+    </div>
+    {{#unless isSetCartItem}}
+        <div class="prod">
+            <img src="{{product.representationImage}}" alt="{{product.name}} 상품 썸네일" />
+        </div>
+        <div class="info">
+            <p class="t1">
+                <span class="brand">{{product.supplierName}}</span>
+                <span>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+            </p>
+            <p class="t2">{{product.name}}</p>
+            <p class="option">{{product.color}}, {{product.size}}</p>
+            <p class="btm">
+                {{#gt totalDiscounts.price 0}}<span class="discount">{{totalWishPrice.formattedPrice}}{{totalWishPrice.symbol}}</span>{{/gt}}
+                <span class="price">{{totalRealPrice.formattedPrice}} {{totalRealPrice.symbol}}</span>
+            </p>
+            <div class="prod-add">
+                <select class="sizeSelect" {{#if isPickupItem}}disabled="disabled"{{/if}}>
+                    <option value="{{product.code}}" selected="selected">{{product.size}}</option>
+                </select>
+                <div class="conts">
+                    <a href="#" class="bt-minus quantityMinus">-</a>
+                    <input type="text" class="quantity cartItemQuantity" value="{{quantity}}" data-original-quantity="{{quantity}}" readonly />
+                    <a href="#" class="bt-plus quantityPlus">+</a>
+                </div>
+            </div>
+            <dl class="delivery-info">
+                {{#if isPickupItem}}
+                    <dt>배송방법</dt>
+                    <dd>픽업</dd>
+                    <dt>픽업매장</dt>
+                    <dd>시리즈 이태원점</dd>
+                    <dt>방문예정</dt>
+                    <dd>{{receiveDate}}</dd>
+                    <dt>방문시간</dt>
+                    <dd>{{receiveTimeFrom}} ~ {{receiveTimeTo}}</dd>
+                {{else}}
+                    <dt>배송방법</dt>
+                    <dd>{{orderType}}</dd>
+                    <dt>배송비</dt>
+                    <dd>{{#if deliveryCost.price}}{{#gt deliveryCost.price 0}}{{deliveryCost.formattedPrice}}{{deliveryCost.symbol}}{{else}}무료{{/gt}}{{else}}무료{{/if}}</dd>
+                {{/if}}
+            </dl>
+        </div>
+    {{else}}
+        {{#cartItemReferences}}
+            <div class="setItem" data-product-base-code="{{product.baseProductCode}}">
+                <div class="prod">
+                    <img src="{{product.representationImage}}" alt="{{product.name}} 상품 썸네일" />
+                </div>
+                <div class="info">
+                    <p class="t1">
+                        <span class="brand">{{product.supplierName}}</span>
+                        <span>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+                    </p>
+                    <p class="t2">{{product.name}}</p>
+                    <p class="option">{{product.color}}, {{product.size}}</p>
+                    <p class="btm">
+                        {{#gt totalDiscounts.price 0}}<span class="discount">{{totalWishPrice.formattedPrice}}{{totalWishPrice.symbol}}</span>{{/gt}}
+                        <span class="price">{{totalRealPrice.formattedPrice}} {{totalRealPrice.symbol}}</span>
+                    </p>
+                    <div class="prod-add">
+                        <select class="sizeSelect" {{#if isPickupItem}}disabled="disabled"{{/if}}>
+                            <option value="{{product.code}}" selected="selected">{{product.size}}</option>
+                        </select>
+                        <div class="conts">
+                            <a href="#" class="bt-minus quantityMinus">-</a>
+                            <input type="text" class="quantity cartItemQuantity" value="{{quantity}}" data-original-quantity="{{quantity}}" readonly />
+                            <a href="#" class="bt-plus quantityPlus">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/cartItemReferences}}
+        <div class="info">
+            <dl class="delivery-info">
+                {{#if isPickupItem}}
+                    <dt>배송방법</dt>
+                    <dd>픽업</dd>
+                    <dt>픽업매장</dt>
+                    <dd>시리즈 이태원점</dd>
+                    <dt>방문예정</dt>
+                    <dd>{{receiveDate}}</dd>
+                    <dt>방문시간</dt>
+                    <dd>{{receiveTimeFrom}} ~ {{receiveTimeTo}}</dd>
+                {{else}}
+                    <dt>배송방법</dt>
+                    <dd>{{orderType}}</dd>
+                    <dt>배송비</dt>
+                    <dd>{{#if deliveryCost.price}}{{#gt deliveryCost.price 0}}{{deliveryCost.formattedPrice}}{{deliveryCost.symbol}}{{else}}무료{{/gt}}{{else}}무료{{/if}}</dd>
+                {{/if}}
+            </dl>
+        </div>
+    {{/unless}}
+    <div class="btn-area">
+        <a href="#" class="btn1 addToWishListBtn">관심상품</a>
+        {{#if isAvailableStock}}
+            <a href="#" class="btn2 buyNowBtn">즉시구매</a>
+        {{else}}
+            <a href="" class="btn3">품절</a>
+        {{/if}}
+    </div>
+</li>

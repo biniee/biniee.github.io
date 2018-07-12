@@ -1,0 +1,37 @@
+<li
+    data-order-number="{{orderNumber}}"
+    data-product-code="{{#is productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}"
+    data-product-img="{{product.representationImage}}"
+    data-product-name="{{product.name}}"
+    data-product-discount="{{#gt product.price.discountRate 0}}{{product.price.formattedWishPrice}}{{/gt}}"
+    data-product-price="{{#if orderNumber}}{{formattedPrice}}{{else}}{{product.price.formattedPrice}}{{/if}}">
+    {{#if orderNumber}}
+        <p class="t1">주문번호: {{orderNumber}}</p>
+        <p class="t2">{{orderCreatedDate}}일 구매</p>
+    {{/if}}
+    <div class="prod"><img src="{{product.representationImage}}" alt="{{product.name}}" /></div>
+    <div class="info">
+        <p class="t3">
+            <span class="brand">{{product.supplierName}}</span>
+            <span>{{#is productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+        </p>
+        <p class="t4">{{product.name}}</p>
+        <dl>
+            <dt>옵션</dt>
+            <dd>{{product.color}}, {{product.size}}</dd>
+            {{#gt quantity 0}}
+                <dt>수량</dt>
+                <dd>{{quantity}}</dd>
+            {{/gt}}
+            {{#if orderNumber}}
+                <!-- TODO : 오더일 경우 상품 판매 가격 표시는? -->
+                <dt>결제금액</dt>
+                <dd class="color">{{formattedPrice}}원</dd>
+            {{else}}
+                <dt>상품금액</dt>
+                <dd class="color">{{totalBasePrice.formattedPrice}}{{totalBasePrice.symbol}}</dd>
+            {{/if}}
+        </dl>
+        <a href="#" class="select selectProductBtn">상품선택</a>
+    </div>
+</li>

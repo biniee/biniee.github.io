@@ -1,0 +1,170 @@
+<li data-entry-code="{{entryCode}}" data-consignment-entry-code="{{consignmentEntryCode}}" data-origin-delivery-code="{{originDeliveryCode}}" {{#if selectedOrderEntryCode}}{{#is selectedOrderEntryCode entryCode}}style="opacity: 1;"{{/is}}{{/if}}>
+    <div class="ch-area">
+        <div class="check hs-gift"> <!-- 반품할 사은품이 있을 때, hs-gift 클래스명 줌 - 토스트 팝업 노출 -->
+            <input type="checkbox" class="orderItemCheckbox" {{#if selectedOrderEntryCode}}{{#is selectedOrderEntryCode entryCode}}checked="checked"{{/is}}{{/if}} id="checkbox_{{entryCode}}" />
+            <label for="checkbox_{{entryCode}}"></label>
+        </div>
+    </div>
+    <div class="prod">
+        <img src="{{product.representationImage}}" alt="{{product.name}}">
+    </div>
+    <div class="info">
+        <p class="t1">
+            <span class="brand">{{product.supplierName}}</span>
+            <span>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+        </p>
+        <p class="t2">{{product.name}}</p>
+        <dl class="option">
+            <dt>옵션</dt>
+            <dd>{{product.color}}, {{product.size}}</dd>
+            <dt>수량</dt>
+            <dd>{{quantity}}</dd>
+            <dt>상품금액</dt>
+            <dd class="price">{{formattedPrice}}원</dd>
+            {{#is product.productSaleType "SET"}}
+                <dd class="set"><a href="#">세트옵션보기</a></dd>
+            {{/is}}
+        </dl>
+    </div>
+    <div class="btm prod-add">
+        <p>{{displayedDeliveryType}}</p>
+        <div class="box">
+            <span>반품수량</span>
+            <div class="conts">
+                <a href="#" class="bt-minus quantityMinus" {{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}>-</a>
+                <input type="text" value="{{quantity}}" data-original-quantity="{{quantity}}" class="orderItemQuantity" readonly />
+                <a href="#" class="bt-plus quantityPlus" {{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}>+</a>
+            </div>
+        </div>
+    </div>
+    <select class="cause rmaOption" onchange="change(this)" {{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}>
+        <option value="" selected="selected">반품 사유를 선택해 주세요</option>
+        <option value="A01911">고객변심</option>
+        <option value="A01914">상품불량</option>
+        <option value="A01912">배송지연</option>
+        <option value="txtbox">직접입력</option><!--A01999-->
+    </select>
+    <div class="request-txt"><textarea placeholder="상품 반품 사유를 적어주세요." class="rmaReason"></textarea></div>
+</li>
+<!-- 세트 -->
+<!--<li>-->
+    <!--<div class="ch-area">-->
+        <!--<div class="check">-->
+            <!--<input type="checkbox" id="prod3" name="chk" />-->
+            <!--<label for="prod3"></label>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="prod"><img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일"></div>-->
+    <!--<div class="info">-->
+        <!--<p class="t1">-->
+            <!--<span class="brand">KOLON SPORT</span>-->
+            <!--<span>QEBBM17504NAY</span>-->
+        <!--</p>-->
+        <!--<p class="t2">포멀 쿨 WOOL 수트</p>-->
+        <!--<dl class="option">-->
+            <!--<dt>수량</dt>-->
+            <!--<dd>1</dd>-->
+            <!--<dt>결제금액</dt>-->
+            <!--<dd class="price">103,500원</dd>-->
+            <!--<dd class="set"><a href="#">세트옵션보기</a></dd>-->
+        <!--</dl>-->
+    <!--</div>-->
+    <!--<div class="btm mb">-->
+        <!--<p>배송완료</p>-->
+    <!--</div>-->
+    <!--<ul class="set-prod">-->
+        <!--<li>-->
+            <!--<div class="ch-area">-->
+                <!--<div class="check">-->
+                    <!--<input type="checkbox" id="prod4" name="chk" />-->
+                    <!--<label for="prod4"></label>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="prod"><img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일"></div>-->
+            <!--<div class="info">-->
+                <!--<p class="t1">-->
+                    <!--<span class="brand">KOLON SPORT</span>-->
+                    <!--<span>QEBBM17504NAY</span>-->
+                <!--</p>-->
+                <!--<p class="t2">포멀 쿨 WOOL 수트 자켓</p>-->
+                <!--<dl class="option">-->
+                    <!--<dt>옵션</dt>-->
+                    <!--<dd>XXX</dd>-->
+                    <!--<dt>수량</dt>-->
+                    <!--<dd>1</dd>-->
+                    <!--<dt>상품금액</dt>-->
+                    <!--<dd class="price">103,500원</dd>-->
+                <!--</dl>-->
+            <!--</div>-->
+            <!--<div class="btm prod-add set">-->
+                <!--<div class="box">-->
+                    <!--<span>반품수량</span>-->
+                    <!--<div class="conts">-->
+                        <!--<a href="#" class="bt-minus">-</a>-->
+                        <!--<input type="text" value="1"/>-->
+                        <!--<a href="#" class="bt-plus">+</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<select class="cause cause-size">-->
+                <!--<option>교환사이즈 선택</option>-->
+                <!--<option>XXX</option>-->
+                <!--<option>XXX</option>-->
+                <!--<option>XXX</option>-->
+            <!--</select>-->
+            <!--<div class="request-txt"><textarea placeholder="상품 반품 사유를 적어주세요."></textarea></div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="ch-area">-->
+                <!--<div class="check">-->
+                    <!--<input type="checkbox" id="prod5" name="chk" />-->
+                    <!--<label for="prod5"></label>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="prod"><img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일"></div>-->
+            <!--<div class="info">-->
+                <!--<p class="t1">-->
+                    <!--<span class="brand">KOLON SPORT</span>-->
+                    <!--<span>QEBBM17504NAY</span>-->
+                <!--</p>-->
+                <!--<p class="t2">포멀 쿨 WOOL 수트 팬츠</p>-->
+                <!--<dl class="option">-->
+                    <!--<dt>옵션</dt>-->
+                    <!--<dd>XXX</dd>-->
+                    <!--<dt>수량</dt>-->
+                    <!--<dd>1</dd>-->
+                    <!--<dt>결제금액</dt>-->
+                    <!--<dd class="price">103,500원</dd>-->
+                <!--</dl>-->
+            <!--</div>-->
+            <!--<div class="btm prod-add set">-->
+                <!--<div class="box">-->
+                    <!--<span>반품수량</span>-->
+                    <!--<div class="conts">-->
+                        <!--<a href="#" class="bt-minus">-</a>-->
+                        <!--<input type="text" value="1"/>-->
+                        <!--<a href="#" class="bt-plus">+</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<select class="cause cause-size">-->
+                <!--<option>교환사이즈 선택</option>-->
+                <!--<option>XXX</option>-->
+                <!--<option>XXX</option>-->
+                <!--<option>XXX</option>-->
+            <!--</select>-->
+            <!--<div class="request-txt"><textarea placeholder="상품 반품 사유를 적어주세요."></textarea></div>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<select class="cause" onchange="change(this)">-->
+        <!--<option>반품 사유를 선택해 주세요</option>-->
+        <!--<option>A/S</option>-->
+        <!--{{!--<option value="size">사이즈교환</option>--}}-->
+        <!--<option>제품불량교환</option>-->
+        <!--<option>배송착오</option>-->
+        <!--<option>고객변심</option>-->
+        <!--<option value="txtbox">직접입력</option>-->
+    <!--</select>-->
+    <!--<div class="request-txt"><textarea placeholder="상품 반품 사유를 적어주세요."></textarea></div>-->
+<!--</li>-->
+<!-- //세트 -->

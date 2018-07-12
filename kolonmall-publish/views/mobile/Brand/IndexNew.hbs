@@ -1,0 +1,205 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title=category.name}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/product/grid"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+
+        <div class="brand-main-new">
+            <div class="wrap-txt">
+                <h2>COURONNE</h2>
+                <p>Simplicity, Timeless chic, Exquisite color<br/>Modern Luxury New class brand</p>
+            </div>       
+        </div>
+
+        <!-- navigation -->
+        <div class="scr-navi">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="">홈</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="">브랜드소개</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="">매장안내</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="">가방</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="">슈즈</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="">액세서리</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="">키즈</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="">시즌스포츠</a>
+                </div>
+            </div>
+        </div>
+        <!-- // navigation -->     
+
+        <article class="brand-slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="/_ui/img/m/temp/brand-top01.jpg" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="/_ui/img/m/temp/brand-top02.jpg" />
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <div class="prod-list-top">
+            <h3>SHOP IN BRAND</h3>
+        </div>
+        <article class="shop-list">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop01.jpg" alt="brand image">
+                    <p>ACROPOLIS</p>
+                </div>
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop02.jpg" alt="brand image">
+                    <p>ARMEDANGELS</p>
+                </div>
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop03.jpg" alt="brand image">
+                    <p>ADD</p>
+                </div>
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop01.jpg" alt="brand image">
+                    <p>ACROPOLIS</p>
+                </div>
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop02.jpg" alt="brand image">
+                    <p>ARMEDANGELS</p>
+                </div>
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop03.jpg" alt="brand image">
+                    <p>ADD</p>
+                </div>
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop01.jpg" alt="brand image">
+                    <p>ACROPOLIS</p>
+                </div>
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop02.jpg" alt="brand image">
+                    <p>ARMEDANGELS</p>
+                </div>
+                <div class="shop swiper-slide">
+                    <img src="/_ui/img/m/temp/brand-shop03.jpg" alt="brand image">
+                    <p>ADD</p>
+                </div>
+            </div>
+        </article>
+
+         <article class="list2-prod">
+            <div class="prod-list-top mt2">
+                <h3>신상품</h3>
+            </div>
+            {{#fetch_product "mobile" "new" parameters 6}}
+                {{{render_product "mobile" "grid" product parameters}}}
+            {{/fetch_product}}
+        </article> 
+
+        <div class="prod-list-top">
+            <h3>브랜드 이슈</h3>
+        </div>
+        <article class="prod-big-bnr hv-sbtit">
+            <ul>
+                <li class="item h-space" style="{{hide_item_gte @index 3}}">
+                    <a href="#">
+                        <img src="/_ui/img/m/temp/brand-bnr01.jpg" />
+                        <div class="txt-box white">
+                            <span class="brand">COURONNE</span>
+                            <span class="tit">지갑<br/>패션의 포인트가 되다</span>
+                            <span class="txt">스테파니, 클리패스, 에르나, 볼리온</span>
+                        </div>
+                        <div class="sub-tit line02">NEW<br/>IN</div> <!-- text 2줄 이상일 때, class="line02" 추가 / 한줄일 때 생략  -->
+                    </a>
+                </li>
+                <li class="item h-space" style="{{hide_item_gte @index 3}}">
+                    <a href="#">
+                        <img src="/_ui/img/m/temp/brand-bnr02.jpg" />
+                        <div class="txt-box white">
+                            <span class="brand">COURONNE</span>
+                            <span class="tit">C-QUATRE<br/>TROU</span>
+                            <span class="txt">모두의 눈길을 사로잡은 C-Quatre trou</span>
+                        </div>
+                        <div class="sub-tit">GIFT</div> <!-- text 2줄 이상일 때, class="line02" 추가 / 한줄일 때 생략  -->
+                    </a>
+                </li>
+                <li class="item h-space" style="{{hide_item_gte @index 3}}">
+                    <a href="#">
+                        <img src="/_ui/img/m/temp/brand-bnr03.jpg" />
+                        <div class="txt-box white">
+                            <span class="brand">COURONNE</span>
+                            <span class="tit">그녀가 꿈꾸는 BAG<br/>LUCIA</span>
+                            <span class="txt">그녀가 꿈꾸는 Bag, Lucia</span>
+                        </div>
+                        <div class="sub-tit line02">NEW<br/>IN</div> <!-- text 2줄 이상일 때, class="line02" 추가 / 한줄일 때 생략  -->
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="bnr-more contents-default-more-btn">더보기</button>
+        </article>
+
+
+        <article class="list2-prod">
+            <div class="prod-list-top mt2">
+                <h3>추천상품</h3>
+            </div>
+            {{#fetch_product "mobile" "" parameters 6}}
+                {{{render_product "mobile" "grid" product parameters}}}
+            {{/fetch_product}}
+        </article>
+
+
+        {{!-- {{#fetch_banner "MOBILE" "brand" "1" "issue-and-deal"}}
+            {{#if banners.page.totalCount}}
+                <article class="prod-big-bnr hv-sbtit">
+                    <div class="prod-list-top">
+                        <h3>ISSUE &amp; DEAL</h3>
+                        <a href="" class="more">ISSUE &amp; DEAL 바로가기</a>
+                    </div>
+                    {{{render_banner "mobile" "contents/flicking" banners}}}
+                </article>
+            {{/if}}
+        {{/fetch_banner}} --}}
+
+        {{!-- <article class="list2-prod">
+            <div class="prod-list-top mt2">
+                <h3>BEST ITEMS</h3>
+            </div>
+            {{#fetch_product "mobile" "best" parameters 6}}
+                {{{render_product "mobile" "grid" product parameters}}}
+            {{/fetch_product}}
+        </article> --}}
+
+        {{!-- <div class="brand-bts">
+            <a href="javascript: alert('준비중 입니다 :)');">매장안내</a>
+            <a href="/Brand/{{category.id}}/Intro">브랜드 소개</a>
+        </div> --}}
+
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

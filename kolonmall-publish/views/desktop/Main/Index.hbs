@@ -1,0 +1,108 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="홈"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/precompiles/product/grid"}}
+            {{precompile "desktop/components/product/grid"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="main">
+            <!-- visual-slide -->
+            {{#fetch_banner "DESKTOP" "page" "main" "desktop-main"}}
+                {{#if banners.page.totalCount}}
+                    {{{render_desktop_main_banner banners}}}
+                {{/if}}
+            {{/fetch_banner}}
+            <!-- // visual-slide -->
+            
+            <!-- prod-wrap -->
+            <article class="prod-wrap">
+                {{#fetch_product "desktop" "new" null 10}}
+                    <h3 class="tit">NEW ARRIVALS</h3>
+                    {{{render_product "desktop" "grid" product parameters}}}
+                {{/fetch_product}}
+            </article>
+            <!-- // prod-wrap -->
+
+            <!-- thumb-wrap -->
+            {{#fetch_banner "DESKTOP" "page" "main" "online-only"}}
+                {{#if banners.page.totalCount}}
+                    <article class="thumb-wrap">
+                        <h3 class="tit">ONLINE ONLY</h3>
+                        {{{render_banner "desktop" "contents/default" banners}}}
+                    </article>
+                {{/if}}
+            {{/fetch_banner}}
+            <!-- // thumb-wrap -->
+
+            {{#if gnb}}
+                {{#if gnb.brandCategory}}
+                    {{#if gnb.brandCategory.subcategories}}
+                        <!-- prod-wrap -->
+                        <article class="prod-wrap brand">
+                            <h3 class="tit">BRAND BEST</h3>
+                            <ul class="brand-list" id="mainBrandBestMenuList">
+                                {{#gnb.brandCategory.subcategories}}
+                                    <li><a href="#" {{#is @index 0}}class="active"{{/is}} data-category-id="{{id}}">{{name}}</a></li>
+                                {{/gnb.brandCategory.subcategories}}
+                            </ul>
+                            <div class="more-wrap">
+                                <a id="mainBrandBestLinkArea" href="{{gnb.brandCategory.subcategories.[0].url}}" class="more">BRAND MAIN</a>
+                            </div>
+                            <div id="mainBrandBestContentsArea">
+                            </div>
+                        </article>
+                        <!-- // prod-wrap -->
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+
+            <!-- thumb-wrap -->
+            {{#fetch_banner "DESKTOP" "page" "main" "special-price"}}
+                {{#if banners.page.totalCount}}
+                    <article class="thumb-wrap special">
+                        <h3 class="tit">SPECIAL PRICE</h3>
+                        {{{render_banner "desktop" "contents/flicking" banners}}}
+                    </article>
+                {{/if}}
+            {{/fetch_banner}}
+            <!-- // thumb-wrap -->
+
+            <!-- prod-wrap -->
+            <article class="prod-wrap">
+                <h3 class="tit">SALE</h3>
+                {{#fetch_product "desktop" "sale" null 15}}
+                    {{{render_product "desktop" "grid" product parameters}}}
+                {{/fetch_product}}
+            </article>
+            <!-- // prod-wrap -->
+
+            <!-- thumb-wrap -->
+            {{#fetch_banner "DESKTOP" "page" "main" "issue-and-deal"}}
+                {{#if banners.page.totalCount}}
+                    <article class="thumb-wrap issue">
+                        <h3 class="tit">ISSUE &amp; DEALS</h3>
+                        {{{render_banner "desktop" "contents/flicking" banners}}}
+                    </article>
+                {{/if}}
+            {{/fetch_banner}}
+            <!-- // thumb-wrap -->
+
+            <!-- banner -->
+            {{#fetch_banner "DESKTOP" "page" "main" "footer"}}
+                {{#if banners.page.totalCount}}
+                    {{{render_banner "desktop" "line/default" banners}}}
+                {{/if}}
+            {{/fetch_banner}}
+            <!-- // banner -->
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

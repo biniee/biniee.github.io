@@ -1,0 +1,63 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="브랜드 인트로"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <nav class="wrap-navi">
+                <h3>{{category.name}}<span>{{category.totalNumber}}</span></h3>
+                {{#if category.subcategories}}
+                    <dl class="sub-menu">
+                        {{#category.subcategories}}
+                            {{#if ../selectedCategory}}
+                                {{#is ../selectedCategory.id id}}
+                                    <dt><a href="{{url}}">{{name}}</a></dt>
+                                {{else}}
+                                    <dd><a href="{{url}}">{{name}}</a></dd>
+                                {{/is}}
+                            {{/if}}
+                        {{/category.subcategories}}
+                        <!--<dd class="bot"><a href="#">시리즈 자켓특집</a></dd>-->
+                    </dl>
+                {{/if}}
+
+                {{>desktop/partials/lnb-banner}}
+            </nav>
+             <!-- //navigation -->
+
+             <article class="brand-cont contents">
+                
+                {{#if brandIntro}}
+                <!-- brand-info -->
+                <article class="brand-info">
+                    {{{brandIntro.content}}}
+
+                    {{#if brandIntro.collection}}
+                        <!-- collection -->
+                        <article class="collection">
+                            <h4 class="tit">COLLECTION</h4>
+                            <div class="collection-list">
+                                {{#brandIntro.collection}}
+                                <div class="item">
+                                    <a href="{{link}}" target="_blank"><img src="{{imagePath}}" alt=""></a>
+                                </div>
+                                {{/brandIntro.collection}}
+                            </div>
+                        </article>
+                        <!-- // collection -->
+                    {{/if}}
+                </article>
+                <!-- // brand-info -->
+                {{/if}}
+             </article>
+
+
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

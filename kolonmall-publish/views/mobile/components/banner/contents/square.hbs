@@ -1,0 +1,21 @@
+<div class="square-banner">
+    <a href="{{link}}">
+        <div class="fix-ratio-106 bg-image" style="background-image:url('{{content.bgImage}}')"></div>
+        <div class="txt-box {{content.theme}}">
+            <span class="brand">
+                {{#if content.brand1}}<span>{{content.brand1}}</span>{{/if}}
+                {{#if content.brand2}}<span>{{content.brand2}}</span>{{/if}}
+                {{#if content.brand3}}<span>{{content.brand3}}</span>{{/if}}
+            </span>
+            {{#if content.title}}<span class="tit">{{{nl2br content.title}}}</span>{{/if}}
+            {{#if content.subtitle}}<span class="txt">{{{nl2br content.subtitle}}}</span>{{/if}}
+        </div>
+        {{#if content.tag}}
+            {{#line_cnt content.tag 2}}
+                <div class="sub-tit line02">{{{nl2br content.tag}}}</div>
+            {{else}}
+                <div class="sub-tit">{{content.tag}}</div>
+            {{/line_cnt}}
+        {{/if}}
+    </a>
+</div>

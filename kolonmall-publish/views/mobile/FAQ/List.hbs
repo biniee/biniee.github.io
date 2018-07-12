@@ -1,0 +1,80 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="고객센터"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="on" href="/FAQ">FAQ</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Contact">1:1문의</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/AfterSales/Warranty">A/S안내</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Notice">공지사항</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/GuestOrder">비회원주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/eKOLON/Point">eKOLON멤버십</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Compensation/Delay">고객보상제</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Proposal/Add">제휴및광고제안</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <div class="spop-bnr">
+                <a href="#"><img src="/_ui/img/m/temp/spot-bnr2.jpg" alt="" /></a>
+                <a href="#" class="spop-close">닫기</a>
+            </div>
+
+            <div class="cs-depth3">
+                <ul>
+                    {{#faqCategories}}
+                        <li {{#is ../currentFaqCategory.nodeId nodeId}}class="on"{{/is}}><a href="/FAQ/{{nodeId}}/List">{{nodeName}}</a></li>
+                    {{/faqCategories}}
+                </ul>
+            </div>
+
+            <article class="cs-faq">
+                <h3 class="hidden">고객센터 FAQ 본문내용</h3>
+                <h4>포인트 관련 질문</h4>
+                <ul class="point-sort">
+                    {{#faqSubCategories}}
+                        <li {{#if ../currentFaqSubCategory}}{{#is ../currentFaqSubCategory.nodeId nodeId}}class="on"{{/is}}{{else}}{{#is @index 0}}class="on"{{/is}}{{/if}}><a href="/FAQ/{{../currentFaqCategory.nodeId}}/List/{{nodeId}}">{{nodeName}}</a></li>
+                    {{/faqSubCategories}}
+                </ul>
+                <ul class="toggle-list">
+                    {{#faqItems}}
+                        {{>mobile/precompiles/faq/faq-item}}
+                    {{/faqItems}}
+                </ul>
+                <h4>자주 묻는 질문 TOP 5</h4>
+                <ul class="toggle-list">
+                    {{#topFive}}
+                        {{>mobile/precompiles/faq/faq-item}}
+                    {{/topFive}}
+                </ul>
+            </article>
+
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

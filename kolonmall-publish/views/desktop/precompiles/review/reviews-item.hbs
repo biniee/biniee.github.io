@@ -1,0 +1,27 @@
+<div class="grade-wrap">
+    <div class="grade">
+        <div class="star" data-grade="{{rating}}"></div>
+        <div class="content">
+            {{#if imageFiles}}
+            <p class="thumb">
+                {{#imageFiles}}
+                    <img src="{{../imageURL}}/{{filePath}}/{{fileName}}" alt="리뷰 이미지" />
+                {{/imageFiles}}
+            </p>
+            {{/if}}
+            <p class="title">{{headline}}</p>
+            <p>{{comment}}</p>
+            <span class="date">{{date}}</span>
+        </div>
+        <div class="aside">
+            <div class="share">
+                <a href="javascript:alert('준비 중입니다.');" class="facebook">페이스북</a>
+                <a href="javascript:alert('준비 중입니다.');" class="kakao">카카오</a>
+                <a href="javascript:alert('준비 중입니다.');" class="url">url</a>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-line btn-small" data-product-code="{{product.code}}" data-comment-seq="{{commentSeq}}">삭제하기</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-menu title="고객센터"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/FAQ">FAQ</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Contact">1:1문의</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="on" href="/AfterSales/Warranty">A/S안내</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Notice">공지사항</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/GuestOrder">비회원주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/eKOLON/Point">eKOLON멤버십</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Compensation/Delay">고객보상제</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Proposal/Add">제휴및광고제안</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <div class="cs-depth3 col2">
+                <ul>
+                    <li><a href="/AfterSales/Warranty">품질보증기간 및 보상기준</a></li>
+                    <li class="on"><a href="/AfterSales/RepairGuide">수선품 접수 안내</a></li>
+                    <li><a href="/AfterSales/RepairCoverage">수선 가능 범위 및 가격</a></li>
+                    <li><a href="/AfterSales/RepairProgress">수선품 진행 조회</a></li>
+                </ul>
+            </div>
+
+            <article class="cs-as">
+                <h3 class="hidden">고객센터 A/S 본문내용</h3>
+                <dl class="as-txt">
+                    <dt>접수안내</dt>
+                    <dd>
+                        <ul>
+                            <li>수선품 접수는 구입매장 또는 인근지역내 브랜드 매장을 방문하시어 의뢰하여 주십시오.</li>
+                            <li>인근 지역내에 당사 매장이 없을 경우, 고객상담팀으로 우편 또는 택배로 보내주시기 바랍니다.</li>
+                            <li>수선작업에 소요되는 기간은 평균적으로 매장접수일로 부터 1주일 이내 이며 수선 작업이 어려운 경우 2주정도 작업기간이 소요됩니다. </li>
+                            <li>단, 염색 , 가공, 수입자재, 복합수선 등 수선 항목에 따라 기간이 지체될수 있습니다.</li>
+                            <li>내구성이 다하였거나 오래된 제품일 경우 수선이 불가 할 수도 있습니다.</li>
+                        </ul>
+                    </dd>
+                    <dt>수선품 처리과정</dt>
+                    <dd class="as-step">
+                        <p>저희 (주)코오롱 Fnc부문에서는 맡겨주신 수선품을 정성껏 손질하여 드립니다.</p>
+                    </dd>
+                    <dd>
+                        <img src="/_ui/img/m/as-step.jpg" alt="매장 -> 고객상담실 -> 수선작업실 -> 고객상담실 -> 매장" />
+                    </dd>
+                    <dt>수선품 접수주소</dt>
+                    <dd>
+                        <ul>
+                            <li>고객상담팀(동탄/전 브랜드 의류, 용품) : <br />경기도 화성시 동탄면 동탄산단10길74 코오롱 인더스트리(주) FnC부문 </li>
+                            <li>고객상담팀 ○○○ 브랜드 담당자 앞(1588-7667)고객상담팀 (부산 / 코오롱 스포츠 신발, 헤드 신발, 슈콤마보니 신발) : 부산광역시 해운대구 양운로 52 (좌동) 코오롱 세이브 4층 (051-622-1082,1084)</li>
+                            <li>엘로드클럽 : 경기도 안양시 동안구 관악대로 360 </li>
+                            <li>코오롱세이브프라자 5층 (031-421-3061)</li>
+                            <li>콜센터 : 1588 - 7667</li>
+                            <li>콜센터 운영시간 안내 : 월요일~금요일 : 오전 9시 30분 - 오후 6시 / 토요일, 일요일, 공휴일 휴무</li>
+                            <li>고객명, 주소, 연락처, 수선요구사항 기재하여 동봉해 주시기 바랍니다.</li>
+                            <li>직접 택배로 보내실 경우 보내는 택배비용은 고객님께서 선불로 부담해주셔야 하고, 수선 처리 후 발송 택배 비용은 당사에서 부담합니다.</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </article>
+
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

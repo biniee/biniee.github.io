@@ -1,0 +1,32 @@
+{{!-- 상품명 3줄, 1행에 1개씩 나열되는 직렬구조 리스트 --}}
+{{#if product}}
+    {{#if product.results}}
+        <ul class="productResultArea">
+            {{#product.results}}
+                {{>mobile/precompiles/product/list}}
+            {{/product.results}}
+        </ul>
+    {{/if}}
+    {{#if product.page}}
+        {{#gt product.page.totalCount product.page.perPage}}
+            <a href="#" class="bnr-more productMoreBtn"
+               data-component-type="list"
+               data-category="{{parameters.category}}"
+               data-sizes="{{parameters.sizes}}"
+               data-colors="{{parameters.colors}}"
+               data-suppliers="{{parameters.suppliers}}"
+               data-price-ranges="{{parameters.priceRanges}}"
+               data-sort="{{parameters.sort}}"
+               data-is-best="{{parameters.isBest}}"
+               data-is-new="{{parameters.isNew}}"
+               data-on-sale="{{parameters.onSale}}"
+               data-per-page="{{product.page.perPage}}"
+               data-page-number="{{product.page.currentPage}}"
+               data-total-count="{{product.page.totalCount}}">더보기</a>
+        {{else}}
+            <a href="#" class="productMoreBtn" style="display: none;"></a>
+        {{/gt}}
+    {{else}}
+        <a href="#" class="productMoreBtn" style="display: none;"></a>
+    {{/if}}
+{{/if}}

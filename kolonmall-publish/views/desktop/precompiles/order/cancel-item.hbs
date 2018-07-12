@@ -1,0 +1,60 @@
+<div class="listWrapper" data-entry-code="{{entryCode}}" data-consignment-entry-code="{{consignmentEntryCode}}" {{#if selectedOrderEntryCode}}{{#is selectedOrderEntryCode entryCode}}style="opacity: 1;"{{/is}}{{/if}}>
+    <div class="list">
+        <p class="select-order">
+            <span class="checkbox">
+                <input type="checkbox" class="orderItemCheckbox" {{#if selectedOrderEntryCode}}{{#is selectedOrderEntryCode entryCode}}checked="checked"{{/is}}{{/if}} id="checkbox_{{entryCode}}">
+                <i></i>
+            </span>
+        </p>
+        <p class="thumb"><img src="{{product.representationImage}}" alt="{{product.name}}"></p>
+        <div class="product">
+            <h4>
+                {{product.supplierName}}
+                <small>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</small>
+            </h4>
+            <p>{{product.name}}</p>
+            <ul class="meta">
+                <li>
+                    <em>수량</em>
+                    <span>{{quantity}}</span>
+                </li>
+                <li>
+                    <em>옵션</em>
+                    <span>{{product.color}}, {{product.size}}</span>
+                </li>
+            </ul>
+            {{#is product.productSaleType "SET"}}
+                <div class="options"><a href="#" class="btn-option">세트옵션보기</a></div>
+            {{/is}}
+        </div>
+        <div class="range">
+            <div class="spinner">
+                <input type="text" value="{{quantity}}" data-original-quantity="{{quantity}}" class="orderItemQuantity" readonly>
+                <button type="button" class="plus quantityPlus" {{#if selectedOrderEntryCode}}{{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}{{/if}}>수량 증가</button>
+                <button type="button" class="minus quantityMinus" {{#if selectedOrderEntryCode}}{{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}{{/if}}>수량 감소</button>
+            </div>
+        </div>
+        <p class="price">{{formattedPrice}}원</p>
+        <p class="state">
+            <span>{{displayedDeliveryType}}</span>
+        </p>
+    </div>
+    <div class="reason-wrap">
+        <div class="reason">
+            <p>
+                <span class="select">
+                    <select class="rmaOption" {{#if selectedOrderEntryCode}}{{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}{{/if}}>
+                        <option value="" selected="selected">취소 사유를 선택해 주세요</option>
+                        <option value="A01911">고객변심</option>
+                        <option value="A01914">상품불량</option>
+                        <option value="A01912">배송지연</option>
+                        <option value="txtbox" class="direct">직접입력</option><!--A01999-->
+                    </select>
+                </span>
+            </p>
+            <p class="direct-textarea">
+                <textarea placeholder="취소 사유를 간략히 적어주세요." class="rmaReason"></textarea>
+            </p>
+        </div>
+    </div>
+</div>

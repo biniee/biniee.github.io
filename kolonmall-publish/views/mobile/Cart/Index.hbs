@@ -1,0 +1,176 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-x title="장바구니"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/cart/cart-item"}}
+            {{precompile "mobile/precompiles/cart/gift-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+            <!-- 장바구니 -->
+            <form name="input_form" action="/Cart/PrepareOrder" method="post" id="cartForm">
+                <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                <input type="hidden" name="entryNo" ID="entryNo" />
+                <article class="cart">
+                    <div class="top">
+                        <div class="ch-area">
+                            <div class="check">
+                                <input type="checkbox" id="selectAllCheckbox" />
+                                <label for="selectAllCheckbox"></label>
+                            </div>
+                            <label for="selectAllCheckbox">전체{{#if cart.items}}({{length cart.items}}){{/if}}</label>
+                        </div>
+                        <a href="#" class="btn-del" id="deleteSelectedItemsBtn">선택상품삭제</a>
+                    </div>
+                    <div class="cont" id="cartItemListWrapper">
+                        {{#if cart.items}}
+                            {{!--cart.code--}}
+                            <!-- 장바구니 상품 -->
+                            <ul class="c-list" id="cartItemList">
+                                {{#cart.items}}
+                                    {{>mobile/precompiles/cart/cart-item}}
+                                {{/cart.items}}
+
+                                <!-- 묶음배송 -->
+                                <!--<li>-->
+                                    <!--<div class="top">-->
+                                        <!--<div class="ch-area">-->
+                                            <!--<div class="check">-->
+                                                <!--<input type="checkbox" id="prod4" name="chk" />-->
+                                                <!--<label for="prod4"></label>-->
+                                            <!--</div>-->
+                                            <!--<label for="prod4">택배배송</label>-->
+                                        <!--</div>-->
+                                        <!--<a href="#" class="btn-del">상품삭제</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="prod">-->
+                                        <!--<img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일" />-->
+                                    <!--</div>-->
+                                    <!--<div class="info">-->
+                                        <!--<p class="t1">-->
+                                            <!--<span class="brand">KOLON SPORT</span>-->
+                                            <!--<span>QEBBM17504NAY</span>-->
+                                        <!--</p>-->
+                                        <!--<p class="t2">여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG</p>-->
+                                        <!--<p class="option">다크크레이, XXX</p>-->
+                                        <!--<p class="btm">-->
+                                            <!--<span class="discount">140,000원</span>-->
+                                            <!--<span class="price">103,500원</span>-->
+                                        <!--</p>-->
+                                        <!--<div class="prod-add">-->
+                                            <!--<select>-->
+                                                <!--<option>XXX</option>-->
+                                                <!--<option>XXX</option>-->
+                                                <!--<option>XXX</option>-->
+                                            <!--</select>-->
+                                            <!--<div class="conts">-->
+                                                <!--<a href="#" class="bt-minus">-</a>-->
+                                                <!--<input type="text" value="1"/>-->
+                                                <!--<a href="#" class="bt-plus">+</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<dl class="delivery-info">-->
+                                            <!--<dt>배송방법</dt>-->
+                                            <!--<dd>택배</dd>-->
+                                            <!--<dt>배송비</dt>-->
+                                            <!--<dd>무료</dd>-->
+                                        <!--</dl>-->
+                                    <!--</div>-->
+                                    <!--<div class="prod">-->
+                                        <!--<img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일" />-->
+                                    <!--</div>-->
+                                    <!--<div class="info">-->
+                                        <!--<p class="t1">-->
+                                            <!--<span class="brand">KOLON SPORT</span>-->
+                                            <!--<span>QEBBM17504NAY</span>-->
+                                        <!--</p>-->
+                                        <!--<p class="t2">여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG</p>-->
+                                        <!--<p class="option">다크크레이, XXX</p>-->
+                                        <!--<p class="btm">-->
+                                            <!--<span class="discount">140,000원</span>-->
+                                            <!--<span class="price">103,500원</span>-->
+                                        <!--</p>-->
+                                        <!--<div class="prod-add">-->
+                                            <!--<select>-->
+                                                <!--<option>XXX</option>-->
+                                                <!--<option>XXX</option>-->
+                                                <!--<option>XXX</option>-->
+                                            <!--</select>-->
+                                            <!--<div class="conts">-->
+                                                <!--<a href="#" class="bt-minus">-</a>-->
+                                                <!--<input type="text" value="1"/>-->
+                                                <!--<a href="#" class="bt-plus">+</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<dl class="delivery-info">-->
+                                            <!--<dt>배송방법</dt>-->
+                                            <!--<dd>택배</dd>-->
+                                            <!--<dt>배송비</dt>-->
+                                            <!--<dd>무료</dd>-->
+                                        <!--</dl>-->
+                                    <!--</div>-->
+                                    <!--<div class="btn-area">-->
+                                        <!--<a href="#" class="btn1">관심상품</a>-->
+                                        <!--<a href="#" class="btn2">즉시구매</a>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!-- //묶음배송 -->
+                            </ul>
+                        {{else}}
+                            <h3 class="empty">장바구니에 담긴 상품이 없습니다.</h3>
+                        {{/if}}
+
+                        <div id="cartGiftArea">
+                            {{#if hasGiftItems}}
+                                {{>mobile/precompiles/cart/gift-list siteFirstFreeGiftItems=siteFirstFreeGiftItems siteFreeGiftItems=siteFreeGiftItems}}
+                            {{/if}}
+                        </div>
+                    </div>
+                </article>
+                <div class="notice">
+                    <h3>장바구니 이용안내</h3>
+                    <ul>
+                        <li>택배상품은 30일간 보관됩니다. 장기간 보관을 원하실 경우 [관심상품 담기]를 이용해 주세요.</li>
+                        <li>매장픽업 상품은 장바구니에 보관 후 1시간 안에 결제를 하셔야 하며 결제하지 않은 상품은 자동으로 삭제됩니다.</li>
+                        <li>택배 상품과 매장픽업 상품은 한번에 주문이 불가하오니 분리하여 주문하여 주셔야 합니다.</li>
+                    </ul>
+                </div>
+
+                {{#if cart.items}}
+                    <!-- 총 주문 금액 -->
+                    <div class="total-price">
+                        <dl>
+                            <dt class="total">총 주문금액</dt>
+                            <dd class="total"><strong id="totalRealPrice"></strong>{{cart.totalPrice.totalPrice.symbol}}</dd>
+                            <dt>총 상품금액</dt>
+                            <dd id="totalBasePrice"></dd>
+                            <dt>배송비</dt>
+                            <dd id="totalDeliveryCost"></dd>
+                            <dt>총 할인금액</dt>
+                            <dd id="totalDiscounts"></dd>
+                            <!--임직원 할인 : cart.totalStaffDiscounts || 0)*1 원-->
+                        </dl>
+                    </div>
+                    <a href="#" class="btn-order cartSubmitBtn">선택상품 주문하기</a>
+                    <!-- //총 주문 금액 -->
+
+                    <!-- 총 주문 금액: fixed -->
+                    <div class="total-price-fixed">
+                        <div class="total">
+                            <span>총 주문금액</span>
+                            <span>{{cartTotalPrice}}<i>원</i></span>
+                        </div>
+                        <a href="#" class="btn-order cartSubmitBtn">주문하기</a>
+                    </div>
+                    <!-- //총 주문 금액: fixed -->
+                {{/if}}
+            </form>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

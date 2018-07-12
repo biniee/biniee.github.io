@@ -1,0 +1,62 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+
+            <article class="cs-as as-pop">
+                <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                <h1>{{repairItem.custNm}}님의 {{repairItem.styleColorCd}} 제품에 <br />대한 수선 진행 현황 입니다.</h1>
+                <div class="as-inquiry">
+                    <ul class="pop-result">
+                        <li>
+                            <p class="tit">
+                                <span>접수일</span>
+                                <small>상담일 접수기준</small>
+                            </p>
+                          <p class="txt">{{repairItem.cnslofcRcptDt}}</p>
+                        </li>
+                        <li>
+                            <p class="tit">접수매장</p>
+                            <p class="txt">{{repairItem.shopNM}}</p>
+                        </li>
+                        <li>
+                            <p class="tit">상품코드</p>
+                            <p class="txt prod-code">{{repairItem.styleColorCd}}</p>
+                        </li>
+                        <li>
+                            <p class="tit">수선내용</p>
+                            <p class="txt">{{repairItem.mendC}}</p>
+                        </li>
+                        <li>
+                            <p class="tit">수선예정 완성일</p>
+                            <p class="txt">{{repairItem.cmplTh2SchdDt}}</p>
+                        </li>
+                        <li>
+                            <p class="tit">유/무상 현황</p>
+                            <p class="txt">{{#is repairItem.mendN1ChrdYn "Y"}}유상{{else}}무상{{/is}}</p>
+                        </li>
+                        <li>
+                            <p class="tit">수선완료일</p>
+                            <p class="txt">{{repairItem.mendSendDt}}</p>
+                        </li>
+                        <li>
+                            <p class="tit">
+                                <span>매장발송일</span>
+                                <small>수선실→매장</small>
+                            </p>
+                            <p class="txt">{{repairItem.shopSendDt}}</p>
+                        </li>
+                        <li>
+                            <p class="tit">담당자</p>
+                            <p class="txt">{{repairItem.empNm}}</p>
+                        </li>
+                    </ul>
+                    <a href="javascript:history.go(-1)">확인</a>
+                </div>
+            </article>
+
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

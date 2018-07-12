@@ -1,0 +1,73 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 - A/S 안내"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+                {{precompile "desktop/precompiles/afterSales/repair-progress-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="AfterSales"}}
+            
+             <article class="after-sales contents">
+                <h3>A/S 안내</h3>
+                <ul class="tab list4">
+                    <li><a href="/AfterSales/Warranty">품질보증 및 보상 기준</a></li>
+                    <li><a href="/AfterSales/RepairGuide">수선품 접수 안내</a></li>
+                    <li><a href="/AfterSales/RepairCoverage">수선 가능 범위 및 가격</a></li>
+                    <li class="on"><a href="/AfterSales/RepairProgress">수선품 진행 조회</a></li>
+                </ul>
+
+                <div class="as-info">
+                  <h4>수선품 조회</h4>
+                  <ul>
+                    <li>수선 의뢰하신 제품의 진행현황을 조회하실 수 있습니다.</li>
+                    <li>의뢰하신 분의 이름과 전화번호를 입력하시고 조회하기 버튼을 클릭하세요.</li>
+                  </ul>
+                </div>
+
+                <div id="repairProgressFormArea" class="search-repair">
+                    <form id="repairProgressForm">
+                        <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                        <label for="">이름</label>
+                        <input type="text" name="name" id="name" class="name">
+                        <div class="inline-form">
+                            <label for="">휴대폰</label>
+                            <select id="mobileNumber1" name="mobileNumber1" title="휴대폰 번호 앞자리 선택">
+                                <option selected="selected">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            <span class="split">-</span>
+                            <input type="text" id="mobileNumber2" name="mobileNumber2" maxlength="4" title="휴대폰 번호 중간자리 입력">
+                            <span class="split">-</span>
+                            <input type="text" id="mobileNumber3" name="mobileNumber3" maxlength="4" title="휴대폰 번호 끝자리 입력">
+                            <input type="hidden" id="mobileNumber" name="mobileNumber">
+                        </div>
+                        <button id="repairProgressFormSubmitBtn" type="button" class="btn">조회</button>
+                    </form>
+                </div>
+
+                <div id="repairProgressItemsArea" class="repair-list" style="display: none;">
+                </div>
+
+                 <!-- 수선 의뢰 내역이 없을때 -->
+                <div class="repair-list no-result" style="display: none;">
+                  검색 결과가 존재하지 않습니다.
+                </div>
+                 <!-- // 수선 의뢰 내역이 없을때 -->
+            </article>
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

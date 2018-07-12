@@ -1,0 +1,22 @@
+{{!-- 페이지 영역과 함께 있는 그리드--}}
+{{#if product}}
+    {{#if product.results}}
+        <div class="prod-list productResultArea">
+            {{#product.results}}
+                {{>desktop/precompiles/product/grid isShowColorImages=true}}
+            {{/product.results}}
+        </div>
+    {{else}}
+        <p class="no-result">상품이 존재하지 않습니다.</p>
+    {{/if}}
+    {{#if product.page}}
+        {{#if pageUrl}}
+            {{{render_paging product.page pageUrl}}}
+        {{else}}
+            {{{render_paging product.page ''}}}
+        {{/if}}
+    {{/if}}
+
+{{else}}
+    <p class="no-result">상품이 존재하지 않습니다.</p>
+{{/if}}

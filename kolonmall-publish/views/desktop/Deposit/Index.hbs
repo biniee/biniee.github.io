@@ -1,0 +1,152 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 예치금"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/precompiles/deposit/deposit-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Deposit"}}
+
+            <article class="deposit contents">
+              <h3>예치금</h3>
+              <div class="my-deposit">
+                <div class="amount">
+                  <strong>보유 예치금</strong>
+                  <span><em>{{point.depositAmount}}</em> 원</span>
+                </div>
+                <ul class="note">
+                  <li>상품 반품/취소 시 발생한 환불 금액을 예치금 형태로 누적하여,
+                  구매 시 현금처럼 이용 가능합니다.</li>
+                  <li>예치금은 현금으로 환불이 불가능합니다.</li>
+                  <li>적립된 예치금은 온라인몰에서만 사용 가능합니다.</li>
+                </ul>
+              </div>
+              <div class="search-deposit">
+                <span class="label">기간조회</span>
+                <ui class="tab list4" id="periodTabs">
+                  <li class="on"><a href="#" data-search-period=30>1개월</a></li>
+                  <li><a href="#" data-search-period=90>3개월</a></li>
+                  <li><a href="#" data-search-period=180>6개월</a></li>
+                  <li><a href="#" data-search-period=365>1년</a></li>
+                </ui>
+                <div class="date">
+                  <input type="text" class="date-input">
+                  <i class="split">~</i>
+                  <input type="text" class="date-input">
+                  <button type="button" class="btn">조회</button>
+                </div>
+              </div>
+
+              <table class="deposit-table">
+                <thead>
+                  <tr>
+                    <th class="date">날짜</th>
+                    <th class="type">구분</th>
+                    <th class="price">예치금액</th>
+                    <th class="price">사용금액</th>
+                    <th class="content">비고</th>
+                  </tr>
+                </thead>
+                <tbody id="emptyResultDepositList" style="display: none;">
+                  <tr>
+                      <td colspan="5">예치금 내역이 없습니다.</td>
+                  </tr>
+                </tbody>
+                <tbody id="resultDepositList" style="display: none;">
+                </tbody>
+              </table>
+
+              {{{render_loader "depositListLoading"}}}
+              <button type="button" class="list-more" id="moreBtn" style="display: none;">더 보기</button>
+
+            </article>
+
+        </section>
+
+        <section class="date-layer">
+          <div class="bg"></div>
+          <div class="inner">
+            <div class="head">
+              <button class="btn first">맨 앞</button>
+              <button class="btn prev">이전</button>
+              <span class="month">2017.03</span>
+              <button class="btn next">다음</button>
+              <button class="btn last">다음</button>
+            </div>
+            <div class="content">
+              <table>
+                <caption>달력</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">일</th>
+                    <th scope="col">월</th>
+                    <th scope="col">화</th>
+                    <th scope="col">수</th>
+                    <th scope="col">목</th>
+                    <th scope="col">금</th>
+                    <th scope="col">토</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#" class="disabled">31</a></td>
+                    <td><a href="#">1</a></td>
+                    <td><a href="#">2</a></td>
+                    <td><a href="#">3</a></td>
+                    <td><a href="#">4</a></td>
+                    <td><a href="#">5</a></td>
+                    <td><a href="#">6</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">7</a></td>
+                    <td><a href="#">8</a></td>
+                    <td><a href="#">9</a></td>
+                    <td><a href="#">10</a></td>
+                    <td><a href="#">11</a></td>
+                    <td><a href="#">12</a></td>
+                    <td><a href="#">13</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">14</a></td>
+                    <td><a href="#">15</a></td>
+                    <td><a href="#">16</a></td>
+                    <td><a href="#" class="today">17</a></td>
+                    <td><a href="#">18</a></td>
+                    <td><a href="#">19</a></td>
+                    <td><a href="#">20</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">21</a></td>
+                    <td><a href="#">22</a></td>
+                    <td><a href="#">23</a></td>
+                    <td><a href="#">24</a></td>
+                    <td><a href="#">25</a></td>
+                    <td><a href="#">26</a></td>
+                    <td><a href="#">27</a></td>
+                  </tr>
+                   <tr>
+                    <td><a href="#">28</a></td>
+                    <td><a href="#">29</a></td>
+                    <td><a href="#">30</a></td>
+                    <td><a href="#">31</a></td>
+                    <td><a href="#" class="disabled">1</a></td>
+                    <td><a href="#" class="disabled">2</a></td>
+                    <td><a href="#" class="disabled">3</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

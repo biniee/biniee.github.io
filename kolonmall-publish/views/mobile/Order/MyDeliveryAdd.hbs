@@ -1,0 +1,76 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back-empty title="배송지 추가"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="c-bg">
+
+            <article class="order">
+
+                <div class="d-info">
+
+                    <form id="myDeliveryAddForm" class="add">
+                        <ul>
+                            <li>
+                                <div class="tit">받는분</div>
+                                <div class="cont">
+                                    <input type="text" id="name" name="name" placeholder="이름을 입력해 주세요."/>
+                                </div>
+                            </li>
+                            <li class="zipCode">
+                                <div class="tit">우편번호</div>
+                                <div class="cont">
+                                    <!--span>123-456</span-->
+                                    <a href="#" class="btn">우편번호찾기</a>
+                                </div>
+                            </li>
+                            <li class="txt-box">
+                                <div class="tit">상세주소</div>
+                                <div class="cont">
+                                    <textarea id="address" name="address" placeholder="상세 주소를 입력해 주세요."></textarea>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tit">휴대폰번호</div>
+                                <div class="cont">
+                                    <input type="text" id="mobileNumber" name="mobileNumber" placeholder="휴대폰 번호를 입력해 주세요."/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tit">전화번호</div>
+                                <div class="cont">
+                                    <input type="text" id="telephoneNumber" name="telephoneNumber" placeholder="선택입력"/>
+                                </div>
+                            </li>
+                            <li class="radioarea">
+                                <div class="tit">기본배송지</div>
+                                <div class="cont">
+                                    <label for="yes">설정</label>
+                                    <div class="radio">
+                                        <input type="radio" name="setting" id="yes" />
+                                        <label for="yes" class="radio-img"></label>
+                                    </div>
+                                    <label for="no">미설정</label>
+                                    <div class="radio">
+                                        <input type="radio" name="setting" id="no" />
+                                        <label for="no" class="radio-img"></label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn-area">
+                            <a href="#" class="close">취소</a>
+                            <a id="myDeliveryAddFormSubmitBtn" href="#" class="finish">등록</a>
+                            <!--a href="#" class="finish">수정</a-->
+                        </div>
+                    </form>
+
+                </div>
+
+            </article>
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

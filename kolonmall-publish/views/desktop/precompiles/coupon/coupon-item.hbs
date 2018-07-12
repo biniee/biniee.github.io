@@ -1,0 +1,25 @@
+<div class="list">
+    <button type="button" class="coupon">
+        <p class="label">할인 쿠폰</p>
+        <p class="brand">{{brandName}}</p>
+        <p class="title">{{name}}</p>
+        <p class="sale">{{discountValue}}<small>{{discountUnit}}</small></p>
+        <p class="note">
+            <span>{{type}}</span>
+            <span>{{useEndDate}}까지</span>
+        </p>
+    </button>
+    <ul>
+        <li>쿠폰혜택 : {{extraType}} {{discountValue}}{{discountUnit}} {{discountString}}</li>
+        <li>쿠폰번호 : {{code}}</li>
+        <li>중복사용 : 다른 쿠폰과
+            {{#if IsEnabledDuplicate}}
+                <em>중복사용 가능</em>
+            {{else}}
+                <em>중복사용 불가</em>
+            {{/if}}
+        </li>
+        <li>유효기간 : {{useStartDate}} ~ {{useEndDate}}</li>
+        <li>사  용  처 : <a href="http://www.luckychouette.com">{{brandName}}</a></li>
+    </ul>
+</div>

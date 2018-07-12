@@ -1,0 +1,122 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+
+            <article class="add-form">
+                <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                <h1>1:1 문의하기</h1>
+                <form id="contactAddForm">
+                    <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                    <!-- TODO : as is 소스에 금칙어 검사를 하는 내용이 있는데 뭔지... -->
+
+                    <!-- 아래의 정보는 이노믹스 측 정보 수집에 필요한 정보들 -->
+                    <input type="hidden" name="customer_ip" />
+                    <input type="hidden" name="device_id" />
+                    <input type="hidden" name="device_version" />
+                    <input type="hidden" name="device_model" />
+                    <input type="hidden" id="attachConfigFileList" value="{{qnaConfig.attachConf.extList}}" />
+                    <input type="hidden" id="attachConfigSize" value="{{qnaConfig.attachConf.size}}" />
+                    <ul>
+                        <li>
+                            <select id="choice_type" name="choice_type">
+                                <option value="">문의 유형을 선택해 주세요.</option>
+                                {{#qnaCategory}}
+                                    <option value="{{nodeId}}">{{nodeName}}</option>
+                                {{/qnaCategory}}
+                            </select>
+                        </li>
+                        <li>
+                            <select id="select_category2" name="select_category2">
+                                <option value="">상세 유형을 선택해 주세요.</option>
+                            </select>
+                        </li>
+                        <li>
+                            <div class="in-txt">
+                                <input type="text" placeholder="이메일을 입력해 주세요." id="customer_email" name="customer_email" value="{{customer.email}}" />
+                                <span>이메일</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <!-- 상품선택 전 -->
+                            <a href="javascript: window.open('/Contact/SearchProduct');" class="slt-prdt" id="emptyProduct">문의하실 상품을 선택해 주세요</a>
+                            <!-- //상품선택 전 -->
+                            <!-- 상품선택 후 -->
+                            <div class="slt-prdt-box" style="display: none;" id="selectedProduct">
+                                <input type="hidden" name="option01" id="orderNumber" /><!-- 주문명 -->
+                                <input type="hidden" name="option02" id="productName" /><!-- 상품명 -->
+                                <input type="hidden" name="option03" id="productCode" /><!-- 상품번호 -->
+                                <div class="prod"><img src="" alt="상품 썸네일" id="productImg" /></div>
+                                <div class="info">
+                                    <p class="t1" id="productNameText"></p>
+                                    <div class="btm">
+                                        <span class="discount" style="display: none;" id="productDiscount"></span><span class="price" id="productPrice"></span>
+                                        <a href="javascript: window.open('/Contact/SearchProduct');" class="slt-btn">상품변경</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //상품선택 후 -->
+                        </li>
+                    </ul>
+                    <dl>
+                        <dt>
+                            <div class="in-txt">
+                                <input type="text" name="question_title" id="question_title" placeholder="제목을 입력해 주세요." />
+                                <span>제목</span>
+                            </div>
+                        </dt>
+                        <dd>
+                            <div class="in-txtarea">
+                                <textarea name="question_contents" id="question_contents" placeholder="내용을 입력해 주세요."></textarea>
+                                <span>내용</span>
+                            </div>
+                        </dd>
+                        <!-- TODO : 이미지 업로드 후 ui -->
+                        <dd class="file" id="container">
+                            <a href="#">
+                                <img src="/_ui/img/m/icn/icn-file.jpg" alt="이미지" class="preview" />
+                                <span>참고할 이미지가 있다면 첨부해 주세요.</span>
+                                <span>첨부파일 용량은 최대 2Mbyte 까지만 가능합니다.</span>
+                                <span class="in-tit">이미지첨부(최대2Mbyte)</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <div class="in-txt">
+                                <input type="text" id="customer_tel" name="customer_tel" placeholder="휴대폰 번호를 입력해 주세요." value="{{customer.mobileNumber}}" />
+                                <span>휴대폰번호</span>
+                            </div>
+                        </dd>
+                        <dd class="sns-chk" id="smsArea" style="display: none;">
+                            <label for="sns">SMS수신</label>
+                            <div class="check">
+                                <input type="hidden" name="option05" id="option05" value="Y" />
+                                <input type="checkbox" id="sms_info" />
+                                <label for="sms_info"></label>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="btns">
+                        <a id="contactAddFormResetBtn" href="#" class="btn type01">취소</a>
+                        <a id="contactAddFormSubmitBtn" href="#" class="btn type02" data-spinner-color="#fff" data-style="zoom-in">확인</a>
+                    </div>
+                </form>
+                <ul class="notice">
+                    <li>
+                        궁금하신 점을 남겨주세요. 가장 빠르게 해결 받으실 수 있으며, 문의하신 내용을 E-MAIL로 친절하게 답변  드리겠습니다.
+                    </li>
+                    <li>
+                        문의에 대한 답변은 <a href="/Contact">고객센터&#62;1:1문의</a>에서 확인하실 수 있습니다.
+                    </li>
+                    <li>
+                        1:1문의글 작성 후에는 수정, 삭제가 되지 않습니다
+                    </li>
+                </ul>
+            </article>
+
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

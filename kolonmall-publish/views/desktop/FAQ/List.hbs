@@ -1,0 +1,46 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 - FAQ"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="FAQ"}}
+
+             <article class="cscenter contents">
+                <h3>FAQ</h3>
+
+                <!-- tab -->
+                <ul class="tab list6">
+                    {{#faqCategories}}
+                        <li {{#is ../currentFaqCategory.nodeId nodeId}}class="on"{{/is}}>
+                            <a href="/FAQ/{{nodeId}}/List">{{nodeName}}</a>
+                            <ul class="smenu">
+                                {{#../faqSubCategories}}
+                                    <li {{#if ../../currentFaqSubCategory}}{{#is ../../currentFaqSubCategory.nodeId nodeId}}class="on"{{/is}}{{else}}{{#is @index 0}}class="on"{{/is}}{{/if}}>
+                                        <a href="/FAQ/{{../../currentFaqCategory.nodeId}}/List/{{nodeId}}">{{nodeName}}</a>
+                                    </li>
+                                {{/../faqSubCategories}}
+                            </ul>
+                        </li>
+                    {{/faqCategories}}
+                </ul>
+                <!-- //tab -->
+
+                <h4 class="hidden">포인트</h4>
+
+                <div class="qna-form">
+                    {{#faqItems}}
+                        {{>desktop/precompiles/faq/faq-item this}}
+                    {{/faqItems}}
+                </div>
+
+                <button type="button" class="list-more">더 보기</button>
+            </article>
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

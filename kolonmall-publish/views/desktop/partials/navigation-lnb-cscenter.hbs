@@ -1,0 +1,52 @@
+<!-- navigation -->
+<nav class="wrap-navi">
+    <h3>{{title}}</h3>
+    <dl class="sub-menu">
+        {{#is submenu "FAQ"}}<dt>{{else}}<dd>{{/is}}<a href="/FAQ">FAQ</a>{{#is submenu "FAQ"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "Contact"}}<dt>{{else}}<dd>{{/is}}<a href="/Contact">1:1 상담</a>{{#is submenu "Contact"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "Notice"}}<dt>{{else}}<dd>{{/is}}<a href="/Notice">공지사항</a>{{#is submenu "Notice"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "AfterSales"}}<dt>{{else}}<dd>{{/is}}<a href="/AfterSales/Warranty">A/S 안내</a>{{#is submenu "AfterSales"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "GuestOrder"}}<dt>{{else}}<dd>{{/is}}<a href="/GuestOrder">비회원 주문조회</a>{{#is submenu "GuestOrder"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "eKOLON"}}<dt>{{else}}<dd>{{/is}}<a href="/eKOLON/Point">eKolon 멤버십</a>{{#is submenu "eKOLON"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "Compensation"}}<dt>{{else}}<dd>{{/is}}<a href="/Compensation/Delay">온라인 고객보상제</a>{{#is submenu "Compensation"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "TermsAndConditions"}}<dt>{{else}}<dd>{{/is}}<a href="/TermsAndConditions/Online">이용약관</a>{{#is submenu "TermsAndConditions"}}</dt>{{else}}</dd>{{/is}}
+    </dl>
+    <ul class="sub-menu-bt">
+        <li class="callcenter">콜센터</li>
+        <li class="call-no">1588-7667</li>
+        <li><a href="#" data-target=".layer-alliance" data-trigger="layer">제휴문의</a></li>
+        <li class="last"><a href="#" data-target=".layer-shop" data-trigger="layer">매장안내</a></li>
+        <li><a href="#" class="info-return"><img src="/_ui/img/pc/temp/img_info_return.jpg" alt="코오롱몰 반품 서비스 안내 - 쉽고 빠른 반품에 관한 모든 것"></a></li>
+    </ul>
+</nav>
+<!-- //navigation -->
+
+{{>desktop/Proposal/Add}}
+
+<section class="layer-popup layer-shop">
+    <div class="layer">
+        <div class="inner">
+            <div class="head">
+                <h1>매장 안내</h1>
+                <button tyle="button" class="close">레이어 닫기</button>
+            </div>
+            <div class="content">
+                <div class="shop-location">
+                    <div class="map">
+                        <img src="/_ui/img/pc/temp/img-map.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <strong>코오롱스포츠<br>문정직영점</strong>
+                        <p class="addr">서울특별시 구로구 구로6동 573</p>
+                        <p class="tel">T. 02-6923-2411</p>
+                        <span>픽업가능시간</span>
+                        <p class="date">오전 10:30 ~ 오후 10:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+                <button type="button" class="btn btn-line close-layer">닫기</button>
+            </div>
+        </div>
+    </div>
+</section>

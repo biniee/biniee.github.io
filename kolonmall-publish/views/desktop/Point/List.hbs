@@ -1,0 +1,219 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="포인트"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+                {{precompile "desktop/precompiles/point/point-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Point"}}
+
+            <article class="point contents">
+              <h3>포인트</h3>
+
+              <p class="order-guide">
+                <a href="#" data-target=".layer-point-info" data-trigger="layer">포인트 이용안내</a>
+              </p>
+              <div class="my-point">
+                <ul>
+                  <li>
+                    <strong>적립 포인트 <button class="tip" type="button" data-target=".layer-point-now" data-trigger="layer">tip</button></strong>
+                    <span>{{point.availablePoint}} P</span>
+                  </li>
+                  <li>
+                    <strong>적립 예정 포인트 <button class="tip" type="button" data-target=".layer-point-after" data-trigger="layer">tip</button></strong>
+                    <span>{{point.unavailablePoint}} P</span>
+                  </li>
+                  <li>
+                    <strong>소멸 예정 포인트 <button class="tip" type="button" data-target=".layer-point-info" data-trigger="layer">tip</button></strong>
+                    <span>{{point.expiringPoint}} P</span>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="tab list2" id="pointTabs">
+                <li class="on"><a href="#" data-history-type="available">적립 포인트 내역</a></li>
+                <li><a href="#" data-history-type="unavailable">적립예정 포인트 내역</a></li>
+              </ul>
+
+              <div class="search-point">
+                <ui class="tab list4" id="periodTabs">
+                  <li class="on"><a href="#" data-search-period=30>1개월</a></li>
+                  <li><a href="#" data-search-period=90>3개월</a></li>
+                  <li><a href="#" data-search-period=180>6개월</a></li>
+                  <li><a href="#" data-search-period=365>1년</a></li>
+                </ui>
+                <div class="date">
+                  <input type="text" class="date-input">
+                  <i class="split">~</i>
+                  <input type="text" class="date-input">
+                  <button type="button" class="btn">조회</button>
+                </div>
+              </div>
+
+              <table class="point-table">
+                <thead>
+                  <tr>
+                    <th class="date">날짜</th>
+                    <th class="billing">구분</th>
+                    <th class="price">구매금액</th>
+                    <th class="plus">포인트 적립</th>
+                    <th class="minus">포인트 사용</th>
+                  </tr>
+                </thead>
+                <tbody id="emptyResultPointList" style="display: none;">
+                  <tr>
+                    <td colspan="5" class="no-result">내역이 없습니다.</td>
+                  </tr>
+                </tbody>
+                <tbody id="resultPointList" style="display: none;">
+                </tbody>
+              </table>
+
+              <button type="button" class="list-more" id="moreBtn" style="display: none;">더 보기</button>
+
+            </article>
+
+        </section>
+
+        <section class="layer-popup layer-point layer-point-now">
+          <div class="layer">
+            <div class="inner">
+              <div class="content">
+                <p class="desc">백화점, 마트, 온라인몰, 대리점에서<br>구매시 적립되며, 적립 후 사용가능 합니다.</p>
+                <button tyle="button" class="close">레이어 닫기</button>
+              </div>
+              <div class="foot">
+                <button type="button" class="btn btn-line close-layer">닫기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layer-popup layer-point layer-point-after">
+          <div class="layer">
+            <div class="inner">
+              <div class="content">
+                <p class="desc">상품평 작성, 이거 어때 추천/판매, 퀴즈이벤트 참여시 적립<br>*15일 후 자동전환 되어 사용가능</p>
+                <button tyle="button" class="close">레이어 닫기</button>
+              </div>
+              <div class="foot">
+                <button type="button" class="btn btn-line close-layer">닫기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layer-popup layer-point layer-point-info">
+          <div class="layer">
+            <div class="inner">
+               <div class="head">
+                <h1>포인트 이용안내</h1>
+                <button tyle="button" class="close">레이어 닫기</button>
+              </div>
+              <div class="content">
+                <ul class="bul-list">
+                  <li>상품평 작성을 통해 취득한 포인트는 15일 이후 적립포인트로 변경됩니다.</li>
+                  <li>이벤트를 통해 취득한 포인트는 익일 오전 12시 이후 적립포인트로 변경됩니다.</li>
+                  <li>이벤트를 통해 취득한 포인트는 해당 이벤트 페이지 내 공지된 유효기간을<br>꼭 확인해주세요.</li>
+                  <li>모든 포인트 유효기간은 적립포인트 변경 이후 한달간 입니다.<br>(매장 체크인 포인트 제외)</li>
+                  <li>매장 체크인 후 지급된 포인트는 적립 당일 밤 12시까지 사용 가능합니다.</li>
+                  <li>유효기간이 지난 적립포인트는 소멸되니 유효기간을 확인하셔서<br>꼭 기간 내 사용 부탁 드립니다.</li>
+                  <li>포인트 부정 취득 이력이 있는 고객에게는 포인트가 적립되지 않으니<br>양해 부탁드립니다.</li>
+                  <li>소멸 예정 포인트는 구매를 통해 얻어 포인트일때만 조회됩니다.</li>
+                  <li>적립된 예치금은 온라인몰에서만 사용 가능합니다.</li>
+                </ul>
+              </div>
+              <div class="foot">
+                <button type="button" class="btn btn-line close-layer">닫기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="date-layer">
+          <div class="bg"></div>
+          <div class="inner">
+            <div class="head">
+              <button class="btn first">맨 앞</button>
+              <button class="btn prev">이전</button>
+              <span class="month">2017.03</span>
+              <button class="btn next">다음</button>
+              <button class="btn last">다음</button>
+            </div>
+            <div class="content">
+              <table>
+                <caption>달력</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">일</th>
+                    <th scope="col">월</th>
+                    <th scope="col">화</th>
+                    <th scope="col">수</th>
+                    <th scope="col">목</th>
+                    <th scope="col">금</th>
+                    <th scope="col">토</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#" class="disabled">31</a></td>
+                    <td><a href="#">1</a></td>
+                    <td><a href="#">2</a></td>
+                    <td><a href="#">3</a></td>
+                    <td><a href="#">4</a></td>
+                    <td><a href="#">5</a></td>
+                    <td><a href="#">6</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">7</a></td>
+                    <td><a href="#">8</a></td>
+                    <td><a href="#">9</a></td>
+                    <td><a href="#">10</a></td>
+                    <td><a href="#">11</a></td>
+                    <td><a href="#">12</a></td>
+                    <td><a href="#">13</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">14</a></td>
+                    <td><a href="#">15</a></td>
+                    <td><a href="#">16</a></td>
+                    <td><a href="#" class="today">17</a></td>
+                    <td><a href="#">18</a></td>
+                    <td><a href="#">19</a></td>
+                    <td><a href="#">20</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">21</a></td>
+                    <td><a href="#">22</a></td>
+                    <td><a href="#">23</a></td>
+                    <td><a href="#">24</a></td>
+                    <td><a href="#">25</a></td>
+                    <td><a href="#">26</a></td>
+                    <td><a href="#">27</a></td>
+                  </tr>
+                   <tr>
+                    <td><a href="#">28</a></td>
+                    <td><a href="#">29</a></td>
+                    <td><a href="#">30</a></td>
+                    <td><a href="#">31</a></td>
+                    <td><a href="#" class="disabled">1</a></td>
+                    <td><a href="#" class="disabled">2</a></td>
+                    <td><a href="#" class="disabled">3</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

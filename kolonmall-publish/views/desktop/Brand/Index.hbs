@@ -1,0 +1,91 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="브랜드 메인"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+                {{precompile "desktop/precompiles/product/grid"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <nav class="wrap-navi">
+                <h3>{{category.name}}<span>{{category.totalNumber}}</span></h3>
+                {{#if category.subcategories}}
+                    <dl class="sub-menu">
+                        {{#category.subcategories}}
+                            <dd><a href="{{url}}">{{name}}</a></dd>
+                        {{/category.subcategories}}
+                        <!--<dd class="bot"><a href="#">시리즈 자켓특집</a></dd>-->
+                    </dl>
+                {{/if}}
+
+                {{>desktop/partials/lnb-banner}}
+            </nav>
+            <!-- //navigation -->
+
+            <article class="brand-cont contents">
+
+                <!-- visual-banner -->
+                {{#fetch_banner "DESKTOP" "brand" category.id "main"}}
+                    {{#if banners.page.totalCount}}
+                        <article class="visual-banner">
+                            <div class="swiper-wrapper">
+                            {{#banners.results}}
+                                <div class="swiper-slide item">
+                                    <a href="{{link}}"><img src="{{content.bgImage}}" alt=""></a>
+                                </div>
+                            {{/banners.results}}
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-controls">
+                                <button type="button" class="swiper-button-prev">prev</button>
+                                <button type="button" class="swiper-button-next">next</button>
+                            </div>
+                        </article>
+                    {{/if}}
+                {{/fetch_banner}}
+                <!-- // visual-banner -->
+
+                <!-- prod-wrap -->
+                <article class="prod-wrap">
+                    {{#fetch_product "desktop" "new" parameters 8}}
+                        <h3 class="tit">NEW ARRIVALS</h3>
+                        {{{render_product "desktop" "grid" product parameters}}}
+                    {{/fetch_product}}
+                </article>
+                <!-- // prod-wrap -->
+
+                <!-- thumb-wrap -->
+                {{#fetch_banner "DESKTOP" "brand" category.id "issue-and-deal"}}
+                    {{#if banners.page.totalCount}}
+                        <article class="thumb-wrap issue">
+                            <h3 class="tit">ISSUE &amp; DEALS</h3>
+                            {{{render_banner "desktop" "contents/flicking" banners}}}
+                        </article>
+                    {{/if}}
+                {{/fetch_banner}}
+                <!-- // thumb-wrap -->
+
+                <!-- prod-wrap -->
+                <article class="prod-wrap">
+                    {{#fetch_product "desktop" "best" parameters 12}}
+                        <h3 class="tit">BEST ITEMS</h3>
+                        {{{render_product "desktop" "grid" product parameters}}}
+                    {{/fetch_product}}
+                </article>
+                <!-- // prod-wrap -->
+
+            </article>
+
+
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

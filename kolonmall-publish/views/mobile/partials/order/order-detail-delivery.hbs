@@ -1,0 +1,45 @@
+<!-- 배송정보 -->
+<!-- TODO : 전화번호 포메팅
+    func@formattedPhoneNum(prop@address.deliveryAddress.phone) }}</li>
+    func@formattedCellPhoneNum(prop@address.deliveryAddress.cellPhone) }}</li>
+-->
+<div class="order">
+    <div class="d-info">
+        <div class="d-top">
+            <h3>배송정보</h3>
+        </div>
+        <ul>
+            <li>
+                <div class="tit">받는분</div>
+                <div class="cont">
+                    <span class="name">{{firstName}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="tit">전화번호</div>
+                <div class="cont">
+                    <span>{{phone}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="tit">휴대폰번호</div>
+                <div class="cont">
+                    <span>{{cellPhone}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="tit">주소</div>
+                <div class="cont">
+                    <span>[{{postalCode}}]  {{line1}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="tit">배송메모</div>
+                <div class="cont">
+                    <span>{{deliveryMemo}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- //배송정보 -->

@@ -1,0 +1,36 @@
+<div class="box2">
+    <h3>결제정보</h3>
+    <dl class="dl-table">
+        <dt>총 상품금액</dt>
+        <dd class="colspan">{{totalBasePrice}}원</dd>
+        <dt>배송비</dt>
+        <dd class="colspan">{{deliveryCost}}원</dd>
+        {{#if discount}}
+            <dt class="rowspan">할인내역</dt>
+            <dd>
+                {{#discount}}
+                    <dl>
+                        <dt>{{name}}</dt>
+                        <dd>(-) {{amount}}원</dd>
+                    </dl>
+                {{/discount}}
+            </dd>
+        {{/if}}
+        <dt class="rowspan">결제수단</dt>
+        <dd>
+            <dl>
+                <!-- TODO : 신용 카드의 경우 카드명과 개월수 표시 -->
+                <!-- ex) <dd class="l2">90,000원<br />삼성카드(2개월)</dd> -->
+                {{#payments}}
+                    <dt>{{name}}</dt>
+                    <dd>{{formattedAmount}}원</dd>
+                {{/payments}}
+            </dl>
+        </dd>
+    </dl>
+
+    <dl class="total">
+        <dt>총 결제금액</dt>
+        <dd>{{orderDetailPrice}}<i>원</i></dd>
+    </dl>
+</div>

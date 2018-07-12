@@ -1,0 +1,245 @@
+//login
+.wrap-form-login {
+  .form-login {
+    padding: 10.133vw 10.133vw 40.66vw;
+    .btn-ctc {
+      overflow: hidden;
+      .contact-phone {
+        float: right;
+        font-size: 3.733vw;
+        color: #aaa;
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 2.933vw;
+          height: 3.33vw;
+          margin-left: 2vw;
+          background: url('/_ui/img/m/icn/icn-check10-1.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+      .contact-phone.on {
+        color:#000;
+        &::after {
+          background: url('/_ui/img/m/icn/icn-check10.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+    }
+    .in-txt {
+      position: relative;
+      input {
+        width: 100%;
+        padding: 7.33vw 0 3.466vw;
+        font-size: 3.733vw;
+        color: #1f1f1f;
+        border-bottom: .266vw solid #eee;
+      }
+      input.active {
+        border-bottom: .266vw solid #1f1f1f;
+      }
+      ::-webkit-input-placeholder {
+        color: #898989;
+      }
+      :-moz-placeholder {
+        color: #898989;
+      }
+      ::-moz-placeholder {
+        color: #898989;
+      }
+      :-ms-input-placeholder {
+        color: #898989;
+      }
+      span {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: none;
+        height: 10.666vw;
+        line-height: 10.666vw;
+        color: #ccc;
+        font-size: 3.733vw;
+      }
+    }
+    .check-area {
+      display: inline-block;
+      width: 38%;
+      margin: 6.933vw 0 6vw;
+      font-size: 0;
+      letter-spacing: 0;
+      word-spacing: 0;
+      input {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        position: absolute;
+      }
+      input + label {
+        display: inline-block;
+        width: 4.533vw;
+        height: 4.533vw;
+        background: url('/_ui/img/m/icn/icn-check07.png') no-repeat;
+        background-size: 100%;
+        vertical-align: middle;
+      }
+      input:checked + label {
+        background: url('/_ui/img/m/icn/icn-check07-on.png') no-repeat;
+        background-size: 100%;
+      }
+      input + label + label {
+        display: inline-block;
+        font-size: 3.733vw;
+        color: #898989;
+        vertical-align: middle;
+        margin-left: 2.4vw;
+      }
+      input:checked + label + label {
+        color: #1f1f1f;
+      }
+    }
+    .btns {
+      .btn {
+        font-size: 3.733vw;
+      }
+      .btn-login {
+        width: 100%;
+        margin-bottom: 2vw;
+        color: #fff;
+        background: #ccc;
+      }
+      .btn-login.on {
+        background: #1f1f1f;
+      }
+      .btn-nonmbr {
+        width: 100%;
+        color: #898989;
+        border: .266vw solid #f1f1f1;
+      }
+      .box-sub {
+        overflow: hidden;
+        padding-top: 5.33vw;
+        .sub {
+          float: left;
+          width: 33.33%;
+          font-size: 3.466vw;
+          color: #898989;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.footer-lgform {
+  padding: 0 10.133vw 10.133vw;
+  background: #fff;
+  text-align: center;
+  p {
+    margin-bottom: 7.466vw;
+    font-size: 3.733vw;
+    color: #aaa;
+  }
+  .box-sns {
+    overflow: hidden;
+    a {
+      float: left;
+      width: 24.8vw;
+      height: 9.066vw;
+      max-width: 186px;
+      max-height: 68px;
+      text-indent: -9999px;
+    }
+    .facebook {
+      margin-right: 2.66vw;
+      background: #004f9d url('/_ui/img/m/icn/icn-facebook02.png');
+      background-size: contain;
+    }
+    .google {
+      margin-right: 2.66vw;
+      background: #dd4b39 url('/_ui/img/m/icn/icn-google.png');
+      background-size: contain;
+    }
+    .kakao {
+      background: #ffe600 url('/_ui/img/m/icn/icn-kakao02.png');
+      background-size: contain;
+    }
+  }
+}
+@media (min-width: 750px) {
+ //login
+  .wrap-form-login {
+    .form-login {
+      padding: 0 76px 305px;
+      .btn-ctc {
+        .contact-phone {
+          font-size: 28px;
+          &::after {
+            width: 22px;
+            height: 25px;
+            margin-left: 15px;
+          }
+        }
+      }
+      .in-txt {
+        input {
+          padding: 55px 0 26px;
+          font-size: 28px;
+          border-bottom: 2px solid #eee;
+        }
+        input.active {
+          border-bottom: 2px solid #1f1f1f;
+        }
+        span {
+          height: 80px;
+          line-height: 80px;
+          font-size: 28px;
+        }
+      }
+      .check-area {
+        margin: 52px 0 45px;
+        input + label {
+          width: 34px;
+          height: 34px;
+        }
+        input + label + label {
+          font-size: 28px;
+          margin-left: 18px;
+        }
+      }
+      .btns {
+        .btn {
+          font-size: 28px;
+        }
+        .btn-login {
+          margin-bottom: 15px;
+        }
+        .btn-nonmbr {
+          border: 2px solid #f1f1f1;
+        }
+        .box-sub {
+          padding-top: 40px;
+          .sub {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+  .footer-lgform {
+    padding: 0 76px 76px;
+    p {
+      margin-bottom: 56px;
+      font-size: 28px;
+    }
+    .box-sns {
+      .facebook {
+        margin-right: 20px;
+      }
+      .google {
+        margin-right: 20px;
+      }
+    }
+  }
+}

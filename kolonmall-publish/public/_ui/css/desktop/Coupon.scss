@@ -1,0 +1,120 @@
+.coupons {
+  margin: 78px 0 140px;
+  h3 {
+    margin-bottom: 52px;
+    font-size: 22px;
+    color: #1f1f1f;
+  }
+  .notice {
+    margin-bottom: 40px;
+    li {
+      color: #898989;
+      font-size: 14px;
+      position: relative;
+      margin-bottom: 18px;
+      padding-left: 8px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        display: block;
+        width: 2px;
+        height: 2px;
+        background-color: #c1c1c1;
+      }
+    }
+  }
+  .tab {
+    padding-bottom: 50px;
+  }
+  .coupon-list {
+    margin-left: -64px;
+    .list {
+      float: left;
+      width: 454px;
+      height: 410px;
+      margin-left: 64px;
+    }
+    .coupon {
+      color: #1f1f1f;
+      text-align: left;
+      position: relative;
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 30px 99px 30px 30px;
+      border: 1px solid #f1f1f1;
+      .label {
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        padding: 0 25px;
+        background-color: #f13d4e;
+      }
+      .brand {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.25;
+        word-break: keep-all;
+        max-width: 230px;
+        height: 90px;
+      }
+      .sale {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .note {
+        color: #898989;
+        text-align: right;
+        position: absolute;
+        right: 129px;
+        bottom: 30px;
+        span {
+          display: block;
+        }
+      }
+    }
+    ul {
+      color: #898989;
+      font-size: 14px;
+      line-height: 1.8571;
+      margin-left: 10px;
+      em {
+        color: #1f1f1f;
+      }
+      a {
+        color: #1f1f1f;
+        text-decoration: underline;
+      }
+    }
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  .no-result {
+    color: #898989;
+    font-size: 16px;
+    line-height: .15;
+    text-align: center;
+    margin: 160px 0;
+  }
+}

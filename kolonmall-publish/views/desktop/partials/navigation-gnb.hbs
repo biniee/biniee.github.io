@@ -1,0 +1,130 @@
+<header class="kolon-header">
+    <div class="header-nav">
+        <h2 class="hidden">KOLONmall 메인메뉴</h2>
+        <div class="gnb">
+            <a href="/"><h1 class="logo">KOLONmall</h1></a>
+            <ul>
+                <li class="language">
+                    <a href="javascript: alert('준비중 입니다.');">KOR</a>
+                </li>
+                {{#is customer.uid 'anonymous'}}
+                    <li>
+                        <a href="/Login">LOGIN</a>
+                    </li>
+                    <li><a href="/Membership/Sign">SIGN UP</a></li>
+                {{else}}
+                    <li>
+                        <a href="/MyPage">{{customer.name}} 고객님</a>
+                    </li>
+                    <li>
+                        <a href="/Logout">LOGOUT</a>
+                    </li>
+                {{/is}}
+                <li class="search"><a href="javascript: alert('준비중 입니다.');">search</a></li>
+                <li class="cart"><a href="/Cart">cart</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            {{#if gnb}}
+                {{#if gnb.categories}}
+                    <ul class="category">
+                        {{#gnb.categories}}
+                            <li>
+                                <a href="{{url}}">{{name}}</a>
+                                {{#if subcategories}}
+                                    <div class="sub-category">
+                                        <div class="fixed-bg"></div>
+                                        <div class="depth-wrap">
+                                            {{#subcategories}}
+                                            <div class="depth-item">
+                                                <strong>{{name}}</strong>
+                                                {{#if subcategories}}
+                                                <ul>
+                                                    {{#subcategories}}
+                                                        <li><a href="{{url}}">{{name}}</a></li>
+                                                    {{/subcategories}}
+                                                </ul>
+                                                {{/if}}
+                                            </div>
+                                            {{/subcategories}}
+                                        </div>
+                                    </div>
+                                {{/if}}
+                            </li>
+                        {{/gnb.categories}}
+                    </ul>
+                {{/if}}
+            {{/if}}
+            <ul class="etc">
+                <li><a href="/Special">기획전</a></li>
+                <li><a href="/Event">이벤트</a></li>
+                <!-- <li><a href="javascript: alert('준비중 입니다 :)');">리뷰</a></li> -->
+                <li><a href="javascript:" class="btn-brand">브랜드</a></li>
+            </ul>
+        </div>
+        <div class="brand-menu">
+            <div class="fl-wrap">
+                <div class="fl-left">
+                    <h3>FASHION</h3>
+                    <ul>
+                        <li><a href="/Brand/4894">KOLON SPORT</a></li>
+                        <li><a href="/Brand/6147">LUCKYCHOUETTE</a></li>
+                        <li><a href="/Brand/6633">SUECOMMABONNIE</a></li>
+                        <li><a href="/Brand/8043">SUPERCOMMA B</a></li>
+                        <li><a href="/Brand/4950">COURONNE</a></li>
+                        <li><a href="/Brand/4946">SERIES</a></li>
+                        <li><a href="/Brand/133020000006">EPIGRAM</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/Brand/4942">CUSTOMELLOW</a></li>
+                        <li><a href="/Brand/4940">HEAD</a></li>
+                        <li><a href="/Brand/4938">JACK NICKLAUS</a></li>
+                        <li><a href="/Brand/4943">GGIO2</a></li>
+                        <li><a href="/Brand/4944">SPASSO</a></li>
+                        <li><a href="/Brand/4945">BRENTWOOD</a></li>
+                        <li><a href="/Brand/4947">HENRY COTTON'S</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/Brand/4939">ELORD</a></li>
+                        <li><a href="/Brand/9038">WAAC</a></li>
+                        <li><a href="/Brand/5683">CLUB CAMBRIDGE</a></li>
+                        <li><a href="/Brand/5682">CAMBRIDGE MEMBERS</a></li>
+                        <li><a href="/Brand/9187">K+</a></li>
+                        <li><a href="/Brand/9022">STONEFEATHER</a></li>
+                        <li><a href="/Brand/7299">AMANDA GHOST</a></li>
+                    </ul>
+                </div>
+                <div class="fl-right">
+                    <h3>LIFE STYLE</h3>
+                    <ul>
+                        <li><a href="#">ACROPOLIS</a></li>
+                        <li><a href="#">ADD</a></li>
+                        <li><a href="#">ALPHA INDUSTRIES</a></li>
+                        <li><a href="#">ANTONY MORATO</a></li>
+                        <li><a href="#">ANERKJENDT</a></li>
+                        <li><a href="#">Arcteryx Veilance</a></li>
+                        <li><a href="#">ANOTHER OFFICE</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">ACROPOLIS</a></li>
+                        <li><a href="#">ADD</a></li>
+                        <li><a href="#">ALPHA INDUSTRIES</a></li>
+                        <li><a href="#">ANTONY MORATO</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">CROSSLEY</a></li>
+                        <li><a href="#">CAPTAINFIN</a></li>
+                        <li><a href="#">CHAMPION USA</a></li>
+                        <li><a href="#">CUSTOM CULTURE</a></li>
+                        <li><a href="#">COMMON CUT</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">DSTREZZED</a></li>
+                        <li><a href="#">DANIELE FIESOLI</a></li>
+                        <li><a href="#">DIVOOM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

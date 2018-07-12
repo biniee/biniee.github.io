@@ -1,0 +1,14 @@
+<li>
+    {{>mobile/components/banner/contents/square link=link content=imageInfo}}
+    <div class="txt-area">
+        <div>
+            <p class="title">{{title}}</p>
+            <p class="data">
+                {{#if specialAt.start}}{{to_date_string specialAt.start}}{{/if}}
+                ~
+                {{#if specialAt.end}}{{to_date_string specialAt.end}}{{/if}}
+            </p>
+        </div>
+        <a href="#" class="bt-share">공유하기</a>
+    </div>
+</li>

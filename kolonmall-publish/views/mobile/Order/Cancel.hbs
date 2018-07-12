@@ -1,0 +1,128 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/order/cancel-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+            
+
+            <article class="mypage-order pt0">
+                <div class="h1-top">
+                    <a href="javascript:history.go(-1)" class="pop-close close2">닫기</a>
+                    <h1>주문취소신청</h1>
+                </div>
+
+                <form name="input_form" id="rmaOrderForm" data-order-number="{{order.orderNumber}}" data-rma-type="Cancel">
+                    <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                    <div class="order-number">
+                        <p>주문번호 : {{order.orderNumber}} <i>({{order.createdDate}})</i></p>
+                        <p>취소를 원하시는 상품을 선택해 주세요.</p>
+                    </div>
+                    <div class="top">
+                        <div class="ch-area">
+                            <div class="check">
+                                <input type="checkbox" id="all" onclick="check();" />
+                                <label for="all"></label>
+                            </div>
+                            <label for="all">전체({{length order.items}})</label>
+                        </div>
+                    </div>
+
+                    <div class="my-order-result">
+                        <ul class="order-detail">
+                            <li class="bundle cancel">
+                                {{#if order.items}}
+                                    <ul id="rmaOrderItemList">
+                                        {{#order.items}}
+                                            {{>mobile/precompiles/order/cancel-item displayedDeliveryType=../order.displayedDeliveryType selectedOrderEntryCode=../selectedOrderEntryCode}}
+                                        {{/order.items}}
+                                    </ul>
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </div>
+
+                    {{#is order.deliveryType "DELIVERYSERVICE"}}
+                        {{#if order.items}}
+                            {{>mobile/partials/order/order-detail-delivery order.items.[0].deliveryAddress}}
+                        {{/if}}
+                    {{/is}}
+
+                    {{#is order.deliveryType "PICKUP"}}
+                        {{#if order.items}}
+                            {{>mobile/partials/order/order-detail-store order.items.[0].pickupInformation}}
+                        {{/if}}
+                    {{/is}}
+
+                    <!-- 환불예정금액 -->
+                    <div class="order cancel-refund">
+                        <h3>환불예정금액</h3>
+                        <dl class="dl-table">
+                            <dt class="thead">구분</dt>
+                            <dt class="thead">결제정보</dt>
+                            <dt class="thead">환불정보</dt>
+                            <dt>총 상품금액</dt>
+                            <dd>{{order.totalBasePrice}}원</dd>
+                            <dd id="cancelTotalBasePrice"></dd>
+                            <dt>총 배송비</dt>
+                            <dd>{{order.deliveryCost}}원</dd>
+                            <dd id="orderDeliveryCost"></dd>
+                            <dt>총 할인금액</dt>
+                            <!--
+                            쿠폰 : (-)  func@comma(prop@order_read.couponDiscount)}}원
+    프로모션 할인 : (-)  func@comma(prop@order_read.totalPromotionDiscounts)}}원
+    임직원 할인 : (-)  func@comma(prop@order_read.totalStaffDiscounts)}}원
+    가격 할인 : (-) func@comma(prop@order_read.totalAdminDiscounts)}}원
+                            -->
+                            <dd>- {{order.totalDiscount}}원</dd>
+                            <dd id="orderTotalDiscount"></dd>
+                            <dt>총 결제금액</dt>
+                            <dd>{{order.orderDetailPrice}}원</dd>
+                            <dd id="orderDetailPrice"></dd>
+                        </dl>
+                        <dl class="total">
+                            <dt>{{paymentMethod}}</dt>
+                            <dd><i id="orderDetailPriceValue"></i>원 환불 예정</dd>
+                        </dl>
+                    </div>
+                    <!-- //환불예정금액 -->
+
+                    <div class="cancel-btns">
+                        <a href="javascript:history.go(-1)" class="btn1">취소</a>
+                        <a href="#" class="btn2" id="rmaOrderSubmitBtn">주문취소신청</a>
+                    </div>
+
+                </form>
+                
+            </article>
+            
+
+        </section>
+    {{/inline}}
+    {{#*inline "extrajavascript"}}
+    <script>
+        function change(request) {
+            if( request == "txtbox" ){
+                $('.request-txt').css('display','block');
+            }else{
+                $('.request-txt').css('display','none');
+            }
+        }
+        function check(){
+            cbox = input_form.getElementsByClassName('orderItemCheckbox');
+            if(cbox.length) {
+                for(var i = 0; i<cbox.length;i++) {
+                    cbox[i].checked=input_form.all.checked;
+                }
+            } else {
+                cbox.checked=input_form.all.checked;
+            }
+        }
+    </script>
+    {{/inline}}
+{{/mobile/layouts/default}}

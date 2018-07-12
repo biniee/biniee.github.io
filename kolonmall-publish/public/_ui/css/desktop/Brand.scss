@@ -1,0 +1,196 @@
+.brand-cont {
+    margin: 78px 0 80px;
+    h3 {
+        font-size: 22px;
+        color: #1f1f1f;
+    }
+    .visual-banner {
+        overflow: hidden;
+    }
+    .slide-list {
+        width: 100%;
+        overflow: hidden;
+    }
+    .prod-wrap {
+        margin-top: 80px;
+        &.category-list {
+            .prod-list {
+                margin-left: -24px;
+                .list {
+                    margin-left: 24px;
+                    margin-bottom: 65px;
+                }
+            }
+        }
+        .tit {
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #0f0f10;
+        }
+        .prod-list {
+            margin-left: -20px;
+            &::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .list {
+                color: #1f1f1f;
+                position: relative;
+                float: left;
+                width: 225px;
+                margin-left: 19px;
+                margin-bottom: 60px;
+            .thumb {
+                margin-bottom: 10px;
+            }
+            .brand {
+                font-size: 11px;
+                font-weight: bold;
+                display: inline-block;
+                margin: 0 10px 15px;
+                padding-bottom: 5px;
+                border-bottom: 3px solid #1f1f1f;
+            }
+            .title {
+                margin: 0 10px 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                word-wrap: break-word;
+                height: 1.2em;
+                color: #1f1f1f;
+                font-size: 13px;
+                line-height: 1.4;
+                white-space: nowrap;
+                display: block;
+                max-width: 100%;
+            }
+            .price {
+                font-size: 12px;
+                margin: 0 10px;
+                del {
+                color: #9ba4b0;
+                }
+            }
+            .sale {
+                font-size: 12px;
+                font-weight: bold;
+                position: absolute;
+                right: 10px;
+                bottom: 0;
+                padding-left: 12px;
+                background: url('/_ui/img/pc/icn/icn-sale.png') no-repeat 0 50%;
+            }
+            }
+        }
+        .list-more {
+            margin: 0 auto;
+        }
+        .color-box {
+            position: absolute; 
+            left: 10px;
+            bottom: -35px;
+            max-width: 205px;
+        }
+    }
+    .thumb-wrap {
+        margin-top: 80px;
+        .tit {
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #0f0f10;
+        }
+        .thumb-list {
+            margin-left: -15px;
+            &::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .item {
+                position: relative;
+                float: left;
+                width: 390px;
+                margin-left: 15px;
+                margin-bottom: 15px;
+            }
+            &.slide-list {
+                margin: 0;
+                .item {
+                    margin-left: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .brand-info {
+        .info {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            &::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .tit {
+                float: left;
+                width: 430px;
+                font-size: 30px;
+                font-weight: bold;
+                line-height: 1.2;
+                color: #1f1f1f;
+                letter-spacing: -1px;
+            }
+            .txt {
+                float: right;
+                width: 460px;
+                margin-right: 30px;
+                font-size: 14px;
+                color: #1f1f1f;
+                line-height: 1.6;
+                p {
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .collection {
+            padding-top: 40px;
+            border-top: 4px solid #1f1f1f;
+            .tit {
+                margin-bottom: 50px;
+                font-weight: bold;
+                font-size: 15px;
+                color: #0f0f10;
+            }
+            .collection-list {
+                &::after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+                .item {
+                    position: relative;
+                    float: left;
+                    width: 324px;
+                    height: 422px;
+                    background: url('/_ui/img/pc/temp/@collection-list-bg.jpg') no-repeat;
+                    img {
+                        position: absolute;
+                        right: 24px;
+                        top: 102px;
+                        width: 235px;
+                        height: 296px;
+                    }
+                }
+            }
+        }
+    }
+}

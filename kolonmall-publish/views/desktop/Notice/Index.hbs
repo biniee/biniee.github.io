@@ -1,0 +1,29 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 - 공지사항"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="Notice"}}
+
+             <article class="notice contents">
+                <h3>공지사항</h3>
+
+                <div class="notice-list">
+                  <table>
+                    <caption>공지사항</caption>
+                    <tbody>
+                        {{#notices.results}}
+                            {{>desktop/precompiles/notice/notice-item}}
+                        {{/notices.results}}
+                    </tbody>
+                  </table>
+                </div>
+                {{{render_paging notices.page "/Notice"}}}
+            </article>
+        </section>
+    {{/inline}}
+{{/desktop/layouts/default}}

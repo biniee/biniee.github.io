@@ -1,0 +1,58 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 - 1:1 상담"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/precompiles/contact/counseling"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="Contact"}}
+
+             <article class="contact contents">
+                <h3>1:1 상담</h3>
+
+                <div class="consulting-history">
+                  <ul class="history">
+                    <li>
+                      <strong>총 문의</strong>
+                      <span>{{qna.qnaCount}}</span>
+                    </li>
+                    <li>
+                      <strong>완료</strong>
+                      <span>{{qna.qnaEndCount}}</span>
+                    </li>
+                    <li>
+                      <strong>처리 중</strong>
+                      <span>{{qna.qnaIngCount}}</span>
+                    </li>
+                  </ul>
+                  <div class="consulting">
+                    <ul class="notice">
+                      <li>문의하신 내용을 email로 신속하고 정확하게 답변 드리겠습니다.</li>
+                      <li>1:1 상담글 작성 후에는 수정,삭제가 되지 않습니다.</li>
+                    </ul>
+                    <p>
+                      <a href="/Contact/Add" class="btn btn-medium">1:1 상담하기</a>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="qna-form">
+                    {{#qna.qnaList}}
+                        {{>desktop/precompiles/contact/counseling this}}
+                    {{/qna.qnaList}}
+                </div>
+             </article>
+
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

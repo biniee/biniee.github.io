@@ -1,0 +1,37 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Order"}}
+
+            <article class="order-complete contents">
+              <h3>주문반품신청</h3>
+
+              <div class="complete return">
+                <p>
+                  반품신청이 정상적으로 접수되었습니다.
+                </p>
+                <p>
+                  <small>제품상태 확인 후 빠르게 반품처리 할 수 있도록 하겠습니다.<br> 항상 KOLONmall을 이용해 주셔서 감사합니다.</small>
+                </p>
+                <p class="note">
+                  반품 배송비를 결제하지 않으신 고객님의 경우<br>
+                  제품상태 확인 후 반품배송비가 추가적으로 발생할 수 있습니다.
+                </p>
+              </div>
+
+              <div class="buttons end-row">
+                <button type="button" class="btn btn-line btn-big" onclick="javascript: location.href='/MyPage';">확인</button>
+              </div>
+            </article>
+
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

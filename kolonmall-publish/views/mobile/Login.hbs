@@ -1,0 +1,77 @@
+{{#> mobile/layouts/popup }}
+
+    {{#*inline "content"}}
+        <header class="kolon-header">
+            <div class="h-wrap">
+                <h2 class="hidden">KOLONmall 메인메뉴</h2>
+                <ul class="top-navi">
+                    <li>
+                        <h1 class="sub"><a href="#">로그인</a></h1>
+                    </li>
+                    <li>
+                        <a href="javascript:history.back();" class="close">닫기</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="wrap-form-login">
+            <input type="hidden" id="errorMessage" value="{{errorMessage}}" />
+            <form class="form-login" id="loginForm" action="./j_spring_security_check" method="post">
+                <input type="hidden" name="returnUrl" value="{{returnUrl}}">
+                <div class="btn-ctc">
+                    <input type="hidden" name="type" id="type" value="01" />
+                    <a href="#none" class="contact-phone" id="checkPhone">휴대폰번호로 로그인</a>
+                </div>
+                <div class="in-txt id">
+                    <input type="text" placeholder="아이디 또는 이메일 주소" id="user_id" name="j_username" value="{{userName}}"/>
+                    <span>아이디/이메일</span>
+                </div>
+                <div class="in-txt pass">
+                    <input type="password" placeholder="비밀번호" id="password" name="j_password"/>
+                    <span>비밀번호</span>
+                </div>
+
+                <!-- 휴대폰 번호 로그인 -->
+                <!-- <div class="in-txt phone">
+                    <input type="text" placeholder="휴대폰 번호( - 없이 숫자만 입력)" id="user_id" name="j_username" value=""/>
+                    <span>휴대폰번호</span>
+                </div>
+                <div class="in-txt pass">
+                    <input type="password" placeholder="비밀번호" id="password" name="j_password"/>
+                    <span>비밀번호</span>
+                </div> -->
+                <!-- //휴대폰 번호 로그인 -->
+
+                <div class="check-area">
+                    <input type="checkbox" name="_spring_security_remember_me" class="checkbox" id="auto"  />
+                    <label for="auto"></label>
+                    <label for="auto">자동로그인</label>
+                </div>
+                <div class="check-area">
+                    <input type="checkbox" id="save" name="_save_username" {{#is saveUserName true}}checked{{/is}}/>
+                    <label for="save"></label>
+                    <label for="save">아이디저장</label>
+                </div>
+                <div class="btns">
+                    <button type="submit" class="btn btn-login">로그인</button>
+                    <a href="/GuestOrder" class="btn btn-nonmbr">비회원 주문조회</a>
+                    <div class="box-sub">
+                        <a href="/Membership/FindLoginId" class="sub">아이디찾기</a>
+                        <a href="/Membership/FindPassword" class="sub">비밀번호찾기</a>
+                        <a href="/Membership/Sign" class="sub">회원가입</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--<footer class="footer-lgform">-->
+            <!--<p>소셜계정으로 간편하게 로그인 하세요.</p>-->
+            <!--<div class="box-sns">-->
+                <!--<a href="#" class="facebook">facebook</a>-->
+                <!--<a href="#" class="google">google</a>-->
+                <!--<a href="#" class="kakao">kakao</a>-->
+            <!--</div>-->
+        <!--</footer>-->
+    {{/inline}}
+{{/mobile/layouts/popup}}

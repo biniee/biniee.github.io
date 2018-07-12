@@ -1,0 +1,388 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-x title="장바구니"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+            
+            <!-- 장바구니 -->
+            <form name="input_form">
+
+            <article class="cart">
+                <div class="top">
+                    <div class="ch-area">
+                        <div class="check">
+                            <input type="checkbox" id="all" onclick="check();" />
+                            <label for="all"></label>
+                        </div>
+                        <label for="all">전체(4)</label>
+                    </div>
+                    <a href="#" class="btn-del">선택상품삭제</a>
+                </div>
+                <div class="cont">
+                    <!-- <h3 class="empty">장바구니에 담긴 상품이 없습니다.</h3> 장바구니 비었을때-->
+                    
+                    <!-- 장바구니 상품 -->
+                    <ul class="c-list">
+                        <!-- 택배배송 -->
+                        <li>
+                            <div class="top">
+                                <div class="ch-area">
+                                    <div class="check">
+                                        <input type="checkbox" id="prod1" name="chk" class="chbox"/>
+                                        <label for="prod1"></label>
+                                    </div>
+                                    <label for="prod1">택배배송</label>
+                                </div>
+                                <a href="#" class="btn-del">상품삭제</a>
+                            </div>
+                            <div class="prod">
+                                <img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일" />
+                            </div>
+                            <div class="info">
+                                <p class="t1">
+                                    <span class="brand">KOLON SPORT</span>
+                                    <span>QEBBM17504NAY</span>
+                                </p>
+                                <p class="t2">여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG</p>
+                                <p class="option">다크크레이, XXX</p>
+                                <p class="btm">
+                                    <span class="discount">140,000원</span>
+                                    <span class="price">103,500원</span>
+                                    <a href="#" class="family-btn-o">직원할인적용</a>
+                                </p>
+                                <div class="prod-add">
+                                    <select>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                    </select>
+                                    <div class="conts">
+                                        <a href="#" class="bt-minus">-</a>
+                                        <input type="text" value="1"/>
+                                        <a href="#" class="bt-plus">+</a>
+                                    </div>
+                                </div>
+                                <dl class="delivery-info">
+                                    <dt>배송방법</dt>
+                                    <dd>택배</dd>
+                                    <dt>배송비</dt>
+                                    <dd>무료</dd>
+                                </dl>
+                            </div>
+                            <div class="btn-area">
+                                <a href="#" class="btn1">관심상품</a>
+                                <a href="#" class="btn2">즉시구매</a>
+                            </div>
+                        </li>
+                        <!-- //택배배송 -->
+                        <!-- 매장픽업 -->
+                        <li>
+                            <div class="top">
+                                <div class="ch-area">
+                                    <div class="check">
+                                        <input type="checkbox" id="prod2" name="chk" class="chbox"/>
+                                        <label for="prod2"></label>
+                                    </div>
+                                    <label for="prod2">매장픽업</label>
+                                </div>
+                                <a href="#" class="btn-del">상품삭제</a>
+                            </div>
+                            <div class="prod">
+                                <img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일" />
+                            </div>
+                            <div class="info">
+                                <p class="t1">
+                                    <span class="brand">KOLON SPORT</span>
+                                    <span>QEBBM17504NAY</span>
+                                </p>
+                                <p class="t2">여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG</p>
+                                <p class="option">다크크레이, XXX</p>
+                                <p class="btm">
+                                    <span class="discount">140,000원</span>
+                                    <span class="price">103,500원</span>
+                                    <span class="family">직원할인가 97,300원</span>
+                                    <a href="#" class="family-btn-x">직원할인취소</a>
+                                </p>
+                                <div class="prod-add">
+                                    <select>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                    </select>
+                                    <div class="conts">
+                                        <a href="#" class="bt-minus">-</a>
+                                        <input type="text" value="1"/>
+                                        <a href="#" class="bt-plus">+</a>
+                                    </div>
+                                </div>
+                                <dl class="delivery-info">
+                                    <dt>배송방법</dt>
+                                    <dd>픽업</dd>
+                                    <dt>픽업매장</dt>
+                                    <dd>시리즈 이태원점</dd>
+                                    <dt>방문예정</dt>
+                                    <dd>2017.03.22 (수)</dd>
+                                    <dt>방문시간</dt>
+                                    <dd>16:30 ~ 19:30</dd>
+                                </dl>
+                            </div>
+                            <div class="btn-area">
+                                <a href="#" class="btn1">관심상품</a>
+                                <a href="#" class="btn2">즉시구매</a>
+                            </div>
+                        </li>
+                        <!-- //매장픽업 -->
+                        <!-- 품절 -->
+                        <li class="sold-out">
+                            <div class="top">
+                                <div class="ch-area">
+                                    <div class="check">
+                                        <input type="checkbox" id="prod3" name="chk" class="chbox" />
+                                        <label for="prod3"></label>
+                                    </div>
+                                    <label for="prod3">매장픽업</label>
+                                </div>
+                                <a href="#" class="btn-del">상품삭제</a>
+                            </div>
+                            <div class="prod">
+                                <img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일" />
+                            </div>
+                            <div class="info">
+                                <p class="t1">
+                                    <span class="brand">KOLON SPORT</span>
+                                    <span>QEBBM17504NAY</span>
+                                </p>
+                                <p class="t2">여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG</p>
+                                <p class="option">다크크레이, XXX</p>
+                                <p class="btm">
+                                    <span class="discount">140,000원</span>
+                                    <span class="price">103,500원</span>
+                                    <span class="family">직원할인가 97,300원</span>
+                                    <a href="#" class="family-btn-x">직원할인취소</a>
+                                </p>
+                                <div class="prod-add">
+                                    <select>
+                                        <option>275 (품절)</option>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                    </select>
+                                    <div class="conts">
+                                        <a href="#" class="bt-minus">-</a>
+                                        <input type="text" value="1"/>
+                                        <a href="#" class="bt-plus">+</a>
+                                    </div>
+                                </div>
+                                <dl class="delivery-info">
+                                    <dt>배송방법</dt>
+                                    <dd>픽업</dd>
+                                    <dt>픽업매장</dt>
+                                    <dd>시리즈 이태원점</dd>
+                                    <dt>방문예정</dt>
+                                    <dd>2017.03.22 (수)</dd>
+                                    <dt>방문시간</dt>
+                                    <dd>16:30 ~ 19:30</dd>
+                                </dl>
+                            </div>
+                            <div class="btn-area">
+                                <a href="#" class="btn1">관심상품</a>
+                                <a href="#" class="btn3">품절</a>
+                            </div>
+                        </li>
+                        <!-- //품절 -->
+                        <!-- 묶음배송 -->
+                        <li>
+                            <div class="top">
+                                <div class="ch-area">
+                                    <div class="check">
+                                        <input type="checkbox" id="prod4" name="chk"  class="chbox"/>
+                                        <label for="prod4"></label>
+                                    </div>
+                                    <label for="prod4">택배배송</label>
+                                </div>
+                                <a href="#" class="btn-del">상품삭제</a>
+                            </div>
+                            <div class="prod">
+                                <img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일" />
+                            </div>
+                            <div class="info">
+                                <p class="t1">
+                                    <span class="brand">KOLON SPORT</span>
+                                    <span>QEBBM17504NAY</span>
+                                </p>
+                                <p class="t2">여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG</p>
+                                <p class="option">다크크레이, XXX</p>
+                                <p class="btm">
+                                    <span class="discount">140,000원</span>
+                                    <span class="price">103,500원</span>
+                                    <span class="family">직원할인가 97,300원</span>
+                                    <a href="#" class="family-btn-x">직원할인취소</a>
+                                </p>
+                                <div class="prod-add">
+                                    <select>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                    </select>
+                                    <div class="conts">
+                                        <a href="#" class="bt-minus">-</a>
+                                        <input type="text" value="1"/>
+                                        <a href="#" class="bt-plus">+</a>
+                                    </div>
+                                </div>
+                                <dl class="delivery-info">
+                                    <dt>배송방법</dt>
+                                    <dd>택배</dd>
+                                    <dt>배송비</dt>
+                                    <dd>무료</dd>
+                                </dl>
+                            </div>
+                            <div class="prod">
+                                <img src="/_ui/img/m/temp/d-prod01.jpg" alt="상품 썸네일" />
+                            </div>
+                            <div class="info">
+                                <p class="t1">
+                                    <span class="brand">KOLON SPORT</span>
+                                    <span>QEBBM17504NAY</span>
+                                </p>
+                                <p class="t2">여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG 여성용 소형 백팩 BLOSSOM BAG</p>
+                                <p class="option">다크크레이, XXX</p>
+                                <p class="btm">
+                                    <span class="discount">140,000원</span>
+                                    <span class="price">103,500원</span>
+                                    <a href="#" class="family-btn-o">직원할인적용</a>
+                                </p>
+                                <div class="prod-add">
+                                    <select>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                        <option>XXX</option>
+                                    </select>
+                                    <div class="conts">
+                                        <a href="#" class="bt-minus">-</a>
+                                        <input type="text" value="1"/>
+                                        <a href="#" class="bt-plus">+</a>
+                                    </div>
+                                </div>
+                                <dl class="delivery-info">
+                                    <dt>배송방법</dt>
+                                    <dd>택배</dd>
+                                    <dt>배송비</dt>
+                                    <dd>무료</dd>
+                                </dl>
+                            </div>
+                            <div class="btn-area">
+                                <a href="#" class="btn1">관심상품</a>
+                                <a href="#" class="btn2">즉시구매</a>
+                            </div>
+                        </li>
+                        <!-- //묶음배송 -->
+                    </ul>
+                    <!-- //장바구니 상품 -->
+
+                    <!-- 사은혜택 -->
+                    <div class="gift">
+                        <h3>사은헤택</h3>
+                        <p class="disc">고객님의 사은품 증정 내역입니다.사은품이 여러 개인 경우<br />원하시는 사은품을 선택하실 수 있습니다.</P>
+                        <p class="disc">상품을 매장픽업하실 경우 사은품은 택배로 발송됩니다. <br />사은품을 수령하실 주소를 입력해주세요.</p>
+                        <ul class="gift-choice">
+                            <li>
+                                <p class="tit">[WAAC] UTG 강희재 PICK상품 30만원 이상 구매 사은품</p>
+                                <ul class="list">
+                                    <li class="select">
+                                        <a href="#">
+                                            <div class="prod"><img src="/_ui/img/m/temp/d-prod02.png" alt="사은품 썸네일" /></div>
+                                            <div class="info">
+                                                <p class="t1">WAAC</p>
+                                                <p class="t2">강희재 모자 - 볼륨 매쉬 업</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="prod"><img src="/_ui/img/m/temp/d-prod02.png" alt="사은품 썸네일" /></div>
+                                            <div class="info">
+                                                <p class="t1">WAAC</p>
+                                                <p class="t2">맵 스냅백(사은품명 입력정보)</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="tit">[series] 30만원 이상 구매 사은품</p>
+                                <ul class="list">
+                                    <li class="select">
+                                        <a href="#">
+                                            <div class="prod"><img src="/_ui/img/m/temp/d-prod02.png" alt="사은품 썸네일" /></div>
+                                            <div class="info">
+                                                <p class="t1">SERIES</p>
+                                                <p class="t2">네츄럴 컬러 양말 증정</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //사은혜택 -->
+
+                </div>
+            </article>
+            <div class="notice"><!-- 장바구니 비었을때 empty 클래스 추가 -->
+                <h3>장바구니 이용안내</h3>
+                <ul>
+                    <li>택배상품은 30일간 보관됩니다. 장기간 보관을 원하실 경우 [관심상품 담기]를 이용해 주세요.</li>
+                    <li>매장픽업 상품은 장바구니에 보관 후 1시간 안에 결제를 하셔야 하며 결제하지 않은 상품은 자동으로 삭제됩니다.</li>
+                    <li>택배 상품과 매장픽업 상품은 한번에 주문이 불가하오니 분리하여 주문하여 주셔야 합니다.</li>
+                </ul>
+            </div>
+
+            <!-- 총 주문 금액 -->
+            <div class="total-price">
+                <dl>
+                    <dt class="total">총 주문금액</dt>
+                    <dd class="total"><strong>999,500</strong>원</dd>
+                    <dt>총 상품금액</dt>
+                    <dd>1,109,000원</dd>
+                    <dt>배송비</dt>
+                    <dd>0원</dd>
+                    <dt>총 할인금액</dt>
+                    <dd>- 109,500원</dd>
+                </dl>
+            </div>
+            <a href="#" class="btn-order">선택상품 주문하기</a>
+            <!-- //총 주문 금액 -->
+
+            <!-- 총 주문 금액: fixed -->
+            <div class="total-price-fixed">
+                <div class="total">
+                    <span>총 주문금액</span>
+                    <span>999,500<i>원</i></span>
+                </div>
+                <a href="#" class="btn-order">주문하기</a>
+            </div>
+            <!-- //총 주문 금액: fixed -->
+            
+            </form>
+            <!-- //장바구니 -->
+
+        </section>
+    {{/inline}}
+    {{#*inline "extrajavascript"}}
+    <script>
+        function check(){
+            cbox = input_form.getElementsByClassName('chbox');
+            if(cbox.length) {
+                for(var i = 0; i<cbox.length;i++) {
+                    cbox[i].checked=input_form.all.checked;
+                }
+            } else {
+                cbox.checked=input_form.all.checked;
+            }
+        }
+    </script>
+    {{/inline}}
+{{/mobile/layouts/default}}

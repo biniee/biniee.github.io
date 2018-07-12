@@ -1,0 +1,53 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="이벤트 상세"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <article class="event-detail">
+                <h3>{{eventDetail.title}}</h3>
+                <div class="location">
+                    <span>FEATURE / <a href="#" class="active">이벤트</a></span>
+                    <span class="date">{{to_date_string eventDetail.eventAt.start}} ~ {{to_date_string eventDetail.eventAt.end}}</span>
+                </div>
+                <div class="page-function">
+                    <a href="#" class="list">이벤트 목록</a>
+                    <div class="slide-list-wrap">
+                        <div class="inner">
+                            <div class="slide-list">
+                                <div class="swiper-wrapper">
+                                    {{#eventList.results}}
+                                    <div class="list swiper-slide">
+                                        <div class="fix-ratio-106 bg-image" style="background-image:url('{{imageInfo.bgImage}}')"></div>
+                                        <p class="title"><a href="/Event/{{no}}">{{title}}</a></p>
+                                    </div>
+                                    {{/eventList.results}}
+                                </div>
+                            </div>
+                            <div class="swiper-controls">
+                                <button type="button" class="swiper-button-prev">prev</button>
+                                <button type="button" class="swiper-button-next">next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="function">공유</a>
+                </div>
+
+                <div class="detail-cont">
+                    {{{eventDetail.content}}}
+                </div>
+
+                <div class="buttons">
+                    <a href="/Event" class="btn btn-line btn-big">목록</a>
+                </div>
+
+            </article>
+
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

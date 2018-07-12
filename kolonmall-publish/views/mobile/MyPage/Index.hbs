@@ -1,0 +1,237 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="마이페이지"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/order/order-list"}}
+            {{precompile "mobile/precompiles/order/order-item-with-status"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/MyPage" class="on">홈</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Order/List">주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/RMA/List">취소/반품/교환</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/WishList/OnlineList">관심상품</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Review/RegisteredList">리뷰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Point">포인트</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Coupon">쿠폰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Deposit">예치금</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <!-- TODO : 회원 등급 종류는?? 아래는 스타일 상 정리 -->
+            <!-- mypage-grade-purple: 퍼플등급 -->
+            <!-- mypage-grade-black: 블랙등급 -->
+            <div class="my-info {{#is myPage.user.grade 'black'}}mypage-grade-black{{else}}mypage-grade-purple{{/is}}">
+                <p class="name"><i>{{myPage.user.name}}</i> 고객님</p>
+                <div>
+                    <div class="left">
+                        {{#if myPage.user.isEmployee}}
+                            <p class="hs-line"><i>임직원</i></p>
+                        {{else}}
+                            <p><i>{{myPage.user.grade}}</i>등급</p>
+                        {{/if}}
+                        <a href="#" class="txt hs-line">혜택안내</a>
+                        <!--span class="txt">보유예치금 : <i>15,000</i>원</span -->
+                        <a href="javascript:location.href='/Membership/CheckPassword?nextUrl=' + encodeURIComponent('/Membership/ChangeMember')" class="txt">회원정보변경</a>
+                    </div>
+                </div>
+            </div>
+            
+            <article class="mypage">
+
+                <dl class="my-point">
+                    <dt>POINT</dt>
+                    <dd>{{myPage.point.availablePoint}}P</dd>
+                    <dt class="small">eKOLON 포인트</dt>
+                    <dd class="small">미가용 포인트 {{myPage.point.unavailablePoint}}P</dd>
+                    <dt>COUPON</dt>
+                    <dd>{{myPage.point.couponCount}}장</dd>
+                    <dt>예치금</dt>
+                    <dd>{{myPage.point.depositAmount}}원</dd>
+                </dl>
+                {{#if myPage.user.isEmployee}}
+                    <!-- 임직원일 경우 노출 -->
+                    <div class="my-family">
+                        <dl>
+                            <dt class="bold">직원복지한도</dt>
+                            <dd class="btn-wow"><a href="/MyPage/WowMyKolon">wow my kolon</a></dd>
+                            <dt>구매지원한도 (30%)</dt>
+                            <dd>{{myPage.point.employeePoint.welfareLimitAmount}}원</dd>
+                            <dt>직원DC한도 (20%)</dt>
+                            <dd>{{myPage.point.employeePoint.employeeDcLimitAmount}}원</dd>
+                            <dt>총 직원복지 한도액</dt>
+                            <dd>{{myPage.point.employeePoint.totalEmployeePoint}}원</dd>
+                        </dl>
+                        <a href="/MyPage/FamilyGuide" class="btn-guide">임직원 이용 안내</a>
+                    </div>
+                    <!-- //임직원일 경우 노출 -->
+                {{/if}}
+
+                {{#fetch_banner "MOBILE" "page" "mypage" "middle"}}
+                    {{#if banners.page.totalCount}}
+                        {{{render_banner "mobile" "line/default" banners}}}
+                    {{/if}}
+                {{/fetch_banner}}
+
+                <div class="my-order">
+                    <div class="tit">
+                        <h3>최근 주문 현황</h3>
+                        <a href="/Order/List">전체주문조회</a>
+                    </div>
+
+                    <div class="cs-depth3 col3">
+                        <ul id="tabs">
+                            <li class="on"><a href="#" id="DELIVERY_tab">택배배송</a></li>
+                            <li><a href="#" id="PICKUP_tab">매장픽업</a></li>
+                            <li><a href="#" id="RMA_tab">취소/교환/반품</a></li>
+                        </ul>
+                    </div>
+                    <div id="tabContents">
+                        <!-- 택배배송 -->
+                        <div class="box1 sub-tab" data-tab-type="DELIVERY">
+                            <ul class="col5">
+                                <li id="RECEIPT_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>주문접수</span>
+                                    </a>
+                                </li>
+                                <li id="COMPLETEPAYMENT_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>결제완료</span>
+                                    </a>
+                                </li>
+                                <li id="DELIVERYREADY_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>상품준비</span>
+                                    </a>
+                                </li>
+                                <li id="DELIVERY_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>배송중</span>
+                                    </a>
+                                </li>
+                                <li id="DELIVERYCOMPLETED_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>배송완료</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //택배배송 -->
+
+                        <!-- 매장픽업 -->
+                        <div class="box1 sub-tab" data-tab-type="PICKUP" style="display: none;">
+                            <ul class="col3">
+                                <li id="COMPLETEPAYMENT_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>결제완료</span>
+                                    </a>
+                                </li>
+                                <li id="PICKUPREADY_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>픽업가능</span>
+                                    </a>
+                                </li>
+                                <li id="PICKUPCOMPLETE_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>픽업완료</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //매장픽업 -->
+
+                        <!-- 취소/교환/반품 -->
+                        <div class="box1 sub-tab" data-tab-type="RMA" style="display: none;">
+                            <ul class="col3">
+                                <li id="CANCEL_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>주문취소</span>
+                                    </a>
+                                </li>
+                                <li id="EXCHANGE_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>상품교환</span>
+                                    </a>
+                                </li>
+                                <li id="RETURN_count" data-order-count="0">
+                                    <a href="#">
+                                        <span class="count">0</span>
+                                        <span>반품신청</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //취소/교환/반품 -->
+
+                        <div class="box2 tab-contents-wrapper">
+                            <ul id="RECEIPT" class="tab-contents DELIVERY" style="display: none;">
+                            </ul>
+                            <ul id="COMPLETEPAYMENT" class="tab-contents DELIVERY" style="display: none;">
+                            </ul>
+                            <ul id="DELIVERYREADY" class="tab-contents DELIVERY" style="display: none;">
+                            </ul>
+                            <ul id="DELIVERY" class="tab-contents DELIVERY" style="display: none;">
+                            </ul>
+                            <ul id="DELIVERYCOMPLETED" class="tab-contents DELIVERY" style="display: none;">
+                            </ul>
+                            <ul id="COMPLETEPAYMENT" class="tab-contents PICKUP" style="display: none;">
+                            </ul>
+                            <ul id="PICKUPREADY" class="tab-contents PICKUP" style="display: none;">
+                            </ul>
+                            <ul id="PICKUPCOMPLETE" class="tab-contents PICKUP" style="display: none;">
+                            </ul>
+                            <ul id="CANCEL" class="tab-contents RMA" style="display: none;">
+                            </ul>
+                            <ul id="EXCHANGE" class="tab-contents RMA" style="display: none;">
+                            </ul>
+                            <ul id="RETURN" class="tab-contents RMA" style="display: none;">
+                            </ul>
+                        </div>
+                    </div>
+
+                    {{!-->mobile/partials/mypage/recently-viewed-products--}}
+
+                </div>
+            </article>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

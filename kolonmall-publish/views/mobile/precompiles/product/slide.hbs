@@ -1,0 +1,16 @@
+<div class="swiper-slide">
+    <a href="/Product/{{code}}">
+        <span class="num">{{add @index 1}}</span>
+        <div class="prod-img">
+            <img src="{{representationImage}}" alt="" />
+        </div>
+        <div class="txt-box">
+            <span class="brand">{{supplierBrandName}}</span>
+            <span class="tit">{{{name}}}</span>
+            <div class="btm">
+                {{#if price.discountRate}}{{#isnt price.discountRate 0}}<span class="discount">{{price.discountRate}}%</span>{{/isnt}}{{/if}}
+                <span class="price">{{#if price.discountRate}}{{#isnt price.discountRate 0}}<i>{{price.formattedWishPrice}}원</i>{{/isnt}}{{/if}}{{price.formattedPrice}}원</span>
+            </div>
+        </div>
+    </a>
+</div>

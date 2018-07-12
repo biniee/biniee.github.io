@@ -1,0 +1,14 @@
+<div class="site-map">
+	<dl>
+		<dt>CATEGORY</dt>
+        {{#categoriesByCode.categories}}
+            <dd><a href="{{url}}">{{name}}</a></dd>
+        {{/categoriesByCode.categories}}
+	</dl>
+	<dl>
+		<dt>BRAND</dt>
+        {{#categoriesByCode.brandCategory.subcategories}}
+            <dd><a href="{{url}}">{{name}}</a></dd>
+        {{/categoriesByCode.brandCategory.subcategories}}
+	</dl>
+</div>

@@ -1,0 +1,19 @@
+<tr>
+    <td class="date">{{createdDate}}</td>
+    <td class="type">{{description}}</td>
+    {{#is type "used"}}
+        <td class="price"><em></em></td>
+        <td class="price minus"><em>- {{amount}}</em> {{currency}}</td>
+    {{/is}}
+    {{#is type "accumulated"}}
+        <td class="price"><em>{{amount}}</em> {{currency}}</td>
+        <td class="price minus"><em></em></td>
+    {{/is}}
+    <td class="content">
+        {{#if extraDescription}}
+            {{extraDescription}}
+        {{else}}
+            {{displayedType}}
+        {{/if}}
+    </td>
+</tr>

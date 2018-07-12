@@ -1,0 +1,27 @@
+.full-width {
+  width: 1200px;
+  position: relative;
+}
+
+.fix-ratio-106 {
+  padding-bottom: 106.666666%;
+}
+
+.clearfix {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@media only screen and (min-width : 1200px) {
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}

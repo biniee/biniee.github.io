@@ -1,0 +1,157 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 홈"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/precompiles/order/order-list"}}
+            {{precompile "desktop/precompiles/order/order-item-with-status"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="MyPage"}}
+
+            <article class="my-page contents">
+              <div class="info-wrap">
+                <div class="my-info">
+                  <h3><strong>{{myPage.user.name}}</strong>님 반갑습니다.</h3>
+                  <div class="link">
+                    {{#if myPage.user.isEmployee}}
+                      <span class="blue">임직원 등급</span><a href="#">혜택안내</a>
+                    {{else}}
+                      <span class="blue">{{myPage.user.grade}} 등급</span>
+                    {{/if}}
+                  </div>
+                </div>
+                
+                <div class="my-point">
+                  <ul>
+                    <li>
+                      <strong>eKOLON POINT</strong>
+                      <span><em>{{myPage.point.availablePoint}}</em> P</span>
+                      <small>미가용 포인트 {{myPage.point.unavailablePoint}}P</small>
+                    </li>
+                    <li>
+                      <strong>COUPON</strong>
+                      <span><em>{{myPage.point.couponCount}}</em>장</span>
+                    </li>
+                    <li>
+                      <strong>예치금</strong>
+                      <span><em>{{myPage.point.depositAmount}}</em>원</span>
+                    </li>
+                  </ul>
+                </div>
+                {{#if myPage.user.isEmployee}}
+                  <!-- 임직원일 경우 노출 -->
+                  <div class="my-kolon">
+                    <div class="welfare">
+                      <h4>직원복지한도 <button type="button" id="familyGuideLayerPopupBtn" class="tip">tip</button></h4>
+                      <button type="button" id="wowMyKolonLayerPopupBtn" class="btn-kolon">WOW MY KOLON</button>
+                    </div>
+                    <div class="limit-info">
+                      <ul>
+                        <li>
+                          <strong>구매지원한도(30%)</strong>
+                          <span><em>{{myPage.point.employeePoint.welfareLimitAmount}}</em>원</span>
+                        </li>
+                        <li>
+                          <strong>직원 DC한도(20%)</strong>
+                          <span><em>{{myPage.point.employeePoint.employeeDcLimitAmount}}</em>원</span>
+                        </li>
+                        <li>
+                          <strong>총 직원복지 한도액</strong>
+                          <span><em>{{myPage.point.employeePoint.totalEmployeePoint}}</em>원</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- //임직원인경우노출-->
+                {{/if}}
+              </div>
+              
+              <h4>최근 주문 현황</h4>
+              <p class="total-order">
+                <a href="/Order/List">전체주문조회</a>
+              </p>
+
+              <ul id="tabs" class="tab list3">
+                <li class="on"><a href="#" id="DELIVERY_tab">택배배송</a></li>
+                <li><a href="#" id="PICKUP_tab">매장픽업</a></li>
+                <li><a href="#" id="RMA_tab">취소/교환/반품</a></li>
+              </ul>
+
+                <div id="tabContents">
+                    <!-- 택배배송 -->
+                    <ul class="order-tab sub-tab" data-tab-type="DELIVERY">
+                        <li id="RECEIPT_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>주문접수</span></a></li>
+                        <li id="COMPLETEPAYMENT_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>결제완료</span></a></li>
+                        <li id="DELIVERYREADY_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>상품준비중</span></a></li>
+                        <li id="DELIVERY_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>배송중</span></a></li>
+                        <li id="DELIVERYCOMPLETED_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>배송완료</span></a></li>
+                    </ul>
+                    <!-- //택배배송 -->
+
+                    <!-- 매장픽업 -->
+                    <ul class="order-tab sub-tab" data-tab-type="PICKUP" style="display: none;">
+                        <li id="COMPLETEPAYMENT_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>결제완료</span></a></li>
+                        <li id="PICKUPREADY_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>픽업가능</span></a></li>
+                        <li id="PICKUPCOMPLETE_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>픽업완료</span></a></li>
+                    </ul>
+                    <!-- //매장픽업 -->
+
+                    <!-- 취소/교환/반품 -->
+                    <ul class="order-tab sub-tab" data-tab-type="RMA" style="display: none;">
+                        <li id="CANCEL_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>주문취소</span></a></li>
+                        <li id="EXCHANGE_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>상품교환</span></a></li>
+                        <li id="RETURN_count" data-order-count="0" class="disabled"><a href="#"><em class="count">0</em><span>반품신청</span></a></li>
+                    </ul>
+                    <!-- //취소/교환/반품 -->
+
+                    <div class="order-lists tab-contents-wrapper">
+                       <p class="desc">최근 1개월간 주문 현황입니다.</p>
+                       <div class="head">
+                          <span class="tit-1">상품정보</span>
+                          <span class="tit-2">결제금액</span>
+                          <span class="tit-3">배송구분</span>
+                          <span class="tit-4">진행상태</span>
+                      </div>
+                        <div id="RECEIPT" class="tab-contents DELIVERY" style="display: none;">
+                        </div>
+                        <div id="COMPLETEPAYMENT" class="tab-contents DELIVERY" style="display: none;">
+                        </div>
+                        <div id="DELIVERYREADY" class="tab-contents DELIVERY" style="display: none;">
+                        </div>
+                        <div id="DELIVERY" class="tab-contents DELIVERY" style="display: none;">
+                        </div>
+                        <div id="DELIVERYCOMPLETED" class="tab-contents DELIVERY" style="display: none;">
+                        </div>
+                        <div id="COMPLETEPAYMENT" class="tab-contents PICKUP" style="display: none;">
+                        </div>
+                        <div id="PICKUPREADY" class="tab-contents PICKUP" style="display: none;">
+                        </div>
+                        <div id="PICKUPCOMPLETE" class="tab-contents PICKUP" style="display: none;">
+                        </div>
+                        <div id="CANCEL" class="tab-contents RMA" style="display: none;">
+                        </div>
+                        <div id="EXCHANGE" class="tab-contents RMA" style="display: none;">
+                        </div>
+                        <div id="RETURN" class="tab-contents RMA" style="display: none;">
+                        </div>
+                    </div>
+              </div>
+
+            {{!-->desktop/partials/mypage/recently-viewed-products--}}
+
+            </article>
+        </section>
+
+        <div id="layerPopupArea" style="display: none;">
+        </div>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

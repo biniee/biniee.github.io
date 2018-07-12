@@ -1,0 +1,33 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 쿠폰"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Coupon"}}
+
+            <article class="coupons contents">
+              <h3>쿠폰</h3>
+              <ul class="notice">
+                <li>주문 후 취소/교환/반품의 경우 이미 사용한 할인쿠폰은 환급되지 않습니다.</li>
+                <li>유효기간이 지난 쿠폰은 재발행 되지 않으니 유효기간 내에 사용해 주시기 바랍니다.</li>
+              </ul>
+
+              <ul class="tab list2">
+                <li><a href="#">온라인 쿠폰 <span>8</span></a></li>
+                <li class="on"><a href="#">매장 쿠폰 <span>0</span></a></li>
+              </ul>
+
+              <div class="coupon-list no-result">
+                사용가능한 쿠폰이 없습니다.
+              </div>
+            </article>
+
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

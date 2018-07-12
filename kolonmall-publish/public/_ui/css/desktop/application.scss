@@ -1,0 +1,6 @@
+// 모든 화면에서 사용할 스타일시트 파일입니다.
+// 모듈별로 쪼개서 만들경우 partials 폴더에 파일을 만드세요.
+
+@import 'partials/layout';
+@import 'partials/common';
+@import 'ladda';

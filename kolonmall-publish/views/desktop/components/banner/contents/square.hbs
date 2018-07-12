@@ -1,0 +1,23 @@
+<div class="item swiper-slide square-banner">
+    <a href="{{link}}">
+        <div class="fix-ratio-106 bg-image" style="background-image:url('{{content.bgImage}}')"></div>
+        {{#if content.tag}}
+            <div class="sticky">
+                {{#line_cnt content.tag 2}}
+                    <span class="type2">{{{nl2br content.tag}}}</span>
+                {{else}}
+                    <span class="type1">{{content.tag}}</span>
+                {{/line_cnt}}
+            </div>
+        {{/if}}
+        <div class="txt-box {{content.theme}}">
+            <span class="brand">
+                {{#if content.brand1}}<span>{{content.brand1}}</span>{{/if}}
+                {{#if content.brand2}}<span>{{content.brand2}}</span>{{/if}}
+                {{#if content.brand3}}<span>{{content.brand3}}</span>{{/if}}
+            </span>
+            {{#if content.title}}<span class="tit">{{{nl2br content.title}}}</span>{{/if}}
+            {{#if content.subtitle}}<span class="txt">{{{nl2br content.subtitle}}}</span>{{/if}}
+        </div>
+    </a>
+</div>

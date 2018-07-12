@@ -1,0 +1,124 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+            
+
+            <article class="mypage-order pt0">
+                <div class="h1-top">
+                    <a href="javascript:history.go(-1)" class="pop-close close2">닫기</a>
+                    <h1>교환신청</h1>
+                </div>
+
+                <form name="input_form" id="rmaOrderForm" data-order-number="{{order.orderNumber}}" data-rma-type="Exchange">
+                    <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                    <div class="order-number">
+                        <p>주문번호 : {{order.orderNumber}}<i>({{order.createdDate}})</i></p>
+                        <p>교환을 원하시는 상품을 선택해 주세요.</p>
+                    </div>
+                    <div class="top">
+                        <div class="ch-area">
+                            <div class="check">
+                                <input type="checkbox" id="all" onclick="check();" />
+                                <label for="all"></label>
+                            </div>
+                            <label for="all">전체({{length order.items}})</label>
+                        </div>
+                    </div>
+
+                    <div class="my-order-result">
+                        <ul class="order-detail">
+                            <li class="bundle cancel">
+                                {{#if order.items}}
+                                    <ul id="rmaOrderItemList">
+                                        {{#order.items}}
+                                            {{>mobile/precompiles/order/exchange-item displayedDeliveryType=../order.displayedDeliveryType selectedOrderEntryCode=../selectedOrderEntryCode}}
+                                        {{/order.items}}
+                                    </ul>
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </div>
+
+                    {{#is order.deliveryType "DELIVERYSERVICE"}}
+                        {{#if order.items}}
+                            {{>mobile/partials/order/order-detail-delivery order.items.[0].deliveryAddress}}
+                        {{/if}}
+                    {{/is}}
+
+                    {{#is order.deliveryType "PICKUP"}}
+                        {{#if order.items}}
+                            {{>mobile/partials/order/order-detail-store order.items.[0].pickupInformation}}
+                        {{/if}}
+                    {{/is}}
+
+                    <!-- 교환 배송비 정보 -->
+                    <div class="order cancel-exchange">
+                        <div class="box1">
+                            <h3 class="bd">교환 배송비 정보</h3>
+                            <p class="t1">우리은행 <i>1005-500-961058(예금주:코오롱인더스트리)</i><br />으로 교환 배송비를 <i>3일 이내</i>로 결제해 주시기 바랍니다.</p>
+                            <p class="t1">교환 배송비 입금이 확인된 후에 교환 처리가 시작됩니다.</p>
+                        </div>
+                        <div class="box2">
+                            <span>교환 배송비 금액</span>
+                            <span id="exchangeDeliveryCost"></span>
+                        </div>
+                        <div class="box3">
+                            <h3>교환안내</h3>
+                            <ul>
+                                <li>단순변심인 경우 1차 교환에 대한 반송비는 고객님 부담이며, 교환되는 제품의 배송비는 부과하지 않습니다. 단 2차 교환 요청 시에는 왕복 배송비 모두 고객님 부담입니다.</li>
+                                <li>불량에 의한 교환은 교환제품 수령 시 반품제품을 택배 기사님께 주시면 됩니다. 별도의 배송비는 없습니다.</li>
+                            </ul>
+                            <h3>이러한 사유는 교환/반품이 불가합니다.</h3>
+                            <ul>
+                                <li>고객님의 책임 있는 사유로 상품이 훼손된 경우</li>
+                                <li>상품 고유의 포장이 훼손되어 상품 가치가 상실된 경우<br />(예: TAG / 라벨 등의 훼손)</li>
+                                <li>시간의 경과에 의하여 재판매가 곤란할 정도로 상품가치가 현저히 감소한 경우</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //교환 배송비 정보 -->
+
+                    <div class="cancel-btns">
+                        <a href="#" href="javascript:history.go(-1)" class="btn1">취소</a>
+                        <a href="#" id="rmaOrderSubmitBtn" class="btn2">교환신청</a>
+                    </div>
+
+                </form>
+                
+            </article>
+            
+
+        </section>
+    {{/inline}}
+    {{#*inline "extrajavascript"}}
+        <script>
+            function change(obj) {
+                var request = obj.options[obj.selectedIndex].value;
+                var itemIndex = $(obj).parent('li').index()
+                //console.log('itemIdx : ' + itemIndex);
+                if( request == "txtbox" ){
+                    $(obj).siblings('.request-txt').css('display','block');
+                }else{
+                    $(obj).siblings('.request-txt').css('display','none');
+                }
+                if( request == "size" ){
+                    $(obj).siblings('.cause-size').css('display','block');
+                }else{
+                    $(obj).siblings('.cause-size').css('display','none');
+                }
+            }
+            function check(){
+                cbox = input_form.getElementsByClassName('orderItemCheckbox');
+                if(cbox.length) {
+                    for(var i = 0; i<cbox.length;i++) {
+                        cbox[i].checked=input_form.all.checked;
+                    }
+                } else {
+                    cbox.checked=input_form.all.checked;
+                }
+            }
+        </script>
+    {{/inline}}
+{{/mobile/layouts/default}}

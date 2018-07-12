@@ -1,0 +1,48 @@
+<div class="billing">
+    <h4>결제정보</h4>
+    <div class="table">
+        <div class="col">
+            <h5>총 상품금액</h5>
+            <ul>
+                <li>
+                    <strong>상품합계</strong>
+                    <span class="price">{{totalBasePrice}}원</span>
+                </li>
+                <li>
+                    <strong>배송비</strong>
+                    <span class="price">{{deliveryCost}}원</span>
+                </li>
+            </ul>
+        </div>
+        {{#if discount}}
+            <div class="col">
+                <h5>할인내역</h5>
+                <ul>
+                    {{#discount}}
+                        <li>
+                            <strong>{{name}}</strong>
+                            <span class="price">- {{amount}}원</span>
+                        </li>
+                    {{/discount}}
+                </ul>
+            </div>
+        {{/if}}
+        <div class="col">
+            <h5>결제수단</h5>
+            <ul>
+                {{#payments}}
+                <li>
+                    <strong>{{name}}</strong>
+                    <span class="price">{{formattedAmount}}원</span>
+                </li>
+                {{/payments}}
+            </ul>
+            <p class="receipt">
+                <button type="button" class="btn btn-line btn-small" onclick="javascript:alert('준비중입니다.');">영수증출력</button>
+            </p>
+        </div>
+    </div>
+    <div class="total">
+        총 결제금액 <em>{{orderDetailPrice}}</em>원
+    </div>
+</div>

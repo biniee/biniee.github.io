@@ -1,0 +1,122 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Order"}}
+
+            <article class="order-view contents">
+              <h3>주문상세조회</h3>
+                <form name="input_form" id="rmaOrderForm" data-order-number="{{order.orderNumber}}" data-rma-type="Cancel">
+                    <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                    <div class="order-lists">
+                    <div class="lists">
+                      <div class="summary">
+                        <p class="select-order">
+                          <span class="checkbox">
+                            <input type="checkbox" id="selectAllCheckbox">
+                            <i></i>
+                          </span>
+                        </p>
+                        <strong>주문번호</strong>
+                        <span>{{order.orderNumber}}</span>
+                        <strong>주문일</strong>
+                        <span>{{order.createdDate}}</span>
+                      </div>
+                      <div class="head">
+                        <span class="select-tit">&nbsp;</span>
+                        <span class="tit-5">상품정보</span>
+                        <span class="tit-3">수량</span>
+                        <span class="tit-2">결제금액</span>
+                        <span class="tit-4">진행상태</span>
+                      </div>
+
+                        {{#if order.items}}
+                            <div id="rmaOrderItemList">
+                                {{#order.items}}
+                                    {{>desktop/precompiles/order/cancel-item displayedDeliveryType=../order.displayedDeliveryType selectedOrderEntryCode=../selectedOrderEntryCode}}
+                                {{/order.items}}
+                            </div>
+                        {{/if}}
+
+                    </div>
+                  </div>
+
+                    {{#is order.deliveryType "DELIVERYSERVICE"}}
+                        {{#if order.items}}
+                            {{>desktop/partials/order/order-detail-delivery order.items.[0].deliveryAddress}}
+                        {{/if}}
+                    {{/is}}
+
+                    {{#is order.deliveryType "PICKUP"}}
+                        {{#if order.items}}
+                            {{>desktop/partials/order/order-detail-store order.items.[0].pickupInformation}}
+                        {{/if}}
+                    {{/is}}
+
+                  <div class="billing">
+                    <div class="table">
+                      <div class="col">
+                        <h4>결제정보</h4>
+                        <ul>
+                          <li>
+                            <strong>총 상품금액</strong>
+                            <span class="price">{{order.totalBasePrice}}원</span>
+                          </li>
+                          <li>
+                            <strong>총 배송비</strong>
+                            <span class="price">{{order.deliveryCost}}원원</span>
+                          </li>
+                          <li>
+                            <strong>총 할인금액</strong>
+                            <span class="price">- {{order.totalDiscount}}원</span>
+                          </li>
+                          <li>
+                            <strong>총 결제금액</strong>
+                            <span class="price">{{order.orderDetailPrice}}원</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4>환불정보</h4>
+                        <ul>
+                          <li>
+                            <strong>총 상품금액</strong>
+                            <span class="price" id="cancelTotalBasePrice"></span>
+                          </li>
+                          <li>
+                            <strong>총 배송비</strong>
+                            <span class="price" id="orderDeliveryCost"></span>
+                          </li>
+                          <li>
+                            <strong>총 할인금액</strong>
+                            <span class="price" d="orderTotalDiscount"></span>
+                          </li>
+                          <li>
+                            <strong>총 결제금액</strong>
+                            <span class="price" id="orderDetailPrice"></span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="total">
+                      총 <em id="orderDetailPriceValue"></em>원 환불예정
+                    </div>
+                  </div>
+
+                  <div class="buttons end-row">
+                    <button type="button" class="btn btn-line btn-big" onclick="javascript:history.go(-1);">취소</button>
+                    <button type="button" class="btn btn-big" id="rmaOrderSubmitBtn">취소신청</button>
+                  </div>
+                </form>
+            </article>
+
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

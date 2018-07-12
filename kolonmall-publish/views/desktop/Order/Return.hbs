@@ -1,0 +1,243 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Order"}}
+
+            <article class="order-view contents">
+                <h3>주문반품신청</h3>
+                <form name="input_form" id="rmaOrderForm" data-order-number="{{order.orderNumber}}" data-rma-type="Return">
+                    <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                    <p class="desc">* 반품하실 상품의 수량과 사유를 선택해 주세요.</p>
+                    <div class="order-lists">
+                        <div class="lists">
+                            <div class="summary">
+                                <p class="select-order">
+                              <span class="checkbox">
+                                <input type="checkbox" id="selectAllCheckbox">
+                                <i></i>
+                              </span>
+                                </p>
+                                <strong>주문번호</strong>
+                                <span>{{order.orderNumber}}</span>
+                                <strong>주문일</strong>
+                                <span>{{order.createdDate}}</span>
+                            </div>
+                            <div class="head">
+                                <span class="select-tit">&nbsp;</span>
+                                <span class="tit-5">상품정보</span>
+                                <span class="tit-3">수량</span>
+                                <span class="tit-2">결제금액</span>
+                                <span class="tit-4">진행상태</span>
+                            </div>
+
+                            {{#if order.items}}
+                                <div id="rmaOrderItemList">
+                                    {{#order.items}}
+                                        {{>desktop/precompiles/order/return-item displayedDeliveryType=../order.displayedDeliveryType selectedOrderEntryCode=../selectedOrderEntryCode}}
+                                    {{/order.items}}
+                                </div>
+                            {{/if}}
+                        </div>
+                    </div>
+
+                    {{#is order.deliveryType "DELIVERYSERVICE"}}
+                        {{#if order.items}}
+                            {{>desktop/partials/order/order-detail-delivery order.items.[0].deliveryAddress}}
+                        {{/if}}
+                    {{/is}}
+
+                    {{#is order.deliveryType "PICKUP"}}
+                        {{#if order.items}}
+                            {{>desktop/partials/order/order-detail-store order.items.[0].pickupInformation}}
+                        {{/if}}
+                    {{/is}}
+
+
+                    <div class="shipping">
+                        <h4>반품상품 수거정보</h4>
+                        <p class="already">
+                            <label for="">상품을 이미 판매자에게 발송</label>
+                            <span class="checkbox">
+                                <input type="checkbox" class="is-send" id="alreadySend">
+                                <i></i>
+                            </span>
+                        </p>
+                        <dl class="address-form common">
+                            <dt>보내는분 <em class="required">필수</em></dt>
+                            <dd>
+                                <input type="text" placeholder="이름을 입력하세요.">
+                                <span class="checkbox">
+                                    <input type="checkbox">
+                                    <i></i>
+                                </span>
+                                <label for="">주문 배송 정보와 동일</label>
+                            </dd>
+                            <dt>우편번호 <em class="required">필수</em></dt>
+                            <dd>
+                                <div class="row">
+                                    <input type="text">
+                                    <button class="btn btn-line btn-small">우편번호찾기</button>
+                                    <button class="btn btn-line btn-small">나의 배송지</button>
+                                </div>
+                                <div class="row"><input type="text" class="full" placeholder="상세주소를 입력하세요."></div>
+                            </dd>
+                            <dt>휴대폰 <em class="required">필수</em></dt>
+                            <dd><input type="text" placeholder="‘-’ 를 제외한 숫자만 입력하세요."></dd>
+                            <dt>전화번호</dt>
+                            <dd><input type="text" placeholder="‘-’ 를 제외한 숫자만 입력하세요."></dd>
+                        </dl>
+                        <!-- 상품을 이미 판매자에게 발송 - 선택 시 -->
+                        <dl class="address-form send-form" style="display:none;">
+                            <dt>보내는분 <em class="required">필수</em></dt>
+                            <dd>
+                    <span class="select">
+                      <select id="deliveryVendorSelect">
+                        <option value="">택배사 선택</option>
+                      </select>
+                    </span>
+                                <span class="checkbox">
+                      <input type="checkbox">
+                      <i></i>
+                    </span>
+                                <label for="">주문 배송 정보와 동일</label>
+                            </dd>
+                            <dt>발송일 <em class="required">필수</em></dt>
+                            <dd>
+                                <input type="text" value="2017.03.05">
+                                <button class="btn btn-line btn-small">날짜 선택</button>
+                            </dd>
+                            <dt>송장번호 <em class="required">필수</em></dt>
+                            <dd><input type="text" placeholder="‘-’ 를 제외한 숫자만 입력하세요."></dd>
+                        </dl>
+                    </div>
+
+                    <!--<div class="shipping">-->
+                    <!--<h4>사은품 회수 목록 <small>해당 사은품도 같이 보내주셔야 환불이 원활하게 진행됩니다.</small></h4>-->
+                    <!--<ul class="gifts">-->
+                    <!--<li>-->
+                    <!--<p class="title">[WAAC] UTG 강희재 PICK상품 30만원 이상 구매 사은품</p>-->
+                    <!--<div class="gift">-->
+                    <!--<p class="thumb"><img src="/_ui/img/pc/temp/@100x120.png" alt=""></p>-->
+                    <!--<div class="cnt">-->
+                    <!--<p class="brand">WAAC</p>-->
+                    <!--<p class="title">강희재 모자 - 볼륨 매쉬 업</p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<p class="title">[WAAC] UTG 강희재 PICK상품 30만원 이상 구매 사은품</p>-->
+                    <!--<div class="gift">-->
+                    <!--<p class="thumb"><img src="/_ui/img/pc/temp/@100x120.png" alt=""></p>-->
+                    <!--<div class="cnt">-->
+                    <!--<p class="brand">WAAC</p>-->
+                    <!--<p class="title">강희재 모자 - 볼륨 매쉬 업</p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <!--</div>-->
+
+                    {{>desktop/partials/order/order-detail-payment totalBasePrice = order.totalBasePrice deliveryCost = order.deliveryCost discount = order.discount payments = order.payments orderDetailPrice = order.orderDetailPrice}}
+
+                    <div class="billing">
+                        <h4>반품배송비/환불정보</h4>
+                        <div class="table">
+                            <div class="col">
+                                <h5>환불수단</h5>
+                                <ul>
+                                    <li>
+                                        <strong>신용카드</strong>
+                                        <span class="price">207,000원</span>
+                                    </li>
+                                    <li>
+                                        <strong id="firstRefundName">포인트</strong>
+                                        <span class="price" id="firstRefundValue">1,000원</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <h5>반품배송비 <button type="button" class="tip" data-target=".layer-return" data-trigger="layer">tip</button></h5>
+                                <ul>
+                                    <li>
+                                        <strong>금액</strong>
+                                        <span class="price" id="returnDeliveryCost"></span>
+                                    </li>
+                                </ul>
+                                <div class="refund-type" id="refundDeliveryGb">
+                              <span class="radio">
+                                <input name="refundType" id="refundType10" type="radio" value="10" checked="checked">
+                                <label for="refundType10">환불금액에서 차감</label>
+                              </span>
+                                    <span class="radio">
+                                <input name="refundType" id="refundType20" type="radio" value="20">
+                                <label for="refundType20">계좌로 입금</label>
+                              </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            총 <em id="returnResultPrice"></em>원 환불예정
+                        </div>
+
+                        <div class="note">
+                            <p>다음과 같이 상품이 사용/훼손된 경우에는 교환 및 반품이 되지 않습니다.</p>
+                            <ul>
+                                <li>고객님의 귀책 사유로 상품이 훼손된 경우 (단, 상품의 내용 확인을 위해 포장 드을 훼손한 경우는 제외)</li>
+                                <li>포장을 개봉하였거나 포장이 훼손되어 상품가치가 현저히 상실된경우.</li>
+                                <li>상품의 TAG, 스티커, 비닐포장, 케이스등을 훼손 및 분실한 경우.</li>
+                                <li>시간의 경과에 의하여 재판매가 곤란할 정도로 상품 등의 가치가 현저히 감소한 경우.</li>
+                            </ul>
+                            <p><button type="button" class="btn btn-line">반품 FAQ 보기</button></p>
+                        </div>
+                    </div>
+
+                    <div class="buttons end-row">
+                        <button type="button" class="btn btn-line btn-big" onclick="javascript:history.go(-1)">취소</button>
+                        <button type="button" class="btn btn-big" id="rmaOrderSubmitBtn">반품신청</button>
+                    </div>
+                </form>
+            </article>
+
+
+        </section>
+
+        <section class="layer-popup layer-return">
+            <div class="layer">
+                <div class="inner">
+                    <div class="head">
+                        <p>일부 상품 반품시  : 2,500월</p>
+                        <p>전체 상품 반품시  : 5,000월</p>
+                        <button type="button" class="close">레이어 닫기</button>
+                    </div>
+                    <div class="content">
+                        <dl>
+                            <dt>환불금액에서 차감</dt>
+                            <dd>
+                                <ul>
+                                    <li>아래 환불 예정금액에서 반품배송비 차감됩니다.</li>
+                                    <li>신용카드 전체 환불의 경우 부분취소가 되지 않을 수 있으므로 계좌로 입금을 선택해 주시기 바랍니다.</li>
+                                </ul>
+                            </dd>
+                            <dt>계좌로 입금</dt>
+                            <dd>
+                                <ul>
+                                    <li>우리은행 1005-500-961058(예금주:코오롱인더스트리)으로 반품 배송비를 3일 이내로 결제해 주시기 바랍니다.</li>
+                                    <li>반품상품 및 배송비 입금이 확인된 후에 환불이 완료됩니다.</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="foot">
+                        <button type="button" class="btn btn-line">닫기</button>
+                    </div>
+                </div>
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

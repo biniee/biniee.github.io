@@ -1,0 +1,104 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Order"}}
+
+            <article class="order-view contents">
+              <h3>주문교환신청</h3>
+                <form name="input_form" id="rmaOrderForm" data-order-number="{{order.orderNumber}}" data-rma-type="Exchange">
+                    <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                    <p class="desc">* 교환하실 상품의 수량과 사유를 선택해 주세요.</p>
+                  <div class="order-lists">
+                    <div class="lists">
+                      <div class="summary">
+                        <p class="select-order">
+                          <span class="checkbox">
+                            <input type="checkbox" id="selectAllCheckbox">
+                            <i></i>
+                          </span>
+                        </p>
+                        <strong>주문번호</strong>
+                        <span>{{order.orderNumber}}</span>
+                        <strong>주문일</strong>
+                        <span>{{order.createdDate}}</span>
+                      </div>
+                      <div class="head">
+                        <span class="select-tit">&nbsp;</span>
+                        <span class="tit-5">상품정보</span>
+                        <span class="tit-3">수량</span>
+                        <span class="tit-2">결제금액</span>
+                        <span class="tit-4">진행상태</span>
+                      </div>
+                        {{#if order.items}}
+                            <div id="rmaOrderItemList">
+                                {{#order.items}}
+                                    {{>desktop/precompiles/order/exchange-item displayedDeliveryType=../order.displayedDeliveryType selectedOrderEntryCode=../selectedOrderEntryCode}}
+                                {{/order.items}}
+                            </div>
+                        {{/if}}
+                    </div>
+                  </div>
+
+                    {{#is order.deliveryType "DELIVERYSERVICE"}}
+                        {{#if order.items}}
+                            {{>desktop/partials/order/order-detail-delivery order.items.[0].deliveryAddress}}
+                        {{/if}}
+                    {{/is}}
+
+                    {{#is order.deliveryType "PICKUP"}}
+                        {{#if order.items}}
+                            {{>mobile/partials/order/order-detail-store order.items.[0].pickupInformation}}
+                        {{/if}}
+                    {{/is}}
+
+                  <div class="shipping">
+                    <h4>교환 배송비 정보</h4>
+                    <dl>
+                      <dt>교환배송비</dt>
+                      <dd id="exchangeDeliveryCost"></dd>
+                      <dt>입금계좌</dt>
+                      <dd>
+                        <em>우리은행 1005-500-961058 (예금주 : 코오롱인더스트리)</em><br>
+                        고객변심의 사유로 교환신청을 신청하실 경우 별도의 교환배송비가 청구됩니다.<br>
+                        교환신청 후 3일 이내 위의 입금계좌로 입금해 주시기 바라며, 교환처리는 교환배송비 확인후 진행됩니다.
+                      </dd>
+                    </dl>
+
+
+                    <div class="note">
+                      <h5>꼭 알아두세요!</h5>
+                      <ul>
+                        <li>
+                          단순고객변심인 경우 1차 교환에 대한 반송비는 고객님 부담이며, 교환되는 제품의 배송비는 부과되지 않습니다.
+                          <br>단 2차 교환 요청 시에는 왕복 배송비 모두 고객님 부담입니다.
+                        </li>
+                        <li>불량에 의한 교환은 교환제품 픽업 시 반품제품을 택배 기사님께 주시면 됩니다. 별도의 배송비는 없습니다.</li>
+                      </ul>
+                      <h5>다음과 같이 상품이 사용/훼손된 경우에는 교환 및 반품이 되지 않습니다.</h5>
+                      <ul>
+                        <li>고객님의 책임 있는 사유로 상품이 훼손된 경우 (단, 상품의 내용 확인을 위해 포장 등을 훼손한 경우는 제외)</li>
+                        <li>포장을 개봉하였거나 포장이 훼손되어 상품가치가 현저히 상실된 경우</li>
+                        <li>상품의 TAG, 스티커, 비닐포장, 케이스 등을 훼손 및 분실한 경우</li>
+                        <li>시간의 경과에 의하여 재판매가 곤란할 정도로 상품 등의 가치가 현저히 감소한 경우</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="buttons end-row">
+                    <button type="button" class="btn btn-line btn-big" onclick="javascript:history.go(-1)">취소</button>
+                    <button type="button" class="btn btn-big" id="rmaOrderSubmitBtn">교환신청</button>
+                  </div>
+                </form>
+            </article>
+
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

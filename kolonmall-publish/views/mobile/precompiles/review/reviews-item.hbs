@@ -1,0 +1,21 @@
+<div class="rgstd-cnts">
+    <p class="star-rating registered">
+        {{{ratingView}}}
+    </p>
+    <p class="date">{{date}}</p>
+    <dl class="txt">
+        <dt>{{headline}}</dt>
+        <dd>{{comment}}</dd>
+    </dl>
+    <div class="rgstd-img">
+        {{#imageFiles}}
+            <img src="{{../imageURL}}/{{filePath}}/{{fileName}}" alt="리뷰 이미지" />
+        {{/imageFiles}}
+    </div>
+    <div class="btn-menu">
+        <a href="javascript:;" class="sns fb">Facebook</a>
+        <a href="javascript:;" class="sns kakao">Kakao talk</a>
+        <a href="javascript:;" class="sns url">URL</a>
+        <a href="javascript:;" class="del" data-product-code="{{product.code}}" data-comment-seq="{{commentSeq}}">삭제하기</a>
+    </div>
+</div>

@@ -1,0 +1,227 @@
+{  
+    "desktop_main": {
+        "page": {
+            "totalCount": 5,
+            "currentPage": 1,
+            "perPage": 100
+        },
+        "results": [
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "https://s3-ap-northeast-2.amazonaws.com/kop.dev.images/cms/banner/2017/07/3_2-4d2e4c6f-f5cd-45f7-9145-817e9d2d96a8.jpg"
+                },
+                "seq": 0
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "https://s3-ap-northeast-2.amazonaws.com/kop.dev.images/cms/banner/2017/07/event-645b1258-fe44-4b59-bc63-6f40e9739fe8.jpg"
+                },
+                "seq": 1
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "https://s3-ap-northeast-2.amazonaws.com/kop.dev.images/cms/banner/2017/07/1_2-24b283bc-176f-4c41-8a7e-89e583311217.jpg"
+                },
+                "seq": 2
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "https://s3-ap-northeast-2.amazonaws.com/kop.dev.images/cms/banner/2017/07/2_1-c27502f5-7f2b-4e2f-ac68-923e0e8ec3c9.jpg"
+                },
+                "seq": 3
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "https://s3-ap-northeast-2.amazonaws.com/kop.dev.images/cms/banner/2017/07/3_-522a2a71-2b46-412f-a00d-d6e4cb4c3b08.jpg"
+                },
+                "seq": 5
+            }
+        ]
+    },
+    "login_side": {
+        "page": {
+            "totalCount": 1,
+            "currentPage": 1,
+            "perPage": 100
+        },
+        "results": [
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "https://s3-ap-northeast-2.amazonaws.com/kop.dev.images/cms/banner/2017/07/login-bd5dd756-2be0-44eb-bc1e-3978d3047c2b.jpg"
+                }
+            }
+        ]
+    },
+    "line_one": {
+        "page": {
+            "totalCount": 1,
+            "currentPage": 1,
+            "perPage": 100
+        },
+        "results": [
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/pc/temp/@1200x120.jpg"
+                }
+            }
+        ]
+    },
+    "lnb_footer": {
+        "page": {
+            "totalCount": 2,
+            "currentPage": 1,
+            "perPage": 100
+        },
+        "results": [
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/pc/temp/@left-banner1.jpg"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/pc/temp/@left-banner2.jpg"
+                }
+            }
+        ]
+    },
+    "line": {
+        "page": {
+            "totalCount": 2,
+            "currentPage": 1,
+            "perPage": 100
+        },
+        "results": [
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/pc/temp/@1200x120.jpg"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/pc/temp/@1200x120.jpg"
+                }
+            }
+        ]
+    },
+    "square": {
+        "page": {
+            "totalCount": 9,
+            "currentPage": 1,
+            "perPage": 100
+        },
+        "results": [
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "https://s3-ap-northeast-2.amazonaws.com/kop.dev.images/cms/banner/2017/07/NEW---49f253d4-0ca1-445b-bd19-8d2ad780d987.jpg",
+                    "tag": "DEALS",
+                    "brand1": "ELORD",
+                    "brand2": "WAAC",
+                    "title": "NEW 시즌을 위한\n봄 라운딩룩 제안",
+                    "subtitle": "SPRING IS COMMING UP TO 50% OFF",
+                    "theme": "black"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "https://s3-ap-northeast-2.amazonaws.com/kop.dev.images/cms/banner/2017/07/special-fb571546-ea38-4b96-97f8-bbe34806d150.jpg",
+                    "tag": "SPECIAL\nPRICE",
+                    "brand1": "SUCOMMABONNIE",
+                    "title": "뉴 핑크 FLOWER\nBOMB SLIP-ON",
+                    "subtitle": "슈꼼마보니 핑크아이템 5%\n할인 쿠폰",
+                    "theme": "white"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/m/temp/online-bnr02.jpg",
+                    "tag": "ONLINE\nONLY",
+                    "brand1": "HEAD",
+                    "title": "HEAD EGO 여성\n스포츠 라이프 스타일 3",
+                    "subtitle": "헤드 핏 우먼 스포츠 라이프 스타일",
+                    "theme": "black"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/m/temp/online-bnr02.jpg",
+                    "tag": "ONLINE\nONLY",
+                    "brand1": "HEAD",
+                    "title": "HEAD EGO 여성\n스포츠 라이프 스타일 4",
+                    "subtitle": "헤드 핏 우먼 스포츠 라이프 스타일",
+                    "theme": "black"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/m/temp/online-bnr02.jpg",
+                    "tag": "ONLINE\nONLY",
+                    "brand1": "HEAD",
+                    "title": "HEAD EGO 여성\n스포츠 라이프 스타일 5",
+                    "subtitle": "헤드 핏 우먼 스포츠 라이프 스타일",
+                    "theme": "black"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/m/temp/online-bnr02.jpg",
+                    "tag": "ONLINE\nONLY",
+                    "brand1": "HEAD",
+                    "title": "HEAD EGO 여성\n스포츠 라이프 스타일 6",
+                    "subtitle": "헤드 핏 우먼 스포츠 라이프 스타일",
+                    "theme": "black"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/m/temp/online-bnr02.jpg",
+                    "tag": "ONLINE\nONLY",
+                    "brand1": "HEAD",
+                    "title": "HEAD EGO 여성\n스포츠 라이프 스타일 7",
+                    "subtitle": "헤드 핏 우먼 스포츠 라이프 스타일",
+                    "theme": "black"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/m/temp/online-bnr02.jpg",
+                    "tag": "ONLINE\nONLY",
+                    "brand1": "HEAD",
+                    "title": "HEAD EGO 여성\n스포츠 라이프 스타일 8",
+                    "subtitle": "헤드 핏 우먼 스포츠 라이프 스타일",
+                    "theme": "black"
+                }
+            },
+            {
+                "link": "/Special",
+                "content": {
+                    "bgImage": "/_ui/img/m/temp/online-bnr02.jpg",
+                    "tag": "ONLINE\nONLY",
+                    "brand1": "HEAD",
+                    "title": "HEAD EGO 여성\n스포츠 라이프 스타일 9",
+                    "subtitle": "헤드 핏 우먼 스포츠 라이프 스타일",
+                    "theme": "black"
+                }
+            }
+        ]
+    }
+}

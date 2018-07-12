@@ -1,0 +1,54 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+            
+            <article class="wow-my-kolon">
+                
+                <div class="h1-top">
+                    <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                    <h1>WOW MY KOLON</h1>
+                    <small>나의 구매 한도</small>
+                </div>
+
+                <ul>
+                    {{#couponList}}
+                        <li>
+                            <div class="coupon">
+                                <div class="left">
+                                    <p class="tit">{{name}}</p>
+                                        <small>임직원전용</small>
+                                    <div class="btm">
+                                        <span class="discount">{{discountValue}}{{discountUnit}}</span>
+                                        <span>{{useEndDate}}까지</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <span>{{discountString}}<br />쿠폰</span>
+                                </div>
+                            </div>
+                            <dl>
+                                <dt>쿠폰혜택 : </dt>
+                                <dd>{{priceName}} {{discountValue}}{{discountUnit}} {{discountString}}</dd>
+                                <dt>쿠폰번호 : </dt>
+                                <dd>{{code}}</dd>
+                                <dt>중복사용 : </dt>
+                                {{#if isEnabledDuplicate}}
+                                    <dd>다른 쿠폰과 <i>중복사용 불가</i></dd>
+                                {{else}}
+                                    <dd>다른 쿠폰과 <i>중복사용 가능</i></dd>
+                                {{/if}}
+                                <dt>구매한도 : </dt><dd><i>{{limitAmt}}원</i></dd>
+                                <dt>유효기간 : </dt>
+                                <dd>{{useStartDate}} ~ {{useEndDate}}</dd>
+                            </dl>
+                        </li>
+                    {{/couponList}}
+                </ul>
+
+            </article>
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

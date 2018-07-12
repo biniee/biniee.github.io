@@ -1,0 +1,43 @@
+{{#> desktop/layouts/popup }}
+    {{#*inline "content"}}
+        <section class="layer-popup layer-limit">
+            <div class="layer">
+                <div class="inner">
+                    <div class="head">
+                        <h1>WOW MY KOLON <span>나의 구매 한도</span></h1>
+                        <button tyle="button" class="close">레이어 닫기</button>
+                    </div>
+                    <div class="content">
+                        <div class="coupons">
+                            <div class="coupon-list">
+                                {{#couponList}}
+                                    <div class="list">
+                                        <button type="button" class="coupon">
+                                            <p class="label">할인 쿠폰</p>
+                                            <p class="title">{{name}}</p>
+                                            <p class="private">임직원전용</p>
+                                            <p class="sale">{{discountValue}}<small>{{discountUnit}}</small></p>
+                                            <p class="note">
+                                                <span>{{useEndDate}}까지</span>
+                                            </p>
+                                        </button>
+                                    <ul>
+                                        <li>쿠폰혜택 : {{priceName}} <span>{{discountValue}}{{discountUnit}} {{discountString}}</span></li>
+                                        <li>쿠폰번호 : {{code}}</li>
+                                        <li>중복사용 : {{#if isEnabledDuplicate}}다른 쿠폰과 <em>중복사용 불가</em>{{else}}다른 쿠폰과 <em>중복사용 가능</em>{{/if}}</li>
+                                        <li>구매한도 : <em>{{limitAmt}}원</em></li>
+                                        <li>유효기간 : {{useStartDate}} ~ {{useEndDate}}</li>
+                                    </ul>
+                                    </div>
+                                    {{/couponList}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foot">
+                            <button type="button" class="btn btn-line close-layer">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    {{/inline}}
+{{/desktop/layouts/popup}}

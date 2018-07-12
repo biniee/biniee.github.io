@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>sitemap</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+  <link rel="stylesheet" href="/stylesheets/base.css" />
+  <link rel="stylesheet" href="/stylesheets/application.css" />
+
+  <!-- use noto sans font start -->
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script type="text/javascript">
+      WebFont.load({
+          custom: {
+              families: ["Spoqa Han Sans"],
+              urls: ["/_ui/font/spoqa-han-sans.css"]
+          }
+      });
+  </script>
+</head>
+<body>
+  <table class="table table-striped table-bordered table-condensed">
+    <tr>
+      <th>ID</th>
+      <th>설명</th>
+    </tr>
+
+    {% for name, item in sitemap %}
+      <tr>
+        <td colspan="2">
+          <i class="fa fa-heart" aria-hidden="true"></i> {{ name }}
+        </td>
+      </tr>
+      {% for value in sitemap[name] %}
+        <tr>
+          <td><a href="/{{ value.id | replace('.', '/') }}">{{ value.id }}</a></td>
+          <td>{{ value.name }}</td>
+        </tr>
+      {% endfor %}
+    {% endfor %}
+  </table>
+</body>
+</html>
+

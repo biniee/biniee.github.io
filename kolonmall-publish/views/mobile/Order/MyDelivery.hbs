@@ -1,0 +1,63 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+
+            <article class="my-address">
+                <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                <h1>나의 배송지</h1>
+                <ul class="ad-list">
+                    <li>
+                        <div class="top">
+                            <div class="radio">
+                                <input type="radio" name="my-ad" id="ad01" checked />
+                                <label for="ad01" class="radio-img"></label>
+                            </div>
+                            <label for="ad01">홍길동</label>
+                            <span class="t1">기본배송지</span>
+                        </div>
+                        <dl>
+                            <dt>주소</dt>
+                            <dd>서울시 서초구 서초대로 411 GT타워 8층 KOP센터 커머스팀</dd>
+                            <dt>연락처</dt>
+                            <dd>
+                                <span>010-1234-5678</span>
+                                <span>02-1234-5678</span>
+                            </dd>
+                        </dl>
+                        <div class="btn-area">
+                            <a href="#" class="edit">수정</a>
+                            <a href="#" class="del">삭제</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="top">
+                            <div class="radio">
+                                <input type="radio" name="my-ad" id="ad02" />
+                                <label for="ad02" class="radio-img"></label>
+                            </div>
+                            <label for="ad02">본가</label>
+                        </div>
+                        <dl>
+                            <dt>주소</dt>
+                            <dd>서울시 서초구 서초대로 411 GT타워 8층 KOP센터 커머스팀</dd>
+                            <dt>연락처</dt>
+                            <dd>
+                                <span>010-1234-5678</span>
+                                <span>02-1234-5678</span>
+                            </dd>
+                        </dl>
+                        <div class="btn-area">
+                            <a href="#" class="edit">수정</a>
+                            <a href="#" class="del">삭제</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="/Order/MyDeliveryAdd" class="btn-add">배송지 추가</a>
+                <a href="#" class="btn-apply">선택한 배송지로 적용</a>
+            </article>
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

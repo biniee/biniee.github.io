@@ -1,0 +1,111 @@
+{
+  "topLine": {
+    "bannerList": [
+      {
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/spot-bnr.jpg"
+      }
+    ]
+  },
+  "bottomLine": {
+    "bannerList": [
+      {
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/btm-bnr01.jpg"
+      },
+      {
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/btm-bnr02.jpg"
+      }
+    ]
+  },
+  "topContentsDefaultList": {
+    "bannerList": [
+      {
+        "type": "brand",
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/special-bnr01.jpg",
+        "label": "SUECOMMABONNIE",
+        "title": "슈콤마보니 2017<br />SS컬렉션 프리오픈",
+        "description": "슈콤마보니 2017 S/S 컬렉션"
+      },
+      {
+        "type": "brand",
+        "colorClassName": "white",
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/special-bnr02.jpg",
+        "label": "GGIO2",
+        "title": "GGIO2 2017 men's<br />스타일링 업",
+        "description": "GGIO2 2017 Men's 스타일링 업"
+      },
+      {
+        "type": "brand",
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/special-bnr03.jpg",
+        "label": "SERIES",
+        "title": "시리즈 홈웨어 시즌오프<br />특별 할인가",
+        "description": "UP TO 70+30% (임직원 ONLY)"
+      }
+    ]
+  },
+  "online": {
+    "bannerInfo": {
+      "title": "ONLINE ONLY",
+      "url": "http://naver.com"
+    },
+    "bannerList": [
+      {
+        "type": "category",
+        "colorClassName": "white",
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/online-bnr01.jpg",
+        "imageDescription": "online only01",
+        "label": "ALL",
+        "title": "봄바람 살랑일 때 가장<br />설레는 조합",
+        "description": "코오롱몰 17SS Pink 신상"
+      },
+      {
+        "type": "category",
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/online-bnr02.jpg",
+        "imageDescription": "online only02",
+        "label": "HEAD",
+        "title": "HEAD ego 여성<br />운동화 30% OFF",
+        "description": "헤드 핏 우먼 스포츠 운동화 30% OFF"
+      }
+    ]
+  },
+  "specialPrice": {
+    "bannerInfo": {
+      "title": "SPECIAL PRICE",
+      "url": "http://naver.com"
+    },
+    "bannerList": [
+      {
+        "type": "brand",
+        "colorClassName": "white",
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/sPrice-bnr01.jpg",
+        "label": "SUECOMMABONNIE",
+        "title": "뉴 핑크 FLOWER<br />BOMB SLIP-ON",
+        "description": "슈콤마보니 핑크아이템 5%<br />할인 쿠폰"
+      }
+    ]
+  },
+  "deals": {
+    "bannerInfo": {
+      "title": "ISSUE & DEALS",
+      "url": "http://naver.com"
+    },
+    "bannerList": [
+      {
+        "type": "category",
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/deals-bnr01.jpg",
+        "label": "<span>ELORD</span><span>WAAC</span>",
+        "title": "NEW 시즌을 위한<br />봄 라운딩룩 제안",
+        "description": "SPRING IS COMING UP TO 50% OFF"
+      }
+    ]
+  }
+}

@@ -1,0 +1,219 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 - 1:1 상담"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/precompiles/contact/search-product-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="Contact"}}
+            <form id="contactAddForm">
+                <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                <!-- 아래의 정보는 이노믹스 측 정보 수집에 필요한 정보들 -->
+                <input type="hidden" name="customer_ip" />
+                <input type="hidden" name="device_id" />
+                <input type="hidden" name="device_version" />
+                <input type="hidden" name="device_model" />
+                <input type="hidden" id="attachConfigFileList" value="{{qnaConfig.attachConf.extList}}" />
+                <input type="hidden" id="attachConfigSize" value="{{qnaConfig.attachConf.size}}" />
+                 <article class="contact contents">
+                    <h3>1:1 상담</h3>
+
+                    <ul class="notice">
+                      <li>문의하신 내용을 email로 신속하고 정확하게 답변 드리겠습니다.</li>
+                      <li>상담에 대한 답변은 마이페이지 및 <a href="/Contact">고객센터 &gt; 1:1상담</a>에서 확인하실 수 있습니다. </li>
+                      <li>1:1 상담글 작성 후에는 수정,삭제가 되지 않습니다.</li>
+                    </ul>
+
+                    <dl class="question-form">
+                      <dt>질문 유형<em class="required">필수</em></dt>
+                      <dd>
+                        <span class="select col-1">
+                          <select id="choice_type" name="choice_type">
+                            <option value="">질문 유형을 선택해 주세요.</option>
+                              {{#qnaCategory}}
+                                  <option value="{{nodeId}}">{{nodeName}}</option>
+                              {{/qnaCategory}}
+                          </select>
+                        </span>
+                      </dd>
+                      <dt>상세 유형</dt>
+                      <dd>
+                        <span class="select col-1">
+                          <select id="select_category2" name="select_category2">
+                            <option value="" >상세 유형을 선택해 주세요.</option>
+                          </select>
+                        </span>
+                      </dd>
+                      <dt>상품 선택</dt>
+                      <dd>
+                        <p class="buttons" id="select-product">
+                          <a href="#" class="btn btn-line btn-small" data-product-type="order">주문 상품</a>
+                          <a href="#" class="btn btn-line btn-small" data-product-type="cart">장바구니</a>
+                          <a href="#" class="btn btn-line btn-small" data-product-type="wishList">관심상품</a>
+                        </p>
+                          <div class="select-product" style="display: none;" id="selectedProduct">
+                              <input type="hidden" name="option01" id="orderNumber" /><!-- 주문명 -->
+                              <input type="hidden" name="option02" id="productName" /><!-- 상품명 -->
+                              <input type="hidden" name="option03" id="productCode" /><!-- 상품번호 -->
+                              <p class="thumb"><img src="" alt="상품 썸네일" id="productImg" width="96"></p>
+                              <div class="product">
+                                  <h4 id="bvrandNameText"></h4>
+                                  <p id="productNameText"></p>
+                                  <div class="price">
+                                      <del class="discount" style="display: none;" id="productDiscount"></del>
+                                      <ins id="productPrice"></ins>
+                                  </div>
+                                  <button class="btn btn-line btn-small change-product" type="button">상품변경</button>
+                                  <button class="btn-close" type="button" id="removeSelectedProduct">닫기</button>
+                              </div>
+                          </div>
+                      </dd>
+                      <!--<dt>맞교환 여부</dt>-->
+                      <!--<dd>-->
+                        <!--<span class="radio">-->
+                          <!--<input type="radio" id="">-->
+                          <!--<label for="">신청</label>-->
+                        <!--</span>-->
+                        <!--<span class="radio">-->
+                          <!--<input type="radio" id="">-->
+                          <!--<label for="">미신청</label>-->
+                        <!--</span>-->
+                      <!--</dd>-->
+                      <dt>제목<em class="required">필수</em></dt>
+                      <dd>
+                        <input type="text" name="question_title" id="question_title" placeholder="제목을 입력하세요.">
+                      </dd>
+                      <dt>내용<em class="required">필수</em></dt>
+                      <dd>
+                        <textarea name="question_contents" id="question_contents" placeholder="내용을 입력하세요."></textarea>
+                      </dd>
+                      <dt>파일 첨부</dt>
+                      <dd>
+                        <div class="add-file">
+                          <span class="thumb hidden"><img alt=""><button type="button" class="delete">삭제</button></span>
+                          <span class="file" id="container">
+                            <span class="btn btn-line btn-small">파일등록</span>
+                            <input type="hidden">
+                          </span>
+                        </div>
+                        <p class="desc inline">참고할 이미지를 등록하실 수 있습니다. 용량제한 2MB</p>
+                      </dd>
+                      <dt>휴대폰<em class="required">필수</em></dt>
+                      <dd>
+                        <div class="col-1">
+                          <input type="text" id="customer_tel" name="customer_tel" placeholder="‘-’ 를 제외한 숫자만 입력하세요." value="{{customer.mobileNumber}}">
+                        </div>
+                        <div class="col-2" id="smsArea" style="display: none;">
+                          <span class="checkbox">
+                              <input type="hidden" name="option05" id="option05" value="Y" />
+                            <input type="checkbox" id="sms_info">
+                            <i></i>
+                          </span>
+                          <label for="sms_info">SMS 받기</label>
+                        </div>
+                      </dd>
+                      <dt>이메일<em class="required">필수</em></dt>
+                      <dd>
+                        <div class="row">
+                          <p class="inline-form col-1">
+                            <input type="hidden" id="customer_email" name="customer_email" value="{{customer.email}}" />
+                            <input type="text" id="emailId">
+                            <span class="split">@</span>
+                            <input type="text" id="emailDomain">
+                          </p>
+                          <span class="select col-2">
+                              <select title="이메일 확장자" id="emailDomainSelect">
+                                  <option value="" selected="selected">기타(직접입력)</option>
+                                  <option value="naver.com">naver.com</option>
+                                  <option value="nate.com">nate.com</option>
+                                  <option value="hanmail.net">hanmail.net</option>
+                              </select>
+                          </span>
+                        </div>
+                        <p class="desc">
+                          문의하신 내용의 답변은 이메일로 보내드립니다.
+                        </p>
+                      </dd>
+                    </dl>
+                    <div class="buttons end-row">
+                      <button id="contactAddFormResetBtn" type="button" class="btn btn-line btn-big">취소</button>
+                      <a href="#" id="contactAddFormSubmitBtn" class="btn btn-big">확인</a>
+                    </div>
+                </article>
+            </form>
+        </section>
+
+        <section class="layer-popup layer-select-layer" id="searchProductPopup">
+            <div class="layer">
+                <div class="inner">
+                    <div class="head">
+                        <h1>상품 선택</h1>
+                        <button tyle="button" class="close">레이어 닫기</button>
+                    </div>
+                    <div class="content">
+                        <ul class="tab list3" id="select-product-tab">
+                            <li class="on"><a href="#" data-product-type="order">주문상품</a></li>
+                            <li><a href="#" data-product-type="cart">장바구니</a></li>
+                            <li><a href="#" data-product-type="wishList">관심상품</a></li>
+                        </ul>
+
+                        <div class="tab-cnt tab-cnt-1" id="resultOrderListWrapper">
+                            <div class="search-date">
+                                <ul class="tab" id="periodBtns">
+                                    <li class="on"><a href="#" data-search-period=30>1개월</a></li>
+                                    <li><a href="#" data-search-period=90>3개월</a></li>
+                                    <li><a href="#" data-search-period=180>6개월</a></li>
+                                    <li><a href="#" data-search-period=365>12개월</a></li>
+                                </ul>
+                                <div class="date">
+                                    <input type="text">
+                                    <i class="split">~</i>
+                                    <input type="text">
+                                    <button type="button" class="btn" id="searchOrderBtn">조회</button> <!-- type : button or submit -->
+                                </div>
+                            </div>
+
+                            <h2 id="searchPeriodTextWrapper">최근 <span class="searchPeriodText">1개월</span>동안 구매하신 상품내역입니다.</h2>
+
+                            {{{render_loader "orderListLoading"}}}
+
+                            <div class="lists">
+                                <div id="resultOrderList" style="display: none;">
+                                    <button type="button" class="list-more" type="button">더 보기</button>
+                                </div>
+                                <p class="no-result" style="display: none;" id="emptyResultOrderList">최근 <span class="searchPeriodText">1개월</span>동안 상품내역이 없습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-cnt tab-cnt-2 hidden" id="resultCartListWrapper">
+                            <div class="lists">
+                                <div id="resultCartList" style="display: none;">
+                                    <!--<button type="button" class="list-more" type="button">더 보기</button>-->
+                                </div>
+                                <p class="no-result" style="display: none;" id="emptyResultCartList">장바구니에 담긴 상품이 없습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-cnt tab-cnt-3 hidden" id="resultWishListWrapper">
+                            <div class="lists">
+                                <div id="resultWishList" style="display: none;">
+                                    <button type="button" class="list-more" type="button">더 보기</button>
+                                </div>
+                                <p class="no-result" style="display: none;" id="emptyResultWishList">등록하신 관심 상품이 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

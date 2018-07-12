@@ -1,0 +1,33 @@
+<div class="list">
+    <div class="productDetailMoveArea" data-product-code="{{product.code}}">
+        <p class="thumb"><img src="{{product.representationImage}}" alt="상품 이미지" /></p>
+        <div class="product">
+            <h4>
+                {{product.supplierName}}
+                <small>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</small>
+            </h4>
+            <p>{{product.name}}</p>
+            <ul class="meta">
+                <li>
+                    <em>옵션</em>
+                    <span>
+                        {{#if product.color}}
+                            {{product.color}}{{#if product.size}}, {{/if}}
+                        {{/if}}
+                        {{product.size}}
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <p class="price">{{product.price.formattedPrice}}{{product.price.symbol}}</p>
+        <p class="delivery">
+            <span></span>
+        </p>
+        <p class="state">
+            <span></span>
+        </p>
+    </div>
+    <p class="state" {{#is reviewType "R"}}style="display: none;"{{/is}}>
+        <button class="btn btn-line btn-small" data-target=".layer-review" data-trigger="layer" data-product-code="{{product.code}}">리뷰 작성</button>
+    </p>
+</div>

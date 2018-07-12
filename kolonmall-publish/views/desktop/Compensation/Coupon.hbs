@@ -1,0 +1,45 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 -  온라인 고객보상제"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="Compensation"}}
+
+             <article class="compensation contents">
+                <h3>온라인 고객보상제</h3>
+
+                <ul class="tab list3">
+                    <li><a href="/Compensation/Delay">배송지연 고객보상제</a></li>
+                    <li><a href="/Compensation/SoldOut">품절 취소 고객보상제</a></li>
+                    <li class="on"><a href="/Compensation/Coupon">보상쿠폰 사용안내</a></li>
+                </ul>
+
+                <div class="content">
+                  <h4>보상쿠폰 사용안내</h4>
+                  <ul>
+                    <li>배송 지연 또는 품절 안내 지연으로 인한 보상쿠폰 발급 요청 시 접수일로부터 7일 이내 발급 해 드립니다.</li>
+                    <li>접수 방법은 고객 센터 (1588-7667)로 연락 주시거나, 1:1 상담 게시판에 남겨 주세요.</li>
+                    <li>보상으로 지급된 할인 쿠폰은 제한 사항 없이 6개월 이내에만 쓰실 수 있습니다. (발행일로부터 6개월 이후 자동 소멸)</li>
+                    <li>아래의 내용에 포함되는 경우 고객보상에서 제외됩니다.</li>
+                  </ul>
+
+                  <h4>고객보상 제외 경우</h4>
+                  <ul>
+                    <li>토, 일, 공휴일은 배송일에 포함되지 않으며, 고객과실, 택배사고, 천재지변 등의 경우.</li>
+                    <li>입금완료 3일 이내 배송지연 및 품절에 대한 전화안내 또는 메일 안내가 진행된 경우.</li>
+                    <li>예약상품은 고객보상 제외 단, 코오롱의 배송 기일은 5일이며, 일부 상품의 경우 안내된 배송기일 기준에서 지연 경과된 일자에 따라 보상해 드립니다.</li>
+                  </ul>
+                  <p>
+                    <a href="/Contact/Add" class="btn btn-line btn-medium">1:1 상담하기</a>
+                  </p>
+
+                </div>
+            </article>
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

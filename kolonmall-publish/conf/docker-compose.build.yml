@@ -1,0 +1,11 @@
+# for staging
+version: '2'
+services:
+  deploy:
+    image: node:6.10
+    working_dir: /app
+    volumes:
+      - $JOB_HOME/$JOB_NAME/workspace:/app
+    environment:
+      DEPLOY: 'true'
+    command: bash -c "npm install"

@@ -1,0 +1,42 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 - FAQ"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="FAQ"}}
+
+             <article class="cscenter contents">
+                <h3>FAQ</h3>
+
+                <!-- tab -->
+                <ul class="tab list6">
+                    {{#faqCategories}}
+                        <li><a href="/FAQ/{{nodeId}}/List">{{nodeName}}</a></li>
+                    {{/faqCategories}}
+                </ul>
+                <!-- //tab -->
+
+                <h4>자주 묻는 질문 TOP5</h4>
+
+                <div class="qna-form">
+                    {{#topFive}}
+                        {{>desktop/precompiles/faq/faq-item this}}
+                    {{/topFive}}
+                </div>
+            </article>
+
+        </section>
+
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+                {{precompile "desktop/precompiles/faq/faq-item"}}
+        </script>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

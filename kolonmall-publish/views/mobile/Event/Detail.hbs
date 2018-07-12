@@ -1,0 +1,18 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+
+        <section id="kolon-content pt0">
+
+            <div class="h1-top">
+                <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                <h1>{{eventDetail.title}}</h1>
+            </div>
+
+            <article class="detail-evt">
+                {{{eventDetail.content}}}
+            </article>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

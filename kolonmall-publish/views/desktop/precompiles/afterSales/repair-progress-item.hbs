@@ -1,0 +1,83 @@
+<a href="#" class="list" data-custnm="{{custNm}}"
+   data-cnslofcmemo="{{cnslofcMemo}}"
+   data-cmplth2schddt="{{cmplTh2SchdDt}}"
+   data-shopsenddt="{{shopSendDt}}"
+   data-empnm="{{empNm}}"
+   data-mendn1chrdyn="{{mendN1ChrdYn}}"
+   data-mendsenddt="{{mendSendDt}}">
+    <span class="state">{{displayedStatus}}</span>
+    <ul>
+        <li>
+            <strong>접수일</strong>
+            <span>{{cnslofcRcptDt}}</span>
+        </li>
+        <li>
+            <strong>상품코드</strong>
+            <span>{{styleColorCd}}</span>
+        </li>
+        <li>
+            <strong>수선내용</strong>
+            <span>{{mendC}}</span>
+        </li>
+    </ul>
+    <i></i>
+</a>
+
+<section class="layer-popup layer-repair-state">
+    <div class="layer">
+        <div class="inner">
+            <div class="head">
+                <h1>{{custNm}}님의 {{styleColorCd}} 제품에 대한 수선진행 현황입니다.</h1>
+                <button tyle="button" class="close">레이어 닫기</button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>
+                        <strong>접수일</strong>
+                        <span>{{cnslofcRcptDt}} <small>상담실 접수기준</small></span>
+                    </li>
+                    <li>
+                        <strong>접수매장</strong>
+                        <span>{{shopNM}}</span>
+                    </li>
+                    <li>
+                        <strong>상품코드</strong>
+                        <span>{{styleColorCd}}</span>
+                    </li>
+                    <li>
+                        <strong>수선내용</strong>
+                        <span>{{mendC}}</span>
+                    </li>
+                    <li>
+                        <strong>특이사항</strong>
+                        <span>{{cnslofcMemo}}</span>
+                    </li>
+                    <li>
+                        <strong>수선예정 완성일</strong>
+                        <span>{{cmplTh2SchdDt}}</span>
+                    </li>
+                    <li>
+                        <strong>유/무상 현황</strong>
+                        <span>{{#is mendN1ChrdYn "Y"}}유상{{else}}무상{{/is}}</span>
+                    </li>
+                    <li>
+                        <strong>수선완료일</strong>
+                        <span>{{mendSendDt}}</span>
+                    </li>
+                    <li>
+                        <strong>매장발송일</strong>
+                        <span>{{shopSendDt}} <small>수선실 -&gt; 매장</small></span>
+                    </li>
+                    <li>
+                        <strong>담당자</strong>
+                        <span>{{empNm}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="foot">
+                <button type="button" class="btn btn-line">취소</button>
+                <button type="button" class="btn">확인</button>
+            </div>
+        </div>
+    </div>
+</section>

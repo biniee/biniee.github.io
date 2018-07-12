@@ -1,0 +1,51 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 - 공지사항"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="Notice"}}
+
+             <article class="notice contents">
+              <div class="notice-view">
+                <div class="head">
+                  <h3>{{notice.title}}</h3>
+                  <time>{{to_date_string notice.publicationAt}}</time>
+                </div>
+                <div class="content">
+                    {{{notice.contentDesktop}}}
+                </div>
+                <div class="foot">
+                  <ul>
+                    {{#if nextNotice}}
+                    <li class="prev">
+                      <a href="/Notice/{{nextNotice.no}}">
+                        <span class="nav">다음 페이지</span>
+                        <span class="subject">{{nextNotice.title}}</span>
+                        <span class="date">{{to_date_string nextNotice.publicationAt}}</span>
+                      </a>
+                    </li>
+                    {{/if}}
+                    {{#if prevNotice}}
+                    <li class="next">
+                      <a href="/Notice/{{prevNotice.no}}">
+                        <span class="nav">이전 페이지</span>
+                        <span class="subject">{{prevNotice.title}}</span>
+                        <span class="date">{{to_date_string prevNotice.publicationAt}}</span>
+                      </a>
+                    </li>
+                    {{/if}}
+                  </ul>
+                  <p class="buttons">
+                    <a href="/Notice" class="btn btn-line btn-big">목록</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

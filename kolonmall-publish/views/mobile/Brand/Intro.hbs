@@ -1,0 +1,29 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="SERIES"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{#if brandIntro}}
+                <article class="brand-intro">
+                    {{{brandIntro.content}}}
+
+                    {{#if brandIntro.collection}}
+                        <h4>COLLECTION</h4>
+                        <div class="b-collection">
+                            {{#brandIntro.collection}}
+                                <a href="{{link}}" target="_blank">
+                                    <img src="{{imagePath}}" alt="" />
+                                    <span>{{title}}</span>
+                                </a>
+                            {{/brandIntro.collection}}
+                        </div>
+                    {{/if}}
+                </article>
+            {{/if}}
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

@@ -1,0 +1,67 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="비회원 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="wrap-form-login">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/FAQ">FAQ</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Contact">1:1문의</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/AfterSales/Warranty">A/S안내</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Notice">공지사항</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="on" href="/GuestOrder">비회원주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/eKOLON/Point">eKOLON멤버십</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Compensation/Delay">고객보상제</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Proposal/Add">제휴및광고제안</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <form class="form-login" action="/GuestOrder/Detail" method="post" id="guestOrderForm">
+                <input type="hidden" id="errorMessage" value="{{errorMessage}}" />
+                <input type="hidden" name="CSRFToken" value="{{CSRFToken}}">
+                <div class="in-txt">
+                    <input name="name" type="text" placeholder="주문자명"/>
+                    <span>주문자명</span>
+                </div>
+                <div class="in-txt">
+                    <input name="orderNumber" type="text" placeholder="주문번호"/>
+                    <span>주문번호</span>
+                </div>
+                <div class="btns">
+                    <button type="submit" class="btn" id="guestOrderFormSubmitBtn">비회원 주문조회</button>
+                </div>
+            </form>
+
+            <article class="txt-info">
+                <h4>이용안내</h4>
+                <ul>
+                    <li>&#183; 비회원고객님께서 주문하신 상품의 목록과 배송상태를 <br/>&nbsp; 확인할 수 있습니다.</li>
+                    <li>&#183; 주문자명과 주문번호 또는 휴대폰번호를 입력하시면 <br/>&nbsp; 주문내역을 확인 할 수 있습니다.</li>
+                </ul>
+            </article>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

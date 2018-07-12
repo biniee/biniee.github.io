@@ -1,0 +1,102 @@
+{{#> desktop/layouts/popup }}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            $('.layer-popup').find('.tab a').on('click', (e) => {
+                const $this = $(e.currentTarget);
+                const $parent = $this.closest('li');
+                const cclass = $this.attr('href').replace('#', '.');
+                const active = 'active';
+                e.preventDefault();
+                $parent.addClass('on').siblings().removeClass('on');
+                $(cclass).addClass(active).siblings().removeClass(active);
+            });
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <section class="layer-popup layer-staff">
+            <div class="layer">
+                <div class="inner">
+                    <div class="head">
+                        <h1>임직원 이용안내</h1>
+                        <button tyle="button" class="close">레이어 닫기</button>
+                    </div>
+                    <div class="content">
+                        <ul class="tab list2">
+                            <li class="on"><a href="#tab01">임직원 가입/이용 안내</a></li>
+                            <li><a href="#tab02">직원DC 사용방법</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab01 active">
+                                <h2>코오롱 임직원 가입/이용 안내</h2>
+                                <p>코오롱 임직원은 KOLON ONE ID 가입 및 eKOLON 직원 카드를 발급받으셔야 임직원 혜택을 받으실 수 있습니다.<br>IKEN 메인화면 오른쪽 중간에 있는 ICON 메뉴의 eKOLON 카드 버튼을 클릭하여 직원카드를 신청하세요. </p>
+                                <div class="point">
+                                    <h2>직원카드 발급문의</h2>
+                                    <dl>
+                                        <dt>본사</dt>
+                                        <dd>FnC 부문 BigData팀으로 신청서 제출</dd>
+                                        <dt>계열사</dt>
+                                        <dd>각 계열사 인사팀에 비치된 신청서 작성</dd>
+                                        <dt>문의전화</dt>
+                                        <dd>1588-7667</dd>
+                                        <dt>담당자 이메일</dt>
+                                        <dd><a href="mailto:iu721@kolon.com">iu721@kolon.com</a></dd>
+                                    </dl>
+                                    <p class="card"><img src="/_ui/img/pc/membership.png" alt="eKOLON membership 카드"></p>
+                                </div>
+                            </div>
+                            <div class="tab02">
+                                <ol class="step">
+                                    <li>
+                                        <strong class="stit">STEP 1</strong>
+                                        <p>상품을 장바구니에 담고 장바구니 내역이 정확한지 확인하세요. 장바구니 상품에서 '직원할인적용'버튼을 확인하실 수 있습니다.</p>
+                                        <p class="strong">정상가 기준으로 적용되므로 기본할인보다 할인율이 큰 상품의 경우 직원할인 적용이 불가합니다.</p>
+                                        <div class="info">
+                                            <img src="/_ui/img/pc/img-dc.jpg" alt="임직원 이용안내 직원DC 사용방법 Step1">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong class="stit">STEP 2</strong>
+                                        <p>직원할인을 적용할 수 있으며 적용 후 장바구니 단계에서 바로 취소하실 수 있습니다.</p>
+                                        <p class="strong">직원할인적용 시 할인된 금액을 확인하실 수 있습니다.</p>
+                                        <div class="info">
+                                            <ol class="sale-list">
+                                                <li>
+                                                    <strong>판매가</strong>
+                                                    <span>190,000</span>원
+                                                </li>
+                                                <li>
+                                                    <span class="circle bg-red">직원<br>할인적용</span>
+                                                </li>
+                                                <li>
+                                                    <strong>판매가</strong>
+                                                    <em class="red">152,000</em>원
+                                                </li>
+                                                <li>
+                                                    <span class="circle bg-gray">직원<br>할인취소</span>
+                                                </li>
+                                                <li>
+                                                    <strong>판매가</strong>
+                                                    <span>190,000</span>원
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <ul class="bul-list">
+                                            <li>상품 판매가의 할인률이 20%보다 높을시에는 직원할인이 적용되지 않습니다.</li>
+                                            <li>총 복지 한도액 중, 구매지원 한도가 우선 소진됩니다.</li>
+                                            <li>구매지원 한도는 직원DC와 동일하게 20% 할인이 적용되며, 정상가 기준에서 계열사별로 책정된 %만큼  급여로 지급 받습니다.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <button type="button" class="btn btn-line close-layer">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{/inline}}
+{{/desktop/layouts/popup}}

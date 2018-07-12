@@ -1,0 +1,332 @@
+.rma {
+  margin: 78px 0 140px;
+  h3 {
+    margin-bottom: 52px;
+    font-size: 22px;
+    color: #1f1f1f;
+  }
+  .shipping {
+    padding: 40px 0 65px;
+    border-top: 4px solid #000;
+    h4 {
+      font-weight: bold;
+      margin-bottom: 35px;
+    }
+    dl {
+      color: #898989;
+      font-size: 14px;
+      line-height: 1.8571;
+      dt,
+      dd {
+        float: left;
+        margin-bottom: 20px;
+      }
+      dt {
+        clear: left;
+        width: 130px;
+      }
+      dd {
+        float: left;
+        em {
+          color: #1f1f1f;
+        }
+      }
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+    .note {
+      font-size: 13px;
+      margin-top: 40px;
+      padding-top: 15px;
+      border-top: 1px solid #f1f1f1;
+      h5 {
+        margin: 25px 0 18px;
+      }
+      li {
+        color: #aaa;
+        line-height: 1.6923;
+        position: relative;
+        padding: 0 0 10px 10px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 2px;
+          height: 2px;
+          background-color: #c1c1c1;
+        }
+      }
+    }
+    .gifts {
+      margin-left: -25px;
+      li {
+        float: left;
+        width: 473px;
+        margin-left: 25px;
+        .title {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        .gift {
+          color: #1f1f1f;
+          padding: 0 16px;
+          background-color: #f7f7f7;
+          .thumb {
+            vertical-align: middle;
+            display: inline-block;
+            width: 100px;
+            margin-right: 10px;
+          }
+          .cnt {
+            vertical-align: middle;
+            display: inline-block;
+            .brand {
+              font-size: 11px;
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+            .title {
+              color: #898989;
+              font-size: 16px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+  }
+  .order-guide {
+    line-height: 1.4;
+    text-align: right;
+    height: 0;
+    a {
+      font-size: 13px;
+      position: relative;
+      display: inline-block;
+      top: -33px;
+      height: 33px;
+      padding-right: 17px;
+      background: url('/_ui/img/pc/icn/icn-order-guide.png') no-repeat 100% 2px;
+    }
+  }
+  .order-search {
+    margin-bottom: 60px;
+    padding: 45px 40px 35px;
+    background-color: #f8f8f8;
+    .col {
+      white-space: nowrap;
+      float: left;
+      .label {
+        font-size: 14px;
+        text-align: right;
+        line-height: 40px;
+        box-sizing: border-box;
+        float: left;
+        margin-bottom: 10px;
+        padding-right: 19px;
+      }
+      input {
+        box-sizing: border-box;
+        float: left;
+        height: 40px;
+        padding: 0 10px;
+        border: 1px solid #dedede;
+      }
+      .select {
+        float: left;
+        select {
+          box-sizing: border-box;
+          height: 40px;
+          padding: 0 10px;
+          border: 1px solid #dedede;
+        }
+      }
+      .split {
+        text-align: center;
+        line-height: 40px;
+        float: left;
+        width: 17px;
+      }
+    }
+    .col.type {
+      width: 245px;
+      .label {
+        width: 75px;
+      }
+      .select {
+        width: 170px;
+      }
+    }
+    .col.product {
+      width: 547px;
+      margin-right: 10px;
+      .label {
+        width: 84px;
+      }
+      .select {
+        width: 171px;
+      }
+      input {
+        width: 282px;
+        margin-left: 10px;
+      }
+    }
+    .col.month {
+      .label {
+        width: 75px;
+      }
+      .tab {
+        display: inline-block;
+        width: 341px;
+        padding-bottom: 0;
+        background-color: #fff;
+        li {
+          width: 25%;
+          a {
+            line-height: 38px;
+            height: 38px;
+            padding: 0;
+          }
+        }
+        .on {
+          background-color: #898989;
+        }
+      }
+    }
+    .col.date {
+      margin-left: 40px;
+      input {
+        width: 160px;
+        background: #fff url(/_ui/img/pc/icn/icn-calrendar.png) no-repeat 135px 50%;
+      }
+    }
+    .btn {
+      height: 90px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  .billing {
+    font-size: 14px;
+    padding: 40px 0 60px;
+    border-top: 4px solid #000;
+    h4 {
+      font-weight: bold;
+      margin-bottom: 35px;
+    }
+    .table {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      margin-bottom: 30px;
+      .col {
+        position: relative;
+        display: table-cell;
+        padding: 0 30px;
+        h5 {
+          margin: 8px 0 30px;
+        }
+        li {
+          margin-top: 20px;
+          strong {
+            color: #898989;
+            font-weight: normal;
+            float: left;
+          }
+          .price {
+            color: #1f1f1f;
+            float: right;
+          }
+          &::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+        .receipt {
+          position: absolute;
+          top: 0;
+          right: 30px;
+        }
+        .refund-type {
+          text-align: right;
+          margin-top: 20px;
+          .radio {
+            margin-left: 15px;
+          }
+        }
+        &:first-child {
+          padding-left: 0;
+          &::before {
+            display: none;
+          }
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 1px;
+          height: 100%;
+          background-color: #f1f1f1;
+        }
+      }
+    }
+    .total {
+      color: #1f1f1f;
+      font-size: 20px;
+      text-align: right;
+      padding: 30px;
+      border-top: 1px solid #f1f1f1;
+      background: #fafafa;
+      em {
+        color: #f23d4e;
+        font-weight: bold;
+        margin-left: 15px;
+      }
+    }
+  }
+  .buttons.end-row {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+    .btn-billing {
+      background-color: #f23d4e;
+    }
+  }
+  .desc {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #898989;
+  }
+  .order-lists {
+    .price {
+      width: 100px;
+      strong,
+      span {
+        display: block;
+      }
+      strong {
+        color: #898989;
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+    }
+    .delivery {
+      width: 150px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="lists">
+    <div class="summary" onclick="javascript:location.href='/Order/{{orderNumber}}';">
+        <strong>주문번호</strong>
+        <span>{{orderNumber}}</span>
+        <strong>주문일</strong>
+        <span>{{createdDate}}</span>
+    </div>
+    {{#items}}
+        {{>desktop/precompiles/order/order-item-with-status orderNumber=../orderNumber deliveryType=../deliveryType displayedDeliveryType=../displayedDeliveryType}}
+    {{/items}}
+    {{#is deliveryType "PICKUP"}}
+        <!-- TODO : 데스크탑 오더에 픽업 정보 퍼블리싱 누락. 일단 모바일거-->
+        <div class="pickup-info">
+            <dl>
+                <dt>{{deliveryPointOfService.displayName}}</dt>
+                <!-- TODO : 매장픽업일 경우 방문예정 날짜 시간 포멧 2017.07.23 14:30~16:30 -->
+                <dd>{{receiveDate}} {{rev_time_from}}~{{rev_time_to}} 방문예정</dd>
+            </dl>
+            <a href="/Order/DetailStore">매장정보</a>
+        </div>
+    {{/is}}
+</div>

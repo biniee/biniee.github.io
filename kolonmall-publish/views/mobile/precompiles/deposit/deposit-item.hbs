@@ -1,0 +1,5 @@
+<div class="detail">
+    <p class="date">{{createdDate}}</p>
+    <p class="state">{{description}}{{#is type "used"}}{{#is extraDescription}}<span>({{extraDescription}})</span>{{/is}}{{/is}}</p>
+    <p class="charge"><span class="pay {{#is type "used"}}red{{/is}}">{{amount}}</span>{{currency}} {{displayedType}}</p>
+</div>

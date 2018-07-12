@@ -1,0 +1,15 @@
+<li>
+    <a href="/Product/{{code}}">
+        <div class="txt-box">
+            <span class="brand">{{supplierBrandName}}</span>
+            <span class="tit">{{{name}}}</span>
+            <div class="btm">
+                {{#if price.discountRate}}{{#isnt price.discountRate 0}}<span class="discount">{{price.discountRate}}%</span>{{/isnt}}{{/if}}
+                <span class="price">{{#if price.discountRate}}{{#isnt price.discountRate 0}}<i>{{price.formattedWishPrice}}원</i>{{/isnt}}{{/if}}{{price.formattedPrice}}원</span>
+            </div>
+        </div>
+        <div class="prod-img">
+            <img src="{{representationImage}}" alt=""/>
+        </div>
+    </a>
+</li>

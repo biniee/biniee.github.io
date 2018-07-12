@@ -1,0 +1,273 @@
+@charset "utf-8";
+
+.scr-navi {
+  width: 90.4vw;
+  border-bottom: .8vw #000 solid;
+  margin: 0 auto;
+  .swiper-wrapper {
+    .swiper-slide {
+      a {
+        height: 13.333vw;
+        line-height: 13.333vw;
+        color: #aaa;
+        font-size: 4vw;
+      }
+      .on {
+        color: #1f1f1f;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+  .swiper-wrapper + .icn-navi {
+    background: url('/_ui/img/m/icn/scr-navi-bg.png') repeat-y;
+    background-size: 100%;
+    width: 4.666vw;
+    height: 15.333vw;
+    right: -4.8vw;
+  }
+  .swiper-wrapper + .icn-navi.left {
+    left: -4.8vw;
+  }
+}
+
+.box-form-pral {
+  padding: 0 7.466vw;
+  .txt-info {
+    margin: 6.66vw 0;
+    li {
+      padding-top: 2vw;
+      font-size: 3.733vw;
+      color: #1f1f1f;
+      word-break: keep-all;
+    }
+  }
+  .form-pral {
+    input {
+      width: 100%;
+      padding: 7.33vw 0 3.33vw;
+      font-size: 3.733vw;
+      border-bottom: .266vw solid #eee;
+    }
+    textarea {
+      width: 100%;
+      height: 39.466vw;
+      max-height: 296px;
+      padding-top: 7.733vw;
+      font-size: 3.733vw;
+      outline: none;
+      resize: none;
+    }
+    ::-webkit-input-placeholder {
+      color: #898989;
+    }
+    :-moz-placeholder {
+      color: #898989;
+    }
+    ::-moz-placeholder {
+      color: #898989;
+    }
+    :-ms-input-placeholder {
+      color: #898989;
+    }
+    .ch-area {
+      padding: 6.133vw 0 5.966vw;
+      border-top: .266vw solid #eee;
+    }
+  }
+}
+.prsnl-info {
+  padding: 5.866vw 7.466vw;
+  background: #fcfcfc;
+  font-size: 3.2vw;
+  color: #898989;
+  dl {
+    padding-bottom: 4.8vw;
+    dt {
+      margin-bottom: 1.33vw;
+      font-weight: 700;
+    }
+    dd {
+      line-height: 4.8vw;
+    }
+  }
+  .type02 {
+    margin-top: 2vw;
+  }
+}
+.btns {
+  padding: 9.6vw 7.466vw 17.066vw;
+}
+
+.add-area {
+    li {
+      position: relative;
+      margin-top: 4vw;
+      border-bottom: 1px #eee solid;
+      &:first-child {
+        margin-top: 0;
+      }
+      input {
+        height: 10.666vw;
+        display: block;
+        width: 75%;
+        font-size: 3.733vw;
+      }
+      textarea {
+        padding-top: 2.66vw;
+        resize: none;
+        width: 100%;
+        display: block;
+        font-size: 3.733vw;
+        border: 0;
+        height: 32.666vw;
+        outline: none;
+      }
+      span {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+        height: 10.666vw;
+        line-height: 10.666vw;
+        color: #ccc;
+        font-size: 3.733vw;
+      }
+    }
+    .ta-txt span {
+      top: auto;
+      bottom: 0;
+    }
+    .check-area {
+      font-size: 0;
+      letter-spacing: 0;
+      word-spacing: 0;
+      margin: 6.933vw 0 6vw;
+      input {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        position: absolute;
+      }
+      input + label {
+        display: inline-block;
+        width: 4.533vw;
+        height: 4.533vw;
+        background: url('/_ui/img/m/icn/icn-check07.png') no-repeat;
+        background-size: 100%;
+        vertical-align: middle;
+      }
+      input:checked + label {
+        background: url('/_ui/img/m/icn/icn-check07-on.png') no-repeat;
+        background-size: 100%;
+      }
+      input + label + label {
+        display: inline-block;
+        font-size: 3.733vw;
+        color: #898989;
+        vertical-align: middle;
+        margin-left: 2.4vw;
+      }
+      input:checked + label + label {
+        color: #1f1f1f;
+      }
+    }
+  }
+
+@media (min-width: 750px) {
+  .scr-navi {
+    width: 678px;
+    border-bottom: 6px #000 solid;
+    .swiper-wrapper {
+      .swiper-slide a {
+        height: 100px;
+        line-height: 100px;
+        font-size: 30px;
+      }
+    }
+    .swiper-wrapper + .icn-navi {
+      height: 100px;
+      background-position: right center;
+    }
+  }
+  .box-form-pral {
+    padding: 0 56px;
+    .txt-info {
+      margin: 50px 0;
+      li {
+        padding-top: 15px;
+        font-size: 28px;
+      }
+    }
+    .form-pral {
+      input {
+        padding: 55px 0 25px;
+        font-size: 28px;
+        border-bottom: 2px solid #eee;
+      }
+      textarea {
+        padding-top: 58px;
+        font-size: 28px;
+      }
+      .ch-area {
+        padding: 46px 0 38px;
+        border-top: 2px solid #eee;
+      }
+    }
+  }
+  .prsnl-info {
+    padding: 44px 56px;
+    font-size: 24px;
+    dl {
+      padding-bottom: 36px;
+      dt {
+        margin-bottom: 10px;
+      }
+      dd {
+        line-height: 36px;
+      }
+    }
+    .type02 {
+      margin-top: 15px;
+    }
+  }
+  .btns {
+    padding: 72px 56px 128px;
+  }
+
+  .add-area {
+      li {
+        margin-top: 30px;
+        border-bottom: 2px #eee solid;
+        input {
+          height: 80px;
+          font-size: 28px;
+        }
+        textarea {
+          padding-top: 20px;
+          font-size: 28px;
+          height: 245px;
+        }
+        span {
+          height: 80px;
+          line-height: 80px;
+          font-size: 28px;
+        }
+      }
+      .check-area {
+        margin: 52px 0 45px;
+        input + label {
+          width: 34px;
+          height: 34px;
+        }
+        input + label + label {
+          font-size: 28px;
+          margin-left: 18px;
+        }
+      }
+    }
+}

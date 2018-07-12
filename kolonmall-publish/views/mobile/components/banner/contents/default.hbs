@@ -1,0 +1,13 @@
+<article class="prod-big-bnr hv-sbtit">
+    <ul>
+        {{#results}}
+            <li class="item" style="{{hide_item_gte @index 3}}">
+                {{>mobile/components/banner/contents/square this}}
+            </li>
+        {{/results}}
+    </ul>
+
+    {{#gt page.totalCount 3}}
+        <button type="button" class="bnr-more contents-default-more-btn">더보기</button>
+    {{/gt}}
+</article>

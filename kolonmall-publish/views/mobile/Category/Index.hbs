@@ -1,0 +1,84 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title=category.name}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/product/grid"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    {{#category.subcategories}}
+                        <div class="swiper-slide">
+                            <a href="{{url}}" class="{{#is ../category.id id}}on{{/is}}">{{name}}</a>
+                        </div>
+                    {{/category.subcategories}}
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            {{#fetch_banner "MOBILE" "category" category.id "main"}}
+                {{#if banners.page.totalCount}}
+                    <article class="prod-big-bnr hv-sbtit">
+                        {{{render_banner "mobile" "contents/flicking" banners}}}
+                    </article>
+                {{/if}}
+            {{/fetch_banner}}
+
+            <article class="brand-list-bnr">
+                <h3>SPORTS BRAND OF KOLON</h3>
+                <div class="brand-list">
+                    <ul class="swiper-wrapper">
+                        {{#categoriesByCode.brandCategory.subcategories}}
+                            <li class="swiper-slide">
+                                <a href="{{url}}">
+                                    <img src="{{image.url}}" alt="Brand image" class="bg">
+                                    <img src="{{logo.url}}" alt="Brand logo" class="bi">
+                                    <span class="br-name">{{name}}</span>
+                                </a>
+                            </li>
+                        {{/categoriesByCode.brandCategory.subcategories}}
+                    </ul>
+                </div>
+            </article>
+
+            <div class="prod-list-top">
+                <h3>NEW ARRIVALS</h3>
+            </div>
+            {{#fetch_product "mobile" "new" parameters 10}}
+                {{{render_product "mobile" "slide" product parameters}}}
+            {{/fetch_product}}
+
+            {{#fetch_banner "MOBILE" "category" category.id "issue-and-deal"}}
+                {{#if banners.page.totalCount}}
+                    <article class="prod-big-bnr hv-sbtit">
+                        <div class="prod-list-top">
+                            <h3>ISSUE &amp; DEAL</h3>
+                        </div>
+                        {{{render_banner "mobile" "contents/flicking" banners}}}
+                    </article>
+                {{/if}}
+            {{/fetch_banner}}
+
+            <article class="list2-prod">
+                <div class="prod-list-top mt2">
+                    <h3>{{category.name}} BEST</h3>
+                </div>
+                {{#fetch_product "mobile" "best" parameters 6}}
+                    {{{render_product "mobile" "grid" product parameters}}}
+                {{/fetch_product}}
+            </article>
+
+        </section>
+        {{>mobile/partials/sitemap-main}}
+    {{/inline}}
+{{/mobile/layouts/default}}

@@ -1,0 +1,10 @@
+<div class="thumb-list">
+    {{#results}}
+        <div class="item-wrapper" style="{{hide_item_gte @index 6}}">
+            {{>desktop/components/banner/contents/square this}}
+        </div>
+    {{/results}}
+</div>
+{{#gt page.totalCount 6}}
+    <button type="button" class="list-more contents-default-more-btn">더 보기</button>
+{{/gt}}

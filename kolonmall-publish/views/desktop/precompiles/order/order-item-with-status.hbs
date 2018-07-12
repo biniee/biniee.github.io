@@ -1,0 +1,129 @@
+<!-- after order 아이템. 구매후 오더 조회성 화면에서 주문 번호와 함께 주로 보여진다. -->
+<div class="list">
+    <p class="thumb">
+        <img src="{{product.representationImage}}" alt="{{product.name}}" />
+    </p>
+    <div class="product">
+        <h4>
+            {{product.supplierName}}
+            <small>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</small>
+        </h4>
+        <p>{{product.name}}</p>
+        <ul class="meta">
+            <li>
+                <em>수량</em>
+                <span>{{quantity}}</span>
+            </li>
+            <li>
+                <em>옵션</em>
+                <span>{{product.color}}, {{product.size}}</span>
+            </li>
+        </ul>
+        {{#is product.productSaleType "SET"}}
+            <div class="options"><a href="#" class="btn-option">세트옵션보기</a></div>
+        {{/is}}
+    </div>
+    <p class="price">{{formattedPrice}}원</p>
+    <p class="delivery"><span>{{displayedDeliveryType}}</span></p>
+    <p class="state">
+        <span {{#is status "CANCEL_COMPLETED"}}class="cancel"{{/is}}{{#is status "RETURN_COMPLETED"}}class="cancel"{{/is}}{{#is status "EXCHANGE_COMPLETED"}}class="cancel"{{/is}}>{{displayedStatus}} {{#is status "CANCEL_COMPLETED"}}({{statusUpdatedDate}}){{/is}}{{#is status "RETURN_COMPLETED"}}({{statusUpdatedDate}}){{/is}}{{#is status "EXCHANGE_COMPLETED"}}({{statusUpdatedDate}}){{/is}}</span>
+        {{#unless isHiddenControls}}
+            {{#is deliveryType "DELIVERYSERVICE"}}
+                {{#if isCancelable}}
+                    <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/Cancel';">주문취소</button>
+                {{/if}}
+            {{/is}}
+            {{#is deliveryType "PICKUP"}}
+                {{#is isCancelable}}
+                    <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/CancelPickUp';">픽업취소</button>
+                {{/is}}
+            {{/is}}
+
+            {{#is deliveryType "DELIVERYSERVICE"}}
+                {{#is status "DELIVERYCOMPLETED"}}
+                    {{#if isReturnable}}
+                        <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/Return';">반품신청</button>
+                    {{else}}
+                        <!--<button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/Return';" class="disabled">반품신청</button>-->
+                    {{/if}}
+                {{else}}
+                    {{#if isReturnable}}
+                        <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/Return';">반품신청</button>
+                    {{/if}}
+                {{/is}}
+            {{/is}}
+            {{#is deliveryType "PICKUP"}}
+                {{#if isReturnable}}
+                    <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/ReturnPickUp';">반품신청</button>
+                {{/if}}
+            {{/is}}
+
+            {{#is deliveryType "DELIVERYSERVICE"}}
+                {{#is status "DELIVERYCOMPLETED"}}
+                    {{#if isExchangeable}}
+                        <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/Exchange';">교환신청</button>
+                    {{else}}
+                        <!--<button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/Exchange';" class="disabled">교환신청</button>-->
+                    {{/if}}
+                {{else}}
+                    {{#if isExchangeable}}
+                        <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/Exchange';">교환신청</button>
+                    {{/if}}
+                {{/is}}
+            {{/is}}
+            {{#is deliveryType "PICKUP"}}
+                {{#if isExchangeable}}
+                    {{#is status "PICKUPCOMPLETE"}}
+                        <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/{{orderNumber}}/ExchangePickUp';">교환신청</button>
+                    {{else}}
+                        <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='/Order/PickUpExchangeTicket';">교환권</button>
+                    {{/is}}
+                {{/if}}
+            {{/is}}
+        {{/unless}}
+        {{#is deliveryType "DELIVERYSERVICE"}}
+            {{#if isTrackable}}
+                {{#if deliveryInformation}}
+                    <button type="button" class="btn btn-line btn-small" onclick="javascript:location.href='{{deliveryInformation.deliveryVendorUrl}}{{deliveryInformation.deliveryNo}}';" target="_blank">배송조회</button>
+                {{/if}}
+            {{/if}}
+        {{/is}}
+    </p>
+
+    {{#is deliveryType "PICKUP"}}
+        <!-- TODO : 픽업 상품의 경우 정보 뿌려주는 퍼블리싱 누락-->
+        <div class="pickup-info">
+            <dl {{#is status "CANCEL_COMPLETED"}}class="cancel"{{/is}}{{#is status "RETURN_COMPLETED"}}class="cancel"{{/is}}{{#is status "EXCHANGE_COMPLETED"}}class="cancel"{{/is}}>
+                <dt>{{deliveryPointOfService.displayName}}</dt>
+                <!-- TODO : 매장픽업일 경우 방문예정 날짜 시간 포멧 2017.07.23 14:30~16:30 -->
+                <dd>{{receiveDate}} {{rev_time_from}}~{{rev_time_to}} 방문예정</dd>
+            </dl>
+            <a href="/Order/DetailStore">매장정보</a>
+        </div>
+    {{/is}}
+    {{#is product.productSaleType "SET"}}
+        <!-- TODO : 세트 상품의 경우 정보 뿌려주는 퍼블리싱 누락-->
+        <ul class="set-prod">
+            {{#product.productReferences}}
+                <li>
+                    <div class="prod"><img src="{{product.representationImage}}" alt="{{product.name}}"></div>
+                    <div class="info">
+                        <p class="t1">
+                            <span class="brand">{{product.supplierName}}</span>
+                            <span>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+                        </p>
+                        <p class="t2">{{product.name}}</p>
+                        <dl class="option">
+                            <dt>옵션</dt>
+                            <dd>{{product.color}}, {{product.size}}</dd>
+                            <dt>수량</dt>
+                            <dd>1</dd>
+                            <dt>결제금액</dt>
+                            <dd class="price">103,500원</dd>
+                        </dl>
+                    </div>
+                </li>
+            {{/product.productReferences}}
+        </ul>
+    {{/is}}
+</div>

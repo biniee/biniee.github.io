@@ -1,0 +1,11 @@
+version: '2'
+services:
+  kolonmall-publish:
+    image: docker.purple.io/kolonmall-publish
+    container_name: kolonmall-publish
+    network_mode: bridge
+    environment:
+      VIRTUAL_HOST: koppub.purple.io
+      LETSENCRYPT_HOST: koppub.purple.io
+      LETSENCRYPT_EMAIL: k@purpleworks.co.kr
+    restart: always

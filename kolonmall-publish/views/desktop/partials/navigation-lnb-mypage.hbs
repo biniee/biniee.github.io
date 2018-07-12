@@ -1,0 +1,20 @@
+<!-- navigation -->
+<nav class="wrap-navi">
+    <h3>{{title}}</h3>
+    <dl class="sub-menu">
+        {{#is submenu "MyPage"}}<dt>{{else}}<dd>{{/is}}<a href="/MyPage">홈</a>{{#is submenu "MyPage"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "Order"}}<dt>{{else}}<dd>{{/is}}<a href="/Order/List" class="on">주문조회</a>{{#is submenu "Order"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "RMA"}}<dt>{{else}}<dd>{{/is}}<a href="/RMA/List">취소/반품/교환</a>{{#is submenu "RMA"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "WishList"}}<dt>{{else}}<dd>{{/is}}<a href="/WishList/OnlineList">관심상품</a>{{#is submenu "WishList"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "Review"}}<dt>{{else}}<dd>{{/is}}<a href="/Review/RegisteredList">리뷰</a>{{#is submenu "Review"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "Point"}}<dt>{{else}}<dd>{{/is}}<a href="/Point">포인트</a>{{#is submenu "Point"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "Coupon"}}<dt>{{else}}<dd>{{/is}}<a href="/Coupon">쿠폰</a>{{#is submenu "Coupon"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "Deposit"}}<dt>{{else}}<dd>{{/is}}<a href="/Deposit">예치금</a>{{#is submenu "Deposit"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "MembershipLeave"}}<dt>{{else}}<dd>{{/is}}<a href="javascript:location.href='/Membership/CheckPassword?nextUrl=' + encodeURIComponent('/Membership/Leave')">회원 탈퇴</a>{{#is submenu "MembershipLeave"}}</dt>{{else}}</dd>{{/is}}
+        {{#is submenu "MembershipChangeMember"}}<dt>{{else}}<dd>{{/is}}<a href="javascript:location.href='/Membership/CheckPassword?nextUrl=' + encodeURIComponent('/Membership/ChangeMember')">회원정보변경</a>{{#is submenu "MembershipChangeMember"}}</dt>{{else}}</dd>{{/is}}
+    </dl>
+    <ul class="sub-menu-bt">
+        <li><a href="#" class="info-return"><img src="/_ui/img/pc/temp/img_info_return.jpg" alt="코오롱몰 반품 서비스 안내 - 쉽고 빠른 반품에 관한 모든 것"></a></li>
+    </ul>
+</nav>
+<!-- //navigation -->

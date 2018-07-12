@@ -1,0 +1,25 @@
+{{!-- 더보기 버튼과 함께 있는 그리드--}}
+{{#if product}}
+    {{#if product.results}}
+        <div class="prod-list">
+            {{#product.results}}
+                {{>desktop/precompiles/product/grid}}
+            {{/product.results}}
+        </div>
+    {{else}}
+        <p class="no-result">상품이 존재하지 않습니다.</p>
+    {{/if}}
+    {{#if product.page}}
+        {{#gt product.page.totalCount product.page.perPage}}
+            <button type="button" class="list-more"
+                data-component-type="grid"
+                data-special-code="{{parameters.no}}"
+                data-group-index="{{parameters.groupIndex}}"
+                data-per-page="{{product.page.perPage}}"
+                data-current-page="{{product.page.currentPage}}"
+                data-total-count="{{product.page.totalCount}}">더보기</button>
+        {{/gt}}
+    {{/if}}
+{{else}}
+    <p class="no-result">상품이 존재하지 않습니다.</p>
+{{/if}}

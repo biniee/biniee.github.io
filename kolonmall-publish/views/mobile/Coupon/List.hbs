@@ -1,0 +1,88 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="쿠폰"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/coupon/coupon-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/MyPage">홈</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Order/List">주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/RMA/List">취소/반품/교환</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/WishList/OnlineList">관심상품</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Review/RegisteredList">리뷰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Point">포인트</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Coupon" class="on">쿠폰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Deposit">예치금</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <div class="line"></div>
+            <!-- //navigation -->
+
+            <div class="cs-depth3 col2">
+                <ul id="couponTabs">
+                    <li class="on"><a href="#" data-coupon-type="online">온라인 쿠폰 <span class="cnt">{{onlineCoupons.page.totalCount}}</span></a></li>
+                    <li><a href="#" data-coupon-type="offline">매장 쿠폰  <span class="cnt">{{offlineCoupons.page.totalCount}}</span></a></li>
+                </ul>
+            </div>
+
+            <h3 class="hidden">쿠폰 본문내용</h3>
+            <article class="li-coupon" id="onlineCouponList">
+                {{#if onlineCoupons.results}}
+                    {{#onlineCoupons.results}}
+                        {{>mobile/precompiles/coupon/coupon-item}}
+                    {{/onlineCoupons.results}}
+                {{else}}
+                    <div class="box-coupon list-non">
+                        <p>사용 가능한 온라인 쿠폰이 없습니다.</p>
+                    </div>
+                {{/if}}
+            </article>
+            <article class="li-coupon" id="offlineCouponList" style="display: none;">
+                {{#if offlineCoupons.results}}
+                    {{#offlineCoupons.results}}
+                        {{>mobile/precompiles/coupon/coupon-item}}
+                    {{/offlineCoupons.results}}
+                {{else}}
+                    <div class="box-coupon list-non">
+                        <p>사용 가능한 오프라인 쿠폰이 없습니다.</p>
+                    </div>
+                {{/if}}
+            </article>
+            <article class="info-use">
+                <h4>이용안내</h4>
+                <ul>
+                  <li>&#183; 주문 후 취소/교환/반품의 경우 이미 사용한 할인쿠폰은 <br/><span>환급되지 않습니다.</span></li>
+                  <li>&#183; 유효기간이 지난 쿠폰은 재발행 되지 않으니 유효기간 내에 <br/><span>사용해 주시기 바랍니다.</span></li>
+                </ul>
+            </article>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

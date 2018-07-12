@@ -1,0 +1,66 @@
+{{#> mobile/layouts/popup }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-at-popup title="비회원 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+            <article class="mypage-order">
+                <!-- 주문 상세 -->
+                <div class="my-order-result">
+
+                    <ul class="order-detail">
+                        <li class="bundle">
+                            <a href="#">
+                                <p class="order-num">주문번호 : {{order.orderNumber}}<i>({{order.createdDate}})</i></p>
+                            </a>
+                            {{#if order.items}}
+                                <ul>
+                                    {{#order.items}}
+                                        {{>mobile/precompiles/order/order-item-with-status orderNumber=../order.orderNumber deliveryType=../order.deliveryType displayedDeliveryType=../order.displayedDeliveryType isOrderDetailView=true isHiddenControls=true}}
+                                    {{/order.items}}
+                                </ul>
+                            {{/if}}
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- 주문 상세 -->
+
+                {{#is order.deliveryType "DELIVERYSERVICE"}}
+                    {{#if order.items}}
+                        {{>mobile/partials/order/order-detail-delivery order.items.[0].deliveryAddress}}
+                    {{/if}}
+                {{/is}}
+
+                {{#is order.deliveryType "PICKUP"}}
+                    {{#if order.items}}
+                        {{>mobile/partials/order/order-detail-store order.items.[0].pickupInformation}}
+                    {{/if}}
+                {{/is}}
+
+                {{#if order.isPayable}}
+                    <!-- 매장 주문 후 온라인 결제 -->
+                    <div class="payment">
+                        <h3>결제수단</h3>
+                        <dl>
+                            <dt>신용카드</dt>
+                            <dd>{{order.creditCardAmount}}원</dd>
+                            <dd>
+                                <!-- TODO : 매장 주문 후 온라인 결제하기 -->
+                                <a href="#">결제하기</a>
+                            </dd>
+                        </dl>
+                    </div>
+                {{/if}}
+
+                <!-- 결제정보 -->
+                <div class="complete">
+                    {{>mobile/partials/order/order-detail-payment totalBasePrice = order.totalBasePrice deliveryCost = order.deliveryCost discount = order.discount payments = order.payments orderDetailPrice = order.orderDetailPrice}}
+                </div>
+                <!-- //결제 정보 -->
+            </article>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/popup}}

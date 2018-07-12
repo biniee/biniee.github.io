@@ -1,0 +1,716 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="상품 - 상세"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <article class="product-detail">
+                <h3 class="title">{{product.name}}</h3>
+                <div class="info">
+                    <span>{{product.productBrandName}}</span>
+                    <span>{{#is product.saleProductType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+                </div>
+                <div class="page-function">
+                    <a href="#" class="gift">선물포장</a>
+                    <a href="#" class="function">공유</a>
+                </div>
+
+                <div class="detail-prod">
+                    <div class="thumb-group">
+                        <div class="thumb">
+                            <div class="swiper-wrapper">
+                                {{#product.imageLLs}}
+                                    <div class="swiper-slide"><img src="{{url}}" alt=""></div>
+                                {{/product.imageLLs}}
+                            </div>
+                        </div>
+                        <div class="swiper-thumb">
+                            <a href="#" class="on"><img src="/_ui/img/pc/temp/@product-image.jpg" alt=""></a>
+                            <a href="#"><img src="/_ui/img/pc/temp/@product-image.jpg" alt=""></a>
+                            <a href="#"><img src="/_ui/img/pc/temp/@product-image.jpg" alt=""></a>
+                        </div>
+
+                        <div class="swiper-controls">
+                            <button type="button" class="swiper-button-prev">prev</button>
+                            <button type="button" class="swiper-button-next">next</button>
+                        </div>
+                    </div>
+
+                    <div class="info-group">
+                        <div class="price">
+                            {{#gt product.price.discountRate 0}}
+                                <span><strong>{{product.price.formattedWishPrice}}</strong>{{product.price.symbol}}</span>
+                            {{/gt}}
+                            <del>{{product.price.formattedPrice}}{{product.price.symbol}}</del>
+                            {{#gt product.price.discountRate 0}}
+                                <span class="sale">{{product.price.discountRate}}%</span>
+                            {{/gt}}
+                        </div>
+                        <div class="detail">
+                            <dl class="sort">
+                                <dt>컬러</dt>
+                                <dd>
+                                    <ul class="color">
+                                        <li>
+                                            <a href="" id="colortype1">
+                                                <label for="colortype1" class="bg-c8c8c8">c8c8c8</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" id="colortype2">
+                                                <label for="colortype2" class="bg-141414">141414</label>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>사이즈</dt>
+                                <dd>
+                                    <div class="size-box-wrap">
+                                        <div class="size-box-slide">
+                                            <ul class="size-box swiper-wrapper">
+                                                <li class="swiper-slide">
+                                                    <input type="radio" name="top-size" id="topsize1">
+                                                    <label for="topsize1">80</label>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <input type="radio" name="top-size" id="topsize2">
+                                                    <label for="topsize2">85</label>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <input type="radio" name="top-size" id="topsize3">
+                                                    <label for="topsize3">90</label>
+                                                </li>
+                                                <li class="swiper-slide size-sold-out">
+                                                    <input type="radio" name="top-size" id="topsize4" disabled="disabled">
+                                                    <label for="topsize4">95</label>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <input type="radio" name="top-size" id="topsize5">
+                                                    <label for="topsize5">100</label>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <input type="radio" name="top-size" id="topsize6">
+                                                    <label for="topsize6">105</label>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <input type="radio" name="top-size" id="topsize7">
+                                                    <label for="topsize7">110</label>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <input type="radio" name="top-size" id="topsize8">
+                                                    <label for="topsize8">115</label>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <input type="radio" name="top-size" id="topsize9">
+                                                    <label for="topsize9">120</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="swiper-controls">
+                                            <button type="button" class="swiper-button-prev">prev</button>
+                                            <button type="button" class="swiper-button-next">next</button>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dt>수량</dt>
+                                <dd class="amount">
+                                    <input type="text" value="2" disabled="disabled">
+                                    <button type="button" class="plus">+</button>
+                                    <button type="button" class="minus">-</button>
+                                </dd>
+                            </dl>
+                            <dl class="payment">
+                                <dt>적립포인트</dt>
+                                <dd>
+                                    12,950원
+                                    <button type="button" class="underline">포인트안내</button>
+                                </dd>
+                                <dt>카드혜택</dt>
+                                <dd>
+                                    신한카드 3% 청구할인
+                                    <button type="button" class="underline">혜택안내</button>
+                                </dd>
+                                <dt>선물포장</dt>
+                                <dd>
+                                    매장픽업 시 가능
+                                    <button type="button" class="underline">선물포장</button>
+                                </dd>
+                                <dt>배송방법</dt>
+                                <dd class="delivery">
+                                    <ul class="delivery-type">
+                                        <li>
+                                            <span class="radio">
+                                                <input type="radio" id="delivery-type1" name="delivery-type">
+                                                <label for="delivery-type1">택배배송</label>
+                                                <i></i>
+                                            </span>
+                                        </li>
+                                        <li>
+                                             <span class="radio">
+                                                <input type="radio" id="delivery-type2" name="delivery-type">
+                                                <label for="delivery-type2">당일배송</label>
+                                                <i></i>
+                                            </span>
+                                        </li>
+                                        <li>
+                                             <span class="radio">
+                                                <input type="radio" id="delivery-type3" name="delivery-type">
+                                                <label for="delivery-type3" data-target=".layer-pickup" data-trigger="layer">매장픽업</label>
+                                                <i></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <p class="today">
+                                        당일배송 서비스는 서울지역만 서비스 되고 있으며, 오후 4시이후에는 주문이 불가합니다.
+                                    </p>
+                                    <div class="pickup">
+                                        <dl>
+                                            <dt>픽업예정매장</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li>청담직영점</li>
+                                                    <li>서울특별시 강남구 청담동 83-7</li>
+                                                    <li>연락처 : 02-511-1864</li>
+                                                    <li>영업시간 : 10:00 ~ 20:30</li>
+                                                </ul>
+                                            </dd>
+                                            <dt>픽업예정일</dt>
+                                            <dd>
+                                                2017년 4월 20일 10:30 ~ 12:30
+                                                <button type="button">픽업정보수정</button>
+                                            </dd>
+                                        </dl>
+                                        <p>
+                                            선물포장은 옴니센터, 무교점 선택시에만 가능하며, 주문서 작성 시 설정하실 수 있습니다.
+                                        </p>
+                                    </div>
+                                </dd>
+                                <dt>배송비</dt>
+                                <dd>없음</dd>
+                            </dl>
+                            <div class="coupon">
+                                <strong class="title">2017 여름 맞이 쇼핑지원 쿠폰</strong>
+                                <span class="sale"><em>15</em>%</span>
+                                <span class="date">2017. 03. 24까지</span>
+                                <button type="button" class="down">쿠폰 다운</button>
+                            </div>
+                            <p class="sold-out">
+                                <strong>SOLD OUT</strong>
+                                품절된 상품 입니다.
+                            </p>
+                            <p class="hot-item">
+                                <strong>HOT SELLER ITEM</strong> 품절임박상품 입니다.
+                            </p>
+                            <p class="reser-item">
+                                예약상품입니다. <strong>배송예정일 2017. 08. 22</strong>
+                            </p>
+                            <div class="btn-wrap col-2">
+                                <a href="#" class="btn">장바구니</a>
+                                <a href="#" class="btn btn-line">바로구매</a>
+                            </div>
+                            <div class="btn-wrap col-1">
+                                <a href="#" class="btn">예약상품 구매</a>
+                            </div>
+                            <dl class="special">
+                                <dt>관련 기획전</dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="#">시리즈 2017SS 신상 기획전 시리즈 2017SS 신상 기획전</a></li>
+                                        <li><a href="#">시리즈 2017SS 신상 기획전</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <div class="banner">
+                                <a href="#"><img src="/_ui/img/pc/temp/@product-detail-banner1.jpg" alt="SPECIAL BENEFIT 8 코오롱몰에서 준비한 8가지 특별한 혜택"></a>
+                                <a href="#"><img src="/_ui/img/pc/temp/@product-detail-banner2.jpg" alt="가입만해도 10% 추가할인"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-nav">
+                    <ul>
+                        <li class="on"><a href="#">상품상세</a></li>
+                        <li><a href="#">사이즈</a></li>
+                        <li><a href="#">구매안내</a></li>
+                        <li><a href="#">리뷰</a></li>
+                    </ul>
+                </div>
+
+                <div class="prod-cont">
+                    <h4 class="title">실측사이즈</h4>
+                    <div class="survey">
+                        <dl>
+                            <dt><span>a</span>전체길이</dt>
+                            <dd>뒷편 정중앙부터 밑단까지 카라를 포함하지 않는 총길이</dd>
+                            <dt><span>b</span>허리둘레</dt>
+                            <dd>옷의 겨드랑이 양쪽 끝 길이</dd>
+                            <dt><span>c</span>엉덩이둘레</dt>
+                            <dd>재봉선의 어깨 끝점에서 반대편 끝점까지 총길이</dd>
+                            <dt><span>d</span>엉덩이둘레</dt>
+                            <dd>어깨선에서 소매끝단까지의 길이</dd>
+                            <dt><span>e</span>바지통</dt>
+                            <dd>겨드랑이점에서 1cm 내려온 지점에서 소매중심선에 직각으로 측정</dd>
+                            <dt><span>f</span>밑위길이</dt>
+                            <dd>어깨 재봉선에서 소매단까지의 길이</dd>
+                        </dl>
+                        <table>
+                            <caption>실측사이즈</caption>
+                            <colgroup>
+                                <col width="*">
+                                <col width="14.5%">
+                                <col width="14.5%">
+                                <col width="14.5%">
+                                <col width="14.5%">
+                                <col width="14.5%">
+                                <col width="14.5%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col">76</th>
+                                    <th scope="col">78</th>
+                                    <th scope="col">80</th>
+                                    <th scope="col">82</th>
+                                    <th scope="col">84</th>
+                                    <th scope="col">86</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>a. 전체길이 (cm)</td>
+                                    <td>114</td>
+                                    <td>115</td>
+                                    <td>116</td>
+                                    <td>117</td>
+                                    <td>118</td>
+                                    <td>119</td>
+                                </tr>
+                                <tr>
+                                    <td>b. 허리둘레 (cm)</td>
+                                    <td>77</td>
+                                    <td>79</td>
+                                    <td>81</td>
+                                    <td>83</td>
+                                    <td>85</td>
+                                    <td>87</td>
+                                </tr>
+                                <tr>
+                                    <td>b. 허리둘레 (inch)</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td>32</td>
+                                    <td>32~33</td>
+                                    <td>33~34</td>
+                                    <td>34</td>
+                                </tr>
+                                <tr>
+                                    <td>c. 엉둥이둘레 (cm)</td>
+                                    <td>104</td>
+                                    <td>106</td>
+                                    <td>108</td>
+                                    <td>110</td>
+                                    <td>112</td>
+                                    <td>114</td>
+                                </tr>
+                                <tr>
+                                    <td>d. 허벅지둘레 (cm)</td>
+                                    <td>64.7</td>
+                                    <td>65.8</td>
+                                    <td>66.9</td>
+                                    <td>68</td>
+                                    <td>69.1</td>
+                                    <td>70.2</td>
+                                </tr>
+                                <tr>
+                                    <td>e. 바지통 (cm)</td>
+                                    <td>49.2</td>
+                                    <td>49.8</td>
+                                    <td>50.4</td>
+                                    <td>51</td>
+                                    <td>51.6</td>
+                                    <td>52.2</td>
+                                </tr>
+                                <tr>
+                                    <td>f. 밑위길이 (cm)</td>
+                                    <td>23.8</td>
+                                    <td>24.1</td>
+                                    <td>24.4</td>
+                                    <td>24.7</td>
+                                    <td>25</td>
+                                    <td>25.3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul class="bul-list">
+                            <li>사이즈 측정은 상품을 바닥에 펼쳐놓은 상태로 끝선과 끝선을 잰후 x2합니다.</li>
+                            <li>사이즈 단위는 cm이며, 재는 위치에 따라 약간의 오차가 생길 수 있습니다.</li>
+                            <li>이미지의 색상은 모니터 사양 또는 해상도에 따라 약간의 차이가 있을 수 있습니다.</li>
+                            <li>위 사항들은 교환 및 반품, 환불의 사유가 될 수 없으며, 고객님의 단순변심으로 분류됩니다.</li>
+                        </ul>
+                    </div>
+                    <h4 class="title">상품정보제공고시</h4>
+                    <div class="info">
+                        <table>
+                            <caption>상품정보제공고시</caption>
+                            <colgroup>
+                                <col width="*">
+                                <col width="70%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">제품소개</th>
+                                    <td>겉감: 면 100% 배색: 폴리에스터 65% 면 35%</td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row">색상</th>
+                                    <td>그레이, 블랙</td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row">치수</th>
+                                    <td>95, 100, 105, 110, 115</td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row">제조자<span>(수입품의 경우 수입자를 함께 표기)</span></th>
+                                    <td>코오롱인더스트리(주) FnC부문</td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row">제조국</th>
+                                    <td>대한민국</td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row">제조년월</th>
+                                    <td>2015년 08월</td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row">품질보증기준</th>
+                                    <td>코오롱인더스트리㈜ FnC부문 제품의 품질보증기간은 구입일로부터 1년입니다.</td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row">A/S 책임자와 전화번호</th>
+                                    <td>코오롱인더스트리㈜ FnC부문 고객상담실 / 대표전화 1588-7667</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="fiber">
+                            <div class="thumb">
+                                <img src="/_ui/img/pc/temp/@product-fiber.jpg" alt="">
+                            </div>
+                            <dl class="txt">
+                                <dt>THERMOLITE</dt>
+                                <dd>가벼운 단열층으로 추운 날씨에 보온기능이 우수하며 탁월한 수분 조절로 신체를 따뜻하게 합니다.<br>인비스타 인증에 의한 원단 기능 입니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <h4 class="title">세탁정보</h4>
+                    <div class="wash">
+                        <ul>
+                            <li class="ico1">다리미질을 할 수 없다.니트류에 적용</li>
+                            <li class="ico2">불에 약함. 불꽃 주의</li>
+                            <li class="ico3">염소,산소계 표백제로 표백할 수 없음</li>
+                            <li class="ico4">"드라이클리닝을 할 수 없다. 프린트,jersey T셔츠류,<br>나일론 소재의 점퍼등에 사용"</li>
+                            <li class="ico5">물의 온도 30℃ 표준으로 약하게 손세탁을 할 수 있다<br>(세탁기 사용 불가) 세제의 종류는 중성세제를 사용한다.</li>
+                            <li class="ico6">옷걸이에 걸고 그늘에서 건조시킬 것. 견 블라우스류를<br>건조시킬 때</li>
+                            <li class="ico7">세탁 후 건조할 때 기계건조를 할 수 없음.</li>
+                        </ul>
+                    </div>
+                    <h4 class="title">리뷰</h4>
+                    <div class="review">
+                        <p class="no-result">
+                            등록된 상품 리뷰가 없습니다.
+                            <a href="#">첫 리뷰 작성하기</a>
+                        </p>
+                    </div>
+                    <h4 class="title">부가정보</h4>
+                    <div class="add-info">
+                        <dl>
+                            <dt><a href="#">배송안내</a></dt>
+                            <dd>배송안내 내용</dd>
+                            <dt><a href="#">교환/반품 안내</a></dt>
+                            <dd>교환/반품 안내 내용</dd>
+                            <dt><a href="#">품질보증 및 보상기준</a></dt>
+                            <dd>품질보증 및 보상기준 내용</dd>
+                            <dt><a href="#">수선품 접수 안내</a></dt>
+                            <dd>수선품 접수 안내 내용</dd>
+                            <dt><a href="#">A/S 책임자와 전화번호</a></dt>
+                            <dd>A/S 책임자와 전화번호 내용</dd>
+                        </dl>
+                    </div>
+
+                    <div class="product-list">
+                        <h5 class="title">다른 고객이 함께 본 상품</h5>
+                        <div class="swiper-wrapper">
+                            <div class="list">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list recent-list">
+                        <h5 class="title">이 상품과 어울리는 상품</h5>
+                        <div class="swiper-wrapper">
+                            <div class="list swiper-slide">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list swiper-slide">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list swiper-slide">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list swiper-slide">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list swiper-slide">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                            <div class="list swiper-slide">
+                                <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                                <p class="brand">SPASSO</p>
+                                <p class="title"><a href="#">잔조직 믹스 매치 캐주얼 점퍼 잔조직 믹스 매치 캐주얼 점퍼</a></p>
+                                <p class="sale">67%</p>
+                                <p class="price">
+                                <del>333,000원</del>
+                                109,000원
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <button type="button" class="swiper-button-prev">prev</button>
+                            <button type="button" class="swiper-button-next">next</button>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        </section>
+
+        <section class="layer-popup layer-pickup">
+          <div class="layer">
+            <div class="inner">
+              <div class="head">
+                <h1>매장픽업</h1>
+                <button tyle="button" class="close">레이어 닫기</button>
+              </div>
+              <div class="content">
+                  <form action="#" method="#" name="#">
+                      <fieldset>
+                        <legend>매장픽업</legend>
+                        <dl class="pickup-form">
+                            <dt><label for="center-search">매장찾기</label></dt>
+                            <dd>
+                                <span class="select">
+                                    <select required="" id="center-search">
+                                        <option value="">지역을 선택하여 주세요.</option>
+                                    </select>
+                                </span>
+                                <p class="no-result">
+                                    해당지역의 매장에 재고가 없습니다.<br>다른 배송방법을 선택해 주세요.
+                                </p>
+                                <div class="addr">
+                                    <ul>
+                                        <li>
+                                            <div class="addr-area">
+                                                <strong>코오롱몰 옴니센터</strong>
+                                                <span>선물포장센터</span>
+                                                <p>서울 중구 무교로 21 코오롱 딜딩 B1</p>
+                                                <p>연락처 : 02-756-8685 / 영업시간 : 10:00 ~ 20:30</p>
+                                            </div>
+                                            <div class="btn-area">
+                                                <button type="button" class="btn btn-line">선택</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="addr-area">
+                                                <strong>코오롱몰 옴니센터</strong>
+                                                <span>선물포장센터</span>
+                                                <p>서울 중구 무교로 21 코오롱 딜딩 B1</p>
+                                                <p>연락처 : 02-756-8685 / 영업시간 : 10:00 ~ 20:30</p>
+                                            </div>
+                                            <div class="btn-area">
+                                                <button type="button" class="btn btn-line">선택</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="paging">
+                                        <a href="#" class="prev">이전 페이지</a>
+                                        <strong class="on">1</strong>
+                                        <a href="#">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <a href="#">5</a>
+                                        <a href="#">6</a>
+                                        <a href="#">7</a>
+                                        <a href="#">8</a>
+                                        <a href="#">9</a>
+                                        <a href="#">10</a>
+                                        <a href="#" class="next">다음 페이지</a>
+                                    </div>
+                                </div>
+                                <div class="addr-select">
+                                    <div class="addr-area">
+                                        <strong>코오롱몰 옴니센터</strong>
+                                        <span>선물포장센터</span>
+                                        <p>서울 중구 무교로 21 코오롱 딜딩 B1</p>
+                                        <p>연락처 : 02-756-8685 / 영업시간 : 10:00 ~ 20:30</p>
+                                    </div>
+                                    <div class="addr-img">
+                                        <img src="/_ui/img/pc/temp/img-map.jpg" alt="">
+                                    </div>
+                                </div>
+                            </dd>
+                            <dt><label for="visit">방문희망일</label></dt>
+                            <dd class="disabled"> <!-- 활성화 class="", 비활성화 class="disabled" -->
+                                <span class="select">
+                                    <select required="" id="visit">
+                                        <option value="">방문날짜를 선택하여 주세요.</option>
+                                    </select>
+                                </span>
+                            </dd>
+                            <dt>방문시간</dt>
+                            <dd class="disabled"> <!-- 활성화 class="", 비활성화 class="disabled" -->
+                                <ul class="radio-list">
+                                    <li>
+                                        <span class="radio">
+                                            <input type="radio" id="visit-time1" name="visit-time">
+                                            <i></i>
+                                            <label for="visit-time1">10:30 ~ 12:30</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="radio">
+                                            <input type="radio" id="visit-time2" name="visit-time">
+                                            <i></i>
+                                            <label for="visit-time2">12:30 ~ 14:30</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="radio">
+                                            <input type="radio" id="visit-time3" name="visit-time">
+                                            <i></i>
+                                            <label for="visit-time3">14:30 ~ 16:30</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="radio">
+                                            <input type="radio" id="visit-time4" name="visit-time">
+                                            <i></i>
+                                            <label for="visit-time4">16:30 ~ 19:30</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <ul class="bul-list">
+                            <li>픽업 주문은 마이페이지 > 전체주문조회에서 조회 및 취소가 가능합니다.</li>
+                            <li>방문 희망일 경과 후 주문이 자동 취소되므로 매장 방문이 어려우신 경우에는<br>고객센터 (1588-7667)로 연락하셔서 방문예정일을 변경해 주십시오.</li>
+                        </ul>
+                      </fieldset>
+                    </form>
+              </div>
+              <div class="foot">
+                <button type="button" class="btn btn-line close-layer">취소</button>
+                <a href="#" class="btn">등록</a>
+              </div>
+          </div>
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

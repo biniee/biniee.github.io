@@ -1,0 +1,74 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-menu title="고객센터"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <div class="cs-depth2">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                    <li class="on"><a href="#">A/S안내</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">비회원주문조회</a></li>
+                </ul>
+            </div>
+
+            <div class="cs-depth3 col2">
+                <ul>
+                    <li><a href="#">품질보증기간 및 보상기준</a></li>
+                    <li><a href="#">수선품 접수 안내</a></li>
+                    <li><a href="#">수선 가능 범위 및 가격</a></li>
+                    <li class="on"><a href="#">수선품 진행 조회</a></li>
+                </ul>
+            </div>
+
+            <article class="cs-as">
+                <h3 class="hidden">고객센터 A/S 본문내용</h3>
+                <h4>수선품 진행 조회</h4>
+                <p>수선 의뢰하신 제품의 진행현황을 조회하실 수 있습니다. 내구성이 다하였거나 오래된 제품일 경우 수선이 불가 할수도 있습니다.</p>
+
+                <div class="as-inquiry">
+                    <div class="top">
+                        <h5>조회 결과</h5>
+                        <a href="#" class="again">다시 조회하기</a>
+                    </div>
+                    <ul class="result">
+                        <li>
+                            <dl>
+                                <dt>접수일</dt>
+                                <dd>2015-12-01</dd>
+                                <dt>접수매장</dt>
+                                <dd>코오롱인더스트리㈜ FNC부문 고객상담실</dd>
+                                <dt>상품코드</dt>
+                                <dd class="prod-code">JKFW43471SU</dd>
+                                <dt>수선내용</dt>
+                                <dd>지퍼</dd>
+                                <dd class="as-more"><a href="RepairProgress_pop2">자세히 보기</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>접수일</dt>
+                                <dd>2015-12-01</dd>
+                                <dt>접수매장</dt>
+                                <dd>코오롱인더스트리㈜ FNC부문 코오롱스포츠 강남직영점</dd>
+                                <dt>상품코드</dt>
+                                <dd class="prod-code">JKFW43471SU</dd>
+                                <dt>수선내용</dt>
+                                <dd>기장수선</dd>
+                                <dd class="as-more"><a href="RepairProgress_pop2">자세히 보기</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

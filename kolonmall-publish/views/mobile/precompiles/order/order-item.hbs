@@ -1,0 +1,19 @@
+{{!-- before order 아이템. 구매전에 체크아웃페이지나 컴플리트 화면에 주로 보여진다. --}}
+<li {{#unless isAvailableStock}}class="sold-out"{{/unless}}>
+    <div class="prod">
+        <img src="{{product.representationImage}}" alt="{{product.name}}" />
+    </div>
+    <div class="info">
+        <p class="t1">
+            <span class="brand">{{product.supplierName}}</span>
+            <span>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+        </p>
+        <p class="t2">{{product.name}}</p>
+        <p class="option">{{product.color}}, {{product.size}}</p>
+        <div class="btm">
+            {{#gt totalDiscounts.price 0}}<span class="discount">{{totalWishPrice.formattedPrice}}{{totalWishPrice.symbol}}</span>{{/gt}}
+            <span class="price">{{totalRealPrice.formattedPrice}} {{totalRealPrice.symbol}}</span>
+            <span class="amount">수량 : {{quantity}}</span>
+        </div>
+    </div>
+</li>

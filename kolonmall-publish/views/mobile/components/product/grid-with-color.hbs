@@ -1,0 +1,37 @@
+{{!-- 상품명 1줄, 1행에 2개씩 나열되는 병렬구조 리스트 --}}
+{{#if product}}
+    {{#if product.results}}
+        <ul class="productResultArea">
+            {{#product.results}}
+                {{>mobile/precompiles/product/grid isShowColorImages=true}}
+            {{/product.results}}
+        </ul>
+    {{else}}
+        <p class="no-result">상품이 존재하지 않습니다.</p>
+    {{/if}}
+    {{#if product.page}}
+        {{#gt product.page.totalCount product.page.perPage}}
+            <a href="#" class="bnr-more productMoreBtn"
+                data-is-show-color-images=true
+                data-component-type="grid"
+                data-category="{{parameters.category}}"
+                data-sizes="{{list_to_string_with_comma parameters.sizes}}"
+                data-colors="{{list_to_string_with_comma parameters.colors}}"
+                data-suppliers="{{list_to_string_with_comma parameters.suppliers}}"
+                data-price-ranges="{{list_to_string_with_comma parameters.priceRanges}}"
+                data-sort="{{parameters.sort}}"
+                data-is-best="{{parameters.isBest}}"
+                data-is-new="{{parameters.isNew}}"
+                data-on-sale="{{parameters.onSale}}"
+                data-per-page="{{product.page.perPage}}"
+                data-page-number="{{product.page.currentPage}}"
+                data-total-count="{{product.page.totalCount}}">더보기</a>
+        {{else}}
+            <a href="#" class="productMoreBtn" style="display: none;"></a>
+        {{/gt}}
+    {{else}}
+        <a href="#" class="productMoreBtn" style="display: none;"></a>
+    {{/if}}
+{{else}}
+    <p class="no-result">상품이 존재하지 않습니다.</p>
+{{/if}}

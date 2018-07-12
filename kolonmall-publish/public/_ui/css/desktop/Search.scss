@@ -1,0 +1,141 @@
+.search-wrap {
+    margin: 78px 0 80px;
+    legend {
+        display: none;
+    }
+    .search-input {
+        position: relative;
+        width: 466px;
+        margin: 0 auto;
+        border: 1px solid #dfdfdf;
+        input[type="text"] {
+            width: 400px;
+            height: 42px;
+            padding-left: 20px;
+            line-height: 42px;
+        }
+        .btn-search {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 45px;
+            height: 42px;
+            font: 0/0 a;
+            background: url('/_ui/img/pc/icn/icn-search.png') no-repeat center;
+        }
+    }
+    .search-category {
+        margin-top: 48px;
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        dt {
+            float: left;
+            width: 70px;
+            padding-top: 4px;
+            font-size: 13px;
+            color: #1f1f1f;
+        }
+        dd {
+            float: left;
+            width: 1130px;
+            margin-left: -10px;
+            margin-bottom: 10px;
+            a {
+                display: inline-block;
+                padding: 5px 10px;
+                font-size: 12px;
+                color: #898989;
+                &.active {
+                    color: #1f1f1f;
+                }
+            }
+        }
+    }
+    .search-result {
+        margin-top: 30px;
+        padding-top: 40px;
+        border-top: 1px solid #f4f4f4;
+        .txt {
+            font-size: 14px;
+            color: #898989;
+            span {
+                color: #1f1f1f;
+            }
+        }
+        .category-menu {
+            margin-top: -15px;
+        }
+    }
+    .prod-wrap {
+        margin-top: 80px;
+        .tit {
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #0f0f10;
+        }
+        .prod-list {
+            margin-left: -20px;
+            &::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .list {
+                color: #1f1f1f;
+                position: relative;
+                float: left;
+                width: 225px;
+                margin-left: 19px;
+                margin-bottom: 50px;
+            .thumb {
+                margin-bottom: 10px;
+            }
+            .brand {
+                font-size: 11px;
+                font-weight: bold;
+                display: inline-block;
+                margin: 0 10px 15px;
+                padding-bottom: 5px;
+                border-bottom: 3px solid #1f1f1f;
+            }
+            .title {
+                margin: 0 10px 18px;
+                a {
+                color: #1f1f1f;
+                font-size: 13px;
+                line-height: 1.4;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                display: inline-block;
+                max-width: 100%;
+                }
+            }
+            .price {
+                font-size: 12px;
+                margin: 0 10px;
+                del {
+                color: #9ba4b0;
+                }
+            }
+            .sale {
+                font-size: 12px;
+                font-weight: bold;
+                position: absolute;
+                right: 10px;
+                bottom: 0;
+                padding-left: 12px;
+                background: url('/_ui/img/pc/icn/icn-sale.png') no-repeat 0 50%;
+            }
+            }
+        }
+        .list-more {
+            margin: 0 auto;
+        }
+    }
+}

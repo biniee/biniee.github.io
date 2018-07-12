@@ -1,0 +1,78 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="리뷰"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/review/product-item"}}
+            {{precompile "mobile/precompiles/review/reviews-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="offline">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/MyPage">홈</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Order/List">주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/RMA/List">취소/반품/교환</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/WishList/OnlineList">관심상품</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Review/RegisteredList" class="on">리뷰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Point">포인트</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Coupon">쿠폰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Deposit">예치금</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+            
+            <div class="cs-depth3 col2">
+                <ul>
+                    <li {{#is reviews.type "R"}}class="on"{{/is}}><a href="/Review/RegisteredList?type=R">등록 리뷰 <i>{{reviews.registeredCount}}</i></a></li>
+                    <li {{#is reviews.type "U"}}class="on"{{/is}}><a href="/Review/RegisteredList?type=U">미등록 리뷰 <i>{{reviews.unregisteredCount}}</i></a></li>
+                </ul>
+            </div>
+
+            <article class="box-list">
+                <div class="list-review">
+                    <div class="review registed" id="reviewList" data-page-number="{{reviews.reviewData.page.currentPage}}" data-page-size="{{reviews.reviewData.page.perPage}}" data-type="{{reviews.type}}" data-registered-count="{{reviews.registeredCount}}" data-unregistered-count="{{reviews.unregisteredCount}}">
+                        {{#reviews.reviewData.results}}
+                            {{>mobile/precompiles/review/product-item reviewType=../../reviews.type}}
+                            {{>mobile/precompiles/review/reviews-item}}
+                        {{/reviews.reviewData.results}}
+                        {{^reviews.reviewData.results}}
+                            <div class="list-non">
+                                {{#is reviews.type "R"}}등록 리뷰가 없습니다.{{/is}}
+                                {{#is reviews.type "U"}}미등록 리뷰가 없습니다.{{/is}}
+                            </div>
+                        {{/reviews.reviewData.results}}
+
+                    </div>
+                    {{{render_loader "reviewListLoading"}}}
+
+                    <a id="moreBtn" href="#" class="more" style="display: none;">더보기</a>
+                </div>
+            </article>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

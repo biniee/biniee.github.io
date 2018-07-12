@@ -1,0 +1,122 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="온라인 고객보상제"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/FAQ">FAQ</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Contact">1:1문의</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/AfterSales/Warranty">A/S안내</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Notice">공지사항</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/GuestOrder">비회원주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/eKOLON/Point">eKOLON멤버십</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="on" href="/Compensation/Delay">고객보상제</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Proposal/Add">제휴및광고제안</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <div class="cs-depth3">
+                <ul>
+                    <li><a href="/Compensation/Delay">배송지연 보상제</a></li>
+                    <li class="on"><a href="/Compensation/SoldOut">품절 취소 보상제</a></li>
+                    <li><a href="/Compensation/Coupon">보상쿠폰 안내</a></li>
+                </ul>
+            </div>
+
+            <article class="cs-indmnt">
+                <h3>품절취소 고객보상이란</h3>
+                <ul class="info">
+                    <li>고객님께서 주문하신 상품이 상품공급상의 문제로 인해,
+                        주문취소요청을 드리게 될 경우 해당 되는 상품 금액 및
+                        초과일 기준에 따른 보상 쿠폰을 지급해 드리는 제도입니다.
+                    </li>
+                </ul>
+                <div class="btns">
+                    <a href="/Contact/Add" class="btn type03">1:1상담하기</a>
+                </div>
+
+                <h3>품절취소 고객보상제(결제완료 및 영업일 기준)</h3>
+                <div class="box-table hv-h3">
+                    <ul class="tit">
+                        <li>상품금액&#47;배송지연</li>
+                        <li>4일째 취소</li>
+                        <li>5일째 취소</li>
+                    </ul>
+                    <ul class="tb-bd">
+                        <li>5만원 미만</li>
+                        <li>2천원 할인쿠폰</li>
+                        <li>3천원 할인쿠폰</li>
+                    </ul>
+                    <ul class="tb-bd">
+                        <li>5~10만원 미만</li>
+                        <li>3천원 할인쿠폰</li>
+                        <li>4천원 할인쿠폰</li>
+                    </ul>
+                    <ul class="tb-bd">
+                        <li>10만원 이상</li>
+                        <li>4천원 할인쿠폰</li>
+                        <li>5천원 할인쿠폰</li>
+                    </ul>
+                    <ul class="tb-bd last">
+                        <li>입금완료 3일 이내 안내시</li>
+                        <li class="col">고객보상 지급 대상 제외</li>
+                    </ul>
+                </div>
+
+                <div class="box-table">
+                    <ul class="tit">
+                        <li>상품금액&#47;배송지연</li>
+                        <li>7일째 취소</li>
+                        <li>7일 이후 취소</li>
+                    </ul>
+                    <ul class="tb-bd">
+                        <li>5만원 미만</li>
+                        <li>4천원 할인쿠폰</li>
+                        <li>5천원 할인쿠폰</li>
+                    </ul>
+                    <ul class="tb-bd">
+                        <li>5~10만원 미만</li>
+                        <li>5천원 할인쿠폰</li>
+                        <li>6천원 할인쿠폰</li>
+                    </ul>
+                    <ul class="tb-bd">
+                        <li>10만원 이상</li>
+                        <li>6천원 할인쿠폰</li>
+                        <li>7천원 할인쿠폰</li>
+                    </ul>
+                    <ul class="tb-bd last">
+                        <li>입금완료 3일 이내 안내시</li>
+                        <li class="col">고객보상 지급 대상 제외</li>
+                    </ul>
+                </div>
+            </article>
+
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

@@ -1,0 +1,87 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="고객센터"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/contact/counseling"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="contact-list">
+
+           <a href="/Contact/Add" class="btn-contact">1:1 문의하기</a>
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/FAQ">FAQ</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="on" href="/Contact">1:1문의</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/AfterSales/Warranty">A/S안내</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Notice">공지사항</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/GuestOrder">비회원주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/eKOLON/Point">eKOLON멤버십</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Compensation/Delay">고객보상제</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Proposal/Add">제휴및광고제안</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <div class="cnt-inquiry">
+                <ul>
+                    <li><strong>{{qna.qnaCount}}</strong><span>총 문의</span></li>
+                    <li><strong>{{qna.qnaEndCount}}</strong><span>완료</span></li>
+                    <li><strong>{{qna.qnaIngCount}}</strong><span>처리중</span></li>
+                </ul>
+            </div>
+
+            <!--<div class="cs-depth3">-->
+                <!--<ul id="periodTab">-->
+                    <!--<li class="on"><a data-period="30days" href="#">최근 30일</a></li>-->
+                    <!--<li><a data-period="90days" href="#">최근 90일</a></li>-->
+                    <!--<li><a data-period="1year" href="#">최근 1년</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+            <article class="to-one">
+                <h3 class="hidden">고객센터 1:1문의 본문내용</h3>
+                <ul class="">
+                    {{#qna.qnaList}}
+                        {{>mobile/precompiles/contact/counseling this}}
+                    {{/qna.qnaList}}
+                </ul>
+            </article>
+            <article class="use-info">
+                <h4>이용안내</h4>
+                <ul class="list-dot">
+                    <li>문의하신 내용을 E-Mail로 신속하고 정확하게 답변 드리겠습니다.</li>
+                    <li>상담에 대한 답변은 마이페이지 및 고객센터 > 1:1상담에서 <br/><span class="indent">확인 하실 수 있습니다.<span> </li>
+                    <li>1:1 상담글 작성 후에는 수정,삭제가 되지 않습니다.</li>
+                </ul>
+            </article>
+
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

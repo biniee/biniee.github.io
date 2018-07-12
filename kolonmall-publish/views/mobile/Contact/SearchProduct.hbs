@@ -1,0 +1,74 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/contact/search-product-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+
+            <article class="search-prod">
+                <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                <h1>문의 상품 선택</h1>
+
+                <div class="cs-depth3">
+                    <ul id="productTypeTabs">
+                        <li class="on"><a href="#" data-product-type="order">주문상품</a></li>
+                        <li><a href="#" data-product-type="cart">장바구니상품</a></li>
+                        <li><a href="#" data-product-type="wishList">관심상품</a></li>
+                    </ul>
+                </div>
+
+                <!-- 주문상품 -->
+                <div class="tab0 tab">
+                    <div id="resultOrderListWrapper" style="display: none;">
+                        <ul class="prod-list">
+
+                        </ul>
+                        <a href="#" class="prod-more">더보기</a>
+                    </div>
+                    <div id="emptyResultOrderList" class="result-x" style="display: none;">
+                        최근 1개월내 주문상품이 없습니다.
+                    </div>
+                </div>
+                <!-- //주문상품 -->
+
+                <!-- 장바구니상품 -->
+                <div class="tab1 tab">
+                    <div id="resultCartListWrapper" style="display: none;">
+                        <ul class="prod-list">
+
+                        </ul>
+                        <a href="#" class="prod-more">더보기</a>
+                    </div>
+                    <div id="emptyResultCartList" class="result-x" style="display: none;">
+                        장바구니상품이 없습니다.
+                    </div>
+                </div>
+                <!-- //장바구니상품 -->
+
+                <!-- 관심상품 -->
+                <div class="tab2 tab">
+                    <div id="resultWishListWrapper" style="display: none;">
+                        <ul class="prod-list">
+
+                        </ul>
+                        <a href="#" class="prod-more">더보기</a>
+                    </div>
+                    <div id="emptyResultWishList" class="result-x" style="display: none;">
+                        관심상품이 없습니다.
+                    </div>
+                </div>
+                <!-- //관심상품 -->
+
+            </article>
+
+        </section>
+
+    {{/inline}}
+    
+
+{{/mobile/layouts/default}}

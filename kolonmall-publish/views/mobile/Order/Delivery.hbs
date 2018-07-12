@@ -1,0 +1,136 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="배송정보"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <article class="order">
+                <div class="order-prod">
+                    <div class="top">
+                        <h3>주문상품{{#if cart.items}}({{length cart.items}}){{/if}}</h3>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                    {{#if cart}}
+                        <ul>
+                            {{#cart.items}}
+                                {{>mobile/precompiles/order/order-item}}
+                            {{/cart.items}}
+                        </ul>
+                    {{else}}
+                        <h3 class="empty">주문 할 상품이 없습니다.</h3>
+                    {{/if}}
+                </div>
+                <div class="gift">
+                    <div class="top">
+                        <h3>사은혜택(2)</h3>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                    <ul class="gift-choice">
+                        {{>mobile/precompiles/order/gift-item}}
+                        {{>mobile/precompiles/order/gift-item}}
+                    </ul>
+                    {{!--<div class="d-gift">
+                        <div class="d-top">
+                            <h3>사은품 배송지 정보</h3>
+                            <div>
+                                <a href="#">새로입력</a>
+                                <a href="/Order/MyDelivery">나의 배송지</a>
+                            </div>
+                        </div>
+                    </div>--}}
+                </div>
+                <div class="d-info">
+                    <div class="d-top">
+                        <h3>배송지 정보</h3>
+                        <div>
+                            <a href="#" class="form-reset">새로입력</a>
+                            <a href="/Order/MyDelivery">나의 배송지</a>
+                        </div>
+                    </div>
+                    <form id="deliveryForm">
+                        <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                        <ul>
+                            <li>
+                                <div class="tit">받는분</div>
+                                <div class="cont">
+                                    <input type="text" name="firstName" id="firstName" placeholder="이름" />
+                                </div>
+                            </li>
+                            <li class="zip-code">
+                                <div class="tit">우편번호</div>
+                                <div class="cont">
+                                    <input type="text" name="postalCode" id="postalCode" value="06028" />
+                                    <a href="#" class="btn">우편번호찾기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tit">상세주소</div>
+                                <div class="cont">
+                                    <textarea id="line1" name="line1">서울시 서초구 서초대로 411 GT타워 8층 KOP센터 커머스팀</textarea>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tit">휴대폰번호</div>
+                                <div class="cont">
+                                    <input type="text" id="cellPhone" name="cellPhone" value="01099094784"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tit">전화번호</div>
+                                <div class="cont">
+                                    <input type="text" placeholder="선택입력" id="phone" name="phone" />
+                                </div>
+                            </li>
+                            <li class="request-box">
+                                <div class="cont">
+                                    <select id="deliveryRequestSelect" onChange="change(this.options[this.selectedIndex].value)">
+                                        <option>배송시 요청사항을 선택해 주세요</option>
+                                        <option>부재 시 경비실에 맡겨주세요</option>
+                                        <option>빠른 배송 부탁드립니다</option>
+                                        <option>배송 전 연락드립니다</option>
+                                        <option value="txtbox">직접입력</option>
+                                    </select>
+                                    <textarea id="deliveryMessage" class="request-txt"></textarea>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+                <button id="deliveryFormSubmitBtn" href="#" class="btn-order" type="submit">주문하기</button>
+
+                <div class="d-notice">
+                    <h3>이용안내</h3>
+                    <ul>
+                        <li>실제 결제 금액에 따라 적립포인트는 변경될 수 있습니다.<br />포인트는 할인 및 쿠폰 적용, 특가 상품 구입 시 적립되지 않습니다.</li>
+                        <li>포인트와 쿠폰 사용 시 유효기간을 꼭 확인해 주시고, 가급적 카드결제를 권장해 드립니다.</li>
+                    </ul>
+                    <h3>매장픽업안내</h3>
+                    <ul>
+                        <li>매장픽업은 교환권을 고객님의 MMS로 발송하여 상품과 교환하는 서비스 입니다. <span class="color">교환권 MMS를 전송 받으신 본인만 매장에서 수령 가능합니다. (본인 확인 절차)<span></li>
+                    </ul>
+                </div>
+
+            </article>
+
+        </section>
+    {{/inline}}
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/order/order-item"}}
+            {{precompile "mobile/precompiles/order/gift-item"}}
+        </script>
+        <script>
+            function change(request) {
+                if( request == "txtbox" ){
+                    $('.request-txt').css('display','block');
+                }else{
+                    $('.request-txt').css('display','none');
+                }
+            }
+        </script>
+    {{/inline}}
+{{/mobile/layouts/default}}

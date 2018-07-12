@@ -1,0 +1,135 @@
+<!-- after order 아이템. 구매후 오더 조회성 화면에서 주문 번호와 함께 주로 보여진다. -->
+<li>
+    <div class="prod">
+        <img src="{{product.representationImage}}" alt="{{product.name}}" />
+    </div>
+    <div class="info">
+        <p class="t1">
+            <span class="brand">{{product.supplierName}}</span>
+            <span>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+        </p>
+        <p class="t2">{{product.name}}</p>
+        <dl class="option">
+            <dt>옵션</dt>
+            <dd>{{product.color}}, {{product.size}}</dd>
+            <dt>수량</dt>
+            <dd>{{quantity}}</dd>
+            <dt>결제금액</dt>
+            <dd class="price">{{formattedPrice}}원</dd>
+            {{#if isOrderDetailView}}
+                <dt>배송비</dt>
+                <dd>{{formattedDeliveryCost}}원</dd>
+                <dt>구분</dt>
+                <dd>{{displayedDeliveryType}}</dd>
+            {{/if}}
+            {{#is product.productSaleType "SET"}}
+                <dd class="set"><a href="#">세트옵션보기</a></dd>
+            {{/is}}
+        </dl>
+    </div>
+    <div class="btm">
+        <p>
+            {{#unless isOrderDetailView}}
+                <span>{{displayedDeliveryType}}</span>
+            {{/unless}}
+            <span {{#is status "CANCEL_COMPLETED"}}class="cancel"{{/is}}{{#is status "RETURN_COMPLETED"}}class="cancel"{{/is}}{{#is status "EXCHANGE_COMPLETED"}}class="cancel"{{/is}}>
+                {{displayedStatus}}
+           </span>
+        </p>
+
+        {{#unless isHiddenControls}}
+            {{#is deliveryType "DELIVERYSERVICE"}}
+                {{#if isCancelable}}
+                    <a href="/Order/{{orderNumber}}/Cancel?selected={{entryCode}}">주문취소</a>
+                {{/if}}
+            {{/is}}
+            {{#is deliveryType "PICKUP"}}
+                {{#is isCancelable}}
+                    <a href="/Order/{{orderNumber}}/CancelPickUp?selected={{entryCode}}">픽업취소</a>
+                {{/is}}
+            {{/is}}
+
+            {{#is deliveryType "DELIVERYSERVICE"}}
+                {{#is status "DELIVERYCOMPLETED"}}
+                    {{#if isReturnable}}
+                        <a href="/Order/{{orderNumber}}/Return?selected={{entryCode}}">반품신청</a>
+                    {{else}}
+                        <!--<a href="/Order/{{orderNumber}}/Return?selected={{entryCode}}" class="disabled">반품신청</a>-->
+                    {{/if}}
+                {{else}}
+                    {{#if isReturnable}}
+                        <a href="/Order/{{orderNumber}}/Return?selected={{entryCode}}">반품신청</a>
+                    {{/if}}
+                {{/is}}
+            {{/is}}
+            {{#is deliveryType "PICKUP"}}
+                {{#if isReturnable}}
+                    <a href="/Order/{{orderNumber}}/ReturnPickUp?selected={{entryCode}}">반품신청</a>
+                {{/if}}
+            {{/is}}
+
+            {{#is deliveryType "DELIVERYSERVICE"}}
+                {{#is status "DELIVERYCOMPLETED"}}
+                    {{#if isExchangeable}}
+                        <a href="/Order/{{orderNumber}}/Exchange?selected={{entryCode}}">교환신청</a>
+                    {{else}}
+                        <!--<a href="/Order/{{orderNumber}}/Exchange?selected={{entryCode}}" class="disabled">교환신청</a>-->
+                    {{/if}}
+                {{else}}
+                    {{#if isExchangeable}}
+                        <a href="/Order/{{orderNumber}}/Exchange?selected={{entryCode}}">교환신청</a>
+                    {{/if}}
+                {{/is}}
+            {{/is}}
+            {{#is deliveryType "PICKUP"}}
+                {{#if isExchangeable}}
+                    {{#is status "PICKUPCOMPLETE"}}
+                        <a href="/Order/{{orderNumber}}/ExchangePickUp?selected={{entryCode}}">교환신청</a>
+                    {{else}}
+                        <a href="/Order/PickUpExchangeTicket">교환권</a>
+                    {{/is}}
+                {{/if}}
+            {{/is}}
+        {{/unless}}
+        {{#is deliveryType "DELIVERYSERVICE"}}
+            {{#if isTrackable}}
+                {{#if deliveryInformation}}
+                    <a href="{{deliveryInformation.deliveryVendorUrl}}{{deliveryInformation.deliveryNo}}" target="_blank">배송조회</a>
+                {{/if}}
+            {{/if}}
+        {{/is}}
+    </div>
+    {{#is deliveryType "PICKUP"}}
+        <div class="pickup-info">
+            <dl {{#is status "CANCEL_COMPLETED"}}class="cancel"{{/is}}{{#is status "RETURN_COMPLETED"}}class="cancel"{{/is}}{{#is status "EXCHANGE_COMPLETED"}}class="cancel"{{/is}}>
+                <dt>{{pickupInformation.name}}</dt>
+                <dd>{{pickupInformation.pickupDate}} {{pickupInformation.pickupTimeFrom}}~{{pickupInformation.pickupTimeTo}} 방문예정</dd>
+            </dl>
+            <a href="#">매장정보</a>
+        </div>
+    {{/is}}
+    {{#is product.productSaleType "SET"}}
+        <ul class="set-prod">
+            {{#product.productReferences}}
+                <li>
+                    <div class="prod"><img src="{{representationImage}}" alt="{{name}}"></div>
+                    <div class="info">
+                        <p class="t1">
+                            <span class="brand">{{supplierName}}</span>
+                            <span>{{#is productSaleType "SET"}}{{code}}{{else}}{{baseProductCode }}{{/is}}</span>
+                        </p>
+                        <p class="t2">{{name}}</p>
+                        <dl class="option">
+                            <dt>옵션</dt>
+                            <dd>{{color}}, {{size}}</dd>
+                            <dt>수량</dt>
+                            <dd>{{../quantity}}</dd>
+                            <dt>결제금액</dt>
+                            <dd class="price">{{price.formattedPrice}}원</dd>
+                        </dl>
+                    </div>
+                </li>
+            {{/product.productReferences}}
+        </ul>
+    {{/is}}
+</li>

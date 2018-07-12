@@ -1,0 +1,24 @@
+<!--<dt>상의</dt>-->
+<!--<dd>80, 90, 95</dd>-->
+<!--<dt>하의</dt>-->
+<!--<dd>30, 31, 32</dd>-->
+<!--<dt>신발</dt>-->
+<!--<dd>270, 275</dd>-->
+{{#if colors}}
+    <dt>컬러</dt>
+    <dd>
+        <ul class="color">
+            {{#colors}}
+                <li class="bg-3ab4ec">
+                    {{this}}
+                </li>
+            {{/colors}}
+        </ul>
+    </dd>
+{{/if}}
+{{#if priceRanges}}
+<dt>가격대</dt>
+<dd>
+    {{list_to_string_with_comma_space priceRanges}}
+</dd>
+{{/if}}

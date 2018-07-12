@@ -1,0 +1,25 @@
+{{!-- 상품명 1줄, 1행에 2개씩 나열되는 병렬구조 리스트 --}}
+{{#if product}}
+    {{#if product.results}}
+        <ul class="productResultArea">
+            {{#product.results}}
+                {{>mobile/precompiles/product/grid}}
+            {{/product.results}}
+        </ul>
+    {{else}}
+        <p class="no-result">상품이 존재하지 않습니다.</p>
+    {{/if}}
+    {{#if product.page}}
+        {{#gt product.page.totalCount product.page.perPage}}
+            <a href="#" class="bnr-more productMoreBtn"
+               data-component-type="grid"
+               data-special-code="{{parameters.no}}"
+               data-group-index="{{parameters.groupIndex}}"
+               data-per-page="{{product.page.perPage}}"
+               data-current-page="{{product.page.currentPage}}"
+               data-total-count="{{product.page.totalCount}}">더보기</a>
+        {{/gt}}
+    {{/if}}
+{{else}}
+    <p class="no-result">상품이 존재하지 않습니다.</p>
+{{/if}}

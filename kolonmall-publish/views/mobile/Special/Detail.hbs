@@ -1,0 +1,50 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+
+            <article class="special-detail">
+                <div class="h1-top">
+                    <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                    <h1>{{specialDetail.title}}</h1>
+                    <p class="data">
+                        기간 : 
+                        {{#if specialDetail.specialAt.start}}{{to_date_string specialDetail.specialAt.start}}{{/if}}
+                        ~
+                        {{#if specialDetail.specialAt.end}}{{to_date_string specialDetail.specialAt.end}}{{/if}}
+                    </p>
+                </div>
+
+                <div class="special-visual">
+                    {{{specialDetail.content}}}
+                </div>
+                <div class="clearfix"></div>
+
+                <!-- 기획전 카테고리 -->
+                <div class="scr-navi">
+                    <div class="swiper-wrapper">
+                        {{#specialDetail.productList}}
+                            <div class="swiper-slide">
+                                <a href="#{{title}}" class="on">{{title}}</a>
+                            </div>
+                        {{/specialDetail.productList}}
+                    </div>
+                </div>
+                <!-- //기획전 카테고리 -->
+
+                <!-- 상품 리스트 -->
+                {{#specialDetail.productList}}
+                    <h3 id="{{title}}">{{title}}</h3>
+                    <article class="list2-prod">
+                        <ul>
+                            {{#fetch_special_product "mobile" parameters @index 60}}
+                                {{{render_special_product "mobile" product parameters}}}
+                            {{/fetch_special_product}}
+                        </ul>
+                    </article>
+                {{/specialDetail.productList}}
+            </article>
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

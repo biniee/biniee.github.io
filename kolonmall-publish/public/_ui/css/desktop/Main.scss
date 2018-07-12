@@ -1,0 +1,175 @@
+.main {
+    .swiper-wrapper {
+        max-width: 100%;
+    }
+    .slide-list {
+        width: 100%;
+        overflow: hidden;
+    }
+    .banner {
+        margin-bottom: 80px;
+        a {
+            display: block;
+            margin-top: 15px;
+        }
+    }
+    .visual-slide {
+        margin-top: 26px;
+        height: 585px;
+        overflow: hidden;
+        .swiper-wrapper {
+            .no-center-banner {
+                .left-banner,
+                .right-banner {
+                    width: 592px;
+                    height: 585px;
+                }
+
+                .right-banner {
+                    margin-left: 16px;
+                }
+            }
+
+            .left-banner,
+            .center-banner,
+            .right-banner {
+                float: left;
+                position: relative;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .center-banner,
+            .right-banner {
+                margin-left: 15px;
+            }
+
+            .left-banner,
+            .right-banner {
+                width: 450px;
+                height: 585px;
+            }
+
+            .center-banner {
+                width: 270px;
+            }
+        }
+        .swiper-controls {
+            position: relative;
+            width: 1200px;
+            margin: 0 auto;
+            .swiper-button-prev {
+                margin-left: -1px;
+                margin-right: -1px;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                margin-top: -315px;
+            }
+        }
+    }
+    .prod-wrap {
+        margin-top: 80px;
+        .tit {
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #0f0f10;
+        }
+        .prod-list {
+            margin-left: -20px;
+            &::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .list {
+                color: #1f1f1f;
+                position: relative;
+                float: left;
+                width: 225px;
+                margin-left: 19px;
+                margin-bottom: 50px;
+            .thumb {
+                margin-bottom: 10px;
+            }
+            .brand {
+                font-size: 11px;
+                font-weight: bold;
+                display: inline-block;
+                margin: 0 10px 15px;
+                padding-bottom: 5px;
+                border-bottom: 3px solid #1f1f1f;
+            }
+            .title {
+                margin: 0 10px 18px;
+                color: #1f1f1f;
+                font-size: 13px;
+                line-height: 1.4;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                display: block;
+                max-width: 100%;
+            }
+            .price {
+                font-size: 12px;
+                margin: 0 10px;
+                del {
+                color: #9ba4b0;
+                }
+            }
+            .sale {
+                font-size: 12px;
+                font-weight: bold;
+                position: absolute;
+                right: 10px;
+                bottom: 0;
+                padding-left: 12px;
+                background: url('/_ui/img/pc/icn/icn-sale.png') no-repeat 0 50%;
+            }
+            }
+        }
+        .list-more {
+            margin: 0 auto;
+        }
+    }
+    .thumb-wrap {
+        margin-top: 80px;
+    }
+    .brand {
+        .brand-list {
+            text-align: center;
+            li {
+                display: inline-block;
+                a {
+                    display: block;
+                    margin: 0 17px 20px;
+                    padding: 3px 0;
+                    font-size: 11px;
+                    color: #1f1f1f;
+                    font-weight: bold;
+                    &.active {
+                        border-bottom: 3px solid #0f0f10;
+                    }
+                }
+            }
+        }
+        .more-wrap {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            text-align: right;
+            a {
+                display: inline-block;
+                padding: 3px 15px;
+                font-weight: bold;
+                font-size: 11px;
+                color: #0f0f10;
+                border: 2px solid #0f0f10;
+            }
+        }
+    }
+}

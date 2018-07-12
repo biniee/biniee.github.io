@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#>title}}코오롱몰{{/title}}</title>
+    {{>desktop/partials/head}}
+
+    {{#>extrahead}}
+    {{!-- Extra head conde --}}
+    {{/extrahead}}
+</head>
+<body>
+    <div class="sub kolon-wrap">
+        {{#>header}}
+        {{!-- Header conde --}}
+        {{/header}}
+
+        {{#>content}}
+        {{!-- Content conde --}}
+        {{/content}}
+
+        {{>desktop/partials/footer}}
+    </div>
+
+{{>desktop/partials/javascript}}
+
+{{#>extrajavascript}}
+{{!-- Extra javascript conde --}}
+{{/extrajavascript}}
+</body>
+</html>

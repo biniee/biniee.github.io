@@ -1,0 +1,57 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title=category.name}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/product/grid"}}
+            {{precompile "mobile/components/product/grid-with-color"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi list-scr-navi">
+                <div class="swiper-wrapper">
+                    {{#category.subcategories}}
+                        <div class="swiper-slide">
+                            <a href="{{url}}" class="{{#is ../selectedCategory.id id}}on{{/is}}">{{name}}</a>
+                        </div>
+                    {{/category.subcategories}}
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <div class="prod-view-top" id="searchedProductListWrapper"
+                 data-category-code="{{selectedCategory.id}}"
+                 data-page-size=20>
+                <div class="btns left">
+                    {{#if sorts}}
+                        <select class="list-option" id="sortSelect">
+                        {{#sorts}}
+                            <option value="{{code}}" class="sortOption {{#if ../parameters.sort}}{{#is ../parameters.sort code}}active{{/is}}{{/if}}" data-sort-code="{{code}}">{{name}}</option>
+                        {{/sorts}}
+                        </select>
+                    {{/if}}
+                </div>
+                <div class="btns" onclick="javascript: alert('준비중 입니다.');">
+                    <a>브랜드</a>
+                    <a>상세설정</a>
+                </div>
+            </div>
+
+            <article class="list2-prod productResultAreaWrapper">
+                {{#fetch_product "mobile" "" parameters 20}}
+                    {{{render_product "mobile" "grid-with-color" product parameters}}}
+                {{/fetch_product}}
+            </article>
+
+        </section>
+        {{>mobile/partials/sitemap-main}}
+    {{/inline}}
+{{/mobile/layouts/default}}

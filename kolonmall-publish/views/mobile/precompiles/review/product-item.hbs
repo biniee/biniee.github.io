@@ -1,0 +1,15 @@
+<div class="prdt">
+    <div class="box-img">
+        <img src="{{product.representationImage}}" alt="상품 이미지" />
+    </div>
+    <div class="box-cnt">
+        <span class="brand">{{product.supplierName}}</span>
+        <span class="code">{{product.baseProductCode}}</span>
+        <p class="pd-name">{{product.name}}</p>
+        <span class="pd-ot">{{product.size}}</span>
+        <p class="pd-prc"><i>{{product.price.formattedPrice}}</i>{{product.price.symbol}}</p>
+    </div>
+    <div class="btn-wrt" {{#is reviewType "R"}}style="display: none;"{{/is}}>
+        <a href="/Review/{{product.code}}/Add?type={{reviewType}}">리뷰작성</a>
+    </div>
+</div>

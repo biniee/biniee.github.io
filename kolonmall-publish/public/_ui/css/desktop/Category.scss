@@ -1,0 +1,283 @@
+.category-cont {
+    margin: 78px 0 80px;
+    h3 {
+        font-size: 22px;
+        color: #1f1f1f;
+    }
+    .top-banner,
+    .issue-and-deal-banner {
+        margin-bottom: 50px;
+        .thumb-list  {
+            overflow: hidden;
+        }
+        .item {
+            margin-right: 20px;
+        }
+    }
+    .issue-and-deal-banner {
+        margin-top: 70px;
+    }
+    .banner-list {
+        margin-bottom: 50px;
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        li {
+            position: relative;
+            float: left;
+            margin-left: 21px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .prod-wrap {
+        &.category-list {
+            margin-top: 0;
+            .prod-list {
+                .list {
+                    margin-bottom: 65px;
+                }
+            }
+        }
+        .tit {
+            margin-bottom: 50px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 15px;
+            color: #0f0f10;
+            span {
+                display: inline-block;
+                margin-top: -2px;
+                margin-left: 5px;
+                padding: 2px 6px;
+                color: #fff;
+                vertical-align: middle;
+                font-size: 12px;
+                border-radius: 8px;
+                background-color: #1f1f1f;
+            }
+        }
+        .prod-list {
+            margin-left: -24px;
+            &::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .list {
+                color: #1f1f1f;
+                position: relative;
+                float: left;
+                width: 225px;
+                margin-left: 24px;
+                margin-bottom: 25px;
+            .thumb {
+                margin-bottom: 10px;
+            }
+            .brand {
+                font-size: 11px;
+                font-weight: bold;
+                display: inline-block;
+                margin: 0 10px 15px;
+                padding-bottom: 5px;
+                border-bottom: 3px solid #1f1f1f;
+            }
+            .title {
+                margin: 0 10px 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                word-wrap: break-word;
+                height: 1.2em;
+                color: #1f1f1f;
+                font-size: 13px;
+                line-height: 1.4;
+                white-space: nowrap;
+                display: block;
+                max-width: 100%;
+            }
+            .price {
+                font-size: 12px;
+                margin: 0 10px;
+                del {
+                color: #9ba4b0;
+                }
+            }
+            .sale {
+                font-size: 12px;
+                font-weight: bold;
+                position: absolute;
+                right: 10px;
+                bottom: 0;
+                padding-left: 12px;
+                background: url('/_ui/img/pc/icn/icn-sale.png') no-repeat 0 50%;
+            }
+            }
+        }
+        .list-more {
+            margin: 50px auto 0;
+        }
+        .no-result {
+            margin: 125px 0;
+            text-align: center;
+            font-size: 16px;
+            color: #898989;
+        }
+    }
+    .color-box {
+        position: absolute; 
+        left: 10px;
+        bottom: -35px;
+        max-width: 205px;
+    }
+    .paging {
+        margin-top: 60px;
+    }
+    hr {
+        border: 2px solid #1f1f1f;
+        margin: 75px 0 50px;
+    }
+    .prod-search-list {
+        position: relative;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f3f3f3;
+        & + .category-list {
+            margin-top: 20px;
+        }
+        dt,
+        dd {
+            display: inline-block;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+        dt {
+            margin-left: 30px;
+            margin-right: 3px;
+            color: #aaa;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        dd {
+            color: #1f1f1f
+        }
+        .color {
+            li {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                vertical-align: middle;
+                font: 0/0 a;
+            }
+        }
+        .reset {
+            position: absolute;
+            right: 0;
+            top: -4px;
+            height: 25px;
+            padding: 0 8px;
+            line-height: 25px;
+            font-size: 12px;
+            color: #000;
+        }
+    }
+}
+.layer-prod-search {
+    .layer {
+        font-size: 14px;
+        width: 600px;
+        .content {
+            margin-bottom: 40px;
+            h2 {
+                padding-top: 28px;
+                border-top: 1px solid #f3f3f3;
+                &:first-child {
+                    padding-top: 0;
+                    border-top: 0;
+                }
+            }
+            ul {
+                margin: 15px 0 22px -7px;
+                &::after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+                li {
+                    float: left;
+                    margin-left: 7px;
+                    margin-bottom: 8px;
+                    label {
+                        display: inline-block;
+                        font-size: 11px;
+                        color: #666;
+                        cursor: pointer;
+                    }
+                    input[type="radio"] {
+                        display: none;
+                    }
+                }
+                &.color {
+                    li {
+                        label {
+                            width: 26px;
+                            height: 26px;
+                            vertical-align: top;
+                            font: 0/0 a;
+                            border: 0;
+                        }
+                        input[type="radio"] {
+                            &:checked + label {
+                                position: relative;
+                                color: #fff;
+                                border: 0;
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    background: url('/_ui/img/pc/icn/icn-checked.png') no-repeat;
+                                    background-size: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.size-box {
+                    li {
+                        label {
+                            width: 38px;
+                            height: 27px;
+                            line-height: 27px;
+                            text-align: center;
+                            border: 1px solid #e0e0e0;
+                        }
+                        input[type="radio"] {
+                            &:checked + label {
+                                color: #fff;
+                                border: 1px solid #1f1f1f;
+                                background-color: #1f1f1f;
+                            }
+                        }
+                    }
+                }
+                &.text {
+                    margin-left: -30px;
+                    li {
+                        margin-left: 30px;
+                        label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

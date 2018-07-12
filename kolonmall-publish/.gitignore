@@ -1,0 +1,24 @@
+# package manager directory
+node_modules
+
+# log
+npm-debug.log*
+
+# temp directory
+.tmp
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor
+.idea
+.vscode
+
+# build
+dist
+README.pdf
+webpack/dll
+public/javascripts/build

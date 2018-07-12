@@ -1,0 +1,45 @@
+<li data-ticket-id="{{ticketId}}">
+    <div class="ques {{!--#is ticket_flag "0"}}working{{/is--}}">
+        <a href="#">
+            <span class="state">{{#is ticketFlag "0"}}처리중{{else}}답변완료{{/is}}</span>
+            <p class="txt">{{questionTitle}}</p>
+            <div class="que-bt hv-ar">
+                <span>{{createdDate}}</span>
+            </div>
+        </a>
+    </div>
+    <div class="answer detailArea">
+        <p class="txt questionDetail">
+        </p>
+        <div class="ANSWEND" style="display: none;">
+            <div class="top-line"></div>
+            <span class="state">답변</span>
+            <p class="txt answerContents">
+
+            </p>
+            <div class="que-bt">
+                <span class="answerCreatedDate"></span>
+            </div>
+        </div>
+        <div class="ANSWADD" style="display: none;">
+            <div class="top-line"></div>
+            <span class="state">답변</span>
+            <p class="txt answerContents">
+
+            </p>
+            <div class="que-bt">
+                <span class="answerCreatedDate"></span>
+            </div>
+        </div>
+        <div class="ANSWTMP" style="display: none;">
+            <div class="top-line"></div>
+            <span class="state">답변</span>
+            <p class="txt answerContents">
+
+            </p>
+            <div class="que-bt">
+                <span class="answerCreatedDate"></span>
+            </div>
+        </div>
+    </div>
+</li>

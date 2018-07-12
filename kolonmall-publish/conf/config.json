@@ -1,0 +1,13 @@
+{
+  "outputPath": {
+    "fonts": "/_ui/font",
+    "images": "/_ui/img",
+    "javascripts": "/_ui/js",
+    "stylesheets": "/_ui/css"
+  },
+  "staticPaths": [
+  ],
+  "sassIncludePaths": [
+    "node_modules/ladda/css"
+  ]
+}

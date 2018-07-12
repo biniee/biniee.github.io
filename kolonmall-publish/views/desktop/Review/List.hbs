@@ -1,0 +1,102 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="리뷰"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+                {{precompile "desktop/precompiles/review/product-item"}}
+                {{precompile "desktop/precompiles/review/reviews-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Review"}}
+
+            <article class="review contents">
+              <h3>리뷰</h3>
+              <ul class="tab list2">
+                  <li {{#is reviews.type "R"}}class="on"{{/is}}><a href="/Review/RegisteredList?type=R">등록 리뷰 <span>{{reviews.registeredCount}}</span></a></li>
+                  <li {{#is reviews.type "U"}}class="on"{{/is}}><a href="/Review/RegisteredList?type=U">미등록 리뷰 <span>{{reviews.unregisteredCount}}</span></a></li>
+              </ul>
+              <div class="order-lists">
+                <div class="lists" id="reviewList" data-page-number="{{reviews.reviewData.page.currentPage}}" data-page-size="{{reviews.reviewData.page.perPage}}" data-type="{{reviews.type}}" data-registered-count="{{reviews.registeredCount}}" data-unregistered-count="{{reviews.unregisteredCount}}">
+                    {{#reviews.reviewData.results}}
+                        {{>desktop/precompiles/review/product-item reviewType=../../reviews.type}}
+                        {{>desktop/precompiles/review/reviews-item}}
+                    {{/reviews.reviewData.results}}
+                    {{^reviews.reviewData.results}}
+                        <div class="order-lists no-result">
+                            {{#is reviews.type "R"}}등록 리뷰가 없습니다.{{/is}}
+                            {{#is reviews.type "U"}}미등록 리뷰가 없습니다.{{/is}}
+                        </div>
+                    {{/reviews.reviewData.results}}
+                </div>
+                {{{render_loader "reviewListLoading"}}}
+
+                <a id="moreBtn" href="#" class="more" style="display: none;">더보기</a>
+              </div>
+            </article>
+        </section>
+
+        <section class="layer-popup layer-review">
+            <div class="layer">
+                <div class="inner">
+                    <div class="head">
+                        <h1>리뷰작성</h1>
+                        <button type="button" class="close">레이어 닫기</button>
+                    </div>
+                    <div class="content">
+                        <div class="review-star">
+                            <div class="star" data-grade="5"></div>
+                            <p class="txt">상품만족도</p>
+                            <form id="reviewAddForm" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                                <input type="hidden" id="rating" name="rating" value="5" />
+                                <fieldset>
+                                    <legend>상품만족도 리뷰작성</legend>
+                                    <dl class="review-form">
+                                        <dt><label for="headline">제목</label></dt>
+                                        <dd><span class="col-1"><input type="text" id="headline" name="headline" placeholder="제목을 입력하세요."></span></dd>
+                                        <dt><label for="baseMsgs">간편입력</label></dt>
+                                        <dd>
+                                            <span class="select col-1">
+                                              <select id="baseMsgs">
+                                                <option value="">상품평 간편 입력 항목을 선택하세요.</option>
+                                                  {{#baseMsgs}}
+                                                      <option value="{{this}}">{{this}}</option>
+                                                  {{/baseMsgs}}
+                                              </select>
+                                            </span>
+                                        </dd>
+                                        <dt><label for="comment">상품평</label></dt>
+                                        <dd><textarea placeholder="상품평 직접입력" id="comment" name="comment"></textarea></dd>
+                                        <dt><label for="review-addfile">파일첨부</label></dt>
+                                        <dd>
+                                            <div class="add-file">
+                                                <span class="thumb "><img src="/_ui/img/m/icn/icn-file.jpg" alt="" id="productImg" /><button type="button" class="delete">삭제</button></span>
+                                                <span class="file">
+                                                    <span class="btn btn-line btn-small">파일등록</span>
+                                                    <input type="file" id="review-addfile" name="review-addfile" multiple="multiple" accept="image/*" capture="camera" />
+                                                </span>
+                                                <p class="desc">참고할 이미지 등록. 용량제한 2MB</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <button type="button" class="btn btn-line close-layer">취소</button>
+                        <a href="#" class="btn" id="reviewAddBtn" data-style="zoom-in">등록</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

@@ -1,0 +1,16 @@
+<div class="list">
+    {{>desktop/components/banner/contents/square link=link content=imageInfo}}
+
+    <a href="{{link}}">
+        {{#if brandList.[0]}}<div class="brand">{{brandList.[0].name}}</div>{{/if}}
+        {{#if brandList.[1]}}<div class="brand">{{brandList.[1].name}}</div>{{/if}}
+        {{#if brandList.[2]}}<div class="brand">{{brandList.[2].name}}</div>{{/if}}
+        <div class="title">{{title}}</div>
+        <div class="desc">{{subTitle}}</div>
+        <div class="date">
+            {{#if specialAt.start}}{{to_date_string specialAt.start}}{{/if}}
+            ~
+            {{#if specialAt.end}}{{to_date_string specialAt.end}}{{/if}}
+        </div>
+    </a>
+</div>

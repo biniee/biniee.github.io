@@ -1,0 +1,339 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title=category.name}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/components/product/grid-with-color-and-page"}}
+            {{precompile "desktop/precompiles/product/grid"}}
+            {{precompile "desktop/partials/category/category-list-selected-filter-bar"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <nav class="wrap-navi">
+                <h3>{{category.name}}<span>{{category.totalNumber}}</span></h3>
+                {{#if category.subcategories}}
+                    <dl class="sub-menu">
+                        {{#category.subcategories}}
+                            {{#if ../selectedCategory}}
+                                {{#is ../selectedCategory.id id}}
+                                    <dt><a href="{{url}}">{{name}}</a></dt>
+                                {{else}}
+                                    <dd><a href="{{url}}">{{name}}</a></dd>
+                                {{/is}}
+                            {{/if}}
+                        {{/category.subcategories}}
+                    </dl>
+                {{/if}}
+                <!-- TODO : 브랜드 목록 정의 되면 추후 작업 -->
+                <!--<div class="sub-menu-brand">-->
+                    <!--<h4 class="tit">BRAND</h4>-->
+                    <!--<button type="button" class="reset" onclick="">RESET</button>-->
+                    <!--{{#if brands}}-->
+                    <!--<ul>-->
+                        <!--{{#brands}}-->
+                            <!--<li>-->
+                            <!--<span class="checkbox">-->
+                              <!--<input type="checkbox" id="brand_{{code}}" value="{{code}}">-->
+                              <!--<i></i>-->
+                            <!--</span>-->
+                            <!--<label for="brand_{{code}}">{{name}}</label>-->
+                            <!--</li>-->
+                        <!--{{/brands}}-->
+                    <!--</ul>-->
+                    <!--{{/if}}-->
+                    <!--<button type="button" class="more">더보기</button>-->
+                <!--</div>-->
+                {{>desktop/partials/lnb-banner}}
+            </nav>
+             <!-- //navigation -->
+
+             <article class="category-cont contents searchedProductListWrapper"
+                        data-category-code="{{selectedSubCategory.id}}"
+                        data-page-size=24>
+
+                <h3>{{subCategory.name}}</h3>
+                <!-- category-menu -->
+                <div class="category-menu">
+                    {{#if subCategory.subcategories}}
+                        <div class="cate-nav">
+                            <div class="swiper-wrapper">
+                            {{#subCategory.subcategories}}
+                                <div class="swiper-slide">
+                                    <a href="{{url}}" {{#if ../selectedSubCategory}}{{#is ../selectedSubCategory.id id}}class="active"{{/is}}{{/if}}>{{name}}</a>
+                                </div>
+                            {{/subCategory.subcategories}}
+                            </div>
+                            <i class="icn-navi"></i>
+                        </div>
+                    {{/if}}
+                    <div class="select-wrap">
+                        <!--<a href="#" data-target=".layer-prod-search" data-trigger="layer">상세검색설정</a>-->
+                        <a href="#" onclick="javascript: alert('준비중 입니다.');return false;">상세검색설정</a>
+                        <a href="#" data-target=".list-option" data-trigger="toggle" id="sortOptionToggle">신상품순</a>
+                        {{#if sorts}}
+                            <div class="list-option" id="sortOptionWrapper">
+                                <ul>
+                                    {{#sorts}}
+                                        <li><a href="#" class="sortOption {{#if ../parameters.sort}}{{#is ../parameters.sort code}}active{{/is}}{{/if}}" data-sort-code="{{code}}">{{name}}</a></li>
+                                    {{/sorts}}
+                                </ul>
+                            </div>
+                        {{/if}}
+                    </div>
+                </div>
+                <!-- // category-menu -->
+
+                <!-- prod-search-list -->
+                 <!-- TODO : 필터작업 되살릴때 같이 살릴 영역 -->
+                {{!--#if parameters}}--}}
+                    <!--<div class="prod-search-list" id="selectedFilterWrapper" style="display: none;">-->
+                        <!--<dl>-->
+                        {{!-->desktop/partials/category/category-list-selected-filter-bar parameters}}--}}
+                        <!--</dl>-->
+                        <!--<button type="button" class="btn btn-line reset resetFilterBtn">상세설정 초기화</button>-->
+                    <!--</div>-->
+        {{!--/if}}--}}
+        <!-- // prod-search-list -->
+
+         <article class="prod-wrap category-list productResultAreaWrapper">
+             {{#fetch_product "desktop" "" parameters 24}}
+                {{{render_product "desktop" "grid-with-color-and-page" product parameters}}}
+            {{/fetch_product}}
+         </article>
+    </article>
+
+</section>
+
+<section class="layer-popup layer-prod-search" id="filterPopupWrapper">
+  <div class="layer">
+    <div class="inner">
+      <div class="head">
+        <h1>상세검색 설정</h1>
+        <button tyle="button" class="close">레이어 닫기</button>
+      </div>
+      <div class="content">
+        <h2>상의 사이즈</h2>
+        <ul class="size-box">
+            <li>
+                <input type="radio" name="top-size" id="topsize1">
+                <label for="topsize1">80</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize2">
+                <label for="topsize2">85</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize3">
+                <label for="topsize3">90</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize4">
+                <label for="topsize4">95</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize5">
+                <label for="topsize5">100</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize6">
+                <label for="topsize6">105</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize7">
+                <label for="topsize7">110</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize8">
+                <label for="topsize8">115</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize9">
+                <label for="topsize9">120</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize10">
+                <label for="topsize10">FREE</label>
+            </li>
+            <li>
+                <input type="radio" name="top-size" id="topsize11">
+                <label for="topsize11">ALL</label>
+            </li>
+        </ul>
+        <h2>하의 사이즈</h2>
+        <ul class="size-box">
+            <li>
+                <input type="radio" name="bot-size" id="botsize1">
+                <label for="botsize1">24</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize2">
+                <label for="botsize2">26</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize3">
+                <label for="botsize3">28</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize4">
+                <label for="botsize4">30</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize5">
+                <label for="botsize5">32</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize6">
+                <label for="botsize6">34</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize7">
+                <label for="botsize7">36</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize8">
+                <label for="botsize8">38</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize9">
+                <label for="botsize9">40</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize10">
+                <label for="botsize10">FREE</label>
+            </li>
+            <li>
+                <input type="radio" name="bot-size" id="botsize11">
+                <label for="botsize11">ALL</label>
+            </li>
+        </ul>
+        <h2>신발 사이즈</h2>
+        <ul class="size-box">
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize1">
+                <label for="shoessize1">220</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize2">
+                <label for="shoessize2">225</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize3">
+                <label for="shoessize3">230</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize4">
+                <label for="shoessize4">235</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize5">
+                <label for="shoessize5">240</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize6">
+                <label for="shoessize6">245</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize7">
+                <label for="shoessize7">250</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize8">
+                <label for="shoessize8">255</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize9">
+                <label for="shoessize9">260</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize10">
+                <label for="shoessize10">265</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize11">
+                <label for="shoessize11">270</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize12">
+                <label for="shoessize12">275</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize13">
+                <label for="shoessize13">280</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize14">
+                <label for="shoessize14">285</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize15">
+                <label for="shoessize15">290</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize16">
+                <label for="shoessize16">FREE</label>
+            </li>
+            <li>
+                <input type="radio" name="shoes-size" id="shoessize17">
+                <label for="shoessize17">ALL</label>
+            </li>
+        </ul>
+        <h2>컬러</h2>
+        <ul class="color">
+            {{#if selectedSwatchColors}}
+                {{#swatchColors}}
+                    <li>
+                        <input type="checkbox" class="colorFilter" name="color-type" id="colortype_{{code}}" value="{{code}}"
+                            {{#../selectedSwatchColors}}
+                                {{#is code ../code}}checked="checked"{{/is}}
+                            {{/../selectedSwatchColors}}>
+                        <label for="colortype_{{code}}" class="bg-{{rgbcode}}" style="background-color: {{render_background_color rgbcode}};">{{name}}</label>
+                    </li>
+                {{/swatchColors}}
+            {{else}}
+                {{#swatchColors}}
+                    <li>
+                        <input type="checkbox" class="colorFilter" name="color-type" id="colortype_{{code}}" value="{{code}}">
+                        <label for="colortype_{{code}}" class="bg-{{rgbcode}}" style="background-color: {{render_background_color rgbcode}};">{{name}}</label>
+                    </li>
+                {{/swatchColors}}
+            {{/if}}
+        </ul>
+        <h2>가격</h2>
+        <ul class="text price">
+            {{#if selectedPriceValueRanges}}
+                {{#priceValueRanges}}
+                <li>
+                    <input type="checkbox" class="priceFilter" id="price_{{code}}" value="{{code}}"
+                        {{#../selectedPriceValueRanges}}
+                            {{#is code ../code}}checked="checked"{{/is}}
+                        {{/../selectedPriceValueRanges}}><label for="price_{{code}}">{{name}}</label>
+                </li>
+                {{/priceValueRanges}}
+            {{else}}
+                {{#priceValueRanges}}
+                    <li>
+                        <input type="checkbox" class="priceFilter" id="price_{{code}}" value="{{code}}" />
+                        <label for="price_{{code}}">{{name}}</label>
+                    </li>
+                {{/priceValueRanges}}
+            {{/if}}
+        </ul>
+      </div>
+      <div class="foot">
+        <button type="button" class="btn btn-line resetFilterBtn">초기화</button>
+        <button type="button" class="btn btn-line" id="closeFilterPopupBtn">닫기</button>
+        <button type="button" class="btn" style="display: none;" id="applyFilterBtn">적용</button>
+      </div>
+  </div>
+</section>
+
+{{/inline}}
+
+{{/desktop/layouts/default}}

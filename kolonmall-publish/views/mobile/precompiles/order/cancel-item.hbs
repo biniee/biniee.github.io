@@ -1,0 +1,48 @@
+<li data-entry-code="{{entryCode}}" data-consignment-entry-code="{{consignmentEntryCode}}" {{#if selectedOrderEntryCode}}{{#is selectedOrderEntryCode entryCode}}style="opacity: 1;"{{/is}}{{/if}}>
+    <div class="ch-area">
+        <div class="check">
+            <input type="checkbox" class="orderItemCheckbox" {{#if selectedOrderEntryCode}}{{#is selectedOrderEntryCode entryCode}}checked="checked"{{/is}}{{/if}} id="checkbox_{{entryCode}}" />
+            <label for="checkbox_{{entryCode}}"></label>
+        </div>
+    </div>
+    <div class="prod">
+        <img src="{{product.representationImage}}" alt="{{product.name}}" />
+    </div>
+    <div class="info">
+        <p class="t1">
+            <span class="brand">{{product.supplierName}}</span>
+            <span>{{#is product.productSaleType "SET"}}{{product.code}}{{else}}{{product.baseProductCode }}{{/is}}</span>
+        </p>
+        <p class="t2">{{product.name}}</p>
+        <dl class="option">
+            <dt>옵션</dt>
+            <dd>{{product.color}}, {{product.size}}</dd>
+            <dt>수량</dt>
+            <dd>{{quantity}}</dd>
+            <dt>상품금액</dt>
+            <dd class="price">{{formattedPrice}}원</dd>
+            {{#is product.productSaleType "SET"}}
+                <dd class="set"><a href="#">세트옵션보기</a></dd>
+            {{/is}}
+        </dl>
+    </div>
+    <div class="btm prod-add">
+        <p>{{displayedDeliveryType}}</p>
+        <div class="box">
+            <span>취소수량</span>
+            <div class="conts">
+                <a href="#" class="bt-minus quantityMinus" {{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}>-</a>
+                <input type="text" value="{{quantity}}" data-original-quantity="{{quantity}}" class="orderItemQuantity" readonly />
+                <a href="#" class="bt-plus quantityPlus" {{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}>+</a>
+            </div>
+        </div>
+    </div>
+    <select class="cause rmaOption" onchange="change(this.options[this.selectedIndex].value)" {{#isnt selectedOrderEntryCode entryCode}}disabled="disabled"{{/isnt}}>
+        <option value="" selected="selected">취소 사유를 선택해 주세요</option>
+        <option value="A01911">고객변심</option>
+        <option value="A01914">상품불량</option>
+        <option value="A01912">배송지연</option>
+        <option value="txtbox">직접입력</option><!--A01999-->
+    </select>
+    <div class="request-txt"><textarea placeholder="상품 취소 사유를 적어주세요" class="rmaReason"></textarea></div>
+</li>

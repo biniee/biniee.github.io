@@ -1,0 +1,108 @@
+{{#> mobile/layouts/main }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-at-main}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+                {{precompile "mobile/precompiles/product/list"}}
+                {{precompile "mobile/precompiles/product/grid"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{#fetch_banner "MOBILE" "page" "main" "mobile-top-line"}}
+                {{#if banners.page.totalCount}}
+                    {{{render_banner "mobile" "line/on-off" banners}}}
+                {{/if}}
+            {{/fetch_banner}}
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    {{#gnb.categories}}
+                        <div class="swiper-slide">
+                            <a href="{{url}}">{{name}}</a>
+                        </div>
+                    {{/gnb.categories}}
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+
+            {{#fetch_banner "MOBILE" "page" "main" "mobile-main"}}
+                {{#if banners.page.totalCount}}
+                    {{{render_banner "mobile" "contents/default" banners}}}
+                {{/if}}
+            {{/fetch_banner}}
+
+            {{#fetch_product "mobile" "new" null 10}}
+                {{#if product.page.totalCount}}
+                    <div class="prod-list-top">
+                        <h3>NEW ARRIVALS</h3>
+                    </div>
+                    {{{render_product "mobile" "slide" product parameters}}}
+                {{/if}}
+            {{/fetch_product}}
+
+            {{#fetch_banner "MOBILE" "page" "main" "online-only"}}
+                {{#if banners.page.totalCount}}
+                    <div class="prod-list-top">
+                        <h3>ONLINE ONLY</h3>
+                    </div>
+                    {{{render_banner "mobile" "contents/default" banners}}}
+                {{/if}}
+            {{/fetch_banner}}
+
+            <article class="list1-prod">
+                <div class="prod-list-top">
+                    <h3>BRAND BEST</h3>
+                </div>
+                {{#fetch_product "mobile" "best" null 5}}
+                    {{{render_product "mobile" "list" product parameters}}}
+                {{/fetch_product}}
+            </article>
+
+            {{#fetch_banner "MOBILE" "page" "main" "special-price"}}
+                {{#if banners.page.totalCount}}
+                    <article class="prod-big-bnr hv-sbtit">
+                        <div class="prod-list-top">
+                            <h3>SPECIAL PRICE</h3>
+                        </div>
+                        {{{render_banner "mobile" "contents/flicking" banners}}}
+                    </article>
+                {{/if}}
+            {{/fetch_banner}}
+
+            <article class="list2-prod">
+                <div class="prod-list-top">
+                    <h3>SALE</h3>
+                </div>
+                {{#fetch_product "mobile" "sale" null 6}}
+                    {{{render_product "mobile" "grid" product parameters}}}
+                {{/fetch_product}}
+            </article>
+
+            {{#fetch_banner "MOBILE" "page" "main" "issue-and-deal"}}
+                {{#if banners.page.totalCount}}
+                    <article class="prod-big-bnr hv-sbtit">
+                        <div class="prod-list-top">
+                            <h3>ISSUE &amp; DEAL</h3>
+                        </div>
+                        {{{render_banner "mobile" "contents/flicking" banners}}}
+                    </article>
+                {{/if}}
+            {{/fetch_banner}}
+
+            {{#fetch_banner "MOBILE" "page" "main" "footer"}}
+                {{#if banners.page.totalCount}}
+                    {{{render_banner "mobile" "line/default" banners}}}
+                {{/if}}
+            {{/fetch_banner}}
+        </section>
+    {{/inline}}
+{{/mobile/layouts/main}}

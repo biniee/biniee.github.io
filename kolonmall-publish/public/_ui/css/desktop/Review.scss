@@ -1,0 +1,308 @@
+.review {
+  margin: 78px 0 140px;
+  h3 {
+    margin-bottom: 52px;
+    font-size: 22px;
+    color: #1f1f1f;
+  }
+  .order-lists {
+    .grade-wrap {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f3f3f3;
+      .grade {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 30px 40px;
+        background-color: #fbfbfb;
+        .star {
+          width: 130px;
+          height: 21px;
+          margin-bottom: 30px;
+          background-repeat: repeat-x;
+          background-image: url('/_ui/img/pc/icn/icn-grade-list.png');
+          &::before {
+            content: '';
+            display: block;
+            width: 0;
+            height:21px;
+            background-repeat: repeat-x;
+            background-position: 0 -21px;
+            background-image: url('/_ui/img/pc/icn/icn-grade-list.png');
+          }
+        }
+        .star[data-grade="1"] {
+          &::before {
+            width: 26px;
+          }
+        }
+        .star[data-grade="2"] {
+          &::before {
+            width: 52px;
+          }
+        }
+        .star[data-grade="3"] {
+          &::before {
+            width: 78px;
+          }
+        }
+        .star[data-grade="4"] {
+          &::before {
+            width: 104px;
+          }
+        }
+        .star[data-grade="5"] {
+          &::before {
+            width: 130px;
+          }
+        }
+        .content {
+          color: #898989;
+          font-size: 14px;
+          line-height: 1.8571;
+          position: relative;
+          .thumb {
+            float: left;
+            width: 140px;
+            margin-right: 29px;
+          }
+          .title {
+            color: #1f1f1f;
+            font-size: 16px;
+            margin-bottom: 18px;
+          }
+          .date {
+            font-size: 13px;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          .thumb ~ p {
+            margin-left: 169px;
+          }
+          &::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+        .aside {
+          margin-top: 35px;
+          .share {
+            float: left;
+            a {
+              font: 0/0 a;
+              vertical-align: middle;
+              display: inline-block;
+              margin-right: 16px;
+              background-repeat: no-repeat;
+              background-image: url('/_ui/img/pc/icn/icn-review.png');
+            }
+            .facebook {
+              width: 8px;
+              height: 18px;
+              background-position: 0 0;
+            }
+            .kakao {
+              width: 23px;
+              height: 21px;
+              background-position: -10px 0;
+            }
+            .url {
+              width: 29px;
+              height: 11px;
+              background-position: -35px 0;
+            }
+          }
+          .buttons {
+            float: right;
+            .btn {
+              font-size: 12px;
+              width: 84px;
+              height: 26px;
+              padding: 0;
+            }
+          }
+          &::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+      }
+    }
+  }
+  .no-result {
+    color: #898989;
+    font-size: 16px;
+    text-align: center;
+    padding: 140px 0;
+  }
+}
+.layer-review {
+   .layer {
+      font-size: 14px;
+      width: 560px;
+      .review-star {
+        .txt {
+          margin-bottom: 30px;
+          text-align: center;
+          font-size: 14px;
+          color: #aaa;
+        }
+        legend {
+          display: none;
+        }
+        .star {
+          width: 230px;
+          height: 36px;
+          margin: 0 auto 5px;
+          background-repeat: repeat-x;
+          background-image: url('/_ui/img/pc/icn/icn-grade-list-lg.png');
+          cursor: pointer;
+          &::before {
+            content: '';
+            display: block;
+            width: 0;
+            height:36px;
+            background-repeat: repeat-x;
+            background-position: 0 -36px;
+            background-image: url('/_ui/img/pc/icn/icn-grade-list-lg.png');
+          }
+        }
+        .star[data-grade="1"] {
+          &::before {
+            width: 46px;
+          }
+        }
+        .star[data-grade="2"] {
+          &::before {
+            width: 92px;
+          }
+        }
+        .star[data-grade="3"] {
+          &::before {
+            width: 138px;
+          }
+        }
+        .star[data-grade="4"] {
+          &::before {
+            width: 184px;
+          }
+        }
+        .star[data-grade="5"] {
+          &::before {
+            width: 230px;
+          }
+        }
+        .review-form {
+          margin-bottom: 40px;
+          dt, dd {
+            min-height: 38px;
+            margin-bottom: 12px;
+          }
+          dt {
+            color: #000;
+            float: left;
+            clear: left;
+            width: 70px;
+          }
+          dd {
+            padding-left: 70px;
+            .col-1 {
+              display: inline-block;
+              width: 406px;
+            }
+            .add-file {
+              margin-top: 13px;
+              vertical-align: top;
+              display: inline-block;
+              .thumb {
+                text-align: center;
+                white-space: nowrap;
+                position: relative;
+                display: inline-block;
+                width: 78px;
+                height: 78px;
+                margin: -8px 16px 0 0;
+                border: 1px solid #dedede;
+                background-color: #000;
+                img {
+                  vertical-align: middle;
+                  display: inline-block;
+                  width: auto;
+                  max-width: 100%;
+                  max-height: 100%;
+                }
+                .delete {
+                  font: 0/0 a;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  display: block;
+                  width: 20px;
+                  height: 20px;
+                  background: #000 url('/_ui/img/pc/icn/icn-file-delete.png') no-repeat 50% 50%;
+                }
+              }
+              .file {
+                vertical-align: top;
+                position: relative;
+                overflow: hidden;
+                display: inline-block;
+                margin-top: -9px;
+                cursor: pointer;
+                input[type="file"] {
+                  font-size: 100px;
+                  vertical-align: top;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  opacity: 0;
+                }
+              }
+              .desc {
+                margin-top: -42px;
+                margin-left: 100px;
+                font-size: 14px;
+                color: #898989;
+              }
+              .thumb.hidden {
+                display: none;
+              }
+              .thumb.hidden ~ .file {
+                margin-top: -15px;
+              }
+              .thumb.hidden ~ .desc {
+                margin-top: 10px;
+                margin-left: 0;
+              }
+            }
+          }
+          input[type="text"] {
+            height: 38px;
+          }
+          input[type="text"],
+          textarea {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: -8px;
+            padding: 0 4px;
+            border-color: #dedede;
+            border-style: solid;
+            border-width: 0 0 1px;
+          }
+          textarea {
+            height: 110px;
+            padding: 9px 4px;
+          }
+          select {
+            vertical-align: middle;
+            margin-top: -8px;
+          }
+        }
+      }
+   }
+}

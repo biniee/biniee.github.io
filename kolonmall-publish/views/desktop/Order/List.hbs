@@ -1,0 +1,355 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/precompiles/order/order-list"}}
+            {{precompile "desktop/precompiles/order/order-item-with-status"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Order"}}
+
+            <article class="order-list contents">
+              <h3>주문조회</h3>
+
+              <p class="order-guide">
+                <button type="button" data-target=".layer-order" data-trigger="layer">주문진행안내</button>
+                <!--<a href="#">주문진행안내</a>-->
+              </p>
+              <div class="order-search">
+                <div class="col type">
+                  <label for="" class="label">배송구분</label>
+                  <span class="select">
+                    <select id="isPointOfServiceSelect">
+                        <option value="all">배송구분 전체</option>
+                        <option value="N">택배배송</option>
+                        <option value="Y">매장픽업</option>
+                    </select>
+                  </span>
+                </div>
+                <div class="col product">
+                  <label for="" class="label">상품</label>
+                  <span class="select">
+                    <select id="searchKeySelect">
+                      <option value="name">상품명</option>
+                      <option value="code">상품코드</option>
+                    </select>
+                  </span>
+                  <input type="text" placeholder="상품명 또는 상품 코드를 입력해 주세요." id="searchWordInput">
+                </div>
+                <div class="col month">
+                  <span class="label">기간</span>
+                  <ul class="tab" id="periodBtns">
+                    <li class="on"><a href="#" data-search-period=30>1개월</a></li>
+                    <li><a href="#" data-search-period=90>3개월</a></li>
+                    <li><a href="#" data-search-period=180>6개월</a></li>
+                    <li><a href="#" data-search-period=365>1년</a></li>
+                  </ul>
+                </div>
+                <div class="col date">
+                  <input type="text" name="startDate" id="datepickerStart">
+                  <i class="split">~</i>
+                  <input type="text" name="endDate" id="datepickerEnd">
+                </div>
+                <button type="button" class="btn search" id="searchOrderBtn">조회</button>
+              </div>
+
+              <div class="order-lists">
+                <div id="resultOrderList" style="display: none;">
+                </div>
+              </div>
+
+              {{{render_loader "orderListLoading"}}}
+              <button type="button" class="list-more" id="moreBtn">더 보기</button>
+
+              <p class="no-result" id="emptyResultOrderList" style="display: none;">최근 <span id="searchPeriodText">1개월</span>내 주문내역이 없습니다.</p>
+            </article>
+
+        </section>
+
+        <section class="layer-popup layer-order">
+          <div class="layer">
+            <div class="inner">
+              <div class="head">
+                <h1>임직원 이용안내</h1>
+                <button tyle="button" class="close">레이어 닫기</button>
+              </div>
+              <div class="content">
+                <ul class="tab list3">
+                  <li class="on"><a href="#tab01">일반 배송 진행단계</a></li>
+                  <li><a href="#tab02">매장 픽업 진행단계</a></li>
+                  <li><a href="#tab03">당일 배송 진행단계</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab01 active">
+                    <ol class="delivery-type delivery">
+                      <li class="icon01">주문접수</li>
+                      <li class="icon02">결제완료</li>
+                      <li class="icon03">상품준비중</li>
+                      <li class="icon04">배송중</li>
+                      <li class="icon05">배송완료</li>
+                    </ol>
+                    <ul class="bul-list">
+                      <li>주문접수 ~ 결제완료 상태에서만 ‘주문취소’가 가능합니다.</li>
+                      <li>배송중 ~ 배송완료 상태에서 ‘반품신청’을 해주세요.</li>
+                    </ul>
+                  </div>
+                  <div class="tab02">
+                    <ol class="delivery-type pickup">
+                      <li class="icon02">결제완료</li>
+                      <li class="icon06">교환권받기</li>
+                      <li class="icon07">매장방문</li>
+                      <li class="icon08">픽업완료</li>
+                    </ol>
+                    <ul class="bul-list">
+                      <li class="strong">교환권받기 MMS 발송은 3회까지 가능합니다.</li>
+                      <li>구매일 이후 2일 이내에 방문하지 않을 경우, 주문이 자동 취소됩니다.</li>
+                      <li>픽업가능기간은 구매일 +2일 입니다.</li>
+                      <li>픽업취소는 구매 당일에만 가능합니다.</li>
+                    </ul>
+                  </div>
+                  <div class="tab03">
+                    <ol class="delivery-type today">
+                      <li class="icon02">결제완료</li>
+                      <li class="icon04">배송중</li>
+                      <li class="icon05">배송완료</li>
+                    </ol>
+                    <ul class="bul-list">
+                      <li class="strong">교환권받기 MMS 발송은 3회까지 가능합니다.</li>
+                      <li>구매일 이후 2일 이내에 방문하지 않을 경우, 주문이 자동 취소됩니다.</li>
+                      <li>픽업가능기간은 구매일 +2일 입니다.</li>
+                      <li>픽업취소는 구매 당일에만 가능합니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="foot">
+                <button type="button" class="btn btn-line">닫기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layer-popup layer-change">
+          <div class="layer">
+            <div class="inner">
+              <div class="head">
+                <h1>매장픽업 상품교환권</h1>
+                <button tyle="button" class="close">레이어 닫기</button>
+              </div>
+              <div class="content">
+                <div class="prod-wrap">
+                  <div class="prod">
+                    <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                    <div class="product">
+                        <h4>
+                          customellow
+                          <small>QEBBM17504NAY</small>
+                        </h4>
+                        <p>여성용 소형 백팩 BLOSSOM BAG</p>
+                        <ul class="meta">
+                          <li>
+                            <em>수량</em>
+                            <span>1</span>
+                          </li>
+                          <li>
+                            <em>옵션</em>
+                            <span>XXX</span>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="change-info">
+                    <dl>
+                      <dt>교환권번호</dt>
+                      <dd>17022266316</dd>
+                      <dt>픽업매장</dt>
+                      <dd>코오롱스포츠 청담 플래그십 스토어</dd>
+                      <dt>픽업예정일</dt>
+                      <dd>2017. 08. 01</dd>
+                      <dt>픽업시간</dt>
+                      <dd>14:30 ~ 16:30</dd>
+                    </dl>
+                    <div class="barcode">
+                      <img src="/_ui/img/pc/temp/img-barcode.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="send-wrap">
+                  <span>휴대폰번호</span>
+                  <strong>010-1234-5678</strong>
+                  <p>(발송 잔여 : 3회)</p>
+                  <div class="btn-wrap">
+                    <button type="button" class="btn btn-line">취소</button>
+                    <button type="button" class="btn">발송</button>
+                  </div>
+                </div>
+                <div class="outer">
+                  <strong>매장픽업 안내</strong>
+                  <ul class="bul-list">
+                    <li class="strong">구매자 본인의 휴대폰번호로만 교환권을 발송하실 수 있습니다.</li>
+                    <li>MMS 발송은 3회 까지 가능하며, 상품의 대리픽업은 불가합니다.</li>
+                    <li>매장픽업 상품의 교환이나 반품은 수령하신 매장 또는 KOLONmall 사이트에서<br>수령 후 7일 이내에만 가능합니다.</li>
+                    <li>매장에서 상품 교환 시 사이즈 및 컬러 교환만 가능합니다.</li>
+                  </ul>
+                  <p>이러한 사유는 교환/반품이 불가합니다.</p>
+                  <ul class="bul-list">
+                    <li>고객님의 책임 있는 사유로 상품이 훼손된 경우</li>
+                    <li>상품 고유의 포장이 훼손되어 상품 가치가 상실된 경우 (예: TAG / 라벨 등의 훼손)</li>
+                    <li>시간의 경과에 의하여 재판매가 곤란할 정도로 상품가치가 현저히 감소한 경우</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layer-popup layer-option">
+          <div class="layer">
+            <div class="inner">
+              <div class="head">
+                <h1>세트옵션</h1>
+                <button tyle="button" class="close">레이어 닫기</button>
+              </div>
+              <div class="content">
+                <div class="order-lists">
+                  <div class="lists">
+                    <div class="list">
+                      <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                      <div class="product">
+                        <h4>
+                          customellow
+                          <small>QEBBM17504NAY</small>
+                        </h4>
+                        <p>여성용 소형 백팩 BLOSSOM BAG</p>
+                        <ul class="meta">
+                          <li>
+                            <em>수량</em>
+                            <span>1</span>
+                          </li>
+                          <li>
+                            <em>옵션</em>
+                            <span>XXX</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <p class="price">103,500원</p>
+                    </div>
+
+                    <div class="list">
+                      <p class="thumb"><img src="/_ui/img/pc/temp/@96x118.png" alt=""></p>
+                      <div class="product">
+                        <h4>
+                          customellow
+                          <small>QEBBM17504NAY</small>
+                        </h4>
+                        <p>여성용 소형 백팩 BLOSSOM BAG</p>
+                        <ul class="meta">
+                          <li>
+                            <em>수량</em>
+                            <span>1</span>
+                          </li>
+                          <li>
+                            <em>옵션</em>
+                            <span>XXX</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <p class="price">103,500원</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="foot">
+                <button type="button" class="btn btn-line">확인</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--<section class="date-layer">
+          <div class="bg"></div>
+          <div class="inner">
+            <div class="head">
+              <button class="btn first">맨 앞</button>
+              <button class="btn prev">이전</button>
+              <span class="month">2017.03</span>
+              <button class="btn next">다음</button>
+              <button class="btn last">다음</button>
+            </div>
+            <div class="content">
+              <table>
+                <caption>달력</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">일</th>
+                    <th scope="col">월</th>
+                    <th scope="col">화</th>
+                    <th scope="col">수</th>
+                    <th scope="col">목</th>
+                    <th scope="col">금</th>
+                    <th scope="col">토</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#" class="disabled">31</a></td>
+                    <td><a href="#">1</a></td>
+                    <td><a href="#">2</a></td>
+                    <td><a href="#">3</a></td>
+                    <td><a href="#">4</a></td>
+                    <td><a href="#">5</a></td>
+                    <td><a href="#">6</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">7</a></td>
+                    <td><a href="#">8</a></td>
+                    <td><a href="#">9</a></td>
+                    <td><a href="#">10</a></td>
+                    <td><a href="#">11</a></td>
+                    <td><a href="#">12</a></td>
+                    <td><a href="#">13</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">14</a></td>
+                    <td><a href="#">15</a></td>
+                    <td><a href="#">16</a></td>
+                    <td><a href="#" class="today">17</a></td>
+                    <td><a href="#">18</a></td>
+                    <td><a href="#">19</a></td>
+                    <td><a href="#">20</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">21</a></td>
+                    <td><a href="#">22</a></td>
+                    <td><a href="#">23</a></td>
+                    <td><a href="#">24</a></td>
+                    <td><a href="#">25</a></td>
+                    <td><a href="#">26</a></td>
+                    <td><a href="#">27</a></td>
+                  </tr>
+                   <tr>
+                    <td><a href="#">28</a></td>
+                    <td><a href="#">29</a></td>
+                    <td><a href="#">30</a></td>
+                    <td><a href="#">31</a></td>
+                    <td><a href="#" class="disabled">1</a></td>
+                    <td><a href="#" class="disabled">2</a></td>
+                    <td><a href="#" class="disabled">3</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>-->
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

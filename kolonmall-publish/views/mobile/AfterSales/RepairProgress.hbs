@@ -1,0 +1,99 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-menu title="고객센터"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/afterSales/repair-progress-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/FAQ">FAQ</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Contact">1:1문의</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="on" href="/AfterSales/Warranty">A/S안내</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Notice">공지사항</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/GuestOrder">비회원주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/eKOLON/Point">eKOLON멤버십</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Compensation/Delay">고객보상제</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Proposal/Add">제휴및광고제안</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <div class="cs-depth3 col2">
+                <ul>
+                    <li><a href="/AfterSales/Warranty">품질보증기간 및 보상기준</a></li>
+                    <li><a href="/AfterSales/RepairGuide">수선품 접수 안내</a></li>
+                    <li><a href="/AfterSales/RepairCoverage">수선 가능 범위 및 가격</a></li>
+                    <li class="on"><a href="/AfterSales/RepairProgress">수선품 진행 조회</a></li>
+                </ul>
+            </div>
+
+            <article class="cs-as">
+                <h3 class="hidden">고객센터 A/S 본문내용</h3>
+                <h4>수선품 진행 조회</h4>
+                <p>수선 의뢰하신 제품의 진행현황을 조회하실 수 있습니다. 내구성이 다하였거나 오래된 제품일 경우 수선이 불가 할수도 있습니다.</p>
+
+                <div id="repairProgressFormArea" class="as-inquiry">
+                    <form id="repairProgressForm">
+                        <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                        <input type="text" name="name" id="name" placeholder="이름을 입력해 주세요."/>
+                        <input type="text" name="mobileNumber" id="mobileNumber" placeholder="휴대폰 번호를 입력해 주세요."/>
+                        <a id="repairProgressFormSubmitBtn" class="as-btn" data-spinner-color="#000" data-style="zoom-in">수선품 조회하기</a>
+                    </form>
+
+                </div>
+                <div id="repairProgressResultArea" class="as-inquiry" style="display: none;">
+                    <div class="top">
+                        <h5>조회 결과</h5>
+                        <a href="#" id="repairProgressFormReSubmitBtn"  class="again">다시 조회하기</a>
+                    </div>
+                    <form id="repairProgressDetailForm" action="/AfterSales/RepairProgress/Detail" method="post">
+                        <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                        <input type="hidden" name="custNm" />
+                        <input type="hidden" name="cnslofcRcptDt" />
+                        <input type="hidden" name="shopNM" />
+                        <input type="hidden" name="styleColorCd" />
+                        <input type="hidden" name="mendC" />
+                        <input type="hidden" name="cnslofcMemo" />
+                        <input type="hidden" name="cmplTh2SchdDt" />
+                        <input type="hidden" name="shopSendDt" />
+                        <input type="hidden" name="empNm" />
+                        <input type="hidden" name="mendN1ChrdYn" />
+                        <input type="hidden" name="mendSendDt" />
+                    </form>
+                    <ul id="repairProgressItemsArea" class="result">
+                    </ul>
+                </div>
+            </article>
+
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

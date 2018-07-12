@@ -1,0 +1,493 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title=product.name}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <article class="prod-detail-main">
+                
+                <!-- 상품메인이미지 슬라이드 -->
+                <div class="prod-detail-slide">
+                    <div class="swiper-wrapper">
+                        {{#product.imageLLs}}
+                            <div class="swiper-slide"><img src="{{url}}" alt=""></div>
+                        {{/product.imageLLs}}
+                    </div>
+                    <div class="scr-prod-pagination"></div>
+                </div>
+                <!-- //상품메인이미지 슬라이드 -->
+
+                <div class="detail-info">
+
+                    <!-- 상품 정보 -->
+                    <div class="info-box">
+                        <div class="info-wrap">
+                            <p class="brand">{{product.productBrandName}}</p>
+                            <p class="prod">{{product.name}}</p>
+                            <div class="price-info">
+                                {{#gt product.price.discountRate 0}}
+                                    <span class="discount"><i class="f-hv">{{product.price.formattedWishPrice}}</i>{{product.price.symbol}}</span>
+                                {{/gt}}
+                                <span class="price"><i class="f-hv">{{product.price.formattedPrice}}</i>{{product.price.symbol}}</span>
+                                {{#gt product.price.discountRate 0}}
+                                    <span class="percent">(<i class="f-hv">{{product.price.discountRate}}</i>%)</span>
+                                {{/gt}}
+                            </div>
+                        </div>
+                        <a href="#" class="favorite" id="addToWishlistBtn">관심상품</a>
+                    </div>
+                    <!-- //상품 정보 -->
+
+                    <!-- 상품 옵션 -->
+                    <div class="option-box">
+                        <dl>
+                            <dt>컬러</dt>
+                            <dd class="color">
+                                <!-- TODO : 컬러 스톡 해야하나? 그렇다면 컬러 없을 경우 스타일은? lowStock은 뭔지? -->
+                                {{#product.baseOption.options}}
+                                    {{#is ../product.baseOption.selected.code code}}
+                                    <!-- TODO : variantOptionQualifiers 무조건 0번째 확인하는게 맞는지? -->
+                                        <a href="#" class="on"><img src="{{variantOptionQualifiers.[0].image.url}}" alt="" /></a>
+                                    {{else}}
+                                        <a href="/Product/{{code}}"><img src="{{variantOptionQualifiers.[0].image.url}}" alt="" /></a>
+                                    {{/is}}
+                                {{/product.baseOption.options}}
+                            </dd>
+                            <dt>사이즈</dt>
+                            <dd class="size">
+                                {{#product.variantOptions}}
+                                    <a href="#" class="{{#is stock.stockLevelStatus "outOfStock"}}size-x{{else}}{{#is @index 0}}on{{/is}}{{/is}}" data-size-code="{{code}}">
+                                        {{#variantOptionQualifiers}}
+                                            {{#is qualifier "size"}}
+                                                {{value}}
+                                            {{/is}}
+                                        {{/variantOptionQualifiers}}
+                                    </a>
+                                {{/product.variantOptions}}
+                            </dd>
+                            <dt class="ea">수량</dt>
+                            <dd class="ea">
+                                <span id="quantity">1</span>
+                                <div class="bts-ctrl">
+                                    <a href="#" class="plus">+</a>
+                                    <a href="#" class="minus">-</a>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- //상품 옵션 -->
+
+                    <!-- 포인트, 카드혜택, 배송정보 -->
+                    <div class="etc-box">
+                        <dl>
+                            <dt>적립포인트</dt>
+                            <dd>
+                                <span class="f-hv">15,750P</span>
+                                <a href="/Product/Point" class="bt-notice">포인트안내</a>
+                            </dd>
+                            <dt>카드혜택</dt>
+                            <dd>
+                                <span>신한카드 3% 청구할인</span>
+                                <a href="/Product/Card" class="bt-notice">혜택안내</a>
+                            </dd>
+                            <dt>배송정보</dt>
+                            <dd class="d-check">
+                                <div class="tab-bts">
+                                    <a href="#" class="on">택배배송</a>
+                                    <a href="#">당일배송</a>
+                                    <a href="#" class="{{#if product.availableForPickup}}on{{/if}}">매장픽업</a>
+                                </div>
+                            </dd>
+                        </dl>
+                        <div class="tab-conts">
+                            <!-- 당일배송 선택시 열림 -->
+                            <div>
+                                <ul class="disc">
+                                    <li>당일 배송 서비스는 서울 지역만 가능합니다. </li>
+                                    <li>당일 배송 주문은 오후 4시까지 입니다.</li>
+                                </ul>
+                            </div>
+                            <!-- //당일배송 선택시 열림 -->
+
+                            <!-- 매장픽업 선택시 열림 -->
+                            <div>
+                                <div class="store-select">
+                                    <select>
+                                        <option>지역선택</option>
+                                        <option>지역선택</option>
+                                        <option>지역선택</option>
+                                    </select>
+                                    <select>
+                                        <option>매장선택</option>
+                                        <option>매장선택</option>
+                                        <option>매장선택</option>
+                                    </select>
+                                </div>
+                                <div class="store-info">
+                                    <p class="t1">시리즈 삼성동 코엑스몰 LAB STORE</p>
+                                    <p class="t2">서울특별시 강남구 삼성동 영동대로 513 코엑스몰 C 112호</p>
+                                    <p class="t3"><span>전화번호 : 02-3677-7372</span><span>영업시간 : 09:30~18:30</span></p>
+                                </div>
+                                <div class="store-date">
+                                    <select>
+                                        <option>방문일선택</option>
+                                        <option>방문일선택</option>
+                                        <option>방문일선택</option>
+                                    </select>
+                                    <select>
+                                        <option>방문시간선택</option>
+                                        <option>10:00 ~ 12:00</option>
+                                        <option>12:30 ~ 14:30</option>
+                                        <option>14:30 ~ 16:30</option>
+                                        <option>16:30 ~ 19:30</option>
+                                    </select>
+                                </div>
+                                <ul>
+                                    <li>픽업 주문은 마이페이지 &gt; 전체주문조회에서 조회 및 취소가 가능합니다.</li>
+                                    <li>방문 희망일 경과 후 주문이 자동 취소되므로 매장 방문이 어려우신 경우에는 고객센터 (1588-7667)로 연락하셔서 방문예정일을 변경해 주십시오</li>
+                                </ul>
+                            </div>
+                            <!-- //매장픽업 선택시 열림 -->
+                        </div>
+                        <dl>
+                            <dt>배송비</dt>
+                            <dd>무료배송</dd>
+                        </dl>
+                        <div class="coupon">
+                            <div class="c-wrap">
+                                <div class="txt">
+                                    <p class="t1 f-hv">2017 여름맞이 쇼핑지원 쿠폰</p>
+                                    <p class="t2">
+                                        <span>15%</span>
+                                        <span>2017.03.24까지</span>
+                                    </p>
+                                </div>
+                                <a href="#" class="bt-down">다운받기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //포인트, 카드혜택, 배송정보 -->
+
+                </div>
+
+                <!-- 관심상품 팝업 -->
+                <div class="favorite-pop">
+                    <i class="ico"></i>
+                    <p>관심상품에<br />저장 되었습니다</p>
+                    <p>관심상품에<br />삭제 되었습니다</p>
+                </div>
+                <!-- //관심상품 팝업 -->
+
+            </article>
+
+            <div class="detail-btn-area">
+                <a href="#" class="type01" id="addToCartBtn">장바구니</a>
+                <a href="#" class="type02">바로구매</a>
+                <a href="#" class="icn-share">공유하기</a>
+            </div>
+
+            <article class="prod-detail-contents">
+
+                <!-- 관련 기획전이 있을 때 노출 -->
+                <div class="detail-special">
+                    <h3 class="tit">관련 기획전</h3>
+                    <ul>
+                        <li><a href="#">시리즈 2017SS 신상 기획전 시리즈 2017SS 신상 기획전</a></li>
+                        <li><a href="#">시리즈 2017SS 신상 기획전</a></li>
+                    </ul>
+                </div>
+                <!-- //관련 기획전이 있을 때 노출 -->
+                
+                <div class="detail-disc">
+                    <h3 class="tit">상세설명</h3>
+                    <div class="txt">
+                        17년 NEW 키퍼 / 전판 까무플라주 프린트 패턴의 사각퀄팅을 적용한 남성 자켓 입니다.<br><br>
+                        내구성, 경량성, 보온성이 우수한 THERMOLITE LIGHTWEIGHT WARMTH 기능성 소재로 착용감이 우수하며,
+                        통기성, 경량성, 탈취성, 보온성이 우수한 attothermo WOOL 충전재로 보온성 강화한 자켓입니다.<br><br>
+                        사이드 포켓과 내부 포켓으로 실용적인 수납이 가능합니다.<br><br>
+                        네크라인과 부분 립조직으로 편안한 FIT을 느끼실 수 있습니다. 소매 상단의 브랜드 상록수 무광 메탈 장식으로 포인트로
+                        다양하게 연출 가능한 간절기 시즌에 알맞는 패딩 아이템 입니다.
+                    </div>
+                    <div class="prod-img">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></div>
+                        </div>
+                        <div class="scr-prod-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="detail-size">
+                    <h3 class="tit">사이즈</h3>
+                    <span class="size-check">사이즈 측정방법 <i>i</i></span>
+                    <div class="size-img">
+                        <img src="/_ui/img/m/temp/@size-img.jpg" alt="">
+                    </div>
+                    <ul>
+                        <li><span>a</span>전체길이</li>
+                        <li><span>b</span>허리둘레</li>
+                        <li><span>c</span>엉덩이둘레</li>
+                        <li><span>d</span>허벅지둘레</li>
+                        <li><span>e</span>바지통</li>
+                        <li><span>f</span>밑위길이</li>
+                    </ul>
+                    <span class="size-more">밀어서 더보기</span>
+                    <div class="size-table-wrap">
+                        <table>
+                            <caption>실측사이즈</caption>
+                            <colgroup>
+                                <col width="*">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="13%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col">76</th>
+                                    <th scope="col">78</th>
+                                    <th scope="col">80</th>
+                                    <th scope="col">82</th>
+                                    <th scope="col">84</th>
+                                    <th scope="col">86</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>a. 전체길이 (cm)</td>
+                                    <td>114</td>
+                                    <td>115</td>
+                                    <td>116</td>
+                                    <td>117</td>
+                                    <td>118</td>
+                                    <td>119</td>
+                                </tr>
+                                <tr>
+                                    <td>b. 허리둘레 (cm)</td>
+                                    <td>77</td>
+                                    <td>79</td>
+                                    <td>81</td>
+                                    <td>83</td>
+                                    <td>85</td>
+                                    <td>87</td>
+                                </tr>
+                                <tr>
+                                    <td>b. 허리둘레 (inch)</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td>32</td>
+                                    <td>32~33</td>
+                                    <td>33~34</td>
+                                    <td>34</td>
+                                </tr>
+                                <tr>
+                                    <td>c. 엉둥이둘레 (cm)</td>
+                                    <td>104</td>
+                                    <td>106</td>
+                                    <td>108</td>
+                                    <td>110</td>
+                                    <td>112</td>
+                                    <td>114</td>
+                                </tr>
+                                <tr>
+                                    <td>d. 허벅지둘레 (cm)</td>
+                                    <td>64.7</td>
+                                    <td>65.8</td>
+                                    <td>66.9</td>
+                                    <td>68</td>
+                                    <td>69.1</td>
+                                    <td>70.2</td>
+                                </tr>
+                                <tr>
+                                    <td>e. 바지통 (cm)</td>
+                                    <td>49.2</td>
+                                    <td>49.8</td>
+                                    <td>50.4</td>
+                                    <td>51</td>
+                                    <td>51.6</td>
+                                    <td>52.2</td>
+                                </tr>
+                                <tr>
+                                    <td>f. 밑위길이 (cm)</td>
+                                    <td>23.8</td>
+                                    <td>24.1</td>
+                                    <td>24.4</td>
+                                    <td>24.7</td>
+                                    <td>25</td>
+                                    <td>25.3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>사이즈 측정 위치에 따라 1cm 정도의 오차가 있을 수 있습니다.</p>
+                </div>
+
+                <div class="detail-info">
+                    <h3 class="tit">상품정보제공고시</h3>
+                    <table>
+                        <caption>상품정보제공고시</caption>
+                        <colgroup>
+                            <col width="*">
+                            <col width="68%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">제품소개</th>
+                                <td>겉감: 면 100% 배색: 폴리에스터 65% 면 35%</td>
+                            </tr>
+                                <tr>
+                                <th scope="row">색상</th>
+                                <td>그레이, 블랙</td>
+                            </tr>
+                                <tr>
+                                <th scope="row">치수</th>
+                                <td>95, 100, 105, 110, 115</td>
+                            </tr>
+                                <tr>
+                                <th scope="row">제조자<span>수입품의 경우<br>수입자를 함께 표기</span></th>
+                                <td>코오롱인더스트리(주) FnC부문</td>
+                            </tr>
+                                <tr>
+                                <th scope="row">제조국</th>
+                                <td>대한민국</td>
+                            </tr>
+                                <tr>
+                                <th scope="row">제조년월</th>
+                                <td>2015년 08월</td>
+                            </tr>
+                                <tr>
+                                <th scope="row">품질보증기준</th>
+                                <td>코오롱인더스트리㈜ FnC부문 제품의 품질보증기간은 구입일로부터 1년입니다.</td>
+                            </tr>
+                                <tr>
+                                <th scope="row">A/S 책임자와 전화번호</th>
+                                <td>코오롱인더스트리㈜ FnC부문 고객상담실 / 대표전화 1588-7667</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="fiber">
+                        <div class="thumb">
+                            <img src="/_ui/img/m/temp/@product-fiber.jpg" alt="">
+                        </div>
+                        <dl class="txt">
+                            <dt>THERMOLITE</dt>
+                            <dd>가벼운 단열층으로 추운 날씨에 보온기능이 우수하며 탁월한 수분 조절로 신체를 따뜻하게 합니다. 인비스타 인증에 의한 원단 기능 입니다.</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="detail-wash">
+                    <h3 class="tit">세탁정보</h3>
+                    <ul>
+                        <li class="ico1">다리미질을 할 수 없다.니트류에 적용</li>
+                        <li class="ico2">염소,산소계 표백제로 표백할 수 없음</li>
+                        <li class="ico3">물의 온도 30℃ 표준으로 약하게 손세탁을 할 수 있다. (세탁기 사용 불가) 세제의 종류는 중성세제를 사용한다.</li>
+                        <li class="ico4">세탁 후 건조할 때 기계건조를 할 수 없음.</li>
+                        <li class="ico5">불에 약함. 불꽃 주의</li>
+                        <li class="ico6">드라이클리닝을 할 수 없다. 프린트, jersey T셔츠류, 나일론 소재의 점퍼등에 사용</li>
+                        <li class="ico7">옷걸이에 걸고 그늘에서 건조시킬 것. 견 블라우스류를 건조시킬 때</li>
+                    </ul>
+                </div>
+
+                <div class="detail-review">
+                    <h3 class="tit">리뷰</h3>
+                    <p class="no-result">
+                        <span>등록된 상품 리뷰가 없습니다.</span>
+                        <a href="#">첫 리뷰 작성하기</a>
+                    </p>
+                </div>
+
+                <div class="detail-addinfo">
+                    <dl>
+                        <dt><a href="#">배송안내</a></dt>
+                        <dd>배송안내 내용</dd>
+                        <dt><a href="#">교환/반품 안내</a></dt>
+                        <dd>교환/반품 안내 내용</dd>
+                        <dt><a href="#">수선품 접수 안내</a></dt>
+                        <dd>수선품 접수 안내 내용</dd>
+                    </dl>
+                </div>
+
+                <div class="area-banner">
+                    <a href="#"><img src="/_ui/img/m/banner_prdt01.jpg" alt="SPECIAL BENEFIT 8 - 코오롱몰에서 준비한 8가지 통큰 혜택"></a>
+                    <a href="#"><img src="/_ui/img/m/banner_prdt02.jpg" alt="가입만해도 10% 추가할인 + 에코백"></a>
+                </div>
+
+                <div class="prod-list">
+                    <h3 class="tit">다른 고객이 함께 본 상품</h3>
+                    <div class="list-wrap">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="scr-prod-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="prod-list">
+                    <h3 class="tit">이 상품과 어울리는 상품</h3>
+                    <div class="list-wrap">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                                <a href="#"><img src="/_ui/img/m/temp/prdt-list01.jpg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="scr-prod-pagination"></div>
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

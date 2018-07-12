@@ -1,0 +1,67 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/review/product-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+
+        <section id="kolon-content" class="pt0">
+
+            <div class="h1-top">
+                <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                <h1>리뷰작성</h1>
+            </div>
+
+            <form id="reviewAddForm" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                <input type="hidden" id="rating" name="rating" value="0" />
+                <article class="box-write">
+                    <div class="grade">
+                        <p class="star-rating">
+                            <a href="">★</a>
+                            <a href="">★</a>
+                            <a href="">★</a>
+                            <a href="">★</a>
+                            <a href="">★</a>
+                        </p>
+                        <p class="txt">상품만족도</p>
+                    </div>
+                    <div class="form-review">
+                        <ul>
+                            <li>
+                                <input type="text" id="headline" name="headline" placeholder="제목을 입력하세요.">
+                            </li>
+                            <li>
+                                <select id="baseMsgs">
+                                    <option value="">상품평 간편 입력 항목을 선택하세요.</option>
+                                    {{#baseMsgs}}
+                                        <option value="{{this}}">{{this}}</option>
+                                    {{/baseMsgs}}
+                                </select>
+                            </li>
+                            <li>
+                                <textarea id="comment" name="comment" placeholder="상품평 직접입력"></textarea>
+                            </li>
+                            <li class="filebox">
+                                <label for="ex-file">업로드</label>
+                                <input type="file" id="ex-file" name="ex-file" class="btn-file" multiple="multiple" accept="image/*" capture="camera">
+                                <small>이미지첨부(최대2Mbyte)</small>
+                            </li>
+                            <div id="gallery" style="display: none;">
+                                <img src="/_ui/img/m/icn/icn-file.jpg" alt="리뷰 이미지" id="productImg" />
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="btns">
+                        <a href="#" class="click-cl">취소</a>
+                        <a href="#" class="click-rgt" data-style="zoom-in">리뷰 등록하기</a>
+                    </div>
+                </article>
+            </form>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

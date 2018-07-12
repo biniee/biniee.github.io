@@ -1,0 +1,148 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title='LUCKYCHOUETTE'}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/product/grid"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+
+        <!-- navigation -->
+        <div class="tab">
+            <ul>
+                <li class="on"><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">STORE</a></li>
+                <li><a href="#">ITEMS</a></li>
+            </ul>
+        </div>
+        <!-- // navigation -->     
+
+        <article class="brand-skin">
+            <div class="skin-wide">
+                <div><a href="#"><img src="/_ui/img/m/temp/brand-skin01.jpg" alt="ESSENTIAL LINE, 실용적인 디자인에 유니크한 디테일로 럭키슈에뜨만의 감성을 더한 basic item"></a></div>
+                <div><a href="#"><img src="/_ui/img/m/temp/brand-skin02.jpg" alt="Pre Order before sunrise hat, 이 기간에만 통해서만 구매하실수 있는 특별한 아이템! 해가 뜨기 전, 지금 바로 주문하세요"></a></div>
+                <div><a href="#"><img src="/_ui/img/m/temp/brand-skin03.jpg" alt="MINI et SHORTS"></a></div>
+            </div>
+            <div class="bottom">
+                <div><a href="#"><img src="/_ui/img/m/temp/brand-skin04.jpg" alt="DRESS CAPSULE COLLECTION"></a></div>
+                <div><a href="#"><img src="/_ui/img/m/temp/brand-skin05.jpg" alt="Before Sunrise Hat"></a></div>
+            </div>
+        </article>
+
+         <article class="list2-prod">
+            <div class="prod-list-top mt2">
+                <h3>NEW ARRIVALS</h3>
+            </div>
+            {{#fetch_product "mobile" "new" parameters 6}}
+                {{{render_product "mobile" "grid" product parameters}}}
+            {{/fetch_product}}
+        </article> 
+
+        <div class="prod-list-top">
+            <h3>C'EST CHOUETTE</h3>
+        </div>
+        <article class="prod-big-bnr">
+            <ul>
+                <li class="item h-space" style="{{hide_item_gte @index 3}}">
+                    <a href="#">
+                        <img src="/_ui/img/m/temp/brand-bnr04.jpg" />
+                        <div class="txt-box white">
+                            <span class="tit n-under">GIRL'S LIFE<br/>DAILY LOOK</span>
+                            <span class="txt">모델들의 럭키슈에뜨 스타일링룩</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item h-space" style="{{hide_item_gte @index 3}}">
+                    <a href="#">
+                        <img src="/_ui/img/m/temp/brand-bnr05.jpg" />
+                        <div class="txt-box white">
+                            <span class="tit n-under">CHOUETTE'S PICK<br/>DRESS COLLECTION</span>
+                            <span class="txt">BON VOYAGE - LUCKY DRESS CAPSULE COLLECTION</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item h-space" style="{{hide_item_gte @index 3}}">
+                    <a href="#">
+                        <img src="/_ui/img/m/temp/brand-bnr06.jpg" />
+                        <div class="txt-box white">
+                            <span class="tit n-under">CHOUETTE'S PICK<br/>Before Sun Rise</span>
+                            <span class="txt">럭키슈에뜨만의 라피아 햇 ‘비포선라이즈’의 여름 여행기</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="bnr-more contents-default-more-btn">더보기</button>
+        </article>
+        
+        <div class="prod-list-top">
+            <h3>SEASON ONLY</h3>
+        </div>
+        <article class="season-only">
+            <div class="season-only-list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/_ui/img/m/temp/prdt-type01.jpg" alt="">
+                            <p>ruffle<br/>t-shirts</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/_ui/img/m/temp/prdt-type02.jpg" alt="">
+                            <p>summer<br/>dress</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/_ui/img/m/temp/prdt-type03.jpg" alt="">
+                            <p>short<br/>shorts</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/_ui/img/m/temp/prdt-type01.jpg" alt="">
+                            <p>skull<br/>blouse</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/_ui/img/m/temp/prdt-type02.jpg" alt="">
+                            <p>loose-fit<br/>t-shirt</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/_ui/img/m/temp/prdt-type03.jpg" alt="">
+                            <p>Sleeveless<br/>Dress</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="list2-prod">
+            <div class="prod-list-top mt2">
+                <h3>RECOMMENDED</h3>
+            </div>
+            {{#fetch_product "mobile" "" parameters 6}}
+                {{{render_product "mobile" "grid" product parameters}}}
+            {{/fetch_product}}
+        </article>
+
+
+       <article class="btm-bnr">
+            <div><a href="#"><img src="/_ui/img/m/temp/brand-bt-bnr01.jpg" alt="WAAC LCG 여성 골프웨어 라인 출시"></a></div>
+            <div><a href="#"><img src="/_ui/img/m/temp/brand-bt-bnr02.jpg" alt="LUCKY7 REVIEWER"></a></div>
+       </article>
+
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

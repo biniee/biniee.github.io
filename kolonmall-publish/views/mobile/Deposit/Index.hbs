@@ -1,0 +1,81 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="예치금"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/deposit/deposit-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/MyPage">홈</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Order/List">주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/RMA/List">취소/반품/교환</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/WishList/OnlineList">관심상품</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Review/RegisteredList">리뷰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Point">포인트</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Coupon">쿠폰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Deposit" class="on">예치금</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <div class="line"></div>
+            <!-- //navigation -->
+
+            <div class="dpst-top">
+                <p class="total">보유 예치금 <span>{{point.depositAmount}}</span>원</p>
+                <ul>
+                    <li>&#183; 상품 반품/취소 시 발생한 환불 금액을 예치금 형태로 누적<br/><span>하여, 구매 시 현금처럼 이용 가능합니다.</span></li>
+                    <li>&#183; 예치금은 현금으로 환불이 불가능합니다.</li>
+                    <li>&#183; 적립된 예치금은 온라인몰에서만 사용 가능합니다.</li>
+                </ul>
+            </div>
+
+            <div class="cs-depth3 col3">
+                <ul id="periodTabs">
+                    <li class="on"><a href="#" data-search-period=30>최근 1개월</a></li>
+                    <li><a href="#" data-search-period=90>최근 3개월</a></li>
+                    <li><a href="#" data-search-period=365>최근 1년</a></li>
+                </ul>
+            </div>
+
+            <!-- 예치금 내역이 없을때 -->
+            <article id="emptyResultDepositList" class="dpst-list" style="display: none;">
+                <div class="list-non">
+                    예치금 내역이 없습니다.
+                </div>
+            </article>
+            <!-- //예치금 내역이 없을때 -->
+
+            <article id="resultDepositListWrapper" class="dpst-list"  style="display: none;">
+                {{{render_loader "depositListLoading"}}}
+                <div id="resultDepositList"></div>
+                <a id="moreBtn" href="#" class="more">더보기</a>
+            </article>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

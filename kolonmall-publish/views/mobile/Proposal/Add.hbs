@@ -1,0 +1,162 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="쇼핑몰 제휴 및 광고 제안"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/FAQ">FAQ</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Contact">1:1문의</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/AfterSales/Warranty">A/S안내</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Notice">공지사항</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/GuestOrder">비회원주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/eKOLON/Point">eKOLON멤버십</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Compensation/Delay">고객보상제</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a  class="on" href="/Proposal/Add">제휴및광고제안</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //navigation -->
+
+            <article class="box-form-pral">
+                <ul class="txt-info">
+                    <li>코오롱 패션 통합몰 KOLONMAll과 함께 하는 길은 언제나 열려 있습니다. </li>
+                    <li>쇼핑몰 제휴 및 신규서비스, B2B광고제안 등 KOLON MALL과 함께 하실 분들은 언제든지 제안주세요. </li>
+                    <li>보내주시는 모든 제휴 제안은 항상 긍정적으로 검토 후 회신 드립니다.</li>
+                </ul>
+                {{!--<div class="form-pral">
+                    <input type="text" id="" name="" placeholder="제목을 입력해 주세요.">
+                    <input type="text" id="" name="" placeholder="담당자 이름을 입력해 주세요.">
+                    <input type="text" id="" name="" placeholder="회사명을 입력해 주세요.">
+                    <input type="text" id="" name="" placeholder="이메일을 입력해 주세요.">
+                    <input type="text" id="" name="" placeholder="연락처를 입력해 주세요.">
+                    <textarea placeholder="내용을 입력해 주세요."></textarea>
+                    <div class="ch-area">
+                        <div class="check small">
+                            <input type="checkbox" id="agree"/>
+                            <label for="agree"></label>
+                        </div>
+                        <label for="agree">개인정보 수집, 이용 등에 동의합니다.</label>
+                    </div>
+                </div>--}}
+                <div class="add-area">
+                    <form id="proposalForm">
+                        <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+                        <!-- TODO : 쇼핑몰광고 제안 site_code, ems_m_email, ems_m_name 값은 어디서? -->
+                        <input type="hidden" name="site_code" value="133">
+                        <input type="hidden" id="ems_m_email" name="ems_m_email" value="chocobo200@kolon.com">
+                        <input type="hidden" id="ems_m_name" name="ems_m_name" value="제휴담당자">
+                        <ul>
+                            <li>
+                                <div class="in-txt">
+                                    <input type="text" name="title" id="title" placeholder="제목을 입력해 주세요."/>
+                                    <span>제목</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="in-txt">
+                                    <input type="text" name="from_name" id="from_name" placeholder="담당자 이름을 입력해 주세요."/>
+                                    <span>담당자 이름</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="in-txt">
+                                    <input type="text" name="company" id="company" placeholder="회사명을 입력해 주세요."/>
+                                    <span>회사명</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="in-txt">
+                                    <input type="text" name="from_email" id="from_email" placeholder="이메일을 입력해 주세요."/>
+                                    <span>이메일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="in-txt">
+                                    <input type="text" name="telno" id="telno" placeholder="연락처를 입력해 주세요."/>
+                                    <span>연락처</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ta-txt">
+                                    <textarea name="content" id="content" placeholder="내용을 입력해 주세요."></textarea>
+                                    <span>내용</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="check-area">
+                            <input type="checkbox" id="agree" name="agree" />
+                            <label for="agree"></label>
+                            <label for="agree">개인정보 수집, 이용 등에 동의합니다.</label>
+                        </div>
+                    </form>
+                </div>
+            </article>
+            <article class="prsnl-info">
+                <dl>
+                    <dt>01 개인정보의 수집 및 이용목적 </dt>
+                    <dd>
+                        1) 서비스 제공을 위한 본인 확인<br/>
+                        &#183; 본인확인, 개인식별, 부정이용 방지와 분쟁조정을 위한 기록<br/>
+                        &nbsp; 보존, 불만처리 등 민원처리, 고지사항 전달
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>02 수집하는 개인정보의 항목 </dt>
+                    <dd>
+                        1) 입력사항 <br/>
+                        &#183; 이용자의 식별을 위한 내용 : 성명, 생년월일, 성별, 통신사, 핸드폰<br/>&nbsp; 번호, 희망ID, 비밀번호, E-MAIL주소
+                    </dd>
+                    <dd>
+                        2) 서비스 이용과정이나 사업처리 과정에서 아래와 같은 정보들이<br/>
+                        생성되어 수집될 수 있습니다. <br/>
+                        &#183; 서비스 이용기록, 접속로그, 쿠키, 접속IP정보, 결제기록, 이용정<br/>&nbsp; 지기록
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>03 개인정보의 보유 및 이용기간 </dt>
+                    <dd>
+                        &#183; 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기 <br/>
+                        &#183; 작성자의 개인정보 삭제요청이 있는 경우 삭제 처리
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>* 개인정보 수집 동의 거부 권리</dt>
+                    <dd>
+                        코오롱인더스트리(주)는 원활한 서비스 제공을 위해 개인정보를 <br/>
+                        수집하고 있습니다. <br/>
+                        개인정보수집, 이용에 대한 동의를 거부할 수 있으나 일부 서비스 <br/>
+                        이용이 제한될 수 있습니다. 
+                    </dd>
+                </dl>
+            </article>
+            <div class="btns">
+                <a href="javascript:history.back();" class="btn type01">취소</a>
+                <a href="#" class="btn type02" id="proposalFormSubmitBtn">확인</a>
+            </div>
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

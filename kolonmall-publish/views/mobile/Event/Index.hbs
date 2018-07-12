@@ -1,0 +1,32 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="이벤트"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/event/event-list-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+            <article class="sub-tit">
+                <p class="date">Today {{to_date_string todayDate}}</p>
+                <p class="txt">진행중인 이벤트</p>
+            </article>
+
+            <article id="eventList" class="event">
+                {{#eventList.results}}
+                    {{>mobile/precompiles/event/event-list-item}}
+                {{/eventList.results}}
+            </article>
+
+            {{{render_hide_loader "eventListLoading"}}}
+            {{#gt eventList.page.totalCount eventList.page.perPage}}
+                <a id="eventListMoreBtn" class="more">더보기</a>
+            {{/gt}}
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

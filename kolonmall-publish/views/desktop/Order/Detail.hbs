@@ -1,0 +1,62 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Order"}}
+
+            <article class="order-view contents">
+              <h3>주문상세조회</h3>
+
+              <div class="order-lists">
+                <div class="lists">
+                  <div class="summary">
+                    <strong>주문번호</strong>
+                    <span>{{order.orderNumber}}</span>
+                    <strong>주문일</strong>
+                    <span>{{order.createdDate}}</span>
+                  </div>
+                  <div class="head">
+                    <span class="tit-1">상품정보</span>
+                    <span class="tit-2">결제금액</span>
+                    <span class="tit-3">배송구분</span>
+                    <span class="tit-4">진행상태</span>
+                  </div>
+                {{#if order.items}}
+                    {{#order.items}}
+                        {{>desktop/precompiles/order/order-item-with-status orderNumber=../order.orderNumber deliveryType=../order.deliveryType displayedDeliveryType=../order.displayedDeliveryType isOrderDetailView=true}}
+                    {{/order.items}}
+                {{/if}}
+                </div>
+              </div>
+
+                {{#is order.deliveryType "DELIVERYSERVICE"}}
+                    {{#if order.items}}
+                        {{>desktop/partials/order/order-detail-delivery order.items.[0].deliveryAddress}}
+                    {{/if}}
+                {{/is}}
+
+                {{#is order.deliveryType "PICKUP"}}
+                    {{#if order.items}}
+                        {{>desktop/partials/order/order-detail-store order.items.[0].pickupInformation}}
+                    {{/if}}
+                {{/is}}
+
+                <!-- 결제정보 -->
+                {{>desktop/partials/order/order-detail-payment totalBasePrice = order.totalBasePrice deliveryCost = order.deliveryCost discount = order.discount payments = order.payments orderDetailPrice = order.orderDetailPrice}}
+                <!-- //결제 정보 -->
+
+              <div class="buttons end-row">
+                <button type="button" class="btn btn-line btn-big" onclick="javascript:history.back();">목록</button>
+              </div>
+            </article>
+
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

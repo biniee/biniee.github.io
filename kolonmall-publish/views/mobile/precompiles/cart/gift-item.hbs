@@ -1,0 +1,15 @@
+<p class="tit">{{#if KSuppliers}}[{{KSuppliers}}] {{/if}}{{title}}</p>
+{{#kGiftProducts}}
+    <ul class="list">
+        <li>
+            <a href="#">
+                <!-- TODO : 사은품 이미지 경로 imageUrl 서버에서 내려줘야 함 -->
+                <div class="prod"><img src="{{styleProduct.imageUrl}}" alt="사은품 썸네일" /></div>
+                <div class="info">
+                    <p class="t1">{{styleProduct.supplierName}}</p>
+                    <p class="t2">{{styleProduct.name}} {{#if size}}({{size}}){{/if}}</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+{{/kGiftProducts}}

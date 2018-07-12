@@ -1,0 +1,80 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 취소/반품/교환"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+                {{precompile "desktop/precompiles/order/order-list"}}
+                {{precompile "desktop/precompiles/order/order-item-with-status"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="RMA"}}
+
+            <article class="rma contents">
+              <h3>취소/교환/반품</h3>
+
+              <!-- 주문조회 -->
+              <p class="order-guide">
+                <a href="#">취소/교환/반품 안내</a>
+              </p>
+              <div class="order-search">
+                <div class="col type">
+                  <label for="" class="label">배송구분</label>
+                  <span class="select">
+                    <select id="isPointOfServiceSelect">
+                        <option value="all">전체보기</option>
+                        <option value="N">택배배송</option>
+                        <option value="Y">매장픽업</option>
+                    </select>
+                  </span>
+                </div>
+                <div class="col product">
+                  <label for="" class="label">상품</label>
+                  <span class="select">
+                    <select>
+                      <option value="">상품명</option>
+                    </select>
+                  </span>
+                  <input type="text">
+                </div>
+                <div class="col month">
+                  <span class="label">기간</span>
+                  <ul id="periodBtns" class="tab">
+                    <li class="on"><a href="#" data-search-period=30>1개월</a></li>
+                    <li><a href="#" data-search-period=90>3개월</a></li>
+                    <li><a href="#" data-search-period=180>6개월</a></li>
+                    <li><a href="#" data-search-period=365>12개월</a></li>
+                  </ul>
+                </div>
+                <div class="col date">
+                  <input type="text">
+                  <i class="split">~</i>
+                  <input type="text">
+                </div>
+                <button type="button" id="searchOrderBtn" class="btn search">조회</button>
+              </div>
+              <!-- //주문조회 -->
+
+              <!-- 조회결과 -->
+              <p class="desc">* 최근 1개월간 취소/교환/반품 내역입니다. 주문번호를 클릭하시면 주문상세조회를 하실 수 있습니다.</p>
+
+              <div id="resultOrderList" class="order-lists">
+              </div>
+
+              {{{render_loader "rmaListLoading"}}}
+              <button id="moreBtn" type="button" class="list-more">더 보기</button>
+
+              <p class="no-result" id="emptyResultOrderList" style="display: none;">최근 <span id="searchPeriodText">1개월</span>내 주문내역이 없습니다.</p>
+            </article>
+
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

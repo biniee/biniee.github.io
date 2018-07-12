@@ -1,0 +1,117 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+
+            <article class="complete">
+                
+                <a href="javascript:history.go(-1)" class="pop-close">닫기</a>
+                <h1>주문완료</h1>
+
+                <div class="box1">
+                    <h3>고객님의 주문이<br />정상적으로 완료되었습니다.</h3>
+                    <div>
+                        <p>주문번호: <i>{{order.orderNumber}}</i></p>
+                        <a href="/Order/{{order.orderNumber}}">주문조회</a>
+                    </div>
+                    <p>주문과 관련한 문의사항이 있으시면<br /><a href="/Contact">고객센터 > 1:1상담</a>을 이용해 주시기 바랍니다.</p>
+                </div>
+
+                <div class="box2">
+                    <h3>결제정보</h3>
+                    <dl class="dl-table">
+                        <dt>주문상품금액</dt>
+                        <dd class="colspan">{{order.totalBasePrice}}원</dd>
+                        <dt>배송비</dt>
+                        <dd class="colspan">{{order.deliveryCost}}원</dd>
+                        {{#if order.discount}}
+                            <dt class="rowspan">할인내역</dt>
+                            <dd>
+                                <dl>
+                                    <dt>쿠폰</dt>
+                                    <dd>(-) 29,250원</dd>
+                                    <dt>프로모션</dt>
+                                    <dd>(-) 0원</dd>
+                                </dl>
+                            </dd>
+                        {{/if}}
+                        <dt class="rowspan">결제수단</dt>
+                        <dd>
+                            <dl>
+                                <dt>직원전용 구매권</dt>
+                                <dd>10,000원</dd>
+                                <dt>예치금</dt>
+                                <dd>10,000원</dd>
+                                <dt>포인트</dt>
+                                <dd>10,000원</dd>
+                                <dt>신용카드</dt>
+                                <dd class="l2">90,000원<br />삼성카드(2개월)</dd>
+                            </dl>
+                        </dd>
+                    </dl>
+
+                    <dl class="total">
+                        <dt>최종 결제금액</dt>
+                        <dd>{{order.totalRealPrice}}<i>원</i></dd>
+                    </dl>
+
+                    <div class="btns">
+                        <a href="/Cart">장바구니</a>
+                        <a href="/">메인</a>
+                    </div>
+                </div>
+
+            </article>
+
+            <div class="list2-prod">
+                <!-- TODO : 이런 상품은 어떠세요? -->
+                <h4>이런 상품은 어떠세요?</h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="prod-img">
+                                <img src="http://kopimages.kolon.com/Prod_Img/SC/2017/LM1/W6DCX17106BLK_LM1.jpg" alt="" />
+                            </div>
+                            <div class="txt-box">
+                                <span class="brand">KOLONSPORT</span>
+                                <span class="tit">남여공용 Gore-Tex 하이하이하이하이하이하이</span>
+                                <div class="btm">
+                                <span class="discount">51%</span>
+                                <span class="price"><i>320,000원</i>192,000원</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                   <li>
+                        <a href="#">
+                            <div class="prod-img">
+                                <img src="http://kopimages.kolon.com/Prod_Img/SC/2017/LM1/W6DCX17106BLK_LM1.jpg" alt="" />
+                            </div>
+                            <div class="txt-box">
+                                <span class="brand">KOLONSPORT</span>
+                                <span class="tit">남여공용 Gore-Tex 하이하이하이하이하이하이</span>
+                                <div class="btm">
+                                <span class="discount">51%</span>
+                                <span class="price"><i>320,000원</i>192,000원</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+    {{/inline}}
+    {{#*inline "extrajavascript"}}
+        <script>
+            function change(request) {
+                if( request == "txtbox" ){
+                    $('.request-txt').css('display','block');
+                }else{
+                    $('.request-txt').css('display','none');
+                }
+            }
+        </script>
+    {{/inline}}
+{{/mobile/layouts/default}}

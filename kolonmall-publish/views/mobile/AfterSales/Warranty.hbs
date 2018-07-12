@@ -1,0 +1,80 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="고객센터"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/FAQ">FAQ</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Contact">1:1문의</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="on" href="/AfterSales/Warranty">A/S안내</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Notice">공지사항</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/GuestOrder">비회원주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/eKOLON/Point">eKOLON멤버십</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Compensation/Delay">고객보상제</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Proposal/Add">제휴및광고제안</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <!-- //navigation -->
+
+            <div class="cs-depth3 col2">
+                <ul>
+                    <li class="on"><a href="/AfterSales/Warranty">품질보증기간 및 보상기준</a></li>
+                    <li><a href="/AfterSales/RepairGuide">수선품 접수 안내</a></li>
+                    <li><a href="/AfterSales/RepairCoverage">수선 가능 범위 및 가격</a></li>
+                    <li><a href="/AfterSales/RepairProgress">수선품 진행 조회</a></li>
+                </ul>
+            </div>
+
+            <article class="cs-as">
+                <h3 class="hidden">고객센터 A/S 본문내용</h3>
+                <dl class="as-txt">
+                <dt>품질보증기간</dt>
+                <dd>코오롱 인더스트리㈜ Fnc부문 제품의 품질보증기간은 구입일로부터 1년 입니다.</dd>
+                <dt>품질보증기간</dt>
+                <dd>
+                    <p>제조사 과실(봉제, 원단, 부자재)로 발생된 불량일 경우 고객께서 제조회사에 보상(무료수선, 교환, 환불)을 청구할 수 있는 기간을 의미합니다.
+                    간혹 보상과정에서 가격산정에 다소 의견차이가 발생될 수 있으니, 제품 구입시의 영수증을 제출하여 주시기 바랍니다.</p>
+                    <ul>
+                        <li>품질보증기간 경과 후에는 공정거래위원회에서 고시한 피해보상기준에 준하여 감가하여 보상하여 드립니다.</li>
+                        <li>상세기준은 한국소비자보호원 홈페이지 <a href="http://www.cpb.or.kr" target="_blank">www.cpb.or.kr</a> 참조하세요.</li>
+                        <li>명확한 제품불량(봉제불량, 원단불량, 부자재불량, 사이즈불량)은 구입매장에서 조치해 드립니다.</li>
+                        <li>단, 불량판정과정에서 의견차이가 발생될 수 있습니다. 이 경우에는 고객상담팀으로 원인규명을 요구하시면 </li>
+                        <li>고객상담팀 판정소견서 또는 한국소비자연맹의 심의결과를 알려 드립니다.</li>
+                    </ul>
+                </dd>
+                <dt>한국소비자연맹의 심의제도란?</dt>
+                <dd>
+                    소비자 권익을 옹호하는 민간소비자단체인 한국소비자연맹에서 매주 화요일에 분쟁의류 제품에 대하여 상의를 하여 결과를 의뢰자(고객 또는 제조회사)에게 알려드리고 있습니다.
+                    저희 소비자.상담팀에서는 고객의 요구시 한국소비자연맹에 심의 의뢰를 무료로 대행하고 있습니다.
+                </dd>
+                </dl>
+            </article>
+
+            {{>mobile/partials/cs/additional-footer-info}}
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

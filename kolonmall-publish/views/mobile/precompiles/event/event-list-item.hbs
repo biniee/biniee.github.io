@@ -1,0 +1,12 @@
+<div class="box">
+    {{>mobile/components/banner/contents/square link=link content=imageInfo}}
+    <div class="cnts">
+        <strong>{{title}}</strong>
+        <p>
+            {{#if eventAt.start}}{{to_date_string eventAt.start}}{{/if}}
+            ~
+            {{#if eventAt.end}}{{to_date_string eventAt.end}}{{/if}}
+        </p>
+        <a href="#" class="share">공유하기</a>
+    </div>
+</div>

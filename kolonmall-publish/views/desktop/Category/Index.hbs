@@ -1,0 +1,79 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="카테고리 메인"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/precompiles/product/grid"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <!-- navigation -->
+            <nav class="wrap-navi">
+                <h3>{{category.name}}<span>{{category.totalNumber}}</span></h3>
+                {{#if category.subcategories}}
+                    <dl class="sub-menu">
+                        {{#category.subcategories}}
+                            <dd><a href="{{url}}">{{name}}</a></dd>
+                        {{/category.subcategories}}
+                    </dl>
+                {{/if}}
+                {{>desktop/partials/lnb-banner}}
+            </nav>
+             <!-- //navigation -->
+
+             <article class="category-cont contents">
+
+                <!-- banner-list -->
+                {{#fetch_banner "DESKTOP" "category" category.id "main"}}
+                     {{#if banners.page.totalCount}}
+                         <article class="thumb-wrap top-banner with-lnb">
+                             {{{render_banner "desktop" "contents/flicking" banners}}}
+                         </article>
+                     {{/if}}
+                 {{/fetch_banner}}
+                <!-- // banner-list -->
+
+                <!-- prod-wrap -->
+                <article class="prod-wrap category-list">
+                    {{#fetch_product "desktop" "new" parameters 8}}
+                        <h5 class="tit">NEW ARRIVALS <span class="itemCount">{{product.page.totalCount}}</span></h5>
+                        {{{render_product "desktop" "grid" product parameters}}}
+                    {{/fetch_product}}
+                </article>
+                <!-- // prod-wrap -->
+
+                <!-- banner-list -->
+                {{#fetch_banner "DESKTOP" "category" category.id "issue-and-deal"}}
+                     {{#if banners.page.totalCount}}
+                        <article class="thumb-wrap issue-and-deal-banner with-lnb">
+                            <h3 class="tit">ISSUE &amp; DEAL</h3>
+                            {{{render_banner "desktop" "contents/flicking" banners}}}
+                        </article>
+                     {{/if}}
+                 {{/fetch_banner}}
+                <!-- // banner-list -->
+
+                <hr>
+
+                <!-- prod-wrap -->
+                <article class="prod-wrap category-list">
+                    {{#fetch_product "desktop" "best" parameters 16}}
+                        <h5 class="tit">{{../category.name}} BEST <span class="itemCount">{{product.page.totalCount}}</span></h5>
+                        {{{render_product "desktop" "grid" product parameters}}}
+                    {{/fetch_product}}
+                </article>
+                <!-- // prod-wrap -->
+            </article>
+
+
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

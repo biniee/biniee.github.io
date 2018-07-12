@@ -1,0 +1,67 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="기획전 - 메인"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "desktop/precompiles/special/special-list-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+            {{>desktop/partials/navigation-lnb-event title="기획전" submenu="Special"}}
+
+             <article class="special-cont contents">
+
+                 <h3>기획전</h3>
+                 <!-- category-menu -->
+                <div class="category-menu">
+                    <div class="select-wrap">
+                        <a href="#" data-target=".list-option" data-trigger="toggle" id="sortOptionToggle">
+                            {{#is orderType "recent"}}
+                                최근 등록순
+                            {{else}}
+                                마감 임박순
+                            {{/is}}
+
+                        </a>
+                        <div class="list-option">
+                            <ul>
+                                {{#is orderType "recent"}}
+                                    <li><a href="/Special?orderType=recent" class="active">최근 등록순</a></li>
+                                    <li><a href="/Special?orderType=deadline">마감 임박순</a></li>
+                                {{else}}
+                                    <li><a href="/Special?orderType=recent">최근 등록순</a></li>
+                                    <li><a href="/Special?orderType=deadline" class="active">마감 임박순</a></li>
+                                {{/is}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- // category-menu -->
+                
+                <!-- special-wrap -->
+                <article class="special-wrap">
+                    <div id="specialList" class="special-list with-lnb">
+                        {{#specialList.results}}
+                          {{>desktop/precompiles/special/special-list-item}}
+                        {{/specialList.results}}
+                    </div>
+                    {{{render_hide_loader "specialListLoading"}}}
+                    {{#gt specialList.page.totalCount specialList.page.perPage}}
+                        <a id="specialListMoreBtn" class="list-more">더보기</a>
+                    {{/gt}}
+                </article>
+                <!-- // thumb-wrap -->
+
+            </article>
+
+
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

@@ -1,0 +1,33 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="Order"}}
+
+           <article class="order-complete contents">
+              <h3>주문취소신청</h3>
+
+              <div class="complete cancel">
+                <p>
+                  주문취소가 정상적으로 접수되었습니다.
+                </p>
+                <p>
+                  <small>항상 KOLONmall을 이용해 주셔서 감사합니다.</small>
+                </p>
+              </div>
+
+              <div class="buttons end-row">
+                <button type="button" class="btn btn-line btn-big" onclick="javascript: location.href='/MyPage';">확인</button>
+              </div>
+            </article>
+
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

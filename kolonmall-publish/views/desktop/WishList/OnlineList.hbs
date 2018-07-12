@@ -1,0 +1,48 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="마이페이지 - 관심상품"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-mypage title="마이페이지" submenu="WishList"}}
+            <form id="wishlistForm">
+                <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+            <article class="wish-list contents">
+              <h3>관심상품</h3>
+              <ul class="tab list2">
+                  <li class="on"><a href="#">온라인 관심 상품 {{!--{{#if wishList.results}}<span>{{length wishList.results}}</span>{{/if}}--}}</a></li>
+                  <li><a href="/WishList/OfflineList">오프라인 관심 상품</a></li>
+              </ul>
+                {{#if wishList.results}}
+                  <p class="desc">* 코오롱몰 사이트에서 등록하신 관심상품 리스트 입니다.</p>
+                    <p class="all-select">
+                    <span class="checkbox">
+                      <input type="checkbox" id="selectAllCheckbox">
+                      <i></i>
+                    </span>
+                        <label for="selectAllCheckbox">전체선택</label>
+                    </p>
+
+                    <ul class="wish-lists">
+                        {{#wishList.results}}
+                            {{>desktop/precompiles/wishList/wishlist-item}}
+                        {{/wishList.results}}
+                    </ul>
+
+                    <div class="buttons end-row">
+                        <button type="button" class="btn btn-line btn-big" id="deleteSelectedItemsBtn">선택삭제</button>
+                        <button type="button" class="btn btn-big" id="addToCartSelectedItemsBtn">장바구니</button>
+                    </div>
+                {{else}}
+                    <!--  내역이 없을때 -->
+                    <p class="no-result">온라인 관심상품이 없습니다.</p>
+                {{/if}}
+                </article>
+            </form>
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

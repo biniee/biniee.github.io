@@ -1,0 +1,82 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="기획전 - 상세"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <article class="special-detail">
+                <h3>{{specialDetail.title}}</h3>
+                <div class="location">
+                    <span>FEATURE / <a href="#" class="active">기획전</a></span>
+                    {{#if specialDetail.brandList.[0]}}<a>{{specialDetail.brandList.[0].name}}</a>{{/if}}
+                    {{#if specialDetail.brandList.[1]}}<a>{{specialDetail.brandList.[1].name}}</a>{{/if}}
+                    {{#if specialDetail.brandList.[2]}}<a>{{specialDetail.brandList.[2].name}}</a>{{/if}}
+                    <span class="date">
+                        {{#if specialDetail.specialAt.start}}{{to_date_string specialDetail.specialAt.start}}{{/if}}
+                        ~
+                        {{#if specialDetail.specialAt.end}}{{to_date_string specialDetail.specialAt.end}}{{/if}}
+                    </span>
+                </div>
+                <div class="page-function">
+                    <a href="#" class="list">기획전 목록</a>
+                    <div class="slide-list-wrap">
+                        <div class="inner">
+                            <div class="slide-list">
+                                <div class="swiper-wrapper">
+                                    {{#specialList.results}}
+                                        <div class="list swiper-slide">
+                                            <div class="fix-ratio-106 bg-image" style="background-image:url('{{imageInfo.bgImage}}')"></div>
+                                            {{#if imageInfo.tag}}
+                                                <div class="sticky">
+                                                    {{#line_cnt imageInfo.tag 2}}
+                                                        <span class="type2">{{{nl2br imageInfo.tag}}}</span>
+                                                    {{else}}
+                                                        <span class="type1">{{imageInfo.tag}}</span>
+                                                    {{/line_cnt}}
+                                                </div>
+                                            {{/if}}
+                                            <p class="title"><a href="/Special/{{no}}">{{title}}</a></p>
+                                        </div>
+                                    {{/specialList.results}}
+                                </div>
+                            </div>
+                            <div class="swiper-controls">
+                                <button type="button" class="swiper-button-prev">prev</button>
+                                <button type="button" class="swiper-button-next">next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="function">공유</a>
+                </div>
+
+                <div class="detail-cont">
+                    <div> <!-- 관리자에서 bg색 넣어줘야함 -->
+                        {{{specialDetail.content}}}
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="nav">
+                        {{#specialDetail.productList}}
+                            <a href="#{{title}}" class="active">{{title}}</a>
+                        {{/specialDetail.productList}}
+                    </div>
+                </div>
+
+                <!-- prod-wrap -->
+                {{#specialDetail.productList}}
+                    <article class="prod-wrap" id="{{title}}">
+                        <h3 class="tit">{{title}}</h3>
+                            {{#fetch_special_product "desktop" parameters @index 60}}
+                                {{{render_special_product "desktop" product parameters}}}
+                            {{/fetch_special_product}}
+                    </article>
+                {{/specialDetail.productList}}
+            </article>
+
+        </section>
+
+    {{/inline}}
+
+{{/desktop/layouts/default}}

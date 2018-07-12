@@ -1,0 +1,9 @@
+{{#fetch_banner "DESKTOP" "page" "lnb" "footer"}}
+    {{#if banners.page.totalCount}}
+        <ul class="sub-menu-bt">
+            {{#banners.results}}
+                <li><a href="{{link}}"><img src="{{content.bgImage}}"></a></li>
+            {{/banners.results}}
+        </ul>
+    {{/if}}
+{{/fetch_banner}}

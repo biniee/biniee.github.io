@@ -1,0 +1,9 @@
+<script src="/_ui/js/build/vendor.dll.js"></script>
+<script src="/_ui/js/build/handlebars.bundle.js"></script>
+<script src="/_ui/js/build/client.bundle.js"></script>
+<script>
+    $(function() {
+        $(document).trigger('desktop:load');
+        $(document).trigger('{{replace assetPath '/' ':' }}:load');
+    });
+</script>

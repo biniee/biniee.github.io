@@ -1,0 +1,99 @@
+{{#> mobile/layouts/popup }}
+
+    {{#*inline "content"}}
+        <h1 class="hidden">KOLONmall 홈 확장형 메뉴</h1>
+        <section id="kolon-content" class="pt0 mt0">
+
+            <article class="kolon-menu">
+
+                <div class="gnb">
+                    <h2 class="hidden">사용자 정보</h2>
+
+                    <div class="my-info">
+                        {{#is customer.uid 'anonymous'}}
+                            <div class="user-log">
+                                <a href="/Login" class="bt-login">로그인해 주세요</a>
+                            </div>
+                        {{else}}
+                            <div class="user-log">
+                                <span class="name"><strong>{{customer.name}}</strong>고객님</span>
+                                <a href="/Logout" class="bt-login">로그아웃</a>
+                            </div>
+                        {{/is}}
+                    </div>
+
+                    <ul>
+                        <!--<li>-->
+                            <!--<a href="/" class="mypage">홈 바로가기</a>-->
+                        <!--</li>-->
+                        <li>
+                            <a href="/MyPage" class="mypage">마이페이지 바로가기</a>
+                        </li>
+                        <li>
+                            <a href="javascript: alert('준비중 입니다 :)');" class="my-alert">나의 알림함 가기<i>2</i></a>
+                        </li>
+                        <li>
+                            <a href="javascript: history.back();" class="close">닫기</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav>
+                    <h2 class="hidden">KOLONmall 카테고리</h2>
+                    {{!--<ul class="category">
+                        <li class="">
+                            <h3>CATEGORY</h3>
+                            <ul class="sub">
+                                <li><a href="#">MEN</a></li>
+                                <li><a href="#">WOMEN</a></li>
+                                <li><a href="#">LIFT STYLE</a></li>
+                                <li><a href="#">SALE</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="#">기획전</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">리뷰</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/Main/Setting">설정</a></li>
+                                <li><a href="#">멤버십</a></li>
+                            </ul>
+                        </li>
+                    </ul>--}}
+                        <h3>CATEGORY</h3>
+                    
+                    <ul class="category">
+                        <li >
+                            <ul class="sub">
+                                {{#gnb.categories}}
+                                    <li><a href="{{url}}">{{name}}</a></li>
+                                {{/gnb.categories}}
+                                <li class="sub-list"><a href="/Special">기획전</a></li>
+                                <li><a href="/Event">이벤트</a></li>
+                                <!-- <li><a href="javascript: alert('준비중 입니다 :)');">리뷰</a></li> -->
+                                <li class="sub-list"><a href="/Main/Setting" >설정</a></li>
+                                <li><a href="javascript: alert('준비중 입니다 :)');">멤버십</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>BRAND</h3>
+                    <ul class="brand">
+                        
+                        <li>
+                            
+                            <ul>
+                                {{#gnb.brandCategory.subcategories}}
+                                    <li><a href="{{url}}">{{name}}</a></li>
+                                {{/gnb.brandCategory.subcategories}}
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/popup}}

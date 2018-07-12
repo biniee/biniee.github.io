@@ -1,0 +1,23 @@
+<li class="bundle">
+    <a href="{{#if isRmaListView}}{{#if items}}/RMA/{{rma_title_by_status items.[0].status}}/{{orderNumber}}?paymentNo={{items.[0].paymentNo}}{{/if}}{{else}}/Order/{{orderNumber}}{{/if}}">
+        <dl class="order-num">
+            <dt>주문번호</dt>
+            <dd>{{orderNumber}}</dd>
+            <dd>{{createdDate}}</dd>
+        </dl>
+    </a>
+    <ul>
+        {{#items}}
+            {{>mobile/precompiles/order/order-item-with-status orderNumber=../orderNumber deliveryType=../deliveryType displayedDeliveryType=../displayedDeliveryType isOrderDetailView=false}}
+        {{/items}}
+    </ul>
+    {{#is deliveryType "PICKUP"}}
+        <div class="pickup-info">
+            <dl>
+                <dt>{{pickupInformation.name}}</dt>
+                <dd>{{pickupInformation.pickupDate}} {{pickupInformation.pickupTimeFrom}}~{{pickupInformation.pickupTimeTo}} 방문예정</dd>
+            </dl>
+            <a href="/Order/DetailStore">매장정보</a>
+        </div>
+    {{/is}}
+</li>

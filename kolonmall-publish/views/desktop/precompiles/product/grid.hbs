@@ -1,0 +1,31 @@
+<div class="list">
+    <a href="/Product/{{code}}">
+    <p class="thumb"><img src="{{representationImage}}" alt=""></p>
+    <p class="brand">{{supplierBrandName}}</p>
+    <p class="title">{{{name}}}</p>
+    {{#if price}}
+        <p class="price">
+            {{#if price.discountRate}}
+                {{#isnt price.discountRate 0}}
+                    <del>{{price.formattedWishPrice}}</del>
+                {{/isnt}}
+            {{/if}}
+            {{price.formattedPrice}}
+        </p>
+        {{#if price.discountRate}}
+            {{#isnt price.discountRate 0}}
+                <p class="sale">{{price.discountRate}}%</p>
+            {{/isnt}}
+        {{/if}}
+        {{#if isShowColorImages}}
+            {{#if colorImages}}
+                <div class="color-box">
+                    {{#colorImages}}
+                        <img class="colbox" src="{{this}}"/>
+                    {{/colorImages}}
+                </div>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+    </a>
+</div>

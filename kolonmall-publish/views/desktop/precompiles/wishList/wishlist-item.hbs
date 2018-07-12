@@ -1,0 +1,22 @@
+<li class="list">
+    <!-- TODO : 퍼블리싱 버그있음... 체크박스 눌리지 않음 class="checkbox", 솔드아웃 경우-->
+    <p class="checkbox">
+        <input type="checkbox" id="checkbox_{{productCode}}" class="checkbox wishlist-item-checkbox" value="{{productCode}}">
+        <i></i>
+    </p>
+    <p class="thumb"><img src="{{product.representationImage}}" alt="{{product.name}}" /></p>
+    <!--<p class="sold-out">SOLD OUT</p>-->
+    <p class="brend"><span>{{product.supplierName}}</span></p>
+    <p class="title"><a href="#">{{product.name}}</a></p>
+    <ul class="options">
+        <li>{{product.color}}, {{product.size}}</li>
+        <li>
+            {{#gt product.price.discountRate 0}}<del>{{product.price.formattedWishPrice}}원</del>{{/gt}}
+            {{product.price.formattedPrice}}원
+        </li>
+    </ul>
+    <p class="buttons">
+        <button class="btn btn-line btn-small delete-item-btn">삭제</button>
+        <button class="btn btn-small add-to-cart-btn">장바구니</button>
+    </p>
+</li>

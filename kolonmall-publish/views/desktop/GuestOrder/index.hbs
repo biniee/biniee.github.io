@@ -1,0 +1,35 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 - 비회원 주문조회"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="GuestOrder"}}
+
+             <article class="guest-order contents">
+                <h3>비회원 주문조회</h3>
+
+                <ul class="notice">
+                  <li>비회원고객님께서 주문하신 상품의 목록과 배송상태를 확인할 수 있습니다.</li>
+                  <li>주문번호와 주문자명 입력 후 조회하시면 주문내역을 확인하실 수 있습니다.</li>
+                </ul>
+
+                <form class="form-login" action="/GuestOrder/Detail" method="post" id="guestOrderForm">
+                    <input type="hidden" name="CSRFToken" value="{{CSRFToken}}">
+                    <div class="search-order">
+                      <label for="">주문자명</label>
+                      <input name="name" type="text" class="name" placeholder="이름을 입력하세요.">
+                      <label for="">주문번호</label>
+                      <input name="orderNumber" type="text" class="number" placeholder="주문번호를 입력하세요.">
+                      <button type="button" class="btn" id="guestOrderFormSubmitBtn">조회</button>
+                    </div>
+                </form>
+
+            </article>
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

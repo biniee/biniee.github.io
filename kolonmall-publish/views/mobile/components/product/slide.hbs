@@ -1,0 +1,9 @@
+{{!-- 상품명 2줄, 좌우 스크롤형 리스트 --}}
+<article class="scr-prod">
+    <div class="swiper-wrapper">
+        {{#product.results}}
+            {{>mobile/precompiles/product/slide}}
+        {{/product.results}}
+    </div>
+    <div class="scr-prod-pagination"></div>
+</article>

@@ -1,0 +1,18 @@
+{
+  "issue": {
+    "bannerInfo": {
+      "title": "ISSUE & DEALS",
+      "url": "http://naver.com"
+    },
+    "bannerList": [
+      {
+        "type": "category",
+        "url": "http://naver.com",
+        "imageUrl": "/_ui/img/m/temp/deals-bnr01.jpg",
+        "label": "<span>ELORD</span><span>WAAC</span>",
+        "title": "NEW 시즌을 위한<br />봄 라운딩룩 제안",
+        "description": "SPRING IS COMING UP TO 50% OFF"
+      }
+    ]
+  }
+}

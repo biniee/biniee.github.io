@@ -1,0 +1,115 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="취소/반품/교환"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/order/order-list"}}
+            {{precompile "mobile/precompiles/order/order-item-with-status"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+             <!-- navigation -->
+            <div class="scr-navi">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/MyPage">홈</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Order/List">주문조회</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/RMA/List" class="on">취소/반품/교환</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/WishList/OnlineList">관심상품</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Review/RegisteredList">리뷰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Point">포인트</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Coupon">쿠폰</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/Deposit">예치금</a>
+                    </div>
+                </div>
+                <i class="icn-navi"></i>
+            </div>
+            <div class="line"></div>
+            <!-- //navigation -->
+
+            <article class="mypage-order">
+
+                <!-- 주문조회 -->
+                <div class="my-order-check">
+                    <div class="tit-top">
+                        <h3>취소/반품/교환 조회</h3>
+                        <a href="/RMA/ListGuide" class="btn-guide">이용안내</a>
+                    </div>
+                    <p>최근 1년 간의 주문내역을 조회하실 수 있습니다.<br />이전 내역은 PC버전 KOLONmall에서 확인하세요.</p>
+                    <div class="sct-box">
+                        <select id="isPointOfServiceSelect">
+                            <option value="all">전체보기</option>
+                            <option value="N">택배배송</option>
+                            <option value="Y">매장픽업</option>
+                        </select>
+                        <select id="orderStatusSelect">
+                            <option value="">진행상태 전체</option>
+                            <option value="CANCEL">취소</option>
+                            <option value="EXCHANGEORDER">교환</option>
+                            <option value="RETURN">반품</option>
+                        </select>
+                    </div>
+                    <div class="add-prod">
+                        <!--<select id="searchKeySelect">-->
+                            <!--<option value="name">상품명</option>-->
+                            <!--<option value="code">상품코드</option>-->
+                        <!--</select>-->
+                        <input type="text" placeholder="상품명 또는 상품 코드를 입력해 주세요." id="searchWordInput" />
+                    </div>
+                    <div class="cs-depth3 col3">
+                        <ul id="periodBtns">
+                            <li class="on"><a href="#" data-search-period=30>최근 1개월</a></li>
+                            <li><a href="#" data-search-period=90>최근 3개월</a></li>
+                            <li><a href="#" data-search-period=365>최근 1년</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-inquiry">
+                        <a href="#" id="searchOrderBtn">조회하기</a>
+                    </div>
+                </div>
+                <!-- //주문조회 -->
+                
+                <!-- 조회결과 -->
+                <div class="my-order-result">
+
+                    {{{render_loader "rmaListLoading"}}}
+
+                    <p id="emptyResultOrderList" class="result-x" style="display: none;">최근 <span id="searchPeriodText">1개월</span>내 <span id="searchStatusText">취소/교환/반품</span> 내역이 없습니다.</p>
+
+                    <div id="resultOrderListWrapper" style="display: none;">
+                        <h3>취소/교환/반품 조회결과</h3>
+                        <ul id="resultOrderList">
+
+                        </ul>
+
+                        <a id="moreBtn" href="#" class="more" style="display: none;">더보기</a>
+                    </div>
+
+                </div>
+                <!-- 조회결과 -->
+
+            </article>
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

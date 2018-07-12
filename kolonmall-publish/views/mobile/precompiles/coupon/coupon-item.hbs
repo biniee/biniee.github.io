@@ -1,0 +1,25 @@
+<div class="box-coupon {{#if @last}}last{{/if}}">
+    <div class="cnts list-nmtype">
+        <span class="brand-name">{{brandName}}<br /></span>
+        <h4>{{name}}<br/><small>{{type}}</small></h4>
+        <p class="dscnt"><span>{{discountValue}}</span>{{discountUnit}}</p>
+        <p class="date"><span>{{useEndDate}}</span> 까지</p>
+    </div>
+    <a href="#" class="cp-dscnt"><span>할인<br/>쿠폰</span></a>
+    <dl class="li-info">
+        <dt>쿠폰혜택 : </dt>
+        <dd>{{extraType}} {{discountValue}}{{discountUnit}} {{discountString}}</dd>
+        <dt>쿠폰번호 : </dt>
+        <dd>{{code}}</dd>
+        <dt>중복사용 : </dt>
+        {{#if IsEnabledDuplicate}}
+            <dd>다른 쿠폰과 <strong>중복사용 가능</strong></dd>
+        {{else}}
+            <dd>다른 쿠폰과 <strong>중복사용 불가</strong></dd>
+        {{/if}}
+        <dt>유효기간 : </dt>
+        <dd>{{useStartDate}} ~ {{useEndDate}}</dd>
+        <dt>사 용 처 &nbsp;:</dt>
+        <dd><a href="https://www.luckychouette.com">{{brandName}}<!-- TODO : 브랜드 url --></a></dd>
+    </dl>
+</div>

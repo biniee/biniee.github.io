@@ -1,0 +1,51 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="기획전"}}
+    {{/inline}}
+
+    {{#*inline "extrajavascript"}}
+        <script type="text/javascript">
+            {{precompile "mobile/precompiles/special/special-list-item"}}
+        </script>
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            <div class="special-select">
+                <p class="today">Today {{to_date_string todayDate}}</p>
+                <div class="filter">
+                    <select id="orderTypeSelect">
+                    {{#is orderType "recent"}}
+                        <option value="recent" selected="selected">최근등록순</option>
+                        <option value="deadline">마감임박순</option>
+                    {{else}}
+                        <option value="recent">최근등록순</option>
+                        <option value="deadline" selected="selected">마감임박순</option>
+                    {{/is}}
+                    </select>
+                    <!--<select>-->
+                        <!--<option>브랜드</option>-->
+                        <!--<option>브랜드</option>-->
+                        <!--<option>브랜드</option>-->
+                        <!--<option>브랜드</option>-->
+                    <!--</select>-->
+                </div>
+            </div>
+
+            <article class="special-list">
+                <ul id="specialList">
+                    {{#specialList.results}}
+                        {{>mobile/precompiles/special/special-list-item}}
+                    {{/specialList.results}}
+                </ul>
+                {{{render_hide_loader "specialListLoading"}}}
+                {{#gt specialList.page.totalCount specialList.page.perPage}}
+                    <a id="specialListMoreBtn" class="bnr-more">더보기</a>
+                {{/gt}}
+            </article>
+
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

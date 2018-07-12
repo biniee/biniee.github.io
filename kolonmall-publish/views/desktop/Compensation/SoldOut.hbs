@@ -1,0 +1,76 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="고객센터 -  온라인 고객보상제"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content">
+
+            {{>desktop/partials/navigation-lnb-cscenter title="고객센터" submenu="Compensation"}}
+
+             <article class="compensation contents">
+                <h3>온라인 고객보상제</h3>
+
+                <ul class="tab list3">
+                    <li><a href="/Compensation/Delay">배송지연 고객보상제</a></li>
+                    <li class="on"><a href="/Compensation/SoldOut">품절 취소 고객보상제</a></li>
+                    <li><a href="/Compensation/Coupon">보상쿠폰 사용안내</a></li>
+                </ul>
+
+                <div class="content">
+                  <h4>품절취소 고객보상이란?</h4>
+                  <p>
+                    고객님께서 주문하신 상품이 상품공급상의 문제로 인해, 주문취소요청을 드리게 될 경우 해당 되는 상품 금액 및 초과일 기준에 따른<br>
+                    보상 쿠폰을 지급해 드리는 제도입니다.
+                  </p>
+                  <p>
+                      <a href="/Contact/Add" class="btn btn-line btn-medium">1:1 상담하기</a>
+                  </p>
+
+                  <h4>품절취소 고객보상제<small>(결제완료기준)</small></h4>
+                  <table>
+                    <caption>품절취소 고객보상제</caption>
+                    <thead>
+                      <tr>
+                        <th>상품금액/배송지연</th>
+                        <th>4일째 취소</th>
+                        <th>5일째 취소</th>
+                        <th>7일째 취소</th>
+                        <th>7일 이후 취소</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>5만원 미만</th>
+                        <td>2천원 할인쿠폰</td>
+                        <td>3천원 할인쿠폰</td>
+                        <td>4천원 할인쿠폰</td>
+                        <td>5천원 할인쿠폰</td>
+                      </tr>
+                      <tr>
+                        <th>5~10만원 미만</th>
+                        <td>3천원 할인쿠폰</td>
+                        <td>4천원 할인쿠폰</td>
+                        <td>5천원 할인쿠폰</td>
+                        <td>6천원 할인쿠폰</td>
+                      </tr>
+                      <tr>
+                        <th>10만원 이상</th>
+                        <td>4천원 할인쿠폰</td>
+                        <td>5천원 할인쿠폰</td>
+                        <td>6천원 할인쿠폰</td>
+                        <td>7천원 할인쿠폰</td>
+                      </tr>
+                      <tr>
+                        <th>입금완료 3일 이내 안내시</th>
+                        <td colspan="4">고객보상 지급 대상 제외</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </article>
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}

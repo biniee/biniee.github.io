@@ -1,0 +1,50 @@
+@mixin generate-paddings-options($n, $j:0){
+  @if $j <= $n {
+    @for $i from $j through $n {
+      $step : $i*5;
+
+      .p-t-#{$step} {
+        padding-top: ($step*1px) !important;
+      }
+      .p-r-#{$step} {
+        padding-right: ($step*1px) !important;
+      }
+      .p-l-#{$step} {
+        padding-left: ($step*1px) !important;
+      }
+      .p-b-#{$step} {
+        padding-bottom: ($step*1px) !important;
+      }
+      .padding-#{$step} {
+        padding: ($step*1px) !important;
+      }
+    }
+  }
+}
+
+@include generate-paddings-options(20);
+
+/* Generic Margin Helpers
+------------------------------------
+ */
+@mixin generate-margin-options($n, $j: 0) {
+  @if $j <= $n {
+    @for $i from $j through $n {
+      $step : $i*5;
+      .m-t-#{$step} {
+        margin-top: ($step*1px);
+      }
+      .m-r-#{$step} {
+        margin-right: ($step*1px);
+      }
+      .m-l-#{$step} {
+        margin-left: ($step*1px);
+      }
+      .m-b-#{$step} {
+        margin-bottom: ($step*1px);
+      }
+    }
+  }
+}
+
+@include generate-margin-options(20);

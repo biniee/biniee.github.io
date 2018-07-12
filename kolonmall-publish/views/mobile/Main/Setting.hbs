@@ -1,0 +1,65 @@
+{{#> mobile/layouts/default }}
+    {{#*inline "header"}}
+        {{>mobile/partials/navigation-with-back title="설정"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="setting">
+
+            <div class="user logout">
+                <span>로그인을 해주세요.</span>
+                <a href="#" class="btn-login">로그인</a>
+            </div>
+            <div class="box-login">
+                <div class="user login">
+                    <span>홍길동 님</span>
+                    <a href="#" class="btn-login">로그아웃</a>
+                </div>
+                <div class="chk-auto">
+                    <p>자동로그인</p>
+                    <a href="#" class="tg-btn">자동 로그인 설정 여부</a>
+                </div>
+            </div>
+            
+
+            <article class="notice">
+                <div class="box-txt">
+                    <h4>알림설정</h4>
+                   <p class="is-agr">마케팅 정보 수신 동의<span class="agr-on">알림수신 동의 : 2017.08.28</span></p>
+                   <a href="#" class="tg-btn pop-on">마케팅 정보 수신 동의 여부</a>
+                  <p class="txt">마케팅 정보 수신에 동의 하시면 주문/결제내역,  배송/상품정보 및 할인쿠폰, 세일, 이벤트 등의 혜택 정보를 받으실 수 있습니다.</p>
+                  <div class="popup">
+                      <h5>마케팅 정보 알림 수신 동의</h5>
+                      <p class="date">2017. 12. 31</p>
+                      <p class="pop-txt"></p>
+                  </div>
+                </div>
+                <div class="box-btn">
+                    <a href="#" class="type01">휴대폰 알림 설정이 꺼져 있습니다.</a>
+                    <a href="#">알림보관함</a>
+                </div>
+            </article>
+
+            <article class="notice">
+                <div class="box-txt">
+                    <h4>위치기반 서비스</h4>
+                    <p class="is-agr">위치기반 서비스 이용 동의</p>
+                    <a href="#" class="tg-btn">마케팅 정보 수신 동의 여부</a>
+                    <p class="txt">위치기반 서비스는 GPS, Wi-Fi, 블루투스 등을 이용하여 사용자 위치를 확인 후 유용한 쇼핑 정보를 제공하는 서비스 입니다.</p>
+                    <a href="#" class="btn-view">위치기반 서비스 이용약관 보기</a>
+                </div>
+            </article>
+
+            <article class="notice">
+                <div class="box-txt">
+                    <h4>프로그램 정보</h4>
+                    <p class="vsn">Version 1. 0. 9 <span>최신 버전입니다.</span></p>
+                </div>
+                <div class="box-btn">
+                        <a href="#">언어설정 <span>한국어</span></a>
+                    </div>
+            </article>
+        </section>
+    {{/inline}}
+{{/mobile/layouts/default}}

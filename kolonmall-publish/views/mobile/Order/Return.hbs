@@ -1,0 +1,289 @@
+{{#> mobile/layouts/default }}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="pt0">
+            
+
+            <article class="mypage-order pt0">
+                <div class="h1-top">
+                    <a href="javascript:history.go(-1)" class="pop-close close2">닫기</a>
+                    <h1>반품신청</h1>
+                </div>
+
+                <form name="input_form" id="rmaOrderForm" data-order-number="{{order.orderNumber}}" data-rma-type="Return">
+                    <input type="hidden" name="{{CSRFName}}" value="{{CSRFToken}}" />
+
+                    <div class="order-number">
+                        <p>주문번호 : {{order.orderNumber}}<i>({{order.createdDate}})</i></p>
+                        <p>반품을 원하시는 상품을 선택해 주세요.</p>
+                    </div>
+                    <div class="top">
+                        <div class="ch-area">
+                            <div class="check">
+                                <input type="checkbox" id="all" onclick="check();" />
+                                <label for="all"></label>
+                            </div>
+                            <label for="all">전체({{length order.items}})</label>
+                        </div>
+                    </div>
+
+                    <div class="my-order-result">
+                        <ul class="order-detail">
+                            <li class="bundle cancel">
+                                {{#if order.items}}
+                                    <ul id="rmaOrderItemList">
+                                        {{#order.items}}
+                                            {{>mobile/precompiles/order/return-item displayedDeliveryType=../order.displayedDeliveryType selectedOrderEntryCode=../selectedOrderEntryCode}}
+                                        {{/order.items}}
+                                    </ul>
+                                {{/if}}
+                            </li>
+                        </ul>
+                        <div class="popup">선택된 상품의 사은품도 같이 보내주셔야<br/>환불이 원활하게 진행됩니다.</div>
+                    </div>
+
+                    {{#is order.deliveryType "DELIVERYSERVICE"}}
+                    {{#if order.items}}
+                        {{>mobile/partials/order/order-detail-delivery order.items.[0].deliveryAddress}}
+                    {{/if}}
+                {{/is}}
+
+                    {{#is order.deliveryType "PICKUP"}}
+                        {{#if order.items}}
+                            {{>mobile/partials/order/order-detail-store order.items.[0].pickupInformation}}
+                        {{/if}}
+                    {{/is}}
+
+                    <!-- 반품상품 수거정보 -->
+                    <div class="order cancel-return">
+                        <div class="d-info">
+                            <div class="d-top">
+                                <h3>반품상품 수거정보</h3>
+                                <div class="btn-tg alreadySend"><a href="#">상품을 이미 판매자에게 발송</a></div>
+                            </div>
+                            <div>
+                                <div class="ch-area">
+                                    <div class="check">
+                                        <input type="checkbox" id="deliveryStatus" name="chk" />
+                                        <label for="deliveryStatus"></label>
+                                    </div>
+                                    <label for="address">주문 배송 정보와 동일</label>
+                                </div>
+                            </div>
+                            <div class="add ad1">
+                                <ul>
+                                    <li>
+                                        <div class="tit">보내는분</div>
+                                        <div class="cont">
+                                            <input type="text" id="name" name="name" placeholder="이름을 입력해 주세요."/>
+                                        </div>
+                                    </li>
+                                    <li class="zipCode">
+                                        <div class="tit">우편번호</div>
+                                        <div class="cont">
+                                            <!--span>123-456</span-->
+                                            <a href="#" class="btn hs-mt">나의 배송지</a>
+                                            <a href="#" class="btn">우편번호찾기</a>
+                                        </div>
+                                    </li>
+                                    <li class="txt-box">
+                                        <div class="tit">상세주소</div>
+                                        <div class="cont">
+                                            <textarea id="address" name="address" placeholder="상세 주소를 입력해 주세요."></textarea>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">휴대폰번호</div>
+                                        <div class="cont">
+                                            <input type="text" id="mobileNumber" name="mobileNumber" placeholder="휴대폰 번호를 입력해 주세요."/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">전화번호</div>
+                                        <div class="cont">
+                                            <input type="text" id="telephoneNumber" name="telephoneNumber" placeholder="선택입력"/>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="add ad2 alreadySendArea">
+                                <ul>
+                                    <li>
+                                        <div class="tit">반품택배사</div>
+                                        <div class="cont">
+                                            <select class="parcel-service" id="deliveryVendorSelect">
+                                                <option value="">택배사 선택</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="calendar">
+                                        <div class="tit">발송일</div>
+                                        <div class="cont">
+                                            <a href="#">날짜선택</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">송장번호</div>
+                                        <div class="cont">
+                                            <input type="text" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //반품상품 수거정보 -->
+
+                    <!-- 사은품 회수 목록 -->
+                    <!--<div class="order cancel-gift">-->
+                        <!--<div class="d-top">-->
+                            <!--<h3>사은품 회수 목록</h3>-->
+                            <!--<p>해당 사은품도 같이 보내주셔야 환불이 원할하게 진행됩니다.</P>-->
+                        <!--</div>-->
+                        <!--<div class="gift">-->
+                            <!--<ul class="gift-choice">-->
+                                <!--<li>-->
+                                    <!--<p class="tit">[WAAC] UTG 강희재 PICK상품 30만원 이상 구매 사은품</p>-->
+                                    <!--<ul class="list">-->
+                                        <!--<li class="select">-->
+                                            <!--<div class="prod"><img src="/_ui/img/m/temp/d-prod02.png" alt="사은품 썸네일" /></div>-->
+                                            <!--<div class="info">-->
+                                                <!--<p class="t1">WAAC</p>-->
+                                                <!--<p class="t2">강희재 모자 - 볼륨 매쉬 업</p>-->
+                                            <!--</div>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<div class="prod"><img src="/_ui/img/m/temp/d-prod02.png" alt="사은품 썸네일" /></div>-->
+                                            <!--<div class="info">-->
+                                                <!--<p class="t1">WAAC</p>-->
+                                                <!--<p class="t2">맵 스냅백(사은품명 입력정보)</p>-->
+                                            <!--</div>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<p class="tit">[series] 30만원 이상 구매 사은품</p>-->
+                                    <!--<ul class="list">-->
+                                        <!--<li class="select">-->
+                                            <!--<div class="prod"><img src="/_ui/img/m/temp/d-prod02.png" alt="사은품 썸네일" /></div>-->
+                                            <!--<div class="info">-->
+                                                <!--<p class="t1">SERIES</p>-->
+                                                <!--<p class="t2">네츄럴 컬러 양말 증정</p>-->
+                                            <!--</div>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!-- //사은품 회수 목록 -->
+
+                    <!-- 결제정보 -->
+                    <div class="complete cancel">
+                        {{>mobile/partials/order/order-detail-payment totalBasePrice = order.totalBasePrice deliveryCost = order.deliveryCost discount = order.discount payments = order.payments orderDetailPrice = order.orderDetailPrice}}
+                    </div>
+                    <!-- //결제 정보 -->
+
+                    <!-- 반품배송비/환불정보 -->
+                    <div class="complete cancel">
+                        <div class="box2">
+                            <h3>반품배송비/환불정보</h3>
+                            <dl class="dl-table bb0">
+                                <dt>환불수단</dt>
+
+                                <dd class="dt" id="firstRefundName">포인트</dd>
+                                <dd class="bd0" id="firstRefundValue">1,000P</dd>
+
+                                <dt>반품배송비</dt>
+                                <dd class="dt">금액</dd>
+                                <dd id="returnDeliveryCost"></dd>
+                            </dl>
+                            <div class="btns-tab" id="refundDeliveryGb">
+                                <a href="#" class="on" data-refund-delivery-gb="10">환불금액에서 차감</a>
+                                <a href="#" data-refund-delivery-gb="20">계좌로 입금</a>
+                            </div>
+                            <div class="tab-info">
+                                <div class="div1 tab-on">
+                                    <p class="tit">환불금액에서 차감</p>
+                                    <p class="txt">
+                                        아래 환불 예정금액에서 반품배송비 차감됩니다.<br />
+                                        신용카드 전체 환불의 경우 부분취소가 되지 않을 수 있으므로 계좌로 입금을 선택해 주시기 바랍니다.
+                                    </p>
+                                    <p class="txt">
+                                        일부 상품 반품시 : 2,500원 / 전체 상품 반품시 : 5,000원
+                                    </p>
+                                </div>
+                                <div class="div2">
+                                    <p class="tit">계좌로 입금</p>
+                                    <p class="txt">
+                                        우리은행 1005-500-961058(예금주:코오롱인더스트리)으로 반품배송비를 3일 이내로 결제해 주시기 바랍니다.<br />
+                                        반품상품 및 배송비 입금이 확인된 후에 환불이 완료됩니다.
+                                    </p>
+                                    <p class="txt">일부 상품 반품시 : 2,500원 / 전체 상품 반품시 : 5,000원</p>
+                                </div>
+                            </div>
+                            <dl class="total">
+                                <dt>총 결제금액</dt>
+                                <!-- TODO : 총 환불금액은 계산해서 넣는건지.. 모르겠다.... as is 소스 보면 환불페이지는 금액관련 에러처리가 많다. 주문 테스트 할때 더 볼 것. -->
+                                <dd id="returnResultPrice"><i>원</i></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //반품배송비/환불정보 -->
+
+                    <div class="return-notice">
+                        <h3>다음과 같이 상품이 사용/훼손된 경우에는 교환 및 반품이 되지 않습니다.</h3>
+                        <ul>
+                            <li>고객님의 귀책 사유로 상품이 훼손된 경우.<br />(단, 상품의 내용 확인을 위해 포장 등을 훼손한 경우는 제외)</li>
+                            <li>포장을 개봉하였거나 포장이 훼손되어 상품가치가 현저히 상실된 경우.</li>
+                            <li>상품의 TAG, 스티커, 비닐포장, 케이스 등을 훼손 및 분실한 경우.</li>
+                            <li>시간의 경과에 의하여 재판매가 곤란할 정도로 상품 등의 가치가 현저히 감소한 경우.</li>
+                        </ul>
+                        <!-- TODO : 반품 FAQ 링크 주소는? -->
+                        <a href="#">반품 FAQ 보기</a>
+                    </div>
+
+                    <div class="cancel-btns">
+                        <a href="javascript:history.go(-1)" class="btn1">취소</a>
+                        <a href="#" class="btn2" id="rmaOrderSubmitBtn">반품신청</a>
+                    </div>
+
+                </form>
+                
+            </article>
+            
+
+        </section>
+    {{/inline}}
+    {{#*inline "extrajavascript"}}
+        <script>
+            function change(obj) {
+                var request = obj.options[obj.selectedIndex].value;
+                var itemIndex = $(obj).parent('li').index()
+
+                if( request == "txtbox" ){
+                    $(obj).siblings('.request-txt').css('display','block');
+                }else{
+                    $(obj).siblings('.request-txt').css('display','none');
+                }
+                if( request == "size" ){
+                    $(obj).siblings('.cause-size').css('display','block');
+                }else{
+                    $(obj).siblings('.cause-size').css('display','none');
+                }
+            }
+            function check(){
+                cbox = input_form.getElementsByClassName('orderItemCheckbox');
+                if(cbox.length) {
+                    for(var i = 0; i<cbox.length;i++) {
+                        cbox[i].checked=input_form.all.checked;
+                    }
+                } else {
+                    cbox.checked=input_form.all.checked;
+                }
+            }
+
+        </script>
+    {{/inline}}
+{{/mobile/layouts/default}}

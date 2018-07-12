@@ -1,0 +1,226 @@
+---
+프론트(1차 정리 완료):
+  - name: 메인
+    id: Main.Index
+  - name: 메인 팝업
+    id: Main.PopUp
+  - name: 앱 다운로드
+    id: Main.AppDownload
+  - name: 메뉴(GNB)
+    id: Main.Menu
+  - name: 로그인
+    id: Login
+  - name: 카테고리 메인
+    id: Category.Index
+  - name: 카테고리 목록
+    id: Category.List
+  - name: 브랜드 메인
+    id: Brand.Index
+  - name: 브랜드 소개
+    id: Brand.Intro
+  - name: 브랜드 목록
+    id: Brand.List
+  - name: 상품 상세
+    id: Product.Detail
+  - name: 세트 상품 상세
+    id: Product.SetDetail
+  - name: 기획전 목록
+    id: Special.Index
+  - name: 기획전 상세
+    id: Special.Detail
+  - name: 이벤트 목록
+    id: Event.Index
+  - name: 이벤트 상세
+    id: Event.Detail
+  - name: 매장 선택 팝업
+    id: Product.DetailStore
+  - name: 선물포장 팝업
+    id: Product.DetailGift
+  - name: 카드 혜택 안내
+    id: Product.Card
+  - name: 적립 포인트 안내
+    id: Product.Point
+  - name: 배송 안내
+    id: Product.Delivery
+  - name: 교환 반품 안내
+    id: Product.Exchange
+  - name: 수선품 접수 안내
+    id: Product.Repair
+  - name: 검색
+    id: Search.Index
+  - name: 검색 결과
+    id: Search.Result
+고객센터(1차 정리 완료):
+  - name: FAQ - 메인
+    id: FAQ.Index
+  - name: FAQ - 리스트
+    id: FAQ.List
+  - name: 일대일 문의 - 리스트
+    id: Contact.Index
+  - name: 일대일 문의 - 작성
+    id: Contact.Add
+  - name: 일대일 문의 - 상품 선택
+    id: Contact.SearchProduct
+  - name: A/S 안내 - 품질 보증 및 보상 기준
+    id: AfterSales.Warranty
+  - name: A/S 안내 - 수선품 접수 안내
+    id: AfterSales.RepairGuide
+  - name: A/S 안내 - 수선 가능 범위 및 가격
+    id: AfterSales.RepairCoverage
+  - name: A/S 안내 - 수선품 진행 조회
+    id: AfterSales.RepairProgress
+  - name: 공지 사항
+    id: Notice.Index
+  - name: 공지 사항 - 상세
+    id: Notice.View
+  - name: 비회원 주문 조회 - 상세
+    id: GuestOrder.Detail
+  - name: eKOLON 멤버십 - 멤버십 포인트 안내
+    id: eKOLON.Point
+  - name: eKOLON 멤버십 - 멤버십 포인트 가맹점
+    id: eKOLON.Brand
+  - name: 온라인 고객 보상제 - 배송 지연
+    id: Compensation.Delay
+  - name: 온라인 고객 보상제 - 품절 취소
+    id: Compensation.SoldOut
+  - name: 온라인 고객 보상제 - 쿠폰 안내
+    id: Compensation.Coupon
+  - name: 쇼핑몰 제휴 및 광고 제안
+    id: Proposal.Add
+  - name: 이용약관
+    id: TermsAndConditions.Index
+주문(1차 정리 완료):
+  - name: 장바구니
+    id: Cart.Index
+  - name: 임직원 장바구니
+    id: Cart.Family
+  - name: 비회원 장바구니
+    id: Cart.Guest
+  - name: 주문 - 배송지 정보
+    id: Order.Delivery
+  - name: 주문 - 임직원 배송지 정보
+    id: Order.DeliveryFamily
+  - name: 주문 - 비회원 배송지 정보
+    id: Order.DeliveryGuest
+  - name: 주문 - 매장픽업 정보  
+    id: Order.DeliveryPickUp
+  - name: 주문 - 임직원 매장픽업 정보
+    id: Order.DeliveryPickUpFamily
+  - name: 주문 - 우편번호 검색
+    id: Order.SearchZipCode
+  - name: 주문 - 나의 배송지
+    id: Order.MyDelivery
+  - name: 주문 - 나의 배송지 추가/수정
+    id: Order.MyDeliveryAdd
+  - name: 주문 - 결제
+    id: Order.Checkout
+  - name: 주문 - 임직원 결제
+    id: Order.CheckoutFamily
+  - name: 주문 - 비회원 결제
+    id: Order.CheckoutGuest
+  - name: 주문 - 매장픽업 결제
+    id: Order.CheckoutPickUp
+  - name: 주문 - 임직원 매장픽업 결제
+    id: Order.CheckoutPickUpFamily
+  - name: 주문 - 주문 완료
+    id: Order.Complete
+  - name: 주문 - 임직원 주문 완료
+    id: Order.CompleteFamily
+  - name: 주문 - 비회원 주문 완료
+    id: Order.CompleteGuest
+  - name: 주문 - 매장 픽업 상품 교환권
+    id: Order.PickUpExchangeTicket
+eKOLON 멤버십(정리중):
+  - name: 회원 가입 안내
+    id: Membership.JoinIntro
+  - name: 회원 가입 1 - 본인 인증
+    id: Membership.JoinVerification
+  - name: 회원 가입 2 - 약관 동의
+    id: Membership.JoinAgreement
+  - name: 회원 가입 3 - 정보 입력 (휴대폰)
+    id: Membership.JoinRegistrationMobile
+  - name: 회원 가입 3 - 정보 입력 (아이핀)
+    id: Membership.JoinRegistrationIPin
+  - name: 회원 가입 4 - 가입 완료
+    id: Membership.JoinComplete
+마이 페이지(1차 정리 완료):
+  - name: 마이 페이지
+    id: MyPage.Index
+  - name: 마이 페이지 (임직원)
+    id: Mypage.Family
+  - name: 와우 마이 코오롱
+    id: MyPage.WowMyKolon
+  - name: 임직원 이용 안내 - 가입/이용 안내
+    id: MyPage.FamilyGuide
+  - name: 임직원 이용 안내 - 직원 DC 사용 방법
+    id: MyPage.FamilyDiscountGuide
+  - name: 주문 조회 (택배 상품 / 픽업 상품 / 세트 상품)
+    id: Order.List
+  - name: 주문 조회 - 매장픽업 상품 교환권
+    id: Order.ListPickUpExchangeTicket
+  - name: eKOLON 구매내역 (택배 상품 / 픽업 상품 / 세트 상품)
+    id: Order.eKOLONList
+  - name: 주문 안내
+    id: Order.ListGuide
+  - name: 주문 매장 안내
+    id: Order.ListStoreGuide
+  - name: 주문 조회 상세 (택배 상품)
+    id: Order.Detail
+  - name: 주문 조회 상세 (택배 상품 - 매장 주문 후 온라인 결제)
+    id: Order.DetailStore
+  - name: 주문 조회 상세 (픽업 상품)
+    id: Order.DetailPickUp
+  - name: 주문 취소 (택배 상품)
+    id: Order.Cancel
+  - name: 주문 취소 (픽업 상품)
+    id: Order.CancelPickUp
+  - name: 주문 취소 완료
+    id: Order.CancelComplete
+  - name: 주문 교환 신청 (택배 상품 / 세트 상품)
+    id: Order.Exchange
+  - name: 주문 교환 신청 (픽업 상품)
+    id: Order.ExchangePickUp
+  - name: 주문 교환 신청 완료
+    id: Order.ExchangeComplete
+  - name: 주문 반품 신청 (택배 상품)
+    id: Order.Return
+  - name: 주문 반품 신청 (픽업 상품)
+    id: Order.ReturnPickUp
+  - name: 주문 반품 신청 완료
+    id: Order.ReturnComplete
+  - name: 취소 / 교환 / 반품 조회 (택배 상품 / 픽업 상품 / 세트 상품)
+    id: RMA.List
+  - name: 취소 / 교환 / 반품 안내
+    id: RMA.ListGuide
+  - name: 취소 조회 상세 (택배 상품)
+    id: RMA.CancelDetail
+  - name: 취소 조회 상세 (픽업 상품)
+    id: RMA.CancelDetailPickUp
+  - name: 교환 조회 상세 (택배 상품 / 세트 상품)
+    id: RMA.ExchangeDetail
+  - name: 교환 조회 상세 (픽업 상품)
+    id: RMA.ExchangeDetailPickUp
+  - name: 반품 조회 상세 (택배 상품)
+    id: RMA.ReturnDetail
+  - name: 반품 조회 상세 (픽업 상품)
+    id: RMA.ReturnDetailPickUp
+  - name: 온라인 관심 상품
+    id: WishList.OnlineList
+  - name: 오프라인 관심 상품
+    id: WishList.OfflineList
+  - name: 등록 리뷰
+    id: Review.RegisteredList
+  - name: 미등록 리뷰
+    id: Review.UnregisteredList
+  - name: 리뷰 작성
+    id: Review.Add
+  - name: eKolon 포인트 - 포인트 내역
+    id: Point.List
+  - name: eKolon 포인트 - 적립 예정 포인트 내역
+    id: Point.WaitingList
+  - name: 온라인 쿠폰
+    id: Coupon.OnlineList
+  - name: 오프라인 쿠폰
+    id: Coupon.OfflineList
+  - name: 예치금
+    id: Deposit.Index

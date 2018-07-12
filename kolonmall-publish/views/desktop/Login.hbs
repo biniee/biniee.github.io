@@ -1,0 +1,115 @@
+{{#> desktop/layouts/default }}
+    {{#*inline "header"}}
+        {{>desktop/partials/navigation-gnb title="로그인"}}
+    {{/inline}}
+
+    {{#*inline "content"}}
+        <h2 class="hidden">KOLONmall 본문영역</h2>
+        <section id="kolon-content" class="main">
+            <input type="hidden" id="errorMessage" value="{{errorMessage}}" />
+            <article class="login-wrap">
+                <div class="login-form">
+                    <div class="top">
+                        <h3>LOGIN</h3>
+                        <div class="tab-menu">
+                            <a href="#tab1" class="active">회원 로그인</a>
+                            <a href="#tab2">비회원 주문조회</a>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <!-- tab1 -->
+                        <div id="tab1" class="active">
+                            <form class="form-login" id="loginForm" action="./j_spring_security_check" method="post">
+                                <input type="hidden" name="returnUrl" value="{{returnUrl}}">
+                                <input type="hidden" id="type" name="type" value="01" />
+                                <fieldset>
+                                    <legend>회원 로그인</legend>
+                                    <div class="input-group">
+                                        <dl>
+                                            <dt><label for="user-id">아이디</label></dt>
+                                            <dd><input type="text" placeholder="아이디 또는 휴대폰 번호를 입력하세요." id="user_id" name="j_username" value="{{userName}}"/></dd>
+                                            <dt><label for="user-pw">비밀번호</label></dt>
+                                            <dd><input type="password" placeholder="비밀번호를 입력하세요." id="password" name="j_password" /></dd>
+                                        </dl>
+                                        <button type="submit" class="btn">로그인</button>
+                                    </div>
+                                    <div class="check-group">
+                                        <span class="checkbox">
+                                            <input type="checkbox" id="id-save" name="_save_username" {{#is saveUserName true}}checked{{/is}}/>
+                                            <i></i>
+                                        </span>
+                                        <label for="id-save">아이디 저장</label>
+                                    </div>
+
+                                    <div class="check-group">
+                                        <span class="checkbox">
+                                            <input type="checkbox" id="id-phone"/>
+                                            <i></i>
+                                        </span>
+                                        <label for="id-phone">휴대폰 번호로 로그인</label>
+                                    </div>
+
+                                    <div class="link-group">
+                                        <a href="/Membership/Sign">회원가입</a>
+                                        <a href="/Membership/FindLoginId">아이디찾기</a>
+                                        <a href="/Membership/FindPassword">비밀번호찾기</a>
+                                    </div>
+                                    <!--<div class="sns">-->
+                                        <!--<p>소셜 계정으로 간편하게 로그인하실 수 있습니다.</p>-->
+                                        <!--<div class="icons">-->
+                                            <!--<a href="#" target="_blank" class="facebook">Facebook</a>-->
+                                            <!--<a href="#" target="_blank" class="google">Google</a>-->
+                                            <!--<a href="#" target="_blank" class="naver">Naver</a>-->
+                                            <!--{{!--<a href="#" target="_blank" class="kakao">KakaoTalk</a>--}}-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- // tab1 -->
+
+                        <!-- tab2 -->
+                        <div id="tab2">
+                            <form class="form-login" action="/GuestOrder/Detail" method="post" id="guestOrderForm">
+                                <input type="hidden" name="CSRFToken" value="{{CSRFToken}}">
+                                <fieldset>
+                                    <legend>비회원 로그인</legend>
+                                    <div class="input-group">
+                                        <dl>
+                                            <dt><label for="user-name">주문자명</label></dt>
+                                            <dd><input type="text" name="name" id="user-name" placeholder="이름을 입력하세요."></dd>
+                                            <dt><label for="user-num">주문번호</label></dt>
+                                            <dd><input type="password" name="orderNumber" id="user-num" placeholder="주문번호 또는 핸드폰 번호를 입력하세요."></dd>
+                                        </dl>
+                                        <button type="submit" class="btn" id="guestOrderFormSubmitBtn">주문조회</button>
+                                    </div>
+                                    <ul class="bul-list">
+                                        <li>비회원고객님께서 주문하신 상품의 목록과 배송상태를 확인할 수 있습니다.</li>
+                                        <li>주문자명과 주문번호 또는 휴대폰번호를 입력하시면 주문내역을 확인할 수 있습니다.</li>
+                                    </ul>
+                                    <div class="link">
+                                        <a href="#" class="btn btn-line">비회원 구입</a>
+                                        <a href="/Membership/Sign" class="btn btn-line">회원가입</a>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- // tab2 -->
+                    </div>
+                </div>
+                <div class="banner">
+                    {{#fetch_banner "DESKTOP" "page" "login" "side"}}
+                        {{#if banners.page.totalCount}}
+                            {{#banners.results}}
+                                <a href="{{link}}"><img src="{{content.bgImage}}"></a>
+                            {{/banners.results}}
+                        {{/if}}
+                    {{/fetch_banner}}
+                    
+                </div>
+            </article>
+
+        </section>
+    {{/inline}}
+
+{{/desktop/layouts/default}}
