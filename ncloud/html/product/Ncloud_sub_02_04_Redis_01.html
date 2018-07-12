@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="bg">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3 dw2">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="on d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3 dw3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">요금 소개</a></li>
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="product">
+      <div class="sub-tit prod04">
+        <div class="sw">
+          <h3>Redis</h3>
+          <p>빠른 응답 속도를 가진 고성능 오픈 소스<br/>인 메모리 데이터베이스입니다</p>
+          <a href="#">이용 신청하기</a>
+        </div>
+      </div>
+      <div class="sub-body">
+
+        <!-- tab -->
+        <ul class="tab-type01 prdt-tab lgTab tab4 mt60 h52">
+          <li class="on">
+            <a href="#">특징</a>
+          </li>
+          <li>
+            <a href="#">상세 기능</a>
+          </li>
+          <li>
+            <a href="#">요금</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="tab-wrap">
+
+          <div class="on">
+            <div class="width">
+              <h4 class="hidden">특징</h4>
+              <div class="tc mt55">
+                <p class="f32 fNS bold">빠르고 안정적인 Redis가 설치된 서버 제공</p>
+                <p class="c66 mt25">
+                  Redis는 보편적인 메인 메모리 기반 Key-Value 스토리지로 네이버와 LINE에서도 서비스 성능 향상을 위해 폭넓게 사용되고 있습니다.<br/>
+                  네이버 클라우드 플랫폼에서는 추가적인 시간과 리소스 투입 없이 곧바로 Redis를 사용할 수 있도록 Redis가 설치된 서버를 제공합니다.
+                </p>
+              </div>
+
+              <ul class="ul-type03 mt40">
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-rds01.png" alt="상품관련 아이콘" class="fr" />
+                    <div class="fl w528">
+  										<h5>편리한 사용</h5>
+  										<p class="f14">
+  										  CentOS, Ubuntu 기반에 최신 Redis 3.2가 설치된 서버를 제공하고 있습니다. 사용자는 별도의 작업 또는 어떠한 설정도 할 필요 없이 OS 이미지 생성만으로 즉시 Redis를 사용할 수 있습니다.
+  										</p>
+  									</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fr w528">
+  										<h5>네트워크 기반의 보안 강화</h5>
+  										<p class="f14">
+  										  Redis는 자체적으로 보안기능을 지원하지 않습니다. 하지만 네이버 클라우드 플랫폼에서 무료로 제공하는 네트워크 보안 기능인 ACG를 기반으로 한 강력한 네트워크 보안을 Redis 상품에 적용하여 사용할 수 있습니다.
+  										</p>
+  									</div>
+                    <img src="../../img/ko/prod-server03.png" alt="상품관련 아이콘" class="fl" />
+                  </div>
+                </li>
+                <li>
+								<div class="wrap of_h">
+									<div class="fl w528">
+										<h5>빠른 응답 성능</h5>
+										<p class="f14">
+										  데이터를 HDD 또는 SSD에 저장하는 기존 RDBMS와 달리 메인 메모리에 데이터를 저장하는 Key –Value 스토리지인 Redis는 빠른 응답 속도를 자랑 합니다.
+                      실시간으로 응답이 필요한 서비스나 RDBMS 기반 서비스의 성능을 더욱 향상시키기 위한 캐시 용도로 사용할 경우 Redis의 장점을 극대화 할 수 있습니다.
+										</p>
+									</div>
+									<img src="../../img/ko/prod-rds03.png" alt="상품관련 아이콘" class="fr" />
+								</div>
+							</li>
+              </ul>
+              <a href="#" onclick="javascript:loadMC('SVR');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">상세기능</h4>
+
+              <div class="h4-area mt50">
+                <h4>다양한 개발 환경 지원</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                Redis는  Java, C, PHP, Node js, Ruby, R, Go 등 다양한 언어를 지원하고 있으며,
+                수많은 오픈 소스 클라이언트를 이용하여 개발에 빠르게 적용할 수 있습니다. 더 자세한 내용은 다음 링크를 통해 확인할 수 있습니다. (<a href="https://Redis.io/clients" target="_blank">https://Redis.io/clients</a>)
+              </p>
+              <div class="h4-area mt60">
+                <h4>다수의 자료형 제공</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                단순한 key Value 1:1 매핑만이 아니라 문자열의 순서를 그대로 보관할 수 있는 Lists,  Value의 정수 값에 따라 언제나 정렬을 보장하는 Sorted Set,<br/>
+                필드와 값의 목록을 저장하기 위한 Hashes 등 다양한 자료형을 제공함으로써 비즈니스에 최적화된 데이터 구조 설계가 가능 합니다
+              </p>
+              <div class="h4-area mt60">
+                <h4>데이터 지속성 지원</h4>
+              </div>
+              <p class="f14 c66 mt10 mb10">
+                캐시 형태로 메모리에서만 사용하는 휘발성 데이터로 사용할 수 있을 뿐만 아니라 특정 시점의 데이터를 디스크에 저장하는 스냅샷 기능과 데이터가 변경될 때마다 디스크에 저장하는 AOF(Append Only File)
+                시스템이 지원되어 장애 발생 시 데이터 복구가 가능한 인 메모리 데이터베이스와 같은 형태로 사용이 가능 합니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>Redis 클러스터 기반의 고가용성 지원 (지원 예정)</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                Redis 클러스터는 여러개의 Redis 노드들이 하나의 클러스터를 구성하는 방식으로, 각 노드로 데이터를 균등하게 분산함으로써 메인 메모리 기반의 <br/>
+                대용량 구성이 가능합니다. 동적으로 클러스터 노드 추가 및 삭제가 가능하며(dynamic scale out) 노드에 슬레이브를 추가하여 고가용성을 지원 합니다.
+              </p>
+              <a href="#" onclick="javascript:loadMC('SVR');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">요금</h4>
+
+              <div class="div01">
+                <h4 class="f18">Redis 는 오픈 소스 시스템으로, 설치형 상품의 경우 Server 이용요금 외에 별도의 추가 요금이 발생하지 않습니다</h4>
+              </div>
+
+              <table class="tbl-type01 mt40 col4">
+							<caption>요금 표</caption>
+							<thead>
+								<tr>
+									<th>운영체제</th>
+									<th>제공 버전</th>
+                  <th>이용 요금(월)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>CentOS 6.6</th>
+									<td>Redis 3.2</td>
+									<td>무료</td>
+								</tr>
+                <tr>
+									<th>CentOS 6.6</th>
+									<td>CentOS 7.3</td>
+									<td>무료</td>
+								</tr>
+                <tr>
+									<th>Ubuntu Server 14.04</th>
+									<td>Redis 3.2</td>
+									<td>무료</td>
+								</tr>
+                <tr>
+									<th>Ubuntu Server 16.04</th>
+									<td>Redis 3.2</td>
+									<td>무료</td>
+								</tr>
+							</tbody>
+						</table>
+            <a href="#" onclick="javascript:loadMC('SVR');return false;" class="btn-prod">이용 신청하기</a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn3"></span><span>Console</span></a></li>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+$(function(){
+  var prodTabIdx = 0;
+  $('.lgTab>li').click(function(){
+    prodTabIdx = $(this).index();
+    $(this).addClass('on').siblings('li').removeClass('on');
+    $('.tab-wrap').children('div').eq(prodTabIdx).addClass('on').siblings('div').removeClass('on');
+    if( prodTabIdx == 0 ){
+      $('#wrap').addClass('bg');
+    }else{
+      $('#wrap').removeClass('bg');
+    }
+    return false;
+  });
+});
+</script>
+</body>
+</html>

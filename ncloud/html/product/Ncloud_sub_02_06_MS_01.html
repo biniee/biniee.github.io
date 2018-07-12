@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="bg">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3 dw2">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3 dw3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="on d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">요금 소개</a></li>
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="product">
+      <div class="sub-tit prod06">
+        <div class="sw">
+          <h3>
+            <div>
+              <span class="beta">BETA</span>
+            </div>
+            Security Monitoring
+          </h3>
+          <p>다양한 보안 위협으로부터 고객의 서비스를<br/>안전하게 보호합니다</p>
+          <a href="#">이용 문의하기</a>
+        </div>
+      </div>
+      <div class="sub-body">
+
+        <!-- tab -->
+        <ul class="tab-type01 prdt-tab lgTab tab4 mt60 h52">
+          <li class="on">
+            <a href="#">특징</a>
+          </li>
+          <li>
+            <a href="#">상세 기능</a>
+          </li>
+          <li>
+            <a href="#">요금</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="tab-wrap">
+
+          <div class="on">
+            <div class="width">
+              <h4 class="hidden">특징</h4>
+              <div class="tc mt55">
+                <p class="f32 fNS bold">전문 인력을 통해 고객의 서비스를 24시간 365일 안전하게 보호</p>
+                <p class="c66 mt25">
+                  외부의 보안 위협을 실시간으로 감시하고 탐지된 이벤트에 효율적으로 대응할 수 있는<br/>
+                  자동화된 보안 시스템으로 고객의 서비스를 안전하게 보호합니다.
+                </p>
+              </div>
+
+              <ul class="ul-type03 mt40">
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528">
+                      <h5>고도화된 보안 정책 제공</h5>
+                      <p class="f14">
+                        최신 공격 기법을 정확히 탐지/모니터링할 수 있는 고도화된 보안 정책을 제공합니다. 필요한 경우 고객 서비스에 특화된 보안 정책을 제공해 고객의 서비스를 보다 안전하게 보호합니다. 또한 DDoS와 같은 공격에 효율적으로 대응함으로써 고객의 서비스 가용성을 안전하게 확보해 비즈니스 연속성을 보장하고, 최신의 웹 공격과 악성코드 감염 공격을 효율적으로 차단/대응할 수 있는 자동화된 보안 서비스도 제공합니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-security11.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-security10.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528">
+                      <h5>자동 모니터링으로 편리한 감시</h5>
+                      <p class="f14">
+                        최고 수준의 전문 보안 인력이 다양한 공격 이벤트를 실시간으로 모니터링하고 고객에게 통보함으로써 고객 서비스에 대한 보안 위협을 원천적으로 차단합니다. 뿐만 아니라 고객의 서비스를 더욱 안전하게 보호할 수 있도록 탐지된 보안 위협에 대한 분석 리포트 및 대응 가이드를 제공합니다.
+                      </p>
+                    </div>
+
+                  </div>
+                </li>
+              </ul>
+              <a href="/support/inquiry/general" class="btn-prod">이용 문의하기</a>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">상세기능</h4>
+
+              <div class="h4-area mt55">
+                <h4>상품/서비스 종류에 따라 제공되는 서비스</h4>
+              </div>
+              <table class="tbl-type01">
+                <caption>상품/서비스 종류에 따라 제공되는 서비스 표</caption>
+                <colgroup>
+                  <col width="10%" />
+                  <col width="15%" />
+                  <col width="50%" />
+                  <col width="25%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>구분</th>
+                    <th>서비스명</th>
+                    <th>서비스 설명</th>
+                    <th>제공 서비스</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">Basic</th>
+                    <td>IDS 관제</td>
+                    <td class="lh tl">
+                      사용자의 서비스를 안전하게 보호하기 위해 최신 공격 탐지 서비스를 제공합니다. 공격자의 실시간 공격을 탐지하고 분석해 사용자에게 리포트를 제공합니다.
+                    </td>
+                    <td class="tl">
+                      - 공격 탐지/분석 리포트 제공
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>DDoS 관제</td>
+                    <td class="lh tl">
+                      사용자의 서비스를 DDoS 공격으로부터 안전하게 보호하기 위해 DDoS 공격에 대한 탐지 서비스를 제공합니다. DDoS 공격 발생 시 공격을 탐지하고 분석해 사용자에게 리포트를 제공합니다.
+                    </td>
+                    <td class="tl">
+                      - 공격 탐지/분석 리포트 제공
+                    </td>
+                  </tr>
+                  <tr>
+                    <th rowspan="5">Managed</th>
+                    <td>IDS 관제</td>
+                    <td class="lh tl">
+                      최신 공격 탐지는 물론 공격에 대한 대응을 실시간으로 제공하고, 사용자의 서비스에 특화된 탐지 정책을 개발해 집중적으로 관리합니다.
+                    </td>
+                    <td class="lh tl">
+                      - 공격 탐지/분석 리포트<br />
+                      - 실시간 대응<br />
+                      - 서비스 특화 탐지 정책 관리<br />
+                      - 주간/월간 리포트 제공
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>DDoS 관제</td>
+                    <td class="lh tl">
+                      DDoS 공격 발생 시 실시간 대응 서비스를 제공합니다. 사용자의 서비스를 분석, 학습해 DDoS 공격 발생 시 즉각 대응할 수 있도록 집중적으로 관리합니다.
+                    </td>
+                    <td class="lh tl">
+                      - 사용자 특화 존(Zone) 생성<br />
+                      - 사용자 서비스 분석 및 학습<br />
+                      - 실시간 대응<br />
+                      - 주간/월간 리포트 제공
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>침해 사고 기술 지원</td>
+                    <td class="lh tl">
+                      사용자의 서비스에 해킹 사고 발생 시 전문화된 보안 인력이 해킹 사고에 대한 원인과 대응 가이드를 제공합니다.
+                    </td>
+                    <td class="tl">- 해킹 사고 분석 및 대응 가이드 제공</td>
+                  </tr>
+                  <tr>
+                    <td>WAF</td>
+                    <td class="lh tl">
+                      웹 서비스를 분석, 학습해 웹 공격 발생 시 즉각 대응할 수 있도록 집중적으로 관리하고, 웹 방화벽으로 사용자의 웹 서비스를 안전하게 보호합니다.
+                    </td>
+                    <td class="lh tl">
+                      - 사용자 특화 웹 서비스 분석 및 학습<br />
+                      - 실시간 대응<br />
+                      - 주간/월간 리포트 제공
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Anti-Virus</td>
+                    <td class="lh tl">
+                      악성코드에 대한 최신 패턴을 바탕으로 악성코드 실시간 차단 서비스를 제공해 최신의 악성코드에서 사용자의 시스템을 안전하게 보호합니다.
+                    </td>
+                    <td class="lh tl">
+                      - 악성코드 탐지 리포트<br />
+                      - 탐지 정책 관리<br />
+                      - 주간/월간 리포트
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p class="f14 c66 mt10">존(Zone): 보호 대상을 구분하는 단위</p>
+              <a href="/support/inquiry/general" class="btn-prod">이용 문의하기</a>
+
+            </div>
+            <div class="product bg">
+              <div class="sub-body">
+
+                <div class="h4-area tc pt80">
+                  <h4 style="font-size:32px">연동 부가 서비스</h4>
+                </div>
+
+                <ul class="ul-type04 mt60 col2">
+                  <li>
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server11.png" alt="서버 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>Server</h5>
+                          <p>
+                            네이버 클라우드 플랫폼의 서버에서 발생하는 트래픽에 한해 서비스 제공
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">요금</h4>
+
+              <!-- <table class="tbl-type01 mt55 col3">
+                <caption>요금 표</caption>
+                <thead>
+                  <tr>
+                    <th>구분</th>
+                    <th>서비스명</th>
+                    <th>요금</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">Basic</th>
+                    <td>IDS 관제 서비스</td>
+                    <td rowspan="2">무료</td>
+                  </tr>
+                  <tr>
+                    <td>DDoS 관제 서비스</td>
+                  </tr>
+                  <tr>
+                    <th rowspan="5">Managed</th>
+                    <td>IDS 관제 서비스</td>
+                    <td>100,000원/월</td>
+                  </tr>
+                  <tr>
+                    <td>DDoS 관제 서비스</td>
+                    <td>200,000원/월</td>
+                  </tr>
+                  <tr>
+                    <td>침해 사고 기술지원</td>
+                    <td>250,000원/월</td>
+                  </tr>
+                  <tr>
+                    <td>WAF</td>
+                    <td>200,000원/월</td>
+                  </tr>
+                  <tr>
+                    <td>Anti-Virus</td>
+                    <td>10,000원/서버 대당</td>
+                  </tr>
+                </tbody>
+              </table> -->
+              <div class="div02">
+                <h4 class="f18">해당 상품에 대한 요금 안내는 <a href="#" class="c33">고객지원</a>으로 문의주시면 상세히 설명드리겠습니다</h4>
+              </div>
+              <a href="/support/inquiry/general" class="btn-prod">이용 문의하기</a>
+            </div>
+          </div>
+
+          <div>
+					<div class="width">
+						<h4 class="hidden">이용안내</h4>
+
+						<div class="div02">
+							<h4 class="f18">해당 상품에 대한 이용안내는 <a href="#" class="c33">고객지원</a>으로 문의주시면 상세히 설명드리겠습니다</h4>
+						</div>
+						<a href="javascript:;" onClick="javascript:goInquiryForm();return false;" class="btn-prod">이용 문의하기</a>
+
+					</div>
+				</div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn3"></span><span>Console</span></a></li>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+$(function(){
+  var prodTabIdx = 0;
+  $('.lgTab>li').click(function(){
+    prodTabIdx = $(this).index();
+    $(this).addClass('on').siblings('li').removeClass('on');
+    $('.tab-wrap').children('div').eq(prodTabIdx).addClass('on').siblings('div').removeClass('on');
+    if( prodTabIdx == 0 ){
+      $('#wrap').addClass('bg');
+    }else{
+      $('#wrap').removeClass('bg');
+    }
+    return false;
+  });
+});
+</script>
+</body>
+</html>

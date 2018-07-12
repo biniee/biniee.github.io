@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="bg">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3 dw2">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="on d3">
+              <a href="#">Management</a>
+              <ul class="depth_3 dw3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">요금 소개</a></li>
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="product">
+      <div class="sub-tit prod05">
+        <div class="sw">
+          <h3>Monitoring</h3>
+          <p>컴퓨팅 자원의 상태를 모니터링하고<br />이벤트가 발생하면 사용자에게 통보합니다</p>
+          <a href="#">이용 신청하기</a>
+        </div>
+      </div>
+      <div class="sub-body">
+
+        <!-- tab -->
+        <ul class="tab-type01 prdt-tab lgTab tab4 mt60 h52">
+          <li class="on">
+            <a href="#">특징</a>
+          </li>
+          <li>
+            <a href="#">상세 기능</a>
+          </li>
+          <li>
+            <a href="#">요금</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="tab-wrap">
+
+          <div class="on">
+            <div class="width">
+              <h4 class="hidden">특징</h4>
+              <div class="tc mt55">
+                <p class="f32 fNS bold">IT 장비에 대한 신속한 장애 대응 및 효율적인 리소스 성능 개선 계획 수립 가능</p>
+                <p class="c66 mt25">
+                  서비스를 운영하는 리소스의 상태를 모니터링하고, 임의로 설정된 임계치를 초과할 때는 이벤트 상황을 통보합니다.<br/>
+                  이를 통해 신속하게 장애에 대응할 수 있고 리소스 용량 및 성능 개선 계획을 마련할 수 있으며, <br/>
+                  궁극적으로 사용자가 제공하는 서비스의 연속성을 확보할 수 있게 도와줍니다.
+                </p>
+              </div>
+
+              <ul class="ul-type03 mt40">
+                <li>
+								<div class="wrap of_h">
+									<div class="fl w528">
+										<h5>컴퓨팅 자원의 안정적인 운영 가능</h5>
+										<p class="f14">CPU 사용률, 디스크 사용률, 메모리 사용률 등 기본 모니터링 기능을 통해 시스템의 지표를 확인할 수 있습니다. 상세 모니터링 기능을 활용하여 이벤트 설정, 컴퓨팅 자원별 비교 및 분석 기능 등 장애 분석과 빠른 대응이 가능합니다.</p>
+									</div>
+									<img src="../../img/ko/prod-management01.png" alt="상품관련 아이콘"
+										class="fr" />
+								</div>
+							</li>
+							<li>
+								<div class="wrap of_h">
+									<img src="../../img/ko/prod-management02.png" alt="상품관련 아이콘"
+										class="fl" />
+									<div class="fr w528">
+										<h5>모니터링 지표로 활용</h5>
+										<p class="f14">7개 분류, 31개 세부항목에 대한 지표의 모니터링 성능 정보를 수집하고, 12개 항목 23개 세부
+											항목의 이벤트 경보를 설정할 수 있습니다. Auto Scaling 그룹과 연동하면 시스템 상황에 맞게 동적으로
+											컴퓨팅 자원을 생성하고 삭제할 수 있는 기능을 활용할 수 있습니다.</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="wrap of_h">
+									<div class="fl w528">
+										<h5>그래프 및 통계 활용</h5>
+										<p class="f14">모니터링 데이터를 RESTful API 방식의 HTTP GET/POST 메소드를 통해 다양한 형태로 활용할 수 있습니다.
+										사용자가 직접 API를 통해 1분 실시간 데이터부터 일 단위 통계 데이터까지 수집하고 분석할 수 있으며, 고객의 비즈니스 목적에 맞게 활용할 수 있는 방법을 제공하고 있습니다.
+										</p>
+									</div>
+									<img src="../../img/ko/prod-management03.png" alt="상품관련 아이콘"
+										class="fr" />
+								</div>
+							</li>
+							<li>
+								<div class="wrap of_h">
+									<img src="../../img/ko/icn/prod-man-02.png" alt="상품관련 아이콘"
+										class="fl" />
+									<div class="fr w528">
+										<h5>다양한 상품에 대한 모니터링 </h5>
+										<p class="f14">컴퓨팅 자원의 리소스 모니터링을 기반으로 NAS, CDN, Storage, Auto Scaling 등 제공하는 다양한 상품의 모니터링에 활용되고 있으며,
+											추후 애플리케이션 로그 및 사용자 지정 메트릭 연동, 모바일 앱에서도 빠른 대응이 가능하도록 기능을 제공할 예정입니다.
+										</p>
+									</div>
+								</div>
+							</li>
+              </ul>
+              <a href="javascript:;" onclick="javascript:loadMC('MONTR');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">상세기능</h4>
+
+              <div class="h4-area mt50">
+                <h4>모니터링 항목과 주기 설정</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                CPU, 메모리, 디스크, Load Average, 네트워크, 디스크 I/O, 파일 감시, 파일 시스템, 로그 감시, 프로세스, Ping Fail, 포트 다운 등 다양한 세부 항목에 대해 모니터링과 이벤트/통보 서비스를 사용할 수 있습니다. 이 중 Ping Fail, 서버 다운, 로그 감시, 포트 다운 등 일부 항목은 이벤트 통보 설정 기능만 제공되며, 이벤트 통보 항목은 최대 20개까지 설정할 수 있습니다. 향후 로드밸런서 등 다른 상품으로도 적용 범위를 확대할 계획입니다. 선택한 기간에 따라 1분, 5분, 2시간, 1일 주기로 모니터링 결과를 제공합니다. 특히, 최근 8일 동안은 1분 주기로 모니터링 결과를 보관해 효율적인 대응이 가능합니다. 현재 모니터링 정보는 최대 1년까지 1일 주기 정보를 제공합니다.
+              </p>
+
+              <h5 class="mt30 c66 f18">서버 모니터링 항목 및 이벤트 항목</h5>
+
+              <table class="tbl-type01 mt15">
+                <caption>서버 모니터링 항목 및 이벤트 항목 표</caption>
+                <colgroup>
+                  <col width="15%" />
+                  <col width="35%" />
+                  <col width="15%" />
+                  <col width="35%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="2">상세 모니터링 항목</th>
+                    <th colspan="2">이벤트 항목</th>
+                  </tr>
+                  <tr>
+                    <th>항목</th>
+                    <th>세부항목</th>
+                    <th>항목</th>
+                    <th>세부항목</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>CPU</th>
+                    <td>Used(%), System(%), User(%), Idle(%), iowait(%)</td>
+                    <th>CPU</th>
+                    <td>Used(%), iowait(%)</td>
+                  </tr>
+                  <tr>
+                    <th>Memory</th>
+                    <td>Used(%), Total/Used/Free/Buffer/Cached(Bytes)</td>
+                    <th>Memory</th>
+                    <td>Used(%)</td>
+                  </tr>
+                  <tr>
+                    <th>Disk</th>
+                    <td>Used(%/Bytes), Free(Bytes)</td>
+                    <th>Network</th>
+                    <td>Output(bps/pps), Input(bps/pps)</td>
+                  </tr>
+                  <tr>
+                    <th>Network</th>
+                    <td>Output(bps/pps/error), Input(bps/pps/error)</td>
+                    <th>Disk I/O</th>
+                    <td>Read Bytes, Write Bytes</td>
+                  </tr>
+                  <tr>
+                    <th>Disk I/O</th>
+                    <td>Read Bytes/Count, Write Bytes/Count</td>
+                    <th>Swap</th>
+                    <td>Used(%)</td>
+                  </tr>
+                  <tr>
+                    <th>Swap</th>
+                    <td>Used(%), Total/Used/Free(Bytes)</td>
+                    <th>Load Averafe</th>
+                    <td>1분, 5분, 15분</td>
+                  </tr>
+                  <tr>
+                    <th rowspan="6">LoadAverage</th>
+                    <td rowspan="6">1분, 5분, 15분</td>
+                    <th>파일 감시</th>
+                    <td>변경, 크기, 존재 여부</td>
+                  </tr>
+                  <tr>
+                    <th>파일 시스템</td>
+                    <td>Used(%)</td>
+                  </tr>
+                  <tr>
+                    <th>프로세스</td>
+                    <td>다운, CPU(%), 메모리(%)</td>
+                  </tr>
+                  <tr>
+                    <th>로그 감시</td>
+                    <td>파일로그</td>
+                  </tr>
+                  <tr>
+                    <th>서버 다운</td>
+                    <td>다운</td>
+                  </tr>
+                  <tr>
+                    <th>포트 다운</td>
+                    <td>다운</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="h4-area mt60">
+                <h4>모니터링 대시보드</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                운영 효율성 향상을 위해 원하는 정보를 한 화면에서 확인할 수 있는 대시보드를 제공합니다. 대시보드는 모니터링 설정을 완료한 서버에 대해서 최근 1주일 동안의 이벤트 발생 현황, 항목별 TOP 3 서버 현황을 한 화면에 제공합니다. 이를 통해 사용자는 운영 중인 서버의 최근 현황을 파악할 수 있고, 특정 서버의 상태를 편리하게 확인할 수 있습니다. 또한, 대시보드 화면과 상세 화면을 바로 연결해 이슈를 상세하게 추적할 수 있어 운영 효율성을 크게 높일 수 있습니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>모니터링 현황 항목 설정</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                모니터링 현황 메뉴에서 이벤트 확인 목적의 일부 항목을 제외한 7개 항목 31개 세부 항목에 대해 모니터링 정보를 제공합니다. 특히, 31개 세부 항목 중 집중적으로 확인해야 하는 10개 항목에 대해 상태 정보를 기본으로 제공합니다. 집중적으로 확인할 10개 항목은 목적에 따라 변경할 수 있습니다. 또한, 비교를 원하는 특정 서버 2대를 선택해 항목별로 비교할 수 있는 [서버 기준 비교 그래프]를 제공합니다. 서버 간 차이를 확인해 문제점이나 이슈를 확인할 때 유용합니다. 또한 특정 항목에 대해 원하는 서버를 비교할 수 있는 [항목 기준 비교 그래프]는 특정 항목에서 다른 서버에 비해 두드러지는 서버를 확인할 때 편리합니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>이벤트 설정 로그 </h4>
+              </div>
+              <p class="f14 c66 mt10">
+                이벤트 설정 로그 기능을 사용해 최근 1개월 동안의 이벤트 설정 이력을 확인할 수 있습니다. 사용자가 설정한 이벤트 설정 일시, 설정 내역, 작업자, 접속 IP로 모니터링 사용 현황을 확인할 수 있어 부주의한 사용을 방지할 수 있습니다. <!-- 20170323 -->
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>Auto Scaling 그룹 모니터링</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                <a href="#" class="blue">Auto Scaling</a> 모니터링은 그룹으로 설정된 여러 대 서버의 평균값을 기준으로 모니터링 서비스를 제공합니다.<br />
+                CPU, 메모리, Load Average, 네트워크, 디스크 I/O, 파일 시스템 등 6개 항목 15개 세부 항목에 대해 이벤트 설정이 가능합니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>API 사용 </h4>
+              </div>
+              <p class="f14 c66 mt10">
+                API를 사용하려면 <a href="#" class="blue">OAuth</a> 인증 방식의 인증키를 발급받아야 합니다. API 인증키는 포털의 마이페이지에서 발급받고 관리할 수 있습니다. API는 <a href="#" class="blue">RESTful API</a> 방식의 HTTP GET/POST 메서드 호출로 실행하며, API를 사용해 원하는 형태의 모니터링 관리 기능을 만들 수 있습니다.
+              </p>
+
+              <div class="div03 mt75">
+                <div class="h4-area pt100 tc">
+                  <h4>기타 지표</h4>
+                </div>
+                <div class="h4-area mt50">
+                  <h4>Monitoring 감시 설정 항목</h4>
+                </div>
+
+                <table class="tbl-type01 mt20 tbl-lh">
+                  <caption>Monitoring 감시 설정 항목 표</caption>
+                  <colgroup>
+                    <col width="24%" />
+                    <col width="8%" />
+                    <col width="30%" />
+                    <col width="8%" />
+                    <col width="10%" />
+                    <col width="20%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>모니터링 항목</th>
+                      <th>상세항목</th>
+                      <th>이벤트 발생 조건</th>
+                      <th>설정 항목</th>
+                      <th>예</th>
+                      <th>비고</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th rowspan="2">CPU</th>
+                      <td>Used(%)</td>
+                      <td>CPU 사용량(%)의 1분 평균값이 임계치 이상으로 지정한 시간만큼 지속된다.</td>
+                      <td>1. 사용량 ▲▲ %<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>CPU 사용량이 ▲▲% 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                      <td rowspan="2">- CPU 코어별 감시 설정이 아니라 전체 CPU 코어의 합산값을 대상으로 감지합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>iowait(%)</td>
+                      <td>CPU iowait(%) 1분 평균값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 사용량 ▲▲%<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>CPU iowait가 ▲▲% 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <th>Memory</th>
+                      <td>Used(%)</td>
+                      <td>메모리 사용량(%)의 1분 평균값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 사용량 ▲▲%<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>메모리 사용량이 ▲▲% 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Swap</th>
+                      <td>Used(%)</td>
+                      <td>Swap 사용량(%)의 1분 평균값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 사용량 ▲▲%<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>Swap 사용량이 ▲▲% 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th rowspan="2">Disk I/O</th>
+                      <td>read bytes</td>
+                      <td>디스크의 초당 read byte 값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. ▲▲▲bytes/sec<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>디스크의 초당 read byte 값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                      <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                      <td>write bytes</td>
+                      <td>디스크의 초당 write byte 값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. ▲▲▲bytes/sec<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>디스크의 초당 write byte 값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <th rowspan="4">Network</th>
+                      <td>bps in </td>
+                      <td>NIC의 초당 inbound byte 값이 임계치 이상으로 지정한 시간만큼 지속된다.</td>
+                      <td>1. 전송 속도 ▲▲▲bytes/sec<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>해당 NIC의 초당 inbound byte 값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                      <td rowspan="4">- 감시하려는 Network Interface의 이름을 명시해야 합니다(예: eth0, bond0 등)</td>
+                    </tr>
+                    <tr>
+                      <td>bps out</td>
+                      <td>NIC의 초당 outbound byte 값이 임계치 이상으로 지정한 시간만큼 지속 될 때 발생한다.</td>
+                      <td>1. 전송 속도 ▲▲▲bytes/sec<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>해당 NIC의 초당 outbound byte 값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <td>pps in</td>
+                      <td>NIC의 초당 inbound packet 값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 전송 속도 ▲▲▲packets/sec<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>해당 NIC의 초당 inbound packet값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <td>pps out</td>
+                      <td>NIC의 초당 outbound packet 값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 전송 속도 ▲▲▲packets/sec<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>해당 NIC의 초당 outbound packet 값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <th rowspan="4">파일 감시</th>
+                      <td>크기</td>
+                      <td>설정 시점부터 파일의 크기가 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 파일 크기 ▲▲▲KB<br />2. 이상<br />3. 지속 시간 OO분<br />4. 파일의 전체 경로<br />(예) /tmp/abc.ext</td>
+                      <td>/tmp/abc.ext 파일의 크기가 ▲▲▲KB 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다. </td>
+                      <td rowspan="4">- 감시하려는 파일에 nbpmon user가 접근할 수 있는 권한이 있어야 합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>변경</td>
+                      <td>설정 시점부터 지정한 시간 동안 매 분마다 파일이 수정될 때 발생한다.</td>
+                      <td>1. 지속 시간 OO분<br />2. 파일의 전체 경로<br />(예) /tmp/abc.ext</td>
+                      <td>
+                        /tmp/abc.ext 파일이 OO분 동안 매 분마다 연속적으로 파일이 수정되면 이벤트를 발생시킨다.예를 들어 0분으로 설정했다면 파일이 수정됐을 때 바로 이벤트를 발생시킨다.2분으로 설정했다면 설정한 시점부터 1분 내에 파일이 수정되고 연속적으로 다음 1분 내에도 파일이 수정됐을 때 이벤트를 발생시킨다.
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>무변경</td>
+                      <td>설정 시점부터 지정한 시간 동안 파일이 수정되지 않을 때 발생한다.</td>
+                      <td>1. 지속 시간 OO분<br />2. 파일의 전체로<br />(예) /tmp/abc.ext</td>
+                      <td>/tmp/abc.ext 파일이 OO분 동안 수정되지 않으면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <td>파일 존재 여부</td>
+                      <td>파일의 존재하지 않을 때 발생한다.</td>
+                      <td>1. 파일의 전체 경로<br />(예) /tmp/abc.ext</td>
+                      <td>/tmp/abc.ext 파일이 존재하지 않으면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <th>파일 시스템</th>
+                      <td>Used(%)</td>
+                      <td>파일 시스템의 사용량(%)이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 사용량 ▲▲%<br />2. 이상<br />3. 지속 시간 OO분<br />4. 마운트된 디렉터리<br />(예) /home</td>
+                      <td>마운트된 /home 디렉터리의 사용량(%)이 ▲▲% 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                      <td>- 네트워크로 마운트된 파일 시스템은 감시할 수 없습니다.<br />(예)NFS, fuse </td>
+                    </tr>
+                    <tr>
+                      <th rowspan="3">Load Average</th>
+                      <td>로드 평균(1분)</td>
+                      <td>Load Average의 1분 평균값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. Load Average 1분 평균 ▲▲<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>Load Average의 1분 평균값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                      <td rowspan="3">- Linux 서버에서만 감시 기능을 설정할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>로드 평균(5분)</td>
+                      <td>Load Average의 5분 평균값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. Load Average 5분 평균 ▲▲<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>Load Average의 5분 평균값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <td>로드 평균(15분)</td>
+                      <td>Load Average의 15분 평균값이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. Load Average 15분 평균 ▲▲<br />2. 이상<br />3. 지속 시간 OO분</td>
+                      <td>Load Average의 15분 평균값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <th>로그 감시</th>
+                      <td>파일 로그</td>
+                      <td>설정 시점부터 감시하려는 파일에 지정한 시간 동안 매 분마다 문자열이 포함(또는 비포함)될 때 발생한다.</td>
+                      <td>1. 로그 매칭 문자열<br />(예) Exception<br />2. 포함/비포함<br />3. 지속 시간 OO분<br />4. 파일의 전체 경로<br />(예) /tmp/abc.log</td>
+                      <td>/tmp/abc.log 파일에 OO분 동안 매 분마다 연속적으로 문자열 'Exception'이 포함(또는 비포함)되면 이벤트를 발생시킨다.0분으로 설정했다면 매칭 문자열이 포함(또는 비포함)될 때 바로 이벤트를 발생시킨다. 2분으로 설정했으면 설정한 시점부터 1분 내에도 매칭 문자열이 포함(또는 비포함)됐고, 연속적으로 다음 1분 내에도 매칭 문자열이 포함(또는 비포함)됐을 때 이벤트를 발생시킨다.</td>
+                      <td>- 감시하려는 파일에 nbpmon user가 접근할 수 있는 권한이 필요합니다.<br />- 인코딩은 UTF-8을 사용합니다.<br />- 대소문자를 구별합니다.<br />- 정규 표현식을 사용할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                      <th rowspan="3">프로세스</th>
+                      <td>프로세스 다운</td>
+                      <td>프로세스가 다운됐을 때 발생한다.</td>
+                      <td>1. 프로세스 매칭 문자열<br />(예) snmp</td>
+                      <td>문자열 "snmp"가 있는 프로세스의 개수가 0이면 이벤트를 발생시킨다.(예)/home1/nbpmon/noms/nsight/bin/noms_nsight -start 프로세스와 /usr/sbin/snmp -start 프로세스가 있고 매칭 문자열을 "start"로 설정했다면, 프로세스 개수는 2개로 인식된다. 두 프로세스가 모두 다운되면 개수를 0으로 인지해 이벤트를 발생시킨다</td>
+                      <td rowspan="3">- 단일 프로세스를 감시하려면 프로세스 전체 이름으로 설정합니다.<br />(예) ps -ef로 추출되는 프로세스 이름에 전부 문자열 매칭</td>
+                    </tr>
+                    <tr>
+                      <td>CPU(%)</td>
+                      <td>프로세스의 CPU 사용량(%)이 임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 사용량 ▲▲%<br />2. 이상<br />3. 지속 시간 OO분<br />4. 프로세스 매칭 문자열<br />(예) snmp</td>
+                      <td>문자열 "snmp"가 있는 프로세스가 점유한 CPU 사용량(%)이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.<br />(예)/home1/nbpmon/noms/nsight/bin/noms_nsight -start 프로세스와 /usr/sbin/snmp -start 프로세스가 있고 매칭 문자열을 "start"로 설정했다면, 프로세스 개수는 2개로 인식된다. 두 프로세스가 점유하고 있는 CPU의 사용량(%)을 모두 합산한 값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <td>mem(%)</td>
+                      <td>프로세스의 메모리 사용량(%)이  임계치 이상으로 지정한 시간만큼 지속될 때 발생한다.</td>
+                      <td>1. 사용량 ▲▲%<br />2. 이상<br />3. 지속 시간 OO분<br />4. 프로세스 매칭 문자열<br />(예) snmp</td>
+                      <td>문자열 "snmp"가 있는 프로세스가 점유한 메모리의 사용량(%)이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.
+                        <br />(예)/home1/nbpmon/noms/nsight/bin/noms_nsight -start 프로세스와 /usr/sbin/snmp -start 프로세스가 있고 매칭 문자열을 "start"로 설정했다면, 프로세스 개수는 2개로 인식된다. 두 프로세스가 점유하고 있는 메모리의 사용량(%)을 모두 합산한 값이 ▲▲ 이상으로 OO분 이상 지속되면 이벤트를 발생시킨다.</td>
+                    </tr>
+                    <tr>
+                      <th>Ping Fail</th>
+                      <td>Ping Fail</td>
+                      <td>모니터링이 연속적으로 3분 이상 작동하지 않고, Collector 서버가 해당 서버로 Ping을 송신했을 때 3초 간격으로 연속 10번 이상 실패할 때 발생한다.</td>
+                      <td>-</td>
+                      <td>모니터링이 연속적으로 3분 이상 작동하지 않고, Collector 서버가 해당 서버로 Ping을 송신했을 때 3초 간격으로 연속 10 번 이상 실패하면 이벤트를 발생시킨다.</td>
+                      <td>- Collector 서버가 해당 서버로 Ping 패킷을 송수신 할 수 있어야 합니다.</td>
+                    </tr>
+                    <tr>
+                      <th>포트 다운</th>
+                      <td>포트 다운</td>
+                      <td>설정된 TCP 포트가 다운돼 Collector 서버가 전송하는 SYN 패킷에 대한 SYN+ACK 응답이 오지 않을 때 발생한다.</td>
+                      <td>1. TCP 포트 번호<br />(예) 8080</td>
+                      <td>8080 TCP 포트가 다운돼 Collector 서버가 전송하는 SYN 패킷에 대한 SYN+ACK 응답이 오지 않으면 이벤트를 발생시킨다.</td>
+                      <td>- Collector 서버가 해당 서버의 설정된 포트로 ICMP 패킷을 송수신할 수 있어야 합니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <a href="javascript:;" onclick="javascript:loadMC('MONTR');return false;" class="btn-prod">이용 신청하기</a>
+
+
+            </div>
+            <div class="product bg">
+              <div class="sub-body">
+
+                <div class="h4-area tc pt80">
+                  <h4 style="font-size:32px">연동 부가 서비스</h4>
+                </div>
+
+                <ul class="ul-type04 mt60 col2">
+                  <li>
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server15.png" alt="NAS 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>NAS</h5>
+                          <p>
+                            다수의 서버가 대용량의 스토리지를 네트워크로 연결해 사용
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="ml24">
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server16.png" alt="Auto Scaling 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>Auto Scaling</h5>
+                          <p>
+                            미리 설정한 이벤트에 따라 서버 수를 자동으로 증가 또는 감소
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt25">
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server12.png" alt="CDN 이미지" class="fl" /> <!-- 20170324 -->
+                        <div class="fl sub-type01">
+                          <h5>CDN</h5>
+                          <p>
+                            대용량의 콘텐츠를 많은 사용자에게 빠르고 손실 없이 안전하게 전달
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">요금</h4>
+
+              <table class="tbl-type01 col2 mt60">
+                <caption>모니터링 요금 표</caption>
+                <thead>
+                  <tr>
+                    <th>구분</th>
+                    <th>이용 요금</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="bold">기본 모니터링</th>
+                    <td>무료</td>
+                  </tr>
+                  <tr>
+                    <th class="bold">상세 모니터링 (이벤트 및 통보 서비스 포함)</th>
+                    <td>무료</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="javascript:;" onclick="javascript:loadMC('MONTR');return false;" class="btn-prod">이용 신청하기</a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn3"></span><span>Console</span></a></li>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+$(function(){
+  var prodTabIdx = 0;
+  $('.lgTab>li').click(function(){
+    prodTabIdx = $(this).index();
+    $(this).addClass('on').siblings('li').removeClass('on');
+    $('.tab-wrap').children('div').eq(prodTabIdx).addClass('on').siblings('div').removeClass('on');
+    if( prodTabIdx == 0 ){
+      $('#wrap').addClass('bg');
+    }else{
+      $('#wrap').removeClass('bg');
+    }
+    return false;
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="bg">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3 dw2">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="on d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3 dw3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">요금 소개</a></li>
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="product">
+      <div class="sub-tit prod04">
+        <div class="sw">
+          <h3>MSSQL</h3>
+          <p>Microsoft가 제공하는 대표적인<br />관계형 데이터베이스 관리 시스템 (RDBMS)입니다</p>
+          <a href="#">상품 신청하기</a>
+        </div>
+      </div>
+      <div class="sub-body">
+
+        <!-- tab -->
+        <ul class="tab-type01 prdt-tab lgTab tab4 mt60 h52">
+          <li class="on">
+            <a href="#">특징</a>
+          </li>
+          <li>
+            <a href="#">상세 기능</a>
+          </li>
+          <li>
+            <a href="#">요금</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="tab-wrap">
+
+          <div class="on">
+            <div class="width">
+              <h4 class="hidden">특징</h4>
+              <div class="tc mt55">
+                <p class="f32 fNS bold">가용성, 안정성, 확장성 강화</p>
+                <p class="c66 mt25">
+                  MSSQL은 지능형 미션 크리티컬 애플리케이션 구축을 위한 데이터 관리 및 비즈니스 분석 플랫폼입니다.<br/>
+                  최신 버전인 SQL Server 2016에서는 컬럼스토어와 인메모리 테이블을 사용한 실시간 고급 분석, 성능 하락 없는 안전한 암호화, <br/>
+                  관리되는 구조와 비정형 데이터의 쿼리, 오픈 소스 R, 분석 서비스 기능이 보강됐습니다. MSSQL은 버전 및 에디션에 따라 <br/>
+                  지원하는 기능이 다르므로 사용하려는 목적에 따라 적절하게 선택해야 합니다.
+                </p>
+              </div>
+
+              <ul class="ul-type03 mt40">
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-database02.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528">
+  										<h5>빠르고 안정적인 데이터베이스 인프라 제공</h5>
+  										<p class="f14">클라우드 전문 인력과 국내 최고 수준의 보안 장치로 고객의 자산을 효과적이고
+  											안정적으로 관리합니다. MSSQL이 설치된 형태의 서버가 제공되므로 빠른 인프라 준비가 필요하거나 한시적으로
+  											데이터베이스 시스템이 필요한 경우에도 신속하고 유연하게 대응할 수 있습니다.</p>
+  									</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528">
+  										<h5>MSSQL의 다양한 기능으로 생산성 향상</h5>
+  										<p class="f14">MSSQL에서 제공하는 다양한 데이터베이스 관리 도구를 사용해 생산성을 향상시킬 수 있습니다.
+  											다양한 성능 분석과 가용성 관리 옵션으로 고객의 요구 사항을 만족시킬 수 있으며, 한층 강화된 보안과 프로그래밍 기능이 지원됩니다.</p>
+  									</div>
+                    <img src="../../img/ko/prod-database03.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+                <li>
+								<div class="wrap of_h">
+									<div class="fr w528">
+										<h5>효율적인 비용관리 </h5>
+										<p class="f14">필요 사양에 대해 사용한 만큼 월 단위로 비용을 부담하므로, 물리적인 서비스 환경 구축 및 운영을 위해 요구되는 고정 비용을 절감할 수 있습니다.
+										다양한 버전 및 에디션을 제공하여 고객 비즈니스에 필요한 기능을 제공합니다.</p>
+									</div>
+									<img src="../../img/ko/prod-database01.png" alt="상품관련 아이콘" class="fl" />
+								</div>
+							</li>
+              </ul>
+              <a href="#" onclick="javascript:loadMC('SVR');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">상세기능</h4>
+
+              <div class="h4-area mt50">
+                <h4>다양한 버전 및 에디션 제공</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                MSSQL 2008 버전부터 최신 버전인 MSSQL 2016까지 다양한 버전 및 에디션을 제공합니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>로그 수집 프로그램 제공</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                설치된 MSSQL의 성능 로그를 수집하는 프로그램이 무료로 제공됩니다. 제공되는 프로그램은 사용자가 직접 설치하고 기본값을 설정해야 작동합니다. 로그 분석을 통해 응용 프로그램의 성능을 분석할 수 있습니다.
+              </p>
+              <ul class="f14 c66 mt5 ul-type05">
+                <li><a href="#" class="blue">MSSQL Log Collector(Lazylog) 사용자 가이드</a></li>
+              </ul>
+
+
+              <div class="h4-area mt60">
+                <h4>강화된 기능</h4>
+              </div>
+              <p class="f14 c66 mt10 mb10">
+                MSSQL 2016은 기존 제품에 비해 인메모리 성능(Lock Free, Latch Free)이 강화돼 트랜잭션 처리가 기존 대비 최대 30배 빨라졌습니다. 또한 인메모리 컬럼스토어를 지원해 100배 이상 빠른 질의 처리가 가능합니다. MSSQL 2016부터 제공되는 상시 암호화(Always Encrypted), 행 수준 보안, 투명한 데이터 암호화(Transparent Data Encryption) 등을 통해 보안 안전성을 강화할 수 있으며, 이 밖에도 SQL Server R Services(In-Database)를 통해 지능형 응용 프로그램 개발 및 배포를 위한 플랫폼을 제공합니다. 버전별, 에디션별 상세 내역은 다음 URL을 참조하시기 바랍니다.
+              </p>
+              <a class="f14 bold hv-cr blue" href="https://msdn.microsoft.com/en-us/library/cc645993(v=sql.130).aspx">Editions and Supported Features for SQL Server 2016</a>
+
+              <div class="div03 mt75">
+                <div class="h4-area pt80 tc">
+                  <h4>기타 지표</h4>
+                </div>
+
+                <div class="h4-area mt50">
+                  <h4>버전별 기능 비교</h4>
+                </div>
+                <p class="f14 c66 mt10">SQL Server Enterprise 및 Business Intelligence를 기준으로 버전별 기능 차이는 다음과 같습니다.</p>
+
+                <table class="tbl-type01 mt15">
+                  <caption>버전별 기능 비교 표</caption>
+                  <colgroup>
+                    <col width="15%" />
+                    <col width="33%" />
+                    <col width="13%" />
+                    <col width="13%" />
+                    <col width="13%" />
+                    <col width="13%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th colspan="2">기능</th>
+                      <th rowspan="2">SQL Server 2016</th>
+                      <th rowspan="2">SQL Server 2014</th>
+                      <th rowspan="2">SQL Server 2012</th>
+                      <th rowspan="2">SQL Server 2008 R2</th>
+                    </tr>
+                    <tr>
+                      <th>분류</th>
+                      <th>상세분류</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th rowspan="5">성능</th>
+                      <th class="tl">인메모리 OLTP*</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">인메모리 ColumnStore*</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">실시간 운영 분석*</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">리소스 거버너*</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">쿼리 스토어</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th rowspan="2">가용성</th>
+                      <th class="tl">AlwaysOn*</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">개선된 가상화 지원 및 라이브 마이그레이션</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                    </tr>
+                    <tr>
+                      <th rowspan="7">보안</th>
+                      <th class="tl">상시 암호화*</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">투명 데이터 암호화*</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">행 수준 보안</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">동적 데이터 마스킹</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">백업 암호화 지원</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">세부 감사</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">업무 분리</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th rowspan="3">프로그래밍 기능</th>
+                      <th class="tl">JSON 지원</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">Hadoop 데이터에 대한 PolyBase 쿼리**</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">Temporal</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th rowspan="4">클라우드 지원</th>
+                      <th class="tl">SQL Server Stretch Database</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">Azure에 백업</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">Azure에 재해 복구*</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">Azure 갤러리의 최적화된 가상 컴퓨터(VM)이미지</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th rowspan="2">관리</th>
+                      <th class="tl">Distributed Replay</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">정책 기반 관리</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                    </tr>
+                    <tr>
+                      <th rowspan="6">비즈니스 인텔리전스(BI)</th>
+                      <th class="tl">최신 보고서</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">모바일 BI*</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">서버로서 관리되는 통합 서비스</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">Power BI로의 리포트 연계</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">디자인 시만텍 모델</th>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                      <td><span class="round">가능</span></td>
+                    </tr>
+                    <tr>
+                      <th class="tl">개선된 타블러 BI 시만텍 모델*</th>
+                      <td><span class="round">가능</span></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="h4-area mt60">
+                  <h4>MSSQL 2016 에디션별 기능 비교</h4>
+                </div>
+                <p class="f14 c66 mt10">
+                  MSSQL 2016 기준 최대 지원 가능 서버 리소스는 다음과 같습니다.
+                </p>
+
+                <table class="tbl-type01 mt20">
+								<caption>에디션 별 기능 비교 표</caption>
+								<colgroup>
+									<col width="44%" />
+									<col width="14%" />
+									<col width="14%" />
+									<col width="14%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>기능</th>
+										<th>Express</th>
+										<th>Standard</th>
+										<th>Enterprise</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="tl lh">단일 인스턴스에서 사용되는 최대 계산 용량 <br/>- MSSQL 데이터베이스 엔진</th>
+										<td class="lh">소켓 1개 또는 코어 4개 미만으로 제한됨</td>
+										<td class="lh">소켓 4개 또는 코어 24개 미만으로 제한됨</td>
+										<td class="lh">운영체제가 지원하는 최대 크기</td>
+									</tr>
+									<tr>
+										<th class="tl lh">단일 인스턴스에서 사용되는 최대 계산 용량 <br />-
+											Analysis Services 또는 Reporting Services
+										</th>
+										<td class="lh">소켓 1개 또는 코어 4개 미만으로 제한됨</td>
+										<td class="lh">소켓 4개 또는 코어 24개 미만으로 제한됨</td>
+										<td class="lh">운영체제가 지원하는 최대 크기</td>
+									</tr>
+									<tr>
+										<th class="tl">MSSQL 데이터베이스 엔진 인스턴스별 최대 버퍼 풀 메모리</th>
+										<td>1410MB</td>
+										<td>128GB</td>
+										<td class="lh">운영체제가 지원하는 최대 크기</td>
+									</tr>
+									<tr>
+										<th class="tl">MSSQL 데이터베이스 엔진 인스턴스별 최대 컬럼스토어 세그먼트 캐시 메모리</th>
+										<td>352MB</td>
+										<td>32GB</td>
+										<td>무제한 메모리</td>
+									</tr>
+									<tr>
+										<th class="tl">MSSQL 데이터베이스 엔진 데이터베이스별 최대 메모리 최적화 데이터 크기</th>
+										<td>352MB</td>
+										<td>32GB</td>
+										<td>무제한 메모리</td>
+									</tr>
+									<tr>
+										<th class="tl">Analysis Services 인스턴스당 최대 메모리 사용량</th>
+										<td>해당 사항 없음</td>
+										<td class="lh">테이블 형식: 16GB <br />MOLAP: 64GB</td>
+										<td class="lh">운영체제가 지원하는 최대 크기</td>
+									</tr>
+									<tr>
+										<th class="tl">Reporting Services 인스턴스당 최대 메모리 사용량</th>
+										<td>해당 사항 없음</td>
+										<td>64GB</td>
+
+										<td class="lh">운영체제가 지원하는 최대 크기</td>
+									</tr>
+									<tr>
+										<th class="tl">최대 관계형 데이터베이스 크기</th>
+										<td>10GB</td>
+										<td>524PB</td>
+										<td>524PB</td>
+									</tr>
+								</tbody>
+							</table>
+
+              </div>
+              <a href="#" onclick="javascript:loadMC('SVR');return false;" class="btn-prod">이용 신청하기</a>
+
+
+            </div>
+
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">요금</h4>
+
+              <div class="div01">
+                <h4 class="f18">Microsoft 사의 정책에 따라 이용 요금이 변경될 수 있으며, 변경 시 기존 사용자에게도 새로운 요금이 적용됩니다</h4>
+              </div>
+
+              <table class="tbl-type01 mt40 col4">
+							<caption>요금 표</caption>
+							<thead>
+								<tr>
+									<th colspan="3">사양</th>
+									<th colspan="1">이용 요금</th>
+								</tr>
+								<tr>
+									<th>버전</th>
+									<th>에디션</th>
+									<th>32 비트 / 64비트</th>
+									<th>월</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>Microsoft SQL Server 2008 R2 SP3</th>
+									<td>Standard</td>
+									<td>64비트</td>
+									<td>290,000원/copy</td>
+								</tr>
+								<tr>
+									<th>Microsoft SQL Server 2012 SP3</th>
+									<td>Standard</td>
+									<td>64비트</td>
+									<td>290,000원/copy</td>
+								</tr>
+								<tr>
+									<th>Microsoft SQL Server 2014 SP1</th>
+									<td>Standard</td>
+									<td>64비트</td>
+									<td>290,000원/copy</td>
+								</tr>
+								<tr>
+									<th rowspan="4">Microsoft SQL Server 2016 SP1</th>
+									<td>Express</td>
+									<td>64비트</td>
+									<td>무료</td>
+								</tr>
+								<tr>
+									<td>Standard</td>
+									<td>64비트</td>
+									<td>290,000원/copy</td>
+								</tr>
+								<tr>
+									<td>Enterprise</td>
+									<td>64비트</td>
+									<td>1,080,000원/copy</td>
+								</tr>
+							</tbody>
+						</table>
+
+
+              <ul class="ul-type05 mt35 f14 c66">
+                <li>라이선스 1 copy로 vCPU 4개를 지원합니다. vCPU가 1~4개인 서버는 1 copy를, vCPU가 8개인 서버는 2 copy를, vCPU가 12개인 서버는 3 copy를 구매해야 합니다.</li>
+                <li>MSSQL 이용 요금은 DBMS 라이선스 요금이며, 서버와 운영체제(Windows)의 이용 요금은 별도로 부과됩니다.</li>
+                <li>(예) 2 vCPU 서버에서 MSSQL 이용 시 69,000원(서버) + 20,000원(Windows 라이선스) + 290,000원(MSSQL 라이선스) = 379,000원/월</li>
+                <li>Express Edition의 경우에는 MSSQL 라이선스 비용이 무료입니다. (vCPU 4개까지 지원).</li>
+                <li>Enterprise Edition의 경우 VDS 상품에만 제공하고 있습니다. 사용을 원하시면 고객지원에 문의하세요.</li>
+              </ul>
+              <a href="#" onclick="javascript:loadMC('SVR');return false;" class="btn-prod">이용 신청하기</a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn3"></span><span>Console</span></a></li>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+$(function(){
+  var prodTabIdx = 0;
+  $('.lgTab>li').click(function(){
+    prodTabIdx = $(this).index();
+    $(this).addClass('on').siblings('li').removeClass('on');
+    $('.tab-wrap').children('div').eq(prodTabIdx).addClass('on').siblings('div').removeClass('on');
+    if( prodTabIdx == 0 ){
+      $('#wrap').addClass('bg');
+    }else{
+      $('#wrap').removeClass('bg');
+    }
+    return false;
+  });
+});
+</script>
+</body>
+</html>

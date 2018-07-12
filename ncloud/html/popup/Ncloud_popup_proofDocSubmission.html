@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+  <div class="layerPop pop01 w480 winPop">
+    <div class="popWrap">
+      <div class="top">
+        <p class="tit">증빙서류 &gt; 파일첨부</p>
+      </div>
+      <div class="cont">
+        <p class="tit">첨부할 파일을 선택해 주세요</p>
+
+        <div class="box_btn_file filebox preview-image">
+          <input class="upload-name" value="" disabled="disabled">
+          <input type="file" class="btn_file upload-hidden" id="input-file" name="input-file">
+          <label for="input-file">파일첨부</label>
+        </div>
+        <p class="f12 c66 mt25">5MB 이하의 파일을 첨부하실 수 있으며, 등록증을 스캔한 이미지 파일이나 pdf파일을 첨부해 주세요</p>
+
+      </div>
+
+      <div class="btn-area">
+        <a href="#" class="btn-type03">확인</a>
+        <a href="#" class="btn-type04" onclick="window.close();">취소</a>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ var fileTarget = $('.filebox .upload-hidden');
+
+  fileTarget.on('change', function(){
+      if(window.FileReader){
+          // 파일명 추출
+          var filename = $(this)[0].files[0].name;
+      }
+
+      else {
+          // Old IE 파일명 추출
+          var filename = $(this).val().split('/').pop().split('\\').pop();
+      };
+
+      $(this).siblings('.upload-name').val(filename);
+  });
+
+  var $findAddress = $('.address .box2 a');
+
+  $findAddress.click(function(){
+    $(this).parent('li').addClass('on').siblings('li').removeClass('on');
+    return false;
+  });
+    // $('.cg-btn').click(function(){
+    //   $(this).toggleClass('on');
+    //   return false;
+    // });
+});
+</script>
+</body>
+</html>

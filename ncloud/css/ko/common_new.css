@@ -1,0 +1,137 @@
+@charset "utf-8";
+@import 'font.css';
+
+/* reset
+************************************************************************************************/
+
+body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,a,button,select{margin:0; padding:0;}
+html{width:100%; height:100%;}
+body{width:100%; height:100%; background:#fff; font-size:12px; font-family:'NanumGothic', '나눔고딕', 'dotum'; color:#333;}
+fieldset{border:0;}
+input,button,select,textarea{font-size:12px; line-height:16px; font-family:'NanumGothic', '나눔고딕', 'dotum'; color:#333;}
+input,button,select{vertical-align:middle;}
+input,button{border:0; background:none;}
+button{cursor:pointer;}
+ol,ul,li{list-style:none;}
+table,th,td{border:0; border-collapse:collapse;}
+caption{width:0; height:0; font-size:0; line-height:0; display:none;}
+img{border:0;}
+p{font-size:16px;color:#333;line-height:23px;}
+a{color:#656565; text-decoration:none;}
+a:hover{text-decoration:underline;}
+address{font-style:normal;}
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}
+
+/* common class
+************************************************************************************************/
+.hidden{width:0; height:0; font-size:0; line-height:0; position:absolute; overflow:hidden; }
+.td_l{text-decoration: underline;}
+.fl{float:left}
+.fr{float:right}
+.of_h{overflow:hidden;zoom:1}
+.ofw-hd{overflow:hidden;}
+.pr{position:relative}
+.pb{position:absolute}
+.rg0{right:0;}
+.b0{bottom:0;}
+.di_b_w{ font-size: 0px; letter-spacing: 0px; word-spacing: 0px;}
+.db{display:block}
+.di_b{display:inline-block}
+.ls1{letter-spacing:-1px}
+.vt{vertical-align:top}
+.vm{vertical-align:middle}
+.vb{vertical-align:bottom}
+.tl{text-align:left;}
+.tc{text-align:center}
+.tr{text-align:right}
+.t-idt10{text-indent:10px}
+.t-idt20{text-indent:20px}
+.cb{clear:both}
+.clboth{clear:both;}
+.bold{font-weight:700}
+.fwb{font-weight:bold}
+.mt0{margin-top:0}
+.mt5{margin-top:5px}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mt25{margin-top:25px;}
+.mt30{margin-top:30px}
+.mt35{margin-top:35px;}
+.mt40{margin-top:40px}
+.mt45{margin-top:45px;}
+.mt50{margin-top:50px}
+.mt55{margin-top:55px}
+.mt60{margin-top:60px}
+.mt65{margin-top:65px;}
+.mt70{margin-top:70px}
+.mt75{margin-top:75px}
+.mt80{margin-top:80px}
+.mt100{margin-top:100px}
+.mt115{margin-top:115px;}
+.ml4{margin-left:4px;}
+.ml5{margin-left:5px;}
+.ml8{margin-left:8px}
+.ml10{margin-left:10px;}
+.ml20{margin-left:20px;}
+.ml24{margin-left:24px;}
+.mr5{margin-right:5px}
+.mr8{margin-right:8px}
+.mr10{margin-right:10px;}
+.mr21{margin-right:21px;}
+.mr23{margin-right:23px;}
+.mr25{margin-right:25px;}
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px}
+.mb15{margin-bottom:15px}
+.mb16{margin-bottom:16px}
+.mb50{margin-bottom:50px}
+.mb100{margin-bottom:100px}
+.pt0{padding-top:0}
+.pt45{padding-top:45px}
+.pt60{padding-top:60px}
+.pt80{padding-top:80px}
+.pt90{padding-top:90px}
+.pt100{padding-top:100px;}
+.pt110{padding-top:110px}
+.pl5{padding-left:5px}
+.pl10{padding-left:10px}
+.pl15{padding-left:15px}
+.pl20{padding-left:20px}
+.pl25{padding-left:25px}
+.pr10{padding-right:10px}
+.pb10{padding-bottom:10px}
+.pb20{padding-bottom:20px}
+.pb30{padding-bottom:30px}
+.pb35{padding-bottom:35px}
+.pb60{padding-bottom:60px}
+.pb70{padding-bottom:70px}
+.f12{font-size:12px}
+.f14{font-size:14px}
+.f15{font-size:15px}
+.f16{font-size:16px}
+.f18{font-size:18px}
+.f20{font-size:20px}
+.f22{font-size:22px}
+.f32{font-size:32px}
+.blue{color:#00acb8}
+.li-blue{color:#00c3c8;}
+.c66{color:#666}
+.c33{color:#333;}
+.c99{color:#999;}
+.c6e{color:#6e7380}
+.c_rd{color:#fb5135}
+.bcf{background-color:#fff;}
+.bce5{background-color:#e5e5e5;}
+.bg3c{background-color:#3c3e4a}
+.bg_lg{background-color:#f6f7f8}
+.fNS{font-family:'NanumSquare'}
+.lh23{line-height:23px}
+.lh24{line-height:24px;}
+.lh27{line-height:27px}
+.lh32{line-height:32px}
+.lh36{line-height:36px}
+.non-clk-a{pointer-events:none;cursor:default;}
+.li-blue.under{border-bottom:1px solid #00c3c8;text-decoration:none;}
+.blue.under{border-bottom:1px solid #00c3c8;text-decoration:none;}
+a.li-blue.under{text-decoration:none}

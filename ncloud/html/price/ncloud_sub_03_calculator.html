@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="sub">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="on d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="gMl"><a href="#">요금 소개</a></li><!-- 20170320 -->
+            <li class="on"><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="cal">
+      <div class="sub-tit">
+        <div class="sw">
+          <h3 class="mt30">요금 계산기</h3>
+          <p>상품 선택 및 사용량 설정을 통해 사용요금을 예상할 수 있습니다</p>
+        </div>
+      </div>
+
+      <div class="sub-body">
+        <div>
+          <ul class="tab-type01 lgTab tab4 h52">
+            <li><a href="#">한국</a></li>
+            <li class="on"><a href="#">미국</a></li>
+            <li><a href="#">싱가포르</a></li>
+            <li><a href="#">홍콩</a></li>
+          </ul>
+        </div>
+        <div class="wrap-price">
+
+          <div class="pr">
+            <div class="h4-area mt60">
+              <h4 class="bold">Server</h4>
+              <a href="#" class="btn-expl"></a>
+              <div class="expl">
+                <p>다양한 스펙의 서버를 웹 기반의 콘솔로 신속하게 구성할 수 있는 서비스입니다</p>
+              </div>
+              <div class="h4-rg">
+                <span class="f14 c66">총 예상 요금(1개월 기준, VAT 별도)</span>
+                <span class="di_b ml10 mr10 f20 fwb"><span class="blue">0</span>원</span>
+                <a href="#" class="btn-add on">추가하기</a>
+              </div>
+            </div>
+
+            <div class="price-box">
+              <ul>
+                <li class="w270 mr70">
+                  <div class="li-tit">운영체제</div>
+                  <div class="opt-type03 w270">
+                    <label for="cal01">선택</label>
+                    <select id="cal01">
+                      <option value="">LINUX(무료)</option>
+                      <option value="">Windows</option>
+                      <option value="">Windows + MSSQL Standard</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="w330">
+                  <div class="li-tit">스토리지 종류</div>
+                  <div class="opt-type03 w330">
+                    <label for="cal02">선택</label>
+                    <select id="cal02">
+                      <option value="">HDD</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="w270 mt30 mr70 hs-af">
+                  <div class="li-tit">서버 스펙</div>
+                  <div class="opt-type03 w270">
+                    <label for="cal03">선택</label>
+                    <select id="cal03">
+                      <option value="">vCPU/Memory(GB)/Disk(GB)</option>
+                      <option value="">vCPU/Memory(GB)/Disk(GB)</option>
+                      <option value="">vCPU/Memory(GB)/Disk(GB)</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="w330 mt30 hs-af cunt01">
+                  <div class="li-tit">서버 대수</div>
+                  <input type="text" name="" value="" placeholder="0" class="w330">
+                </li>
+              </ul>
+            </div>
+
+            <div class="price-noti">
+              <ul>
+                <li>Local Disk 타입의 서버는 서버 요금에 스토리지 요금(운영체제 및 데이터 영역)이 함께 청구됩니다.</li>
+                <li>서버 스펙 및 상세 요금은 <a href="#" class="h-light">Server 상품소개</a>를 참고하시기 바랍니다.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pr">
+            <div class="h4-area mt60">
+              <h4 class="bold">Block Storage</h4>
+              <a href="#" class="btn-expl"></a>
+              <div class="expl">
+                <p>서버의 데이터를 저장하는 용도로 사용하는 서비스입니다</p>
+              </div>
+              <div class="h4-rg">
+                <span class="f14 c66">총 예상 요금(1개월 기준, VAT 별도)</span>
+                <span class="di_b ml10 mr10 f20 fwb"><span class="blue">43,200</span>원</span>
+                <a href="#" class="btn-add">추가하기</a>
+              </div>
+            </div>
+
+            <div class="price-box">
+              <ul>
+                <li class="mr70 gb hs-af">
+                  <div class="li-tit">HDD 스토리지 사용량<span class="li-prc">21,600</span></div>
+                  <input type="text" name="" value="" placeholder="0" class="w300">
+                </li>
+              </ul>
+            </div>
+
+            <div class="price-noti">
+              <ul>
+                <li>최소 생성 용량은 10GB이며, 10GB씩 추가할 수 있습니다. 최대 용량은 1000GB입니다.</li>
+                <li>블록 스토리지 상품에 대한 더 자세한 내용은 <a href="#" class="h-light">Block Storage 상품소개</a>를 참고하시기 바랍니다.</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="pr">
+            <div class="h4-area mt80">
+              <h4 class="bold">Network</h4>
+              <a href="#" class="btn-expl"></a>
+              <div class="expl">
+                <p>서버를 외부와 연결하거나, <br/>서버로 흐르는 트래픽을 분산하는 목적으로 사용하는 서비스입니다</p>
+              </div>
+              <div class="h4-rg">
+                <span class="f14 c66">총 예상 요금(1개월 기준, VAT 별도)</span>
+                <span class="di_b ml10 mr10 f20 fwb"><span class="blue">86,400</span>원</span>
+                <a href="#" class="btn-add">추가하기</a>
+              </div>
+            </div>
+
+            <div class="price-box">
+              <ul>
+                <li class="mr70 hs-af cunt02">
+                  <div class="li-tit">공인 IP<span class="li-prc">21,600</span></div>
+                  <input type="text" name="" value="" placeholder="0" class="w300">
+                </li>
+                <li class="hs-af cunt01">
+                  <div class="li-tit">Load Balancer<span class="li-prc">21,600</span></div>
+                  <input type="text" name="" value="" placeholder="0" class="w300">
+                </li>
+                <li class="mt30 mr70 hs-af gb">
+                  <div class="li-tit">네트워크(국내 회선) 사용량<span class="li-prc">21,600</span></div>
+                  <input type="text" name="" value="" placeholder="0" class="w300">
+                </li>
+                <li class="mt30 hs-af gb">
+                  <div class="li-tit">네트워크(해외 회선) 사용량<span class="li-prc">21,600</span></div>
+                  <input type="text" name="" value="" placeholder="0" class="w300">
+                </li>
+              </ul>
+            </div>
+
+            <div class="price-noti">
+              <ul>
+                <li>네트워크는 아웃바운드 트래픽만 과금되며, 사용량에 따라 차등을 두어 청구됩니다.</li>
+                <li>네트워크 상품에 대한 더 자세한 내용은 <a href="#" class="h-light">Network 상품 소개</a>를 참고하시기 바랍니다.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pr">
+            <div class="h4-area mt80">
+              <h4 class="bold">Global CDN</h4>
+              <a href="#" class="btn-expl"></a>
+              <div class="expl">
+                <p>대용량의 콘텐츠를 전세계(한국 제외) 사용자에게 빠르고 손실없이 안전하게 전달하는 서비스입니다</p>
+              </div>
+              <div class="h4-rg">
+                <span class="f14 c66">총 예상 요금(1개월 기준, VAT 별도)</span>
+                <span class="di_b ml10 mr10 f20 fwb"><span class="blue">11,111</span>원</span>
+                <a href="#" class="btn-add">추가하기</a>
+              </div>
+            </div>
+
+            <div class="price-box">
+              <ul>
+                <li class="mr70 hs-af gb">
+                  <div class="li-tit">사용량<span class="li-prc">11,111</span></div>
+                  <input type="text" name="" value="" placeholder="0" class="w300">
+                </li>
+                <li class="hs-af cunt03">
+                  <div class="li-tit">요청 수<span class="li-prc">11,111</span></div>
+                  <input type="text" name="" value="" placeholder="800,000" class="w300">
+                </li>
+              </ul>
+            </div>
+
+            <div class="price-noti">
+              <ul>
+                <li>Global CDN 요금은 전송량과 요청 수를 합산해서 청구됩니다.</li>
+                <li>사용량에 따라 차등 청구됩니다.</li>
+                <li>Global CDN 상품에 대한 더 자세한 내용은 <a href="#" class="h-light">Global CDN 상품 소개</a>를 참고하시기 바랍니다.</li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div> <!-- end wrap-price -->
+
+
+        <!-- 총 예상 요금 영역 -->
+        <div class="wrap-total-price">
+          <div class="pr-btn">
+            <a href="#" class="btn-type01" style="border:1px solid #00acb8">예상 요금 출력</a>
+          </div>
+          <div class="total-price">
+            <p class="f14 c66">총 예상 요금 (30일 기준)</p>
+            <p class="sum"><span class="blue">888,888,888</span> 원</p>
+
+            <div class="mt25 pb20">
+              <p class="li-tit">Server<a href="#" class="close"></a></p>
+              <div class="box-cnt ">
+                <dl class="li-cnt">
+                  <dt>운영체제</dt>
+                  <dd>Windows + MSSQL</dd>
+                  <dt>서버 스펙</dt>
+                  <dd>(VDS)[LOCAL] 16CPU/32GB/(SSD)2000GB</dd>
+                  <dt>스토리지 종류</dt>
+                  <dd>SSD</dd>
+                  <dt>서버 대수</dt>
+                  <dd>2대</dd>
+                </dl>
+                <dl class="ept-prc">
+                  <dt>1개월 예상 요금</dt>
+                  <dd>520,400원</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="mt25 pb20">
+              <p class="li-tit mt25 ">Block Storage<a href="#" class="close"></a></p>
+              <div class="box-cnt ">
+                <dl class="li-cnt">
+                  <dt>HDD 스토리지 사용량</dt>
+                  <dd>1000GB</dd>
+                </dl>
+                <dl class="ept-prc">
+                  <dt>1개월 예상 요금</dt>
+                  <dd>543,200원</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="mt25 pb20">
+              <p class="li-tit mt25 ">Network<a href="#" class="close"></a></p>
+              <div class="box-cnt ">
+                <dl class="li-cnt">
+                  <dt>공인 IP</dt>
+                  <dd>2개</dd>
+                  <dt>Load Balancer</dt>
+                  <dd>4대</dd>
+                  <dt>네트워크(국내 회선) 사용량</dt>
+                  <dd>100GB</dd>
+                  <dt>네트워크(해외 회선) 사용량</dt>
+                  <dd>200GB</dd>
+                </dl>
+                <dl class="ept-prc">
+                  <dt>1개월 예상 요금</dt>
+                  <dd>520,400원</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="mt25 pb20">
+              <p class="li-tit mt25 ">Global CDN<a href="#" class="close"></a></p>
+              <div class="box-cnt ">
+                <dl class="li-cnt">
+                  <dt>사용량</dt>
+                  <dd>100GB</dd>
+                  <dt>요청 수</dt>
+                  <dd>20,000건</dd>
+                </dl>
+                <dl class="ept-prc">
+                  <dt>1개월 예상 요금</dt>
+                  <dd>21,600원</dd>
+                </dl>
+              </div>
+            </div>
+
+          </div>
+        </div><!-- end wrap-total-price -->
+
+      </div><!-- end sub-body -->
+
+    </div> <!-- end price-->
+
+
+    <div class="bnr-btm bnr01">
+      <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+      <div class="btn-area">
+        <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+      </div>
+    </div>
+    <div class="bnr-btm bnr02">
+      <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+      <div class="btn-area">
+        <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+        <a href="#" class="btn-type07 ml20">1544-5876</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('.lgTab>li').click(function(){
+      $(this).addClass('on').siblings('li').removeClass('on');
+      return false;
+    });
+    $('.lgTab .sub-tab>li').click(function(){
+      $(this).addClass('on').siblings('li').removeClass('on');
+      return false;
+    });
+
+    var selectTarget = $('.opt-type03 select');
+
+    selectTarget.change(function(){
+      var select_name = $(this).children('option:selected').text();
+      $(this).siblings('label').text(select_name);
+    });
+  });
+  // $('.btn-expl').click(function(){
+  //   var expl = $(this).parents().children('.expl');
+  //   if( !expl.hasClass('active') ){
+  //     $('.expl').removeClass('active');
+  //     expl.addClass('active');
+  //   }else{
+  //     expl.removeClass('active');
+  //   }
+  //   var h4Width = expl.parents().children('h4').width() + expl.parents().children('.btn-expl').width() + 30;
+  //   console.log(h4Width);
+  //   $('.expl').css('left',h4Width);
+  //   return false;
+  // });
+
+
+  $('.btn-expl').mouseover(function(){
+    var expl = $(this).parents().children('.expl');
+    expl.addClass('active');
+
+    var h4Width = expl.parents().children('h4').width() + expl.parents().children('.btn-expl').width() + 30;
+    $('.expl').css('left',h4Width);
+    return false;
+  });
+  $('.btn-expl').mouseleave(function(){
+    var expl = $(this).parents().children('.expl');
+    expl.removeClass('active');
+  });
+
+</script>
+</body>
+</html>

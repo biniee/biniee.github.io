@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="bg">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3 dw2">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="on d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3 dw3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">요금 소개</a></li>
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="product">
+      <div class="sub-tit prod02">
+        <div class="sw">
+          <h3>NAS</h3>
+          <p>다수의 서버가 네트워크로 연결해 사용할 수 있는<br />스토리지 입니다</p>
+          <a href="#">이용 신청하기</a>
+        </div>
+      </div>
+      <div class="sub-body">
+
+        <!-- tab -->
+        <ul class="tab-type01 prdt-tab lgTab tab4 mt60 h52">
+          <li class="on">
+            <a href="#">특징</a>
+          </li>
+          <li>
+            <a href="#">상세 기능</a>
+          </li>
+          <li>
+            <a href="#">요금</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="tab-wrap">
+
+          <div class="on">
+            <div class="width">
+              <h4 class="hidden">특징</h4>
+              <div class="tc mt60">
+                <p class="f32 fNS bold">다수의 사용자가 함께 사용하는 네트워크 저장공간</p>
+                <p class="c66 mt25">
+                  서버 간 데이터 공유, 대용량 스토리지, 유연한 용량 확대/축소, 스냅샷 백업 등 NAS 상품의 주요 기능을 활용해<br />
+                  사용자가 안전하고 편리하게 데이터를 관리할 수 있습니다. 특히, 프로토콜에 따른 인증 설정으로 높은 보안성을 제공하고,<br />
+                  이중화된 Controller 및 Disk Array Raid 구성으로 강력한 서비스 안정성을 확보하고 있습니다
+                </p>
+              </div>
+
+              <ul class="ul-type03 mt40">
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528">
+                      <h5 style="margin-top:10px">서버 간 데이터 공유</h5>
+                      <p class="f14">
+                        NAS 볼륨을 마운트한 다수의 서버와 데이터를 공유하고 관리할 수 있습니다. 다수 서버로 구성된 특정 서비스 혹은 애플리케이션에서 데이터를 함께 사용할 수 있고, 다수의 사용자가 공동으로 데이터를 활용할 수도 있습니다.
+                        Linux 서버는 네트워크 스토리지 연결을 위해 NFS 프로토콜을, Windows 서버는 CIFS 프로토콜을 제공합니다. NAS 볼륨 마운트는 국내 서버에 한하며, Global Region Service를 이용하는 사용자는 NAS를 이용할 수 없습니다.
+                        또한, 사설 IP 통신으로 구성돼 있어 네이버 클라우드 플랫폼 서버에만 마운트할 수 있습니다. 여러 계정을 동시에 보유하고 있는 사용자는 원하는 서버의 사설 IP만 등록하면 특정 NAS 볼륨을 마운트할 수 있습니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-storage05.png" alt="상품관련 아이콘" class="fr mt30" />
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-storage06.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528">
+                      <h5>대용량 저장 및 유연한 확장/축소</h5>
+                      <p class="f14">
+                        기본 저장용량 부족 시 최대 10TB까지 고객이 원하는 용량을 선택하여 생성할 수 있으며, 동시에 여러 개의 볼륨을 구성하여 생성할 수 있습니다. 온라인 상태에서의 NAS 볼륨 축소 및 확장이 가능하며. 선택한 용량이 커질수록 더 높은 성능(IOPS)을 제공받을 수 있습니다. 볼륨 사용량에 대해서는 Monitoring 감시 설정 기능을 통해 임계치 설정 후 SMS, 메일로 통보받을 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528 ㅡㅅ10">
+                      <h5>손쉬운 보안 설정</h5>
+                      <p class="f14">
+                        서버에서 NAS 볼륨을 마운트한 후 프로토콜 설정에 따라 보안을 강화할 수 있습니다. 프로토콜에 따라 ‘NFS 접근제어’, ‘CIFS 인증’의 마운트 정보를 설정해 다른 사용자의 접근을 제어합니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-nas02.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-storage07.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528 mt10">
+                      <h5>안정적인 서비스를 위한 구성</h5>
+                      <p class="f14">
+                        NAS 서비스를 제공하는 스토리지는 자체적으로 이중화된 Controller 및 Disk Array Raid로 구성돼 있어 높은 내구성과 가용성을 제공합니다. 스토리지 장비의 특정 영역에서 장애가 발생하더라도 서비스 연속성을 보장하는 형태로 구성돼 데이터의 안정성을 보장합니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528">
+                      <h5>데이터 손실 방지</h5>
+                      <p class="f14">
+                        스냅샷 기능을 제공해 데이터를 복사/보관하고, 데이터가 변경되거나 삭제되는 등 유사시에 데이터를 복구할 수 있도록 합니다. 스냅샷 기능으로 의도하지 않은 데이터 손실을 방지할 수 있습니다. 생성한 볼륨 용량 내에서 스냅샷 용량을 설정할 수 있고, 스냅샷 용량 한도 내에서 최대 7개까지 복사본이 보관됩니다. 또한, 스냅샷 자동 생성 주기를 설정할 수 있고, 원하는 즉시 스냅샷을 생성할 수도 있습니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-storage08.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-nas01.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528 mt25">
+                      <h5>간편한 관리</h5>
+                      <p class="f14">
+                        웹 기반의 콘솔에서 사용자가 직접 필요한 기능을 설정할 수 있도록 편리하게 설계돼 있습니다. 볼륨 생성, 인증, 볼륨 용량 변경, 스냅샷 설정 등 필요한 기능을 쉽게 사용할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528 mt10">
+                      <h5>효율적인 비용 관리</h5>
+                      <p class="f14">
+                        필요한 용량의 NAS 볼륨을 빠르게 생성 또는 삭제할 수 있으며, 필요한 만큼 용량을 확장하거나 축소할 수 있습니다. 이를 통해 원하는 만큼의 스토리지를 기본요금 또는 추가 요금 없이 사용할 수 있습니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-storage09.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+              </ul>
+              <a href="javascript:;" onclick="javascript:loadMC('NAS');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">상세기능</h4>
+              <div class="div01">
+                <h4 class="f18">뛰어난 안정성을 기반으로 대용량 저장소 기능을 편리하게 제공하는 서비스입니다</h4>
+              </div>
+              <div class="h4-area mt60">
+                <h4>대용량 저장소</h4>
+              </div>
+              <p class="f14 c66">
+                NAS 볼륨은 최소 500GB에서 최대 10TB까지 생성할 수 있으며, 다수의 볼륨도 생성할 수 있습니다. 사용자의 환경에 따라 큰 용량의 볼륨을 생성해 여러 서버에서 마운트해 공유하거나, 작은 용량으로 볼륨을 여러 대 생성해 용도별로 활용할 수 있습니다. 볼륨 용량 및 대수에 제한이 없기 때문에 무제한으로 볼륨을 생성할 수 있습니다.<br />
+                한편, 볼륨 용량에 따라 서로 다른 IOPS(Input/Output Operations Per Second, 초당 입출력 처리량)를 제공하기 때문에 볼륨 용량이 클수록 IOPS 측면에서 유리합니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>접근 제어 설정</h4>
+              </div>
+              <p class="f14 c66">
+                프로토콜에 따라 다른 방법으로 접근 제어를 실행할 수 있습니다. NFS 프로토콜은 볼륨 생성 과정 또는 생성된 볼륨의 ‘NFS 접근 제어’ 버튼을 클릭한 다음 보유하고 있는 서버를 선택하거나 사설 IP를 등록해 접근 제어를 설정할 수 있습니다.
+                CIFS 프로토콜은 볼륨 생성 과정 또는 생성된 볼륨의 ‘CIFS 인증’ 버튼을 클릭한 다음 아이디와 비밀번호를 설정할 수 있으며, 이 마운트 정보로 Windows에 직접 접속해 인증을 실행합니다.
+                이때, <a href="#" class="blue">Windows</a> 서버 접속 시 최초 1회 CIFS 인증 확인 절차가 필요합니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>스냅샷 설정</h4>
+              </div>
+              <p class="f14 c66">
+                <a href="#" class="blue">스냅샷</a>은 사용자가 생성한 NAS 볼륨 용량 내에서 원하는 만큼 설정할 수 있으며, 자동으로 생성되도록 주기를 설정할 수 있습니다. 또한, 필요한 상황에 즉시 스냅샷을 생성할 수 있어서 편리하게 데이터 변경 사항을 보관할 수 있습니다.<br />
+                스냅샷 보관은 자동 주기 설정으로 생성된 경우에 최대 7개까지 보관합니다(7개를 초과하면 오래된 스냅샷부터 삭제됩니다). 즉시 생성한 경우에는 용량 한도 내에서 무제한으로 보관합니다. 스냅샷 용도로 설정한 한도를 초과하면 해당 볼륨의 일반 저장용 용량을 사용합니다. 보관했던 스냅샷을 선택해 복구를 요청하면 바로 데이터가 복구됩니다. 데이터 복구에 사용한 스냅샷 이후에 생성된 스냅샷은 복구 요청과 함께 모두 삭제되므로 유의하시기 바랍니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>모니터링 및 이벤트 설정</h4>
+              </div>
+              <p class="f14 c66">
+                생성된 볼륨에 대해서 디스크 사용량을 <a href="#" class="blue">모니터링</a>할 수 있습니다. 최근 1년까지의 볼륨 신청 용량, 볼륨 및 스냅샷 할당 용량, 볼륨 및 스냅샷 사용량을 확인할 수 있습니다.<br />
+                모니터링 기능을 기반으로 디스크 사용량에 대해 이벤트 설정이 가능합니다. 원하는 NAS 볼륨에 대해 디스크 사용량 임계치와 통보 대상자를 설정하면 임계치 초과 시에 이벤트 발생 상황이 통보됩니다. 디스크 사용량 임계치는 여러 개를 중복으로 설정할 수 있어서 단계별로 이벤트 발생 통보를 받을 수 있습니다.
+              </p>
+              <a href="javascript:;" onclick="javascript:loadMC('NAS');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+            <div class="product bg">
+              <div class="sub-body">
+
+                <div class="h4-area tc pt80">
+                  <h4 style="font-size:32px">연동 부가 서비스</h4>
+                </div>
+
+                <ul class="ul-type04 mt60 col2">
+                  <li>
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server11.png" alt="서버 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>Server</h5>
+                          <p>
+                            서버 상품에 NAS 스토리지를 마운트
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">요금</h4>
+              <div class="div01">
+                <h4 class="f18">
+                  기본요금은 없으며, 최소 500GB에서 최대 10TB까지 사용자가 원하는 용량의 볼륨을 직접 생성할 수 있습니다<br />
+                  월 또는 시간 단위로 스토리지를 사용할 수 있습니다. 월 단위 요금으로 스토리지를 1개월 미만으로 사용하면 <br />
+                  이용 요금은 일할 계산돼 청구됩니다<br />
+                </h4>
+              </div>
+
+              <div class="h4-area mt60">
+                <h4 class="f18 c33">데이터 저장량 요금</h4>
+              </div>
+
+              <table class="tbl-type01 mt40 col2">
+                <caption>표준 타입 Server</caption>
+                <thead>
+                  <tr>
+                    <th>구분</th>
+                    <th>시간 요금</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>기본 용량 500GB</th>
+                    <td>50원</td>
+                  </tr>
+                  <tr>
+                    <th>추가 용량 100GB당</th>
+                    <td>10원</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <ul class="ul-type05 f14 c66 mt20">
+                <li>최소 생성 용량은 500GB 이며, 100GB씩 추가할 수 있습니다.</li>
+                <li>기본 용량 500GB를 한 달(30일 기준) 동안 이용하면 월간 이용료로 약 36,000원이 발생됩니다.</li>
+                <li>추가 용량 100GB를 한 달(30일 기준) 동안 추가 이용하면 월간 이용료로 약 7,200원이 추가 발생됩니다.</li>
+              </ul>
+              <a href="javascript:;" onclick="javascript:loadMC('NAS');return false;" class="btn-prod">이용 신청하기</a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn3"></span><span>Console</span></a></li>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+$(function(){
+  var prodTabIdx = 0;
+  $('.lgTab>li').click(function(){
+    prodTabIdx = $(this).index();
+    $(this).addClass('on').siblings('li').removeClass('on');
+    $('.tab-wrap').children('div').eq(prodTabIdx).addClass('on').siblings('div').removeClass('on');
+    if( prodTabIdx == 0 ){
+      $('#wrap').addClass('bg');
+    }else{
+      $('#wrap').removeClass('bg');
+    }
+    return false;
+  });
+});
+</script>
+</body>
+</html>

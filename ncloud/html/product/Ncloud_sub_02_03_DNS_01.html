@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="bg">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3 dw2">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="on d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3 dw3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">요금 소개</a></li>
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="product">
+      <div class="sub-tit prod03">
+        <div class="sw">
+          <h3>
+            <div>
+              <span class="beta">BETA</span>
+            </div>
+            DNS
+          </h3>
+          <p>서비스 운영에 필요한 도메인을 쉽고 간편하게<br />설정하고 관리할 수 있습니다</p>
+          <a href="#">이용 신청하기</a>
+        </div>
+      </div>
+      <div class="sub-body">
+
+        <!-- tab -->
+        <ul class="tab-type01 prdt-tab lgTab tab4 mt60 h52">
+          <li class="on">
+            <a href="#">특징</a>
+          </li>
+          <li>
+            <a href="#">상세 기능</a>
+          </li>
+          <li>
+            <a href="#">요금</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="tab-wrap">
+
+          <div class="on">
+            <div class="width">
+              <h4 class="hidden">특징</h4>
+              <div class="tc mt60">
+                <p class="f32 fNS bold">손쉬운 도메인 관리로 서비스 접근성 향상 가능</p>
+                <p class="c66 mt25">
+                  DNS(Domain Name System)는 인터넷상의 도메인 이름을 실제로 접속 가능한 주소로 식별해서 찾을 수 있도록 하는 서비스입니다.<br />
+                  예를 들어 'http://www.example.com'라는 URL을 웹 브라우저에서 입력하면 인터넷상에서 'www.example.com'에 해당하는<br />
+                  실제 IP 주소를 DNS 서비스가 전달하고, 시스템은 전달된 IP 주소로 원하는 서비스에 접속할 수 있게 됩니다.<br />
+                  DNS 서비스는 사용자가 자체 DNS 서버를 손쉽게 구축하고 안정적인 서비스를 운영할 수 있게 합니다.<br />
+                  다양한 리소스 레코드를 지원하며, 편리하게 검색, 등록, 수정할 수 있습니다. 사용자는 DNS 상품을 이용해 신규 도메인을 등록하거나<br />
+                  네이버 클라우드 플랫폼의 DNS로 이관할 수 있고, 하위 도메인을 등록해 사용할 수 있습니다
+                </p>
+              </div>
+
+              <ul class="ul-type03 mt40">
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528 mt20">
+                      <h5>간편한 DNS 관리</h5>
+                      <p class="f14">
+                        웹 기반 콘솔상에서 도메인 추가만으로 간편하게 자체 DNS를 구축하고 관리할 수 있습니다. 별도의 DNS 인프라 구축, DNS 솔루션 설치/업데이트, DNS 서버의 용량/성능관리를 포함한 운영 관리가 필요하지 않습니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-network03.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-dns01.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528 mt10">
+                      <h5>안정적인 서비스 제공</h5>
+                      <p class="f14">
+                        여러 대의 DNS 서버를 운영하여 1대의 DNS 서버에 장애가 발생하더라도 다른 DNS 서버에서 도메인 응답이 가능한 구조이기 때문에 서비스 연속성을 보장합니다. 더불어 도메인 변경 작업 시 각 DNS 서버 데이터가 빠르게 동기화되어 서비스를 안정적으로 제공할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528">
+                      <h5>손쉬운 도메인 설정</h5>
+                      <p class="f14">
+                        웹 기반 콘솔에서 몇 번의 클릭 및 입력만으로 도메인 등록/변경관리가 가능합니다. IPv4(A), IPv6(AAAA), TXT, MX, NS, 역방향 조회(PTR), 메일 서버 등록 정책(SPF) 등 다양한 리소스 레코드를 설정할 수 있으며, 검색 기능 지원을 통하여 해당 zone의 리소스 레코드도 빠르게 확인할 수 있습니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-network04.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+              </ul>
+              <a href="#" onclick="javascript:loadMC('DNS');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">상세기능</h4>
+              <div class="div01">
+                <h4 class="f18">DNS 서비스는 도메인을 소유하고 있지만 자체 DNS 서버가 없거나, DNS 구축 경험이 부족한 고객에게 유용합니다</h4>
+              </div>
+
+
+              <div class="div03">
+                <div class="h4-area mt50 tc">
+                  <h4>활용 사례</h4>
+                </div>
+
+                <div class="h4-area mt60">
+                  <h4>도메인을 신규로 등록해 DNS 서비스를 이용하는 경우</h4>
+                </div>
+                <p class="f14 c66">
+                  <!-- 20170323 -->
+                  신규 도메인 영역을 생성하고, 생성된 도메인의 네임서버를 확인합니다. 도메인 생성 시 제공된 DNS의 네임서버를 도메인 등록 기관이나 대행 기관(가비아, KINX 등)에 사용자 도메인의 네임서버로 등록합니다(참고: 네이버 클라우드 플랫폼의 DNS 서비스는 도메인 등록을 대행하는 서비스가 아니므로 도메인 등록 기관이나 등록 대행 기관을 통해 도메인을 등록해야 합니다).
+                  <!-- //20170323 -->
+                </p>
+
+                <div class="h4-area mt60">
+                  <h4>타사 또는 자체 DNS 서비스를 이용하다가 네이버 클라우드 플랫폼 DNS로 이관하는 경우</h4>
+                </div>
+                <p class="f14 c66">
+                  <!-- 20170323 -->
+                  네이버 클라우드 플랫폼의 DNS에 신규 도메인 영역을 생성합니다. 기존 DNS 관리 시스템이나 자체 DNS 관리 시스템에서 현재 등록해 사용 중인 리소스 레코드 정보를 네이버 클라우드 플랫폼의 DNS 리소스 레코드 영역으로 이관(복제)합니다. 운영 중인 도메인의 네임서버 정보를 네이버 클라우드 플랫폼 DNS에서 제공하는 네임서버 정보로 변경합니다. 이때 네임서버는 도메인 등록 기관이나 대행 기관(가비아, KINX 등)에 사용자 도메인의 네임서버로 등록해야 하며, 네임서버 변경은 최대 48시간이 소요될 수 있습니다.
+                  <!-- //20170323 -->
+                </p>
+
+                <div class="h4-area mt60">
+                  <h4>네이버 클라우드 플랫폼 DNS에서 하위 도메인을 운영하는 경우</h4>
+                </div>
+                <p class="f14 c66">
+                  하위 도메인을 신규로 생성하고, 생성한 하위 도메인의 리소스 레코드 정보를 입력합니다. 기존에 DNS를 관리하던 하위 도메인을 이관하는 경우에는 기존 리소스 레코드를 이관(복제)합니다. 상위 도메인의 리소스 레코드 설정에서 하위 도메인의 네임서버를 네이버 클라우드 플랫폼 DNS의 네임서버로 등록합니다.
+                </p>
+              </div>
+
+              <div class="div03 mt75">
+                <div class="h4-area pt80 tc">
+                  <h4>기타 지표</h4>
+                </div>
+
+                <div class="h4-area mt60">
+                  <h4>리소스 레코드</h4>
+                </div>
+
+                <table class="tbl-type01 mt40">
+                  <caption>리소스 레코드 표</caption>
+                  <colgroup>
+                    <col width="20%" />
+                    <col width="80%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>레코드</th>
+                      <th>내용</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>A 레코드</th>
+                      <td class="tl lh">
+                        도메인 이름으로 IP 주소를 찾을 수 있도록 도메인 이름에 해당하는 IP 주소를 지정합니다. 소유 도메인 및 그 하위 도메인의 IP 주소(IPv4)를 지정할 수 있습니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>NS(네임서버) 레코드</th>
+                      <td class="tl lh">
+                        소유 도메인 이름의 DNS 서버(네임서버)를 지정합니다. 보통 하위 도메인 이름을 다른 DNS 서버가 관리하도록 위임(delegation)할 때 사용합니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>AAAA(IPv6) 레코드</th>
+                      <td class="tl lh">
+                        도메인 이름으로 IPv6 주소를 찾을 수 있도록 도메인 이름에 해당하는 IPv6 주소를 지정합니다. 소유 도메인 및 그 하위 도메인의 IPv6 주소를 지정할 수 있습니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>CNAME(도메인 별명) 레코드</th>
+                      <td class="tl lh">
+                        도메인 이름에 대한 별명(alias)을 지정하는 레코드입니다. 예를 들어 'server2'라는 정규(canonical) 도메인 이름의 서버가 'www' 서버로도 사용된다면, 'server2'의 별명으로 'www'를 지정합니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>MX(메일 서버) 레코드</th>
+                      <td class="tl lh">
+                        사용자가 보유한 도메인과 하위 도메인의 메일 서버를 지정할 수 있습니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>PTR(역방향 조회) 레코드</th>
+                      <td class="tl lh">
+                        IP 주소로 해당 도메인 이름을 찾을 수 있도록 IP 주소에 해당하는 도메인 이름을 지정합니다. A 레코드와 반대되는 개념입니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>SPF(스팸 처리 방지) 레코드</th>
+                      <td class="tl lh">
+                        보안 정책을 지정합니다. 주로 스팸 메일 방지를 위해 스팸 메일을 송신한 서버의 IP 주소 등을 명시해서 메일 주소를 사칭하지 못하게 합니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>TXT(도메인 설명) 레코드</th>
+                      <td class="tl lh">
+                        도메인에 대해서 텍스트 정보를 설정합니다. 주로 SPF 레코드와 같은 용도로 사용합니다.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="#" onclick="javascript:loadMC('DNS');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+            <div class="product bg">
+              <div class="sub-body">
+
+                <div class="h4-area tc pt80">
+                  <h4 style="font-size:32px">연동 부가 서비스</h4>
+                </div>
+
+                <ul class="ul-type04 mt60 col2">
+                  <li>
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server11.png" alt="서버 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>Server</h5>
+                          <p>
+                            사용이 필요한 시점에 빠르게 서버를 공급 및 축소 등의 구성 변경 가능<br />
+                            웹 기반의 콘솔 및 API, SDK 등으로 관리
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="ml24">
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server06.png" alt="서버 이미지" class="fl" /> <!-- 20170323 -->
+                        <div class="fl sub-type01">
+                          <h5>Load Balancer</h5> <!-- 20170323 -->
+                          <p>
+                            DNS(도메인 이름) 방식으로 사용. 로드밸런서 생성 후<br >
+                            도메인 이름을 사용하려는 서비스 도메인의 CNAME으로 설정해서 사용
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">요금</h4>
+              <div class="div02">
+                <h4 class="f18">현재 베타 서비스이므로 별도 요금이 부과되지 않습니다</h4>
+              </div>
+              <a href="#" onclick="javascript:loadMC('DNS');return false;" class="btn-prod">이용 신청하기</a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn3"></span><span>Console</span></a></li>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+$(function(){
+  var prodTabIdx = 0;
+  $('.lgTab>li').click(function(){
+    prodTabIdx = $(this).index();
+    $(this).addClass('on').siblings('li').removeClass('on');
+    $('.tab-wrap').children('div').eq(prodTabIdx).addClass('on').siblings('div').removeClass('on');
+    if( prodTabIdx == 0 ){
+      $('#wrap').addClass('bg');
+    }else{
+      $('#wrap').removeClass('bg');
+    }
+    return false;
+  });
+});
+</script>
+</body>
+</html>

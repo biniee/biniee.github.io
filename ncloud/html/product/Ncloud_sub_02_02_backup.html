@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="bg">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3 dw2">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="on d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3 dw3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">요금 소개</a></li>
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="product">
+      <div class="sub-tit prod02">
+        <div class="sw">
+          <h3>Backup</h3>
+          <p>백업을 통해 데이터 손실을 최소화할 수 있습니다</p>
+          <a href="#">이용 문의하기</a>
+        </div>
+      </div>
+      <div class="sub-body">
+
+        <!-- tab -->
+        <ul class="tab-type01 prdt-tab lgTab tab4 mt60 h52">
+          <li class="on"><a href="javascript:;">특징</a></li>
+          <li><a href="javascript:;">상세 기능</a></li>
+          <li><a href="javascript:;">요금</a></li>
+          <li><a href="javascript:;">이용안내</a></li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="tab-wrap">
+
+          <div class="on">
+            <div class="width">
+              <h4 class="hidden">특징</h4>
+              <div class="tc mt60">
+                <p class="f32 fNS bold">중요한 데이터를 가장 안전한 방법으로 백업</p>
+                <p class="c66 mt25">
+                  검증된 백업 솔루션을 사용해 서버의 데이터를 정기적으로 백업하고 보관하는 서비스입니다.<br />유사 시 데이터 복구가 가능해 고객의 비즈니스 연속성을 보장합니다.<br />중요한 데이터를 안전하게 보호할 수 있도록 높은 안정성과 가용성을 기반으로 제공됩니다.
+                </p>
+              </div>
+
+              <ul class="ul-type03 mt40">
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528">
+                      <h5 style="margin-top:10px">다양한 플랫폼 및 데이터베이스 지원</h5>
+                      <p class="f14">
+                        다양한 버전의 운영 체제(Linux 및 Windows 계열)를 지원하며 각종 데이터베이스의 온라인 백업이 가능합니다. 또한 데이터를 복구할 때 동일 계열의 운영 체제라면 원본과 다른 서버에서도 백업된 데이터를 간편하게 확인할 수 있습니다. 단, 데이터베이스의 경우 복구 대상인 서버의 환경이 원본 서버와 동일해야 합니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-storage10.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-storage11.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528">
+                      <h5>높은 안정성 보장</h5>
+                      <p class="f14">
+                        신뢰받고 있는 백업 솔루션을 이용하여 높은 안정성과 가용성을 보장합니다. 전문 인력이 고객의 백업 업무를 대행하여 안전하게 데이터를 백업하며, 백업 결과는 일별 리포트를 통해 제공됩니다. (2017년 하반기에는 지리적으로 분리된 멀티 존 간의 백업 데이터를 이중화하는 기능이 추가될 예정입니다.)
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528">
+                      <h5>간편한 이용</h5>
+                      <p class="f14">
+                        간단한 설치 스크립트 수행만으로 백업 Agent의 설치부터 구성까지 완료할 수 있어 간편하게 백업 서비스를 이용할 수 있습니다. 서버는 파일 단위부터 디렉토리 단위까지, 데이터베이스의 경우는 테이블 단위부터 전체 DB 단위까지 백업 대상으로 선택할 수 있습니다. 데이터베이스 온라인 백업은 별도의 백업 저장 장치로 데이터가 저장되므로 서버에서 백업을 위한 추가적인 볼륨 용량을 따로 관리할 필요가 없습니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-storage12.png" alt="상품관련 아이콘" class="fr mt20" />
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-database01.png" alt="상품관련 아이콘" class="fl mt25" />
+                    <div class="fr w528">
+                      <h5>효율적인 비용 관리</h5>
+                      <p class="f14">
+                        백업 대상의 데이터 전체를 백업하는 방식과 변경된 데이터만 추출하여 백업하는 방식을 조합하여 운영할 수 있어 백업 용량을 효과적으로 관리할 수 있습니다. 백업된 데이터는 최소 1주부터 최대 24주까지 보관이 가능하며, 고객이 필요에 따라 적절한 보관 기간을 선택할 수 있어 효율적인 비용 관리가 가능합니다. 또한 백업을 위한 별도의 저장 공간이 필요하지 않아 경제적입니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+              <a href="javascript:;" onclick="javascript:loadMC('BKUP');return false;" class="btn-prod">이용 문의하기</a>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">상세기능</h4>
+              <div class="div01">
+                <h4 class="f18">데이터 손실을 방지하는 것을 최우선으로 하여 설계된 네이버 클라우드 플랫폼의 Backup은<br />고객의 중요 데이터를 가장 안전하게 백업하고 보관해주는 상품입니다.</h4>
+              </div>
+
+              <div class="h4-area mt60">
+                <h4>유연한 백업 정책</h4>
+              </div>
+              <p class="f14 c66">
+                최소 1일 1회부터 최대 4주 1회까지, 백업 수행 주기를 필요에 따라 선택할 수 있습니다. 백업 데이터 보관 기관은 백업 수행 주기를 기준으로 최소 2배 이상의 기간으로 계획하여, 최소 7일부터 최대 24주 기간 내에서 자유롭게 선택 가능합니다. 백업 용량은 총 저장량 기준으로 계산되며 최소 100GB에서 수 십 TB까지 유연하게 사용할 수 있습니다. 단일 서버의 일간 백업 최대 용량은 1TB까지 지원합니다.
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>강력한 보안</h4>
+              </div>
+              <p class="f14 c66">
+                데이터를 안전하게 백업하기 위해 백업 솔루션 내에 별도의 방화벽 기능을 적용했습니다. 방화벽 설정은 백업 Agent 설치를 위한 스크립트 수행 시 자동으로 함께 설정됩니다.<br />추가적인 고객의 요청에 따라 백업 스케줄 단위의 데이터 암호화를 지원해 보다 강력하게 데이터를 보호할 수 있습니다. (CAST-128, AES-256 or CAST 256 암호화 지원)
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>소산 백업 (이중화 백업)</h4>
+              </div>
+              <p class="f14 c66">
+                로컬 존(Zone)에서 백업한 데이터를 지리적으로 떨어진 다른 존으로 이중화하여 고객의 중요 데이터를 더욱 안정적으로 보관할 수 있습니다.<br />이중화된 백업 데이터의 보관 주기는 기본적으로 로컬 존의 백업 데이터 주기와 동일하나, 고객의 요청에 따라 변경할 수 있습니다. (2017년 하반기 제공 예정)
+              </p>
+
+              <div class="h4-area mt60">
+                <h4>백업 서비스 유형</h4>
+              </div>
+              <p class="f14 c66">
+                · 파일 시스템 백업 : 네이버 클라우드 플랫폼에서 제공하는 서버(VM)의 데이터 백업 (파일 혹은 디렉토리 단위로 백업 가능)<br/>
+                · 데이터베이스 온라인 백업 : 네이버 클라우드 플랫폼에서 서버 이미지로 제공하는 버전의 MSSQL, MySQL의 온라인 백업
+				<span class="db ml5">(데이터 복구를 위해 검증된 버전에 대한 지원만 제공하고 있으나, 향후 다양한 DBMS 버전을 지원할 예정입니다)</span>
+
+              </p>
+              <a href="javascript:;" onclick="javascript:loadMC('BKUP');return false;" class="btn-prod">이용 문의하기</a>
+            </div>
+            <div class="product bg">
+              <div class="sub-body">
+
+                <div class="h4-area tc pt80">
+                  <h4 style="font-size:32px">연동 부가 서비스</h4>
+                </div>
+
+                <ul class="ul-type04 mt60 col2">
+                  <li>
+                    <a href="/product/compute/server">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server11.png" alt="서버 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>Server</h5>
+                          <p>
+                            네이버 클라우드 플랫폼 내에 있는 서버를 대상으로 백업 서비스 제공
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="ml24">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server21.png" alt="서버 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>Multi Zone</h5>
+                          <p>
+                            로컬 존에서 백업된 데이터를 지리적으로 떨어진 다른 존<br/>
+                            이중화(소산)하여 보관 (2017년 하반기 예정)
+                          </p>
+                        </div>
+                      </div>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">요금</h4>
+              <div class="div01">
+                <h4 class="f18">
+                 최소 100GB에서 최대 수 십 TB까지 사용자가 원하는 데이터를 백업하고 보관합니다.<br />일 또는 주 단위로 백업 서비스를 이용할 수 있습니다.
+
+                </h4>
+              </div>
+
+              <div class="h4-area mt60">
+                <h4 class="f18 c33">서비스 요금표</h4>
+              </div>
+
+              <table class="tbl-type01 mt40">
+                <caption>서비스 요금표</caption>
+                <colgroup>
+                	<col width="30%">
+                	<col width="30%">
+                	<col width="40%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="2">구분</th>
+                    <th>종량 요금제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th colspan="2">기본 제공 용량 100GB 당</th>
+                    <td>30,000원</td>
+                  </tr>
+                 <tr>
+                 	<th rowspan="3">추가 용량 1GB 당</th>
+                 	<th>100GB이상 ~ 1TB 이하</th>
+                    <td>300원</td>
+                 </tr>
+                 <tr>
+                 	<th>1TB 초과 ~ 5TB 이하</th>
+                 	<td>250원</td>
+                 </tr>
+                 <tr>
+                 	<th>5TB 초과</th>
+                 	<td>200원</td>
+                 </tr>
+                </tbody>
+              </table>
+              <ul class="ul-type05 f14 c66 mt15">
+              	<li>Backup 서비스는 최소 100GB의 데이터를 저장합니다. 실제 사용량이 100GB 이하로 저장할 경우엔 100GB 요금이 부과되며, 100GB를 초과하면 추가 사용량에 대해서 GB 단위로 과금됩니다.</li>
+              	<li>(예) 3월 20일에 백업 서비스를 신청하고, 3월 총 저장량이 20GB인 경우 요금은 30,000원(기본 제공 용량 100GB)입니다.</li>
+              	<li>(예) 백업 데이터 저장량이 300GB인 경우 요금은 90,000원(30,000원 + 300원*200GB)입니다.</li>
+              </ul>
+              <a href="javascript:;" onclick="javascript:loadMC('BKUP');return false;" class="btn-prod">이용 문의하기</a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn3"></span><span>Console</span></a></li>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+$(function(){
+  var prodTabIdx = 0;
+  $('.lgTab>li').click(function(){
+    prodTabIdx = $(this).index();
+    $(this).addClass('on').siblings('li').removeClass('on');
+    $('.tab-wrap').children('div').eq(prodTabIdx).addClass('on').siblings('div').removeClass('on');
+    if( prodTabIdx == 0 ){
+      $('#wrap').addClass('bg');
+    }else{
+      $('#wrap').removeClass('bg');
+    }
+    return false;
+  });
+});
+</script>
+</body>
+</html>

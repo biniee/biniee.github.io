@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="join">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li><a href="#">소개</a></li>
+        <li><a href="#">상품</a></li>
+        <li><a href="#">요금</a></li>
+        <li><a href="#">고객지원</a></li>
+        <li><a href="#">이용 가이드</a></li>
+        <li><a href="#">마이페이지</a></li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그인</a></li>
+        <li class="gnb-join"><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="login">
+    <div class="tit">
+      <h3 class="pt110">유료회원 등록</h3>
+      <p class="tc fNS">
+        Npac 기본 프로모션만 이용하는 회원은, 유료상품 구매를 위해 결제정보 등 회원정보 추가 등록이 필요합니다<br/>
+        (콘솔에서 상품을 구매하기 전에는 추가 비용이 발생하지 않습니다)
+      </p>
+      <ul class="fNS">
+        <li class="step01 check">
+          <span class="round"></span>
+          <span class="txt">회원등록 유형</span>
+        </li>
+        <li class="step02 check">
+          <span class="round"></span>
+          <span class="txt">이용약관 동의</span>
+        </li>
+        <li class="step03 on">
+          <span class="round"></span>
+          <span class="txt">회원정보 입력</span>
+        </li>
+        <li class="step04">
+          <span class="round"></span>
+          <span class="txt">결제수단 등록</span>
+        </li>
+        <li class="step05 last">
+          <span class="round"></span>
+          <span class="txt">회원등록 완료</span>
+        </li>
+      </ul>
+    </div>
+    <div class="body">
+      <div class="user-join">
+
+        <!-- 회원정보 입력 -->
+        <div class="step03 userForm">
+
+          <!-- 로그인정보
+          <div class="userForm01">
+            <h4>1. 로그인 정보</h4>
+            <ul>
+              <li>
+                <label for="userId">
+                  아이디
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <div class="box">
+                    <input type="text" id="userId" placeholder="메일을 입력해 주세요" />
+                    <a href="#" class="btn-type02">메일 인증</a>
+                  </div>
+                  <div class="alert db">
+                    // <span class="ico-x">메일 주소를 확인해 주세요</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="userPW">
+                  비밀번호
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <input type="password" id="userPW" placeholder="비밀번호를 입력해 주세요" />
+                  <div class="alert db">
+                    //<span class="ico-x">비밀번호를 입력해 주세요</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="checkPW">
+                  비밀번호 확인
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <input type="password" id="checkPW" placeholder="비밀번호를 재입력해 주세요" />
+                  <div class="alert db">
+                    // <span class="ico-x">비밀번호를 확인해 주세요</span>
+                  </div>
+                  <p class="f12 c66">* 비밀번호는  6~16자의 영문 대소문자, 숫자 및 특수문자로 사용이 가능합니다</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+           //로그인정보 -->
+
+          <!-- 회원정보 -->
+          <div class="userForm02">
+            <h4>1. 사업자 정보</h4>
+            <ul>
+              <li>
+                <label for="userName" class="f14 bold">
+                  사업자명
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <input type="text" id="userName" placeholder="사업자명을 입력해 주세요" class="wMax" />
+                  <div class="alert db">
+                    <!--span class="ico-x">사업자명을 확인해 주세요</span-->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="userLicensee" class="f14 bold">
+                  사업자 등록번호
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <div class="form-num i30">
+                    <div class="of_h">
+                      <input type="text" name="userLicensee" title="사업자등록번호 번호 첫자리 입력" placeholder="000" class="w124"/>
+                      <i>-</i>
+        							<input type="text" name="userLicensee" title="사업자등록번호 중간자리 입력" placeholder="00" class="w124"/>
+                      <i>-</i>
+        							<input type="text" name="userLicensee" title="사업자등록번호 끝자리 입력" placeholder="00000" class="w124"/>
+                    </div>
+                  </div>
+                  <div class="alert db">
+                    <!--span class="ico-x">사업자 등록번호를 확인해 주세요</span-->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="userCEO" class="f14 bold">
+                  대표자명
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <input type="text" id="userCEO" placeholder="대표자명을 입력해 주세요" class="wMax" />
+                  <div class="alert db">
+                    <!--span class="ico-x">대표자명을 확인해 주세요</span-->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="address" class="f14 bold">
+                  사업장 주소
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <div class="box of_h">
+                    <input type="text" placeholder="기본주소를 입력해 주세요" class="w432" />
+                    <a href="javascript:popupOpen();" class="form-btn01 w122">주소 검색</a><!-- 20170322 -->
+                  </div>
+                  <div class="alert db">
+                    <!--span class="ico-x">주소 검색을 진행해 주세요</span--><!-- 20170322 -->
+                  </div>
+                  <input type="text" placeholder="상세주소를 입력해 주세요" class="mt10 wMax" />
+                  <div class="alert db">
+                    <!--span class="ico-x">상세주소를 확인해 주세요</span-->
+                  </div>
+                </div>
+              </li>
+              <li class="bc">
+                <label for="bc" class="f14 bold">
+                  업태/종목
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <div class="div01">
+                    <input type="text" placeholder="업태명을 입력해 주세요" class="w200" />
+                    <div class="alert db">
+                      <!--span class="ico-x">업태명을 확인해 주세요</span-->
+                    </div>
+                  </div>
+                  <span class="span">/</span>
+                  <div class="div02">
+                    <input type="text" placeholder="종목명을 입력해 주세요" class="w200"/>
+                    <div class="alert db">
+                      <!--span class="ico-x">종목명을 확인해 주세요</span-->
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="userPhone2" class="f14 bold">
+                  유선(대표)번호
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="form-num i30">
+                  <div class="of_h">
+    								<select title="유선 번호 앞자리 선택" class="opt-type01 w124">
+      								<option selected="selected">선택</option>
+                      <optio>02</option>
+      								<option>031</option>
+      								<option>032</option>
+      								<option>033</option>
+    								</select>
+                    <i>-</i>
+    								<input type="text" name="userPhone2" title="유선 번호 중간자리 입력" placeholder="8888" class="w124"/>
+                    <i>-</i>
+    								<input type="text" name="userPhone2" title="유선 번호 끝자리 입력" placeholder="8888" class="w124"/>
+                  </div>
+  							</div>
+                <div class="alert db">
+                  <!--span class="ico-x">유선(대표)번호를 확인해 주세요</span-->
+                </div>
+              </li>
+              <li>
+                <label for="service"class="f14 bold">
+                  서비스 분야
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <div class="of_h">
+                    <select class="opt-type01 mr8 w277 fl mr10">
+                      <option selected="selected">선택</option>
+                      <option>선택</option>
+                      <option>선택</option>
+                      <option>선택</option>
+                    </select>
+                    <input type="text" placeholder="서비스 분야를 입력해 주세요"  class="w277 fl"/>
+                  </div>
+                  <div class="alert db">
+                    <!--span class="ico-x">서비스 분야를 선택해 주세요</span-->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="service"class="f14 bold">
+                  서비스 형태
+                </label>
+                <div class="right">
+                  <select class="opt-type01 mr8 w277 mb16">
+                    <option selected="selected">선택</option>
+                    <option>선택</option>
+                    <option>선택</option>
+                    <option>선택</option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <span class="route f14 bold">
+                  가입 경로
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </span>
+                <div class="right">
+                  <div class="of_h">
+                    <select class="opt-type01 route w277 mr10 fl">
+                      <option selected="selected">선택</option>
+                      <option>선택</option>
+                      <option>선택</option>
+                      <option>선택</option>
+                    </select>
+                    <input type="text" placeholder="가입경로를 입력해 주세요" class="w277" />
+                  </div>
+                  <div class="alert db">
+                    <!--span class="ico-x">가입 경로를 선택해 주세요</span-->
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //회원정보 -->
+
+          <!-- 담당자정보 -->
+          <div class="userForm03">
+            <h4>2. 담당자 정보</h4>
+            <ul>
+              <li>
+                <label for="manager" class="f14 bold">
+                  담당자명
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <input type="text" placeholder="담당자명을 입력해 주세요" class="wMax" />
+                  <div class="alert db">
+                    <!--span class="ico-x">담당자명을 입력해주세요</span-->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="managerPhone" class="f14 bold managerPhone">
+                  담당자<br />휴대폰 번호
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <div class="form-num mb10 i30">
+                    <div class="of_h">
+      								<select title="휴대폰 번호 앞자리 선택" class="opt-type01 w124">
+        								<option selected="selected">선택</option>
+                        <option>010</option>
+        								<option>011</option>
+        								<option>016</option>
+        								<option>018</option>
+        								<option>019</option>
+      								</select>
+                      <i>-</i>
+      								<input type="text" name="managerPhone" title="휴대폰 번호 중간자리 입력" placeholder="8888" class="w124"/>
+                      <i>-</i>
+      								<input type="text" name="managerPhone" title="휴대폰 번호 끝자리 입력" placeholder="8888" class="w124"/>
+      								<a href="#" class="form-btn01 w122">휴대폰 인증</a>
+                    </div>
+                    <div class="alert db">
+                      <!--span class="ico-x">휴대폰 번호를 확인해 주세요</span-->
+                    </div>
+                  </div>
+                  <div class="box of_h">
+                    <input type="text" placeholder="인증번호를 입력해 주세요" class="w432" />
+                    <a href="#" class="form-btn01 w122">확인</a>
+                  </div>
+                  <div class="alert db">
+                    <!--span class="ico-x">인증번호를 확인해 주세요</span-->
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //담당자정보 -->
+
+          <!-- 증빙서류제출 -->
+          <div class="userForm04">
+            <h4>3. 증빙서류 제출</h4>
+            <ul>
+              <li>
+                <label for="evidence" class="f14 bold evidence"><!-- 20170318 -->
+                  증빙서류
+                  <span class="ico-essential"><span class="hidden">필수입력 항목</span></span>
+                </label>
+                <div class="right">
+                  <p class="f14 c66">신청 정보를 증명할 수 있는 사업자등록증 사본을 제출해 주세요</p>
+                  <p class="f12 c66 mt5">* 일반과세자(개인사업자)의 경우, 사업자등록증에 주민등록번호가 포함되어 있으면 뒷자리 7자리를 음영처리(masking)하여 제출 바랍니다</p><!-- 20170318 -->
+                  <a href="javascript:popupOpen2();" class="btn-type02 mt10">파일첨부</a><!-- 20170320 -->
+                  <div class="alert db">
+                    <!--span class="ico-x">증빙서류를 첨부해 주세요</span-->
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //증빙서류제출 -->
+
+          <div class="btn-area">
+            <a href="#" class="btn-type04">이전</a>
+            <a href="#" class="btn-type03">다음</a>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- //회원정보 입력 -->
+
+    </div>
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+
+<!-- 20170320 -->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+function check(){
+    cbox = input_form.chk;
+    if(cbox.length) {
+        if ( $('#all').is(":checked") ){
+          $('.allAgree').addClass('on');
+        }else{
+          $('.allAgree').removeClass('on');
+        }
+        for(var i = 0; i<cbox.length;i++) {
+            cbox[i].checked=input_form.all.checked;
+        }
+    } else {
+        cbox.checked=input_form.all.checked;
+    }
+}
+function popupOpen(){
+  var popUrl = "../popup/Ncloud_popup_zipCode.html";
+  var popOption = "width=640, height=788, resizable=no, scrollbars=no, status=no;"
+
+  window.open(popUrl, "", popOption);
+}
+function popupOpen2(){
+  var popUrl = "../popup/Ncloud_popup_proofDocSubmission.html";
+  var popOption = "width=480, height=450, resizable=no, scrollbars=no, status=no;"
+
+  window.open(popUrl, "", popOption);
+}
+</script>
+<!-- //20170320 -->
+</body>
+</html>

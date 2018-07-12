@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="bg">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3 dw2">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="on d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3 dw3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">요금 소개</a></li>
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="product">
+      <div class="sub-tit prod03">
+        <div class="sw">
+          <h3>CDN</h3>
+          <p>다수의 콘텐츠를 많은 사용자에게<br />손실 없이 빠르게 전달합니다</p>
+          <a href="#">이용 신청하기</a>
+        </div>
+      </div>
+      <div class="sub-body">
+
+        <!-- tab -->
+        <ul class="tab-type01 prdt-tab lgTab tab4 mt60 h52">
+          <li class="on">
+            <a href="#">특징</a>
+          </li>
+          <li>
+            <a href="#">상세 기능</a>
+          </li>
+          <li>
+            <a href="#">요금</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="tab-wrap">
+
+          <div class="on">
+            <div class="width">
+              <h4 class="hidden">특징</h4>
+              <div class="tc mt60">
+                <p class="f32 fNS bold">다양한 콘텐츠를 빠르고 안전하게 전달</p>
+                <p class="c66 mt25">
+                  CDN(Content Delivery Network)은 인터넷 사용자에게 다양한 콘텐츠를 빠르고 안전하게 전달하는 서비스입니다.<br />
+                  수많은 이미지 콘텐츠의 빠른 전송, 대용량 콘텐츠의 초고속 다운로드, 미디어 콘텐츠의 끊김 없는 스트리밍 서비스 등 많은 분야에서 활용됩니다.<br />
+                  웹 기반의 콘솔로 편리하게 CDN 서비스를 이용할 수 있습니다. CDN 서비스를 신청하면 수 분 내에 서비스 제공이 완료돼 원하는 콘텐츠를 전달할 수 있습니다. <br />
+                  콘텐츠를 전송하기 위해 사용한 네트워크 및 요청수만큼 요금이 부과되는 상품이라 사용한 만큼만 비용을 지불합니다.
+                </p>
+              </div>
+
+              <ul class="ul-type03 mt40">
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-network15.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528 mt5">
+                      <h5>웹캐싱, 다운로드, 스트리밍 서비스 동시 제공</h5>
+                      <p class="f14">
+                        이미지, 게임 설치 파일 등 전통적인 웹캐싱, 다운로드 서비스뿐만 아니라, 대용량 미디어 콘텐츠에 대해 HLS(HTTP Live Streaming), MPEG-DASH 등과 같은 HTTP/HTTPS 표준 규격 기반의 스트리밍 전송 기능을 동시에 제공합니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528 mt5">
+                      <h5>간단한 신청 및 활용</h5>
+                      <p class="f14">
+                        고객이 온라인으로 CDN 서비스 생성, 설정할 수 있도록 웹 기반의 콘솔을 제공합니다. CDN 서비스 생성 후, 수 분 이내에 CDN 제공이 완료되어, 바로 콘텐츠 전송이 가능합니다. 고객의 CDN 이용금액은 콘텐츠 전송량 및 요청 수에 비례하며, 서비스 이용에 따른 사용량 약정이 없습니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-network16.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <img src="../../img/ko/prod-network17.png" alt="상품관련 아이콘" class="fl" />
+                    <div class="fr w528 mt25">
+                      <h5>네이버 클라우드 플랫폼 타 상품과 연계 가능</h5>
+                      <p class="f14">
+                        타 상품과의 편리한 연동 설정 기능을 제공합니다. File Storage, Server 상품 사용 고객은 CDN 원본 서버 및 CDN 로그 저장소로 기존에 사용 중인 상품을 활용할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrap of_h">
+                    <div class="fl w528 mt10">
+                      <h5>신속한 이벤트 알림</h5>
+                      <p class="f14">
+                        고객의 CDN 사용 패턴 확인과 사용량 관리를 위해, CDN 사용량에 대한 알림 기능을 고객에게 제공 합니다. 전송량, 호출수에 대해 월 누적 사용량이 고객이 설정한 값을 초과하면 메일 또는 SMS로 안내됩니다.
+                      </p>
+                    </div>
+                    <img src="../../img/ko/prod-network08.png" alt="상품관련 아이콘" class="fr" />
+                  </div>
+                </li>
+              </ul>
+              <a href="javascript:;" onclick="javascript:loadMC('CDN2');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">상세기능</h4>
+              <div class="div01">
+                <h4 class="f18">Server, File Storage 기능과 연계하여 쉽고 편리하게 사용할 수 있습니다</h4>
+              </div>
+
+              <div class="h4-area mt60">
+                <h4>콘텐츠 보안 기능</h4>
+              </div>
+              <p class="f14 c66 mt10">
+                다양한 콘텐츠 보안 기능을 제공하여, 안전하게 콘텐츠를 전송합니다. 콘텐츠 보안을 위해 제공하는 기능은 다음과 같습니다.
+              </p>
+              <ul class="ul-type05 f14 mt5">
+                <li class="lh27">HTTPS 전송 지원 (SSL 인증서 설정 기능 포함)</li>
+                <li class="lh27">등록된 도메인 기준 접근 허용 기능</li>
+                <li class="lh27">Secure-Token 기반 보안 URL 생성 기능</li>
+              </ul>
+
+              <div class="h4-area mt60">
+                <h4>웹캐싱, 다운로드 기능</h4>
+              </div>
+              <p class="f14 c66 mt10">웹캐싱, 다운로드와 같은 일반적인 CDN 서비스 속성을 웹 기반의 콘솔을 통해, 간편하게 설정할 수 있습니다. HTTP/HTTPS 프로토콜로 서비스를 제공하며, Cache Expire, Ignore Query String, Referrer Domain 등의 캐싱 옵션을 지원합니다.</p>
+
+              <div class="h4-area mt60">
+                <h4>스트리밍</h4>
+              </div>
+              <p class="f14 c66 mt10">대용량 미디어 콘텐츠에 대한 HTTP 표준 규격 기반의 스트리밍 방식의 콘텐츠 전송을 제공합니다. 단, 미디어 콘텐츠는 MP4/MOV/MP3 (Video H.264/AVC, Audio AAC/MP3) 규격을 따라야 합니다. 이러한 미디어 콘텐츠에 대해 HLS (HTTP Live Streaming), MPEG-DASH, Pseudo-Streaming 방식으로 사용자에게 전송합니다.</p>
+
+              <div class="h4-area mt60">
+                <h4>CDN 통계/모니터링 기능</h4>
+              </div>
+              <p class="f14 c66 mt10">다음과 같은 항목들을 기본으로 제공합니다.</p>
+              <ul class="ul-type05 f14 mt5">
+                <li class="lh27">이용량 (전송량/요청수) 통계</li>
+                <li class="lh27">응답 코드별 통계</li>
+                <li class="lh27">국가별 접속 통계</li>
+                <li class="lh27">Referer 통계</li>
+              </ul>
+
+              <div class="h4-area mt60">
+                <h4>콘텐츠 접근 로그 제공</h4>
+              </div>
+              <p class="f14 c66 mt10">고객의 콘텐츠 전송 및 사용 패턴 분석 지원을 위하여 CDN 콘텐츠 요청에 대한 접근 로그를 제공합니다. 추출된 접근 로그는 File Storage 와 연동되어 주기적으로 자동 저장됩니다. </p>
+
+              <div class="h4-area mt60">
+                <h4>다양한 원본 서버 지원</h4>
+              </div>
+              <p class="f14 c66 mt10">CDN은 HTTP 프로토콜을 통해 다양한 원본 서버와의 콘텐츠 연동을 지원 합니다. 원본 서버로 고객이 보유중인 다양한 웹 서버 및 네이버 클라우드 플랫폼의 File Storage, Server를 설정할 수 있으며, 연결을 위한 포트를 자유롭게 지정할 수 있습니다.</p>
+              <a href="javascript:;" onclick="javascript:loadMC('CDN2');return false;" class="btn-prod">이용 신청하기</a>
+            </div>
+            <div class="product bg">
+              <div class="sub-body">
+
+                <div class="h4-area tc pt80">
+                  <h4 style="font-size:32px">연동 부가 서비스</h4>
+                </div>
+
+                <ul class="ul-type04 mt60 col2">
+                  <li>
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server11.png" alt="서버 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>Server</h5>
+                          <p>
+                            CDN의 원본 서버로 지정
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="ml24">
+                    <a href="#">
+                      <div class="wrap of_h">
+                        <img src="../../img/ko/prod-server19.png" alt="스토리지 이미지" class="fl" />
+                        <div class="fl sub-type01">
+                          <h5>File Storage</h5>
+                          <p>
+                            CDN을 사용할 콘텐츠 원본을 파일 스토리지에 저장<br />사용 중인 CDN 서비스의 사용 로그(Access Log) 저장
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="width">
+              <h4 class="hidden">요금</h4>
+
+              <table class="tbl-type01 mt40 col4">
+                <caption>CDN 요금 표</caption>
+                <thead>
+                  <tr>
+                    <th>구분</th>
+                    <th>과금 단위</th>
+                    <th>사용량 구간</th>
+                    <th>종량 요금제</th><!-- 20170318 -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="4">월 전송량 요금</th>
+                    <td rowspan="4">GB</td>
+                    <td>0~10TB 이하</td>
+                    <td>100원</td>
+                  </tr>
+                  <tr>
+                    <td>10TB 초과~100TB 이하</td>
+                    <td>90원</td>
+                  </tr>
+                  <tr>
+                    <td>100TB 초과~500TB 이하</td>
+                    <td>80원</td>
+                  </tr>
+                  <tr>
+                    <td>500TB 초과</td>
+                    <td>70원</td>
+                  </tr>
+                  <tr>
+                    <th>월 요청 수 요금</th>
+                    <td>10,000건</td>
+                    <td>-</td>
+                    <td>10원</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p class="f14 c66 mt15">
+                · 서비스 요금 = 월 전송량(transfer) 요금 + 월 요청수(request) 요금
+              </p>
+              <ul class="f14 c66 mt5 pl10">
+                <li>- 월 전송량(transfer) 요금 = 월 단위 총 CDN 전송량에 대한 사용량 구간별 요금의 합</li>
+                <li>- 월 요청수(request) 요금 = 월 단위 총 CDN 요청 수</li>
+              </ul>
+              <a href="javascript:;" onclick="javascript:loadMC('CDN2');return false;" class="btn-prod">이용 신청하기</a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- quick-menu -->
+    <div class="quick-menu">
+      <ul>
+        <li><a href="#"><span class="icn icn3"></span><span>Console</span></a></li>
+        <li><a href="#"><span class="icn icn1"></span><span>요금 계산기</span></a></li>
+        <li><a href="#"><span class="icn icn2"></span><span>문의 게시판</span></a></li>
+        <li><a href="#container" class="goTop">TOP</a></li>
+      </ul>
+    </div>
+    <!-- //quick-menu -->
+
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+$(function(){
+  var prodTabIdx = 0;
+  $('.lgTab>li').click(function(){
+    prodTabIdx = $(this).index();
+    $(this).addClass('on').siblings('li').removeClass('on');
+    $('.tab-wrap').children('div').eq(prodTabIdx).addClass('on').siblings('div').removeClass('on');
+    if( prodTabIdx == 0 ){
+      $('#wrap').addClass('bg');
+    }else{
+      $('#wrap').removeClass('bg');
+    }
+    return false;
+  });
+});
+</script>
+</body>
+</html>

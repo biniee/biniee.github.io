@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>네이버 클라우드 BIZ</title>
+  <link rel="stylesheet" href="../../css/ko/layout.css" />
+  <link rel="stylesheet" href="../../css/ko/contents.css" />
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="sub">
+  <a href="#container" class="skip">본문 바로가기</a>
+
+  <!-- header -->
+  <header id="nC-gnb">
+    <div class="wrap">
+      <h2 class="hidden">메인메뉴</h2>
+      <h1 class="nCloud-logo"><a href="#">NAVER Cloud Platform</a></h1>
+      <ul class="menu">
+        <li>
+          <a href="#">소개</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">서비스 소개</a></li>
+            <li><a href="#">서비스 추천</a></li>
+            <li class="d3">
+              <a href="#">활용분야</a>
+              <ul class="depth_3">
+                <li><a href="#">모바일 및 웹 서비스</a></li>
+                <li><a href="#">게임 서비스</a></li>
+                <li><a href="#">미디어 서비스</a></li>
+                <li><a href="#">금융 서비스</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">고객사례</a>
+              <ul class="depth_3">
+                <li><a href="#">NAVER</a></li>
+                <li><a href="#">Red Sahara</a></li>
+                <li><a href="#">Npac</a></li>
+                <li><a href="#">Wishlink</a></li>
+                <li><a href="#">Soongsil University</a></li>
+              </ul>
+            </li>
+            <li><a href="#">파트너</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">상품</a>
+          <ul class="depth_2">
+            <li class="on d3">
+              <a href="#">Compute</a>
+              <ul class="depth_3">
+                <li><a href="#">Server</a></li>
+                <li><a href="#">SSD Server</a></li>
+                <li><a href="#">Virtual Dedicated Server</a></li>
+                <li><a href="#">Auto Scaling</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Storage</a>
+              <ul class="depth_3">
+                <li><a href="#">File Storage</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">NAS</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Networking</a>
+              <ul class="depth_3">
+                <li><a href="#">Load Balancer</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">Global Internet Service</a></li>
+                <li><a href="#">CDN</a></li>
+                <li><a href="#">Live Transcoder</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Database</a>
+              <ul class="depth_3">
+                <li><a href="#">MSSQL</a></li>
+                <li><a href="#">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Management</a>
+              <ul class="depth_3">
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Sub Account</a></li>
+                <li><a href="#">Web service Monitoring System</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="d3">
+              <a href="#">Security</a>
+              <ul class="depth_3">
+                <li><a href="#">ACG</a></li>
+                <li><a href="#">App Safer</a></li>
+                <li><a href="#">Site Safer</a></li>
+                <li><a href="#">Managed Security</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Global Region</a></li>
+          </ul>
+        </li>
+        <li class="on">
+          <a href="#">요금</a>
+          <ul class="depth_2">
+            <li class="on gMl"><a href="#">요금 소개</a></li><!-- 20170320 -->
+            <li><a href="#">요금 계산기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객지원</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">공지사항</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">나의문의 내역</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+        </li>
+        <li>
+          <a href="#">마이페이지</a>
+          <ul class="depth_2">
+            <li class="on"><a href="#">이용현황</a></li>
+            <li><a href="#">청구내역 조회</a></li>
+            <li><a href="#">세금계산서 조회</a></li>
+            <li><a href="#">이용내역 조회</a></li>
+            <li><a href="#">인증키 관리</a></li>
+            <li class="d3">
+              <a href="#">회원정보 관리</a>
+              <ul class="depth_3">
+                <li><a href="#">비밀번호 변경</a></li>
+                <li><a href="#">회원정보 변경</a></li>
+                <li><a href="#">계정 변경</a></li>
+                <li><a href="#">결제 수단 변경</a></li>
+                <li><a href="#">알림설정 변경</a></li>
+                <li><a href="#">회원탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="gnb">
+        <li class="gnb-login"><a href="#">로그아웃</a></li>
+        <li class="gnb-platform">
+          <select class="opt-type02" title="platform 선택">
+            <option value="platform_1.0">platform 1.0</option>
+            <option value="platform_2.0">platform 2.0</option>
+          </select>
+        </li>
+        <li class="gnb-console"><a href="#">Console</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <h2 class="hidden">네이버 클라우드 BIZ 본문영역</h2>
+  <section id="container" class="sub">
+    <div class="price type02">
+      <div class="sub-tit">
+        <div class="sw">
+          <h3>요금 소개</h3>
+          <p>적은 비용으로 더 많은 서비스를 이용할 수 있도록 효과적인 요금제를 제공합니다</p>
+        </div>
+      </div>
+
+      <div class="sub-body">
+        <!-- tab -->
+        <ul class="tab-type01 lgTab tab4">
+          <li>
+            <a href="#">한국</a>
+          </li>
+          <li class="on">
+            <a href="#">미국</a>
+            <ul class="sub-tab02 tab4">
+              <li class="on"><a class="scroll" href="#server">Server</a></li>
+              <li><a class="scroll" href="#operating-system">Operating System</a></li>
+              <li><a class="scroll" href="#load-balancer">Load Balancer</a></li>
+              <li><a class="scroll" href="#public-ip">Public IP</a></li>
+              <li><a class="scroll" href="#network">Network</a></li>
+              <li><a class="scroll" href="#glb-only-line">글로벌 전용 회선</a></li>
+              <li><a class="scroll" href="#monitoring">Monitoring</a></li>
+              <li><a class="scroll" href="#glb-cdn">Global CDN</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">싱가포르</a>
+          </li>
+          <li>
+            <a href="#">홍콩</a>
+          </li>
+        </ul>
+        <!-- //tab -->
+
+        <div class="h4-area mt65" id="server">
+          <h4>Server</h4>
+          <p class="mt20 f14 c66">운영체제 설치를 위한 기본 디스크가 제공되며, 추가 디스크는 사용자가 원하는 용량 만큼 직접 생성할 수 있습니다. <br/>
+            월 또는 시간 단위로 서버를 이용할 수 있습니다. 월요금의 경우 1개월 미만으로 이용하면 일할 계산되어 청구됩니다.<br/>
+            vCPU 1개, 메모리 2GB 서버는 Linux 계열 운영체제만 사용할 수 있습니다.<br/>
+          </p>
+        </div>
+
+        <table class="tbl-type01 hgt34 col7" summary="서버별 요금 정보를 제공하는 표로 타입별 제공 사양과 이용 요금으로 이루어져 있습니다.">
+          <caption>Server 타입별 이용 요금</caption>
+          <thead>
+            <tr>
+              <th colspan="1" scope="col" style="width:20%;" rowspan="2">타입</th>
+              <th colspan="3" scope="col" >제공 사양</th>
+              <th colspan="2" scope="col" >이용 요금</th>
+              <th colspan="1" scope="col" style="width:20%;"rowspan="2">비고</th>
+            </tr>
+            <tr>
+              <th colspan="1" scope="col" style="width:12%;">vCPU</th>
+              <th colspan="1" scope="col" style="width:12%;">메모리</th>
+              <th colspan="1" scope="col" style="width:12%;">디스크(데이터)</th>
+              <th colspan="1" scope="col" style="width:12%;">시간</th>
+              <th colspan="1" scope="col" style="width:12%;">월</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="9">Standard</th>
+              <td>1개</td>
+              <td>2GB</td>
+              <td>50GB</td>
+              <td>41원</td>
+              <td>29,000원</td>
+              <td rowspan="9" class="lh24">가용성보다<br/>디스크 I/O 성능이 중요한<br/>애플리케이션에 적합</td>
+            </tr>
+            <tr>
+              <td>2개</td>
+              <td>2GB</td>
+              <td>50GB</td>
+              <td>64원</td>
+              <td>46,000원</td>
+            </tr>
+            <tr>
+              <td>2개</td>
+              <td>4GB</td>
+              <td>50GB</td>
+              <td>96원</td>
+              <td>69,000원</td>
+            </tr>
+            <tr>
+              <td>4개</td>
+              <td>4GB</td>
+              <td>50GB</td>
+              <td>120원</td>
+              <td>86,000원</td>
+            </tr>
+            <tr>
+              <td>4개</td>
+              <td>8GB</td>
+              <td>50GB</td>
+              <td>174원</td>
+              <td>125,000원</td>
+            </tr>
+            <tr>
+              <td>8개</td>
+              <td>8GB</td>
+              <td>50GB</td>
+              <td>237원</td>
+              <td>170,000원</td>
+            </tr>
+            <tr>
+              <td>8개</td>
+              <td>16GB</td>
+              <td>50GB</td>
+              <td>317원</td>
+              <td>228,000원</td>
+            </tr>
+            <tr>
+              <td>12개</td>
+              <td>16GB</td>
+              <td>50GB</td>
+              <td>362원</td>
+              <td>260,000원</td>
+            </tr>
+            <tr>
+              <td>16개</td>
+              <td>16GB</td>
+              <td>50GB</td>
+              <td>459원</td>
+              <td>330,000원</td>
+            </tr>
+
+            <tr>
+              <th scope="row" rowspan="7">High Memory</th>
+              <td>2개</td>
+              <td>8GB</td>
+              <td>50GB</td>
+              <td>149원</td>
+              <td>107,000원</td>
+              <td rowspan="7" class="lh24">CPU보다 메모리<br/>리소스가 더 필요한<br/>애플리케이션에 적합</td>
+            </tr>
+            <tr>
+              <td>2개</td>
+              <td>16GB</td>
+              <td>50GB</td>
+              <td>187원</td>
+              <td>134,000원</td>
+            </tr>
+            <tr>
+              <td>4개</td>
+              <td>16GB</td>
+              <td>50GB</td>
+              <td>285원</td>
+              <td>205,000원</td>
+            </tr>
+            <tr>
+              <td>4개</td>
+              <td>32GB</td>
+              <td>50GB</td>
+              <td>369원</td>
+              <td>265,000원</td>
+            </tr>
+            <tr>
+              <td>8개</td>
+              <td>32GB</td>
+              <td>50GB</td>
+              <td>519원</td>
+              <td>373,000원</td>
+            </tr>
+            <tr>
+              <td>12개</td>
+              <td>32GB</td>
+              <td>50GB</td>
+              <td>763원</td>
+              <td>549,000원</td>
+            </tr>
+            <tr>
+              <td>16개</td>
+              <td>32GB</td>
+              <td>50GB</td>
+              <td>807원</td>
+              <td>581,000원</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- <div class="h4-area mt70" id="file-storage-network">
+          <h4>File Storage Network</h4>
+          <p class="mt20 f14 c66">한국 리전에서 제공하는 File Storage를 다른 글로벌 리전에서 공인 IP를 통해 사용하는 경우에 적용합니다.</p>
+        </div>
+
+        <table class="tbl-type01 hgt34 col5" summary="File Storage 요금 정보를 제공하는 표로 구분, 네트워크 구간, 단위, 사용량 구간, 종량 요금제로 이루어져 있습니다.">
+          <caption>File Storage Network 트래픽 별 이용 요금</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">구분</th>
+              <th scope="col" rowspan="2">네트워크 구간</th>
+              <th scope="col" rowspan="2">단위</th>
+              <th scope="col" rowspan="2">사용량 구간</th>
+              <th scope="col" rowspan="1">종량 요금제 (월)</th>
+            </tr>
+            <tr>
+              <th scope="col">월</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">인바운드 트래픽</th>
+              <td>전체</td>
+              <td>GB</td>
+              <td>전 구간 동일</td>
+              <td>무료</td>
+            </tr>
+            <tr>
+              <th scope="row" rowspan="5">아웃바운드 트래픽</th>
+              <td rowspan="4">인터넷을 이용한 트래픽<br/>
+                  (다른 리전으로 공인 IP를 이용한 트래픽 포함)
+              </td>
+              <td rowspan="4">GB</td>
+              <td>5TB 이하</td>
+              <td>100원</td>
+            </tr>
+            <tr>
+              <td>5TB 초과~10TB 이하</td>
+              <td>90원</td>
+            </tr>
+            <tr>
+              <td>10TB 초과~30TB 이하</td>
+              <td>80원</td>
+            </tr>
+            <tr>
+              <td>30TB 초과</td>
+              <td>70원</td>
+            </tr>
+            <tr>
+              <td>동일 리전 내 공인 IP를 이용한 트래픽</td>
+              <td>GB</td>
+              <td>전 구간 동일</td>
+              <td>무료</td>
+            </tr>
+          </tbody>
+        </table> -->
+
+        <div class="h4-area mt70" id="operating-system">
+          <h4>Operating System</h4>
+        </div>
+        <table class="tbl-type01 hgt34 mt25" summary="Operating System 사양에 따른 요금 정보를 제공하는 표로 버전, 에디션, 비트 크기, 월 요금 으로 이루어져 있습니다.">
+          <caption>Operating System 사양에 따른 이용 요금</caption>
+          <colgroup>
+            <col width="30%">
+            <col width="15%">
+            <col width="15%">
+            <col width="40%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" colspan="3">사양</th>
+              <th scope="col" rowspan="2">월 요금 (시간 요금)</th>
+            </tr>
+            <tr>
+              <th scope="col">버전</th>
+              <th scope="col">에디션</th>
+              <th scope="col">32비트 / 64비트</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">CentOS 5.11</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+              <td rowspan="8" style="padding:195px 0;">무료</td>
+            </tr>
+            <tr>
+              <th scope="row">CentOS 6.3</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">32비트 / 64비트</th>
+            </tr>
+            <tr>
+              <th scope="row">CentOS 6.6</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+            </tr>
+            <tr>
+              <th scope="row">CentOS 7.2</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+            </tr>
+            <tr>
+              <th scope="row">CentOS 7.3</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+            </tr>
+            <tr>
+              <th scope="row">Ubuntu 12.04 Server</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+            </tr>
+            <tr>
+              <th scope="row">Ubuntu 12.04 Desktop</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+            </tr>
+            <tr>
+              <th scope="row">Ubuntu 14.04 Server</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+            </tr>
+
+            <tr>
+              <th scope="row">Windows Server 2008 R2</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+              <td rowspan="2" style="padding:40px 0;">20,000원 (28원)</td>
+            </tr>
+            <tr>
+              <th scope="row">Windows Server 2012 R2</th>
+              <th scope="row">&#45;</th>
+              <th scope="row">64비트</th>
+            </tr>
+
+            <tr>
+              <th scope="row">Microsoft SQL Server 2008 R2 SP3</th>
+              <th scope="row">Standard</th>
+              <th scope="row">64비트</th>
+              <td>vCPU 4개당 290,000원 (미제공)</td>
+            </tr>
+            <tr>
+              <th scope="row">Microsoft SQL Server 2012 SP3</th>
+              <th scope="row">Standard</th>
+              <th scope="row">64비트</th>
+              <td>vCPU 4개당 290,000원 (미제공)</td>
+            </tr>
+            <tr>
+              <th scope="row">Microsoft SQL Server 2014 SP1</th>
+              <th scope="row">Standard</th>
+              <th scope="row">64비트</th>
+              <td>vCPU 4개당 290,000원 (미제공)</td>
+            </tr>
+
+            <tr>
+              <th scope="row" rowspan="3">Microsoft SQL Server 2016 SP1</th>
+              <th scope="row">Express</th>
+              <th scope="row">64비트</th>
+              <td>무료</td>
+            </tr>
+            <tr>
+              <th scope="row">Standard</th>
+              <th scope="row">64비트</th>
+              <td>vCPU 4개당 290,000원 (미제공)</td>
+            </tr>
+            <tr>
+              <th scope="row">Enterprise</th>
+              <th scope="row">64비트</th>
+              <td>vCPU 4개당 1,0800,000원 (미제공)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul class="ul-type05 f14 c66 mt20">
+          <li>DBMS는 월 요금으로만 제공합니다.</li>
+          <li class="mt10">MSSQL 이용요금은 DBMS 라이선스 요금이며, 서버와 운영체제(Windows)는 별도 청구됩니다.<br/>
+            <span class="pl10">(Ex. 2 vCPU 서버에서 MSSQL 이용 시 69,000원(서버) + 20,000원(Windows 라이선스) + 290,000원(MSSQL 라이선스) =379,000원/월)</span>
+          </li>
+        </ul>
+
+
+        <div class="h4-area mt70" id="load-balancer">
+          <h4>Load Balancer</h4>
+        </div>
+        <table class="tbl-type01 hgt34 col2 mt25" summary="Load Balancer 요금 정보를 제공하는 표로 구분, 30일 기준 요금으로 이루어져 있습니다.">
+          <caption>Load Balancer에 따른 이용 요금</caption>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">시간 요금 (30일 요금)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Load Balancer (대당)</th>
+              <td>30원 (21,600원)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="mt10 f14 c66">Load Balancer가 처리한 트래픽은 네트워크와 동일한 요금제로 별도 청구됩니다.</p>
+
+        <div class="h4-area mt70" id="public-ip">
+          <h4>Public IP</h4>
+        </div>
+        <table class="tbl-type01 hgt34 col2 mt25" summary="Public IP 요금 정보를 제공하는 표로 구분, 30일 기준 요금으로 이루어져 있습니다.">
+          <caption>Public IP에 따른 이용 요금</caption>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">시간 요금 (30일 요금)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">공인 IP (개당)</th>
+              <td>5.6원(4,032원)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="h4-area mt70" id="network">
+          <h4>Network</h4>
+        </div>
+        <table class="tbl-type01 hgt34 col5 mt25" summary="Network 요금 정보를 제공하는 표로 구분, 네트워크 구간, 단위, 사용량 구간, 종량 요금제로 이루어져 있습니다.">
+          <caption>Network 이용 요금</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2" style="width:10%;">구분</th>
+              <th scope="col" rowspan="2" style="width:30%;">네트워크 구간</th>
+              <th scope="col" rowspan="2" style="width:10%;">단위</th>
+              <th scope="col" rowspan="2" style="width:25%;">사용량 구간</th>
+              <th scope="col" style="width:25%;">종량 요금제(월)</th>
+            </tr>
+            <tr>
+              <th scope="col" style="width:10%;">일반</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">인바운드 트래픽</th>
+              <td>전체</td>
+              <td>GB</td>
+              <td>전 구간 동일</td>
+              <td>무료</td>
+            </tr>
+            <tr>
+              <th scope="row" rowspan="9">아웃바운드 트래픽</th>
+              <td rowspan="6" class="lh27">
+                인터넷을 이용한 트래픽<br />
+                (다른 리전으로 공인 IP를 이용한 트래픽 포함)
+              </td>
+              <td rowspan="6">GB</td>
+              <td>100MB 미만</td>
+              <td>무료</td>
+            </tr>
+            <tr>
+              <td>100MB 초과~10TB 이하</td>
+              <td>90원</td>
+            </tr>
+            <tr>
+              <td>10TBB 초과~40TB 이하</td>
+              <td>73원</td>
+            </tr>
+            <tr>
+              <td>40TB 초과~100TB 이하</td>
+              <td>59원</td>
+            </tr>
+            <tr>
+              <td>100TB 초과~150TB 이하</td>
+              <td>47원</td>
+            </tr>
+            <tr>
+              <td>150TB 초과</td>
+              <td>39원</td>
+            </tr>
+            <tr>
+              <td>네이버 클라우드 플랫폼 내 공인 IP를 이용한 트래픽</td>
+              <td>GB</td>
+              <td>전 구간 동일</td>
+              <td>10원</td>
+            </tr>
+            <tr>
+              <td>다른 존(Zone)에서 비공인 IP를 이용한 트래픽</td>
+              <td>GB</td>
+              <td>전 구간 동일</td>
+              <td>10원</td>
+            </tr>
+            <tr>
+              <td>같은 존에서 비공인 IP를 이용한 트래픽</td>
+              <td>GB</td>
+              <td>전 구간 동일</td>
+              <td>무료</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="h4-area mt70" id="glb-only-line">
+          <h4>글로벌 전용 회선</h4>
+        </div>
+
+        <table class="tbl-type01 hgt34 col5 mt25" summary="글로벌 전용 회선에 따른 요금 정보를 제공하는 표로 구분, 네트워크 구간, 단위, 사용량 구간, 종량 요금제로 이루어져 있습니다.">
+          <caption>글로벌 전용 회선에 따른 이용 요금</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">구분</th>
+              <th scope="col" rowspan="2" style="width:30%">네트워크 구간</th>
+              <th scope="col" rowspan="2" style="width:10%">단위</th>
+              <th scope="col" rowspan="2">사용량 구간</th>
+              <th scope="col" rowspan="1">종량 요금제(월)</th>
+            </tr>
+            <tr>
+              <th scope="col">일반</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">인바운드 트래픽</th>
+              <td>전체</td>
+              <td>GB</td>
+              <td>전 구간 동일</td>
+              <td>무료</td>
+            </tr>
+            <tr>
+              <th scope="row" rowspan="5">아웃바운드 트래픽</th>
+              <td>공통</td>
+              <td>GB</td>
+              <td>1TB 이하</td>
+              <td>무료</td>
+            </tr>
+            <tr>
+              <td>한국 리전 → 글로벌 리전</td>
+              <td>GB</td>
+              <td>1TB 초과</td>
+              <td>29원</td>
+            </tr>
+            <tr>
+              <td>미국 서부 리전 → 글로벌 리전</td>
+              <td>GB</td>
+              <td>1TB 초과</td>
+              <td>29원</td>
+            </tr>
+            <tr>
+              <td>싱가포르 리전 → 글로벌 리전</td>
+              <td>GB</td>
+              <td>1TB 초과</td>
+              <td>29원</td>
+            </tr>
+            <tr>
+              <td>홍콩 리전 → 글로벌 리전</td>
+              <td>GB</td>
+              <td>1TB 초과</td>
+              <td>29원</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+        <div class="h4-area mt70" id="monitoring">
+          <h4>Monitoring</h4>
+        </div>
+        <table class="tbl-type01 hgt34 col2 mt25" summary="Monitoring 요금 정보를 제공하는 표로 구분, 요금으로 이루어져 있습니다.">
+          <caption>Monitoring에 따른 이용 요금</caption>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">요금</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">기본 모니터링</th>
+              <td>무료</td>
+            </tr>
+            <tr>
+              <th scope="row">상세 모니터링 (이벤트 및 통보 서비스 포함)</th>
+              <td>무료</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="h4-area mt70" id="glb-cdn">
+  				<h4>Global CDN</h4>
+  			</div>
+  			<table class="tbl-type01 mt25 col4 hgt34">
+          <caption>global CDN 요금 표</caption>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>과금 단위</th>
+              <th>사용량 구간</th>
+              <th>종량 요금제</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="6">월 전송량 요금</th>
+              <td rowspan="6">GB</td>
+              <td>0~200GB 이하</td>
+              <td>77원</td>
+            </tr>
+            <tr>
+              <td>200GB 초과~10TB 이하</td>
+              <td>65원</td>
+            </tr>
+            <tr>
+              <td>10TB 초과~50TB 이하</td>
+              <td>57원</td>
+            </tr>
+            <tr>
+              <td>50TB 초과~150TB 이하</td>
+              <td>52원</td>
+            </tr>
+            <tr>
+              <td>150TB 초과~500TB 이하</td>
+              <td>40원</td>
+            </tr>
+            <tr>
+              <td>500TB 초과</td>
+              <td>30원</td>
+            </tr>
+            <tr>
+              <th>월 요청 수 요금</th>
+              <td>10,000건</td>
+              <td></td>
+              <td>10원</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="mt10 f14 c66">
+  				<strong>서비스 요금 = 월 전송량(transfer) 요금 + 월 요청수(request) 요금</strong><br />
+          1) 월 전송량(transfer) 요금 = 월 단위 총 CDN 전송량에 대한 사용량 구간별 요금의 합<br />
+          2) 월 요청수(request) 요금 = 월 단위 총 CDN 요청 수
+  			  </p>
+        </div>
+
+      <div class="bnr-btm bnr01">
+        <h3>더욱 다양해진 NAVER Cloud Platform를 무료로 직접 체험해보세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type03 btn-ico01 w200">무료체험 신청하기</a>
+        </div>
+      </div>
+      <div class="bnr-btm bnr02">
+        <h3>고객지원을 통해 궁금증을 해결하세요</h3>
+        <div class="btn-area">
+          <a href="#" class="btn-type07 btn-ico01">온라인 문의</a>
+          <a href="#" class="btn-type07 ml20">1544-5876</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer>
+    <h2 class="hidden">네이버 클라우드 BIZ 정책 밑 사이트 정보 영역</h2>
+    <div class="siteMap">
+      <dl>
+        <dt><a href="#">소개</a></dt>
+        <dd>
+          <div><a href="#">서비스 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">서비스 추천</a></div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">활용분야</a>
+            <ul class="sub-menu">
+              <li><a href="#">모바일 및 웹 서비스</a></li>
+              <li><a href="#">게임 서비스</a></li>
+              <li><a href="#">미디어 서비스</a></li>
+              <li><a href="#">금융 서비스</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">고객사례</a>
+            <ul class="sub-menu">
+              <li><a href="#">NAVER</a></li>
+              <li><a href="#">Woongjin</a></li>
+              <li><a href="#">Npac</a></li>
+              <li><a href="#">Wishlink</a></li>
+              <li><a href="#">Soongsil University</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">파트너</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">상품</a></dt>
+        <dd>
+          <div>
+            <a href="#">Compute</a>
+            <ul class="sub-menu">
+              <li><a href="#">Server</a></li>
+              <li><a href="#">SSD Server</a></li>
+              <li><a href="#">Virtual Dedicated Server</a></li>
+              <li><a href="#">Auto Scaling</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Storage</a>
+            <ul class="sub-menu">
+              <li><a href="#">File Storage</a></li>
+              <li><a href="#">Block Storage</a></li>
+              <li><a href="#">NAS</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Networking</a>
+            <ul class="sub-menu">
+              <li><a href="#">Load Balancer</a></li>
+              <li><a href="#">DNS</a></li>
+              <li><a href="#">Global Internet Service</a></li>
+              <li><a href="#">CDN</a></li>
+              <li><a href="#">Live Transcoder</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Database</a>
+            <ul class="sub-menu">
+              <li><a href="#">MSSQL</a></li>
+              <li><a href="#">MySQL</a></li>
+            </ul>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <div>
+            <a href="#">Management</a>
+            <ul class="sub-menu smW">
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Sub Account</a></li>
+              <li><a href="#">Web service Monitoring System</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div>
+            <a href="#">Security</a>
+            <ul class="sub-menu">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">App Safer</a></li>
+              <li><a href="#">Site Safer</a></li>
+              <li><a href="#">Managed Security</a></li>
+            </ul>
+          </div>
+        </dd>
+        <dd>
+          <div><a href="#">Global Region</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">요금</a></dt>
+        <dd>
+          <div><a href="#">요금 소개</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">요금 계산기</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">고객지원</a></dt>
+        <dd>
+          <div><a href="#">공지사항</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자주 하는 질문</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">문의하기</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">제휴 문의</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">나의 문의 내역</a></div>
+        </dd>
+        <dd>
+          <div><a href="#">자료</a></div>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="#">사용자 가이드</a></dt>
+      </dl>
+    </div>
+    <div class="footer">
+      <h3 class="ft-logo">NBP</h3>
+      <dl class="info">
+        <dt class="policy"><a href="#">서비스 이용약관</a></dt>
+        <dt class="policy"><a href="#">개인정보처리방침</a></dt>
+        <dt class="cb">사업자등록번호:</dt>
+        <dd>129-86-31394</dd>
+        <dt>통신판매업신고번호:</dt>
+        <dd>제2009-경기성남-0510호</dd>
+        <dt>대표이사:</dt>
+        <dd>박원기</dd>
+        <dt class="cb">주소:</dt>
+        <dd>경기도 성남시 분당구 불정로 6 네이버 그린팩토리, 463-867</dd>
+        <dt>대표전화:</dt>
+        <dd>1566-3880</dd>
+        <dt>팩스:</dt>
+        <dd>031-784-1800</dd>
+        <dd class="copyright cb">COPYRIGHT © NAVER BUSINESS PLATFORM CORP. ALL RIGHTS RESERVED.</dd>
+      </dl>
+      <div class="btn-right">
+        <a href="#" class="btn-sm">SITE MAP</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //wrap-->
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/nCloud.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('.lgTab>li').click(function(){
+      $(this).addClass('on').siblings('li').removeClass('on');
+      return false;
+    });
+    $('.lgTab .sub-tab02>li').click(function(){
+      $(this).addClass('on').siblings('li').removeClass('on');
+      return false;
+    });
+    $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top-114}, 500);
+    });
+  });
+</script>
+</body>
+</html>
