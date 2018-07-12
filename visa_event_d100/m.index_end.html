@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:url"                content="https://www.visa-promotions.com/mepa/100ticketpromo" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Visa X 2018 평창 동계올림픽 D-100 이벤트" />
+    <meta property="og:description"        content="100일 앞으로 다가온 평창 동계올림픽 Visa로 결제한 영수증에서 ‘100’을 찾아 응모하면 총 100장의 올림픽 티켓이 쏟아집니다. 당신의 영수증이 올림픽 티켓이 되는 Visa의 마법같은 순간을 놓치지 마세요!" />
+    <meta property="og:image"              content="https://www.visa-promotions.com/mepa/100ticketpromo/images/link_img.png" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>영수증에서 100찾고 올림픽가자!</title>
+    <link rel="stylesheet" href="css/m.style.css">
+    <link href="/mepa/visaMepa/css/mepa-form.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var UserAgent = navigator.userAgent;
+
+        if(UserAgent.match(/iPhone|iPod|iPad|iPad2|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) == null && UserAgent.match(/LG|SAMSUNG|Samsung/) == null) {
+            top.location.href = "index_end.html";
+        }
+    </script>
+</head>
+<body>
+<div class="wrap">
+
+    <header class="header">
+    </header>
+
+    <section>
+        <article class="event-step">
+            <h2>참여방법</h2>
+            <div class="box-image"><img src="images/m_step.png"></div>
+        </article>
+
+        <!-- 171016 추가 - 이벤트 종료 안내 (display:none 상태) -->
+        <article class="box-close-event" style="display: block">
+            <h3>- 이벤트가 <strong>종료되었습니다</strong> -</h3>
+            <p class="greeting">참여해 주신 모든 분들께 감사드립니다</p>
+            <div class="close-event">
+                <p class="info-date">당첨자 발표는 <strong>11월 1일(수)</strong> 입니다</p> <!--- 171017 modify class name -->
+                <p class="txt">페이스북 노트 또는 이벤트 응모 시 작성한 이메일을 통해<br>
+                    당첨 사실을 확인할 수 있습니다.</p>
+                <a href="https://www.facebook.com/VisaKorea/" target="_blank" class="link-facebook">https://www.facebook.com/VisaKorea/</a>
+            </div>
+        </article>
+        <!-- // 171016 추가 - 이벤트 종료 안내 -->
+
+        <form name="userForm" ng-submit="postData(userForm)" ng-show="showForm" autocomplete="off" ng-cloak novalidate>
+            <article class="event-apply" style="display: none">
+                <h2>응모하기</h2>
+                <p class="txt">이벤트 참여를 위해 아래 정보를 입력해 주세요</p>
+
+                <div class="form-group row error" ng-class="{ 'has-error': userForm.name.$invalid && (userForm.$submitted || userForm.name.$touched) }">
+                    <label class="col-sm-3">이름</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="이름을 입력해 주세요 (예: 홍길동)" ng-model="user.name" ng-maxlength="100" maxlength="100" required> <!-- 171019 added maxlength -->
+                        <div ng-if="userForm.name.$invalid && (userForm.$submitted || userForm.name.$touched)"
+                             ng-messages="userForm.name.$error" class="help-block" role="alert">
+                            <p ng-message="maxlength">이름을 입력해 주세요 (예: 홍길동)</p> <!-- 171019 주석 삭제 / 텍스트 한글로 변경 modified - txt translate to Korean -->
+                            <p ng-message="required" class="required-msg">이름을 입력해 주세요 (예: 홍길동)</p> <!-- 171019 클래스명 추가 added class name -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row error" ng-class="{ 'has-error': userForm.phonenumber.$invalid && (userForm.$submitted || userForm.phonenumber.$touched) }">
+                    <label class="col-sm-3">휴대폰 번호</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="휴대폰 번호를 숫자만 입력해 주세요 (예: 01000000000)"
+                               ng-model="user.phonenumber" ng-maxlength="11" maxlength="11" ng-keypress="numberDash($event, user.phonenumber,11)" required> <!-- 171019 added maxlength -->
+                        <div class="help-block" ng-messages="userForm.phonenumber.$error"
+                             ng-if="userForm.phonenumber.$invalid && (userForm.$submitted || userForm.phonenumber.$touched)">
+                            <p ng-message="maxlength">휴대폰 번호를 숫자만 입력해 주세요 (예: 01000000000)</p> <!-- 171019 주석 삭제 / 텍스트 한글로 변경 modified - txt translate to Korean -->
+                            <p ng-message="required" class="required-msg">휴대폰 번호를 숫자만 입력해 주세요 (예: 01000000000)</p> <!-- 171019 클래스명 추가 added class name -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row error" ng-class="{ 'has-error': userForm.email.$invalid && (userForm.$submitted || userForm.email.$touched) }">
+                    <label class="col-sm-3">메일주소</label>
+                    <div class="col-sm-4 hv-info">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="메일주소를 입력해 주세요 (예: gildong.hong@visa.com)" ng-model="user.email" required> <!-- 171017 가이드 문구 수정 -->
+                        <div ng-if="userForm.email.$invalid && (userForm.$submitted || userForm.email.$touched)"
+                             ng-messages="userForm.email.$error" class="help-block" role="alert">
+                            <!--Visa IT Comment: our system check valid email address, hence this message is require. Please do not remove. Pls translate to Korean-->
+                            <p ng-message="email">메일주소를 입력해 주세요 (예: gildong.hong@visa.com)</p> <!-- 171019 주석 삭제 / 텍스트 한글로 변경 modified - txt translate to Korean  -->
+                            <p ng-message="required" class="required-msg">메일주소를 입력해 주세요 (예: gildong.hong@visa.com)</p> <!-- 171019 클래스명 추가 added class name -->
+                        </div>
+                        <p class="form-info">* 당첨 시 기입해 주신 메일 주소로 고지됩니다</p>
+                    </div>
+                </div>
+
+                <div class="form-group row error" ng-class="{ 'has-error': userForm.first6digit.$invalid && (userForm.$submitted || userForm.first6digit.$touched) }">
+                    <label class="col-sm-3">카드 번호</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="first6digit" class="form-control" id="first6digit" placeholder="카드 번호 앞자리 6개를 띄어쓰기 없이 입력해 주세요(예: 400000)"
+                               ng-model="user.first6digit" ng-maxlength="6" maxlength="6" ng-keypress="numberDash($event, user.first6digit,6)" required> <!-- 171018 가이드 문구 수정 modified - txt change --> <!-- 171019 added maxlength -->
+                        <div ng-if="userForm.first6digit.$invalid && (userForm.$submitted || userForm.first6digit.$touched)"
+                             ng-messages="userForm.first6digit.$error" class="help-block" role="alert">
+                            <p ng-message="maxlength">카드 번호 앞자리 6개를 띄어쓰기 없이 입력해 주세요(예: 400000)</p> <!-- 171019 주석 삭제 / 텍스트 한글로 변경 modified - txt translate to Korean -->
+                            <p ng-message="required" class="required-msg">카드 번호 앞자리 6개를 띄어쓰기 없이 입력해 주세요(예: 400000)</p> <!-- 171019 클래스명 추가 added class name -->
+                        </div>
+                        <p class="form-info">*  Visa 카드번호(4로 시작)가 아닐 시 응모가 취소될 수 있습니다</p> <!-- 171019 added p-tag -->
+                    </div>
+                </div>
+
+                <div class="form-group row error" ng-class="{ 'has-error': userForm.amount.$invalid && (userForm.$submitted || userForm.amount.$touched) }">
+                    <label class="col-sm-3">결제 금액</label>
+                    <div class="col-sm-4 hv-info">
+                        <input type="number" name="amount" class="form-control" id="amount" placeholder="결제 금액을 쉼표 없이 입력해 주세요(예: 7100)" ng-model="user.amount" ng-pattern="/\d{1}/" required> <!-- 171017 가이드 문구 수정 -->
+                        <div ng-if="userForm.amount.$invalid && (userForm.$submitted || userForm.amount.$touched)"
+                             ng-messages="userForm.amount.$error" class="help-block" role="alert">
+                            <p ng-message="required" class="required-msg">결제 금액을 쉼표 없이 입력해 주세요(예: 7100)</p> <!-- 171019 주석 삭제 / 텍스트 한글로 변경 modified - txt translate to Korean --> <!-- 171019 클래스명 추가 added class name -->
+                            <p ng-message="pattern">결제 금액을 쉼표 없이 입력해 주세요(예: 7100)</p>
+                        </div>
+                        <p class="form-info">* 당첨 시 기입해 주신 결제 금액과 영수증이 사실과 다를 경우 자동 무효 처리됩니다</p>
+                    </div>
+                </div>
+
+                <div class="form-group row error" ng-class="{ 'has-error': userForm.captcha.$invalid && (userForm.$submitted || userForm.captcha.$touched) }">
+                    <label class="col-sm-3">보안 확인</label>
+                    <div class="col-sm-4">
+                        <img src="{{user.captchaImage}}" name="captcha_img" id="captchaImage" ng-model="user.captchaImage" class="captcha_img">
+                        <a href="javascript:void(0);" id="captchaRefresh" ng-click="reloadCaptcha();"><span class="glyphicon glyphicon-refresh"></span></a>
+                        <input type="text" name="captcha" class="form-control captcha" id="captcha" placeholder="텍스트를 입력하세요" ng-model="user.captcha" required>
+                        <div class="help-block" ng-messages="userForm.captcha.$error" ng-if="userForm.captcha.$invalid && (userForm.$submitted || userForm.captcha.$touched)">
+                            <p ng-message="required" class="required-msg">이미지에 보이는 텍스트를 입력해 주세요</p> <!-- 171019 클래스명 추가 added class name -->
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" value="{{user.captcha}}" ng-model="user.captcha">
+                <!-- dont modify -->
+                <input type="hidden" value="{{user.promoId}}" ng-model="user.promoId">
+                <!-- dont modify -->
+            </article>
+
+ 
+				
+      <article class="personal-info" style="display: none">
+        <div class="agree-use-info" ng-class="{ 'has-error': userForm.tnc_0.$invalid && (userForm.$submitted || userForm.tnc_0.$touched) }">
+          <input type="checkbox" class="tnc_0" id="tnc_0" name="tnc_0" ng-model="user.tnc_0" value="tnc_0" required>
+          <label class="check-area" for="tnc_0"></label>
+          <label class="check-txt" for="tnc_0">개인정보 수집 및 이용에 동의합니다.</label>
+		  
+		     <div ng-if="userForm.tnc_0.$invalid && (userForm.$submitted || userForm.tnc_0.$touched)" ng-messages="userForm.tnc_0.$error" class="help-block" role="alert">
+              <p ng-message="required">개인정보 수집 및 이용에 동의해주세요</p>
+            </div>
+	
+        </div>
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+                <!--button class="btn-agree">확인</button-->
+                <div class="form-group row box-btn-primary">
+                    <label class="col-sm-3"></label>
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-primary" id="btnMepa" ng-disabled="loading" button-spinner="loading">
+                            <i class="glyphicon glyphicon-ok-sign"></i> Submit
+                        </button>
+                    </div>
+                </div>
+                <h3 class="tit-primary">개인정보 수집 및 이용 약관</h3>
+                <ul>
+                    <li class="hyphen">본 이벤트는 ㈜자이언트블랙에 처리 위탁하여 이벤트 이벤트 시스템 운영, 당첨자 추첨, 고객 상담 및 배송 업무를 처리합니다.</li>
+                    <li>
+                        <p class="tit">1. 개인정보의 수집, 이용 목적</p>
+                        <p class="txt">본인확인, 이벤트 당첨 경품 배송</p>
+                    </li>
+                    <li>
+                        <p class="tit">2. 수집하는 개인정보의 항목</p>
+                        <p class="txt">이름, 휴대폰 번호, 메일 주소, 카드번호(앞자리 6개), 결제 금액</p>
+                        <p class="txt">당첨 시, 경품 수령 주소, 증빙 영수증, 제세공과금 안내에 따른 신분증 사본 및 통장 사본</p>
+                    </li>
+                    <li>
+                        <p class="tit">3. 개인정보의 보유 및 이용기간</p>
+                        <p class="txt">경품 지급 완료시점까지 보유하며, 최장 6개월 보관 후 파기합니다.</p>
+                        <p class="txt">기재하신 정보는 당첨 확인에 대한 안내 및 경품 전달 이외의 목적으로 사용되지 않습니다.</p>
+                    </li>
+                    <li class="hyphen">이벤트 응모를 위한 개인정보 수집/이용에 대한 동의로써, 동의하지 않으실 경우 이벤트에 응모하실 수 없습니다.</li>
+                </ul>
+
+            </article>
+        </form>
+
+        <article class="information">
+            <div class="box-info-detail">
+                <h2>유의사항</h2>
+                <div class="info-detail">
+                     <ul>
+                         <li>Visa 카드로 결제한 영수증만 이벤트 응모 가능합니다.</li> <!-- 171018 added txt -->
+                        <li>참여자 중 50명을 추첨하여 쇼트트랙 티켓을 증정합니다(1인 2매).</li>
+                        <li>당첨자는 페이스북 노트와 응모시 기입해 주신 메일로 고지합니다.</li>
+                        <li>실물 티켓은 12월 말 우편으로 전달됩니다.</li>
+                        <li>당첨 시, 제출한 영수증과 응모한 결제 금액이 사실과 다를 경우 무효처리 됩니다. </li>
+                        <li>당첨자 선정은 추첨을 통해 결정되며, 심사 기준은 별도로 공개 되지 않습니다.</li>
+                        <li>티켓 수령에 대한 제세공과금은 소비자 본인 부담입니다(5만원 이상, 22%).</li>
+                         <!-- 171017 modify txt -->
+                         <li>본 이벤트는 1일 5회까지 참여 가능하며, 중복 당첨은 인정되지 않습니다.</li>
+                         <!-- // 171017 modify txt -->
+                         <!--li>자세한 내용은 올림픽 공식 홈페이지(<a href="http://www.pyeongchang2018.com" target="_blank">www.pyeongchang2018.com</a>)에서 확인해 주세요.</li-->
+                      </ul>
+                    <a href="m.terms.html" class="btn-more" target="_blank"></a>
+                </div>
+
+            </div>
+
+        </article>
+    </section>
+
+    <footer class="footer">
+        <p class="copyright">Copyright © 2017 Visa. All Rights Reserved</p>
+    </footer>
+</div>
+
+<!-- Note to agency developer, below is where the error or thank you message displayed -->
+<script type="text/javascript">
+    var mepaConfig = {
+        promoId: 173,
+        apiLoginErr: "There is error in API connection. Please try again later.",
+        apiPostErr: "There was an error with your registration. Please try again. Thank you.",
+        apiPostSuccess: "이벤트에 참여해주셔서 감사합니다!"
+    };
+</script>
+<!-- Note to agency developer, please DO NOT remove mep-form.min.js otherwise the form will not work -->
+<script src="/mepa/visaMepa/scripts/mepa-form.min.js"></script>
+
+<script type="text/javascript">
+    /*$(window).load(function(){
+        $('#promoModal').modal({
+                backdrop: 'static',
+                keyboard: true,
+                show: true
+        });
+    });*/
+</script>
+
+</body>
+</html>
