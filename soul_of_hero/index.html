@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280px" />
+  <title>Soul of Heroes</title>
+  <link rel="shortcut icon" href="resources/images/icon_silhouette.ico">
+  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="resources/css/swiper.min.css">
+</head>
+<body>
+  <div class="navigation">
+    <nav>
+      <h1><a href="#header" class="go-top">홈페이지 바로가기</a></h1>
+      <ul>
+        <li class="nav01"><a href="#application">사전예약</a></li>
+        <li class="nav02"><a href="#gallery">게임소개</a></li>
+        <li class="nav03"><a href="#event">이벤트</a></li>
+        <li class="nav04"><a href="#community">커뮤니티</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap">
+    <header id="header" class="header">
+      <a class="play-video" onclick="mainVideoPlay();openLayer('main-video');">play</a>
+      <a href="#application" class="head-btn-apply">사전 예약 신청</a>
+    </header>
+    <section class="contents">
+
+      <article id="application" class="application">
+        <div class="form-apply">
+          <div class="box-store">
+            <div>
+              <input type="radio" id="app-store" name="store">
+              <label for="app-store" class="checkbox"></label>
+              <label for="app-store" class="list-text"><img src="resources/images/pc/icn-apple.png" alt="애플스토어 이미지"></label>
+            </div>
+            <div>
+              <input type="radio" id="google-play" name="store">
+              <label for="google-play" class="checkbox"></label>
+              <label for="google-play"><img src="resources/images/pc/icn-google.png" alt="구글스토어 이미지"></label>
+            </div>
+            <div>
+              <input type="radio" id="one-store" name="store">
+              <label for="one-store" class="checkbox"></label>
+              <label for="one-store"><img src="resources/images/pc/icn-one.png" alt="원스토어 이미지"></label>
+            </div>
+          </div>
+
+          <div class="box-text">
+            <input type="tel" class="phone" placeholder="핸드폰 번호 입력 (- 제외, 숫자만 입력)">
+            <button class="sand-sns" onclick="openLayer('alert01');">인증번호 받기</button>
+            <input class="conform-no" placeholder="인증번호 입력">
+            <button class="btn-conform" onclick="openLayer('alert02');">확인</button>
+          </div>
+
+          <div class="box-agree">
+            <input type="checkbox" id="agree" name="agree">
+            <label for="agree" class="checkbox"></label>
+            <label for="agree" class="text"><img src="resources/images/pc/text-agree.png" alt="개인정보 수집 이용 및 SMS 수신 동의에 동의합니다"></label>
+            <button class="more" onclick="openLayer('personal-info');">자세히 보기</button>
+            <button class="notice" onclick="openLayer('notice');">꼭 알아 두세요!</button>
+          </div>
+        </div>
+        <a class="btn-apply" onclick="openLayer('alert04')">사전 예약 신청</a>
+      </article>
+
+      <article id="gallery" class="gallery">
+        <div class="gallery-tab">
+          <ul>
+            <li class="tab01 active"><a>탐험모드</a></li>
+            <li class="tab02"><a>도전모드</a></li>
+            <li class="tab03"><a>결투장</a></li>
+            <li class="tab04"><a>연맹전</a></li>
+            <li class="tab05"><a>레이드</a></li>
+          </ul>
+        </div>
+
+        <div class="box-gallery">
+          <div class="tab tab01 active" no="1">
+            <h3><img src="resources/images/pc/gallery-tit-01.png"></h3>
+            <div class="images">
+              <div class="array left">
+                <a slideNo="1">
+                  <img src="resources/images/pc/gal-list01-01.jpg" class="list-left-01">
+                </a>
+                <a slideNo="0">
+                  <img src="resources/images/pc/gal-list-video01.jpg">
+                </a>
+              </div>
+              <div class="array right">
+                <a slideNo="2">
+                  <img src="resources/images/pc/gal-list01-02.jpg" class="list-left-02">
+                </a>
+                <a slideNo="3">
+                  <img src="resources/images/pc/gal-list01-03.jpg" class="list-left-03">
+                </a>
+              </div>
+            </div>
+            <div class="arrows">
+              <a class="prev">prev</a>
+              <a class="next">next</a>
+            </div>
+          </div>
+
+          <div class="tab tab02" no="2">
+            <h3><img src="resources/images/pc/gallery-tit-02.png"></h3>
+            <div class="images">
+              <div class="array left">
+                <a slideNo="1">
+                  <img src="resources/images/pc/gal-list02-01.jpg" class="list-left-01">
+                </a>
+                <a slideNo="0">
+                  <img src="resources/images/pc/gal-list-video02.jpg">
+                </a>
+              </div>
+              <div class="array right">
+                <a slideNo="2">
+                  <img src="resources/images/pc/gal-list02-02.jpg" class="list-left-02">
+                </a>
+                <a slideNo="3">
+                  <img src="resources/images/pc/gal-list02-03.jpg" class="list-left-03">
+                </a>
+              </div>
+            </div>
+            <div class="arrows">
+              <a class="prev">prev</a>
+              <a class="next">next</a>
+            </div>
+          </div>
+
+          <div class="tab tab03" no="3">
+            <h3><img src="resources/images/pc/gallery-tit-03.png"></h3>
+            <div class="images">
+              <div class="array left">
+                <a slideNo="1">
+                  <img src="resources/images/pc/gal-list03-01.jpg" class="list-left-01">
+                </a>
+                <a slideNo="0">
+                  <img src="resources/images/pc/gal-list-video03.jpg">
+                </a>
+              </div>
+              <div class="array right">
+                <a slideNo="2">
+                  <img src="resources/images/pc/gal-list03-02.jpg" class="list-left-02">
+                </a>
+                <a slideNo="3">
+                  <img src="resources/images/pc/gal-list03-03.jpg" class="list-left-03">
+                </a>
+              </div>
+            </div>
+            <div class="arrows">
+              <a class="prev">prev</a>
+              <a class="next">next</a>
+            </div>
+          </div>
+
+          <div class="tab tab04" no="4">
+            <h3><img src="resources/images/pc/gallery-tit-04.png"></h3>
+            <div class="images">
+              <div class="array left">
+                <a slideNo="1">
+                  <img src="resources/images/pc/gal-list04-01.jpg" class="list-left-01">
+                </a>
+                <a slideNo="0">
+                  <img src="resources/images/pc/gal-list-video04.jpg">
+                </a>
+              </div>
+              <div class="array right">
+                <a slideNo="2">
+                  <img src="resources/images/pc/gal-list04-02.jpg" class="list-left-02">
+                </a>
+                <a slideNo="3">
+                  <img src="resources/images/pc/gal-list04-03.jpg" class="list-left-03">
+                </a>
+              </div>
+            </div>
+            <div class="arrows">
+              <a class="prev">prev</a>
+              <a class="next">next</a>
+            </div>
+          </div>
+
+          <div class="tab tab05" no="5">
+            <h3><img src="resources/images/pc/gallery-tit-05.png"></h3>
+            <div class="images">
+              <div class="array left">
+                <a slideNo="1">
+                  <img src="resources/images/pc/gal-list05-01.jpg" class="list-left-01">
+                </a>
+                <a slideNo="0">
+                  <img src="resources/images/pc/gal-list-video05.jpg">
+                </a>
+              </div>
+              <div class="array right">
+                <a slideNo="2">
+                  <img src="resources/images/pc/gal-list05-02.jpg" class="list-left-02">
+                </a>
+                <a slideNo="3">
+                  <img src="resources/images/pc/gal-list05-03.jpg" class="list-left-03">
+                </a>
+              </div>
+            </div>
+            <div class="arrows">
+              <a class="prev">prev</a>
+              <a class="next">next</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="event" class="event">
+        <a class="btn-apply" href="http://cafe.naver.com/soulhero" target="_blank">이벤트 자세히 보기</a> <!-- 171130 url 수정 -->
+      </article>
+
+      <article id="community" class="community">
+        <a href="http://cafe.naver.com/soulhero" class="btn-apply" target="_blank">공식 카페 가입하기</a>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <a href="#" class="footer-btn01">이용약관</a>
+      <a href="#" class="footer-btn02">개인정보취급방침</a>
+    </footer>
+  </div>
+
+  <div class="layer-popup popup-alert01 alert">
+    <div class="box-content">
+      <p>인증번호가 발송되었습니다.</p>
+      <a href="javascript:;" class="close-popup close-alert">확인</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-alert02 alert">
+    <div class="box-content">
+      <p>인증이 완료되었습니다.</p>
+      <a href="javascript:;" class="close-popup close-alert">확인</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-alert03 alert">
+    <div class="box-content">
+      <p>확인 후 다시 입력하여 주세요.</p>
+      <a href="javascript:;" class="close-popup close-alert">확인</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-alert04 alert">
+    <div class="box-content hs-more-txt">
+      <p>사전등록이 완료되었습니다.<br><small>공식카페 가입하면 200루비 100% 지급</small></p>
+      <a href="javascript:;" class="close-popup close-alert">확인</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-alert05 alert">
+    <div class="box-content hs-more-txt">
+      <p>이미 사전등록을 하셨습니다.<br><small>휴대폰 번호를 확인해주시기 바랍니다.</small></p>
+      <a href="javascript:;" class="close-popup close-alert">확인</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-alert06 alert">
+    <div class="box-content">
+      <p>이용하시는 OS를 선택하여 주세요</p>
+      <a href="javascript:;" class="close-popup close-alert">확인</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-alert07 alert">
+    <div class="box-content">
+      <p>개인정보 수집 이용 및<br>SMS 수신에 동의하여 주세요.</p>
+      <a href="javascript:;" class="close-popup close-alert">확인</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-notice information">
+    <div class="box-content">
+      <ul>
+        <li>휴대폰 번호 도용 시, 법적 책임은 본인에게 있습니다.</li>
+        <li>사전등록 쿠폰 코드는 정식 출시 후 SMS를 통해 발송됩니다.</li>
+        <li>SMS 수신 불가하거나 허위로 신청한 경우 상품 지급을 거부할 수 있습니다.</li>
+        <li>본 이벤트를 통해 수집된 개인정보는 이벤트 알림 및 경품 지급 등의 용도로 사용됩니다.</li>
+      </ul>
+      <a href="javascript:;" class="close-popup close-noti-pop">닫기</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-event-detail information">
+    <div class="box-content">
+      <ul>
+        <li>황금 티켓의 경우 미션 달성 후 게임 내 해당 이벤트에서 보상 받기를 통해  수령하실 수 있습니다.</li>
+        <li>미션을 완료하였으나 황금 티켓을 수령하지 않으실 경우 추첨 대상에서 제외 됩니다.</li>
+        <li>수령한 황금 티켓은 가방 내 재료 목록에서 확인 가능합니다. </li>
+        <li>5만원이 넘는 경품의 제세공과금 22%는 당첨자 본인 부담입니다.</li>
+      </ul>
+      <a href="javascript:;" class="close-popup close-noti-pop">닫기</a>
+    </div>
+  </div>
+  <div class="layer-popup popup-personal-info information">
+    <div class="box-content">
+      <ul>
+        <li>㈜엔터메이트 ‘소울 오브 히어로즈’ 사전등록 이벤트와 관련하여 아래와 같이 개인정보를 수집합니다.<br>
+            수집/이용에 동의하지 않을 수 있지만, 미 동의 시 이벤트 참여가 불가능합니다.
+        </li>
+        <li>1. 개인정보 수집 항목 : 휴대전화번호<br>
+            2. 개인정보 수집 목적 : 소울 오브 히어로즈 및 엔터메이트의 게임 소식과 이벤트 당첨결과 통보 안내<br>
+            3. 보유기간 및 이용기간 : 게임 서비스 종료 시 파기
+        </li>
+        <li>타인의 휴대전화번호를 임의로 입력하는 경우 관련 법령에 따라 처벌 받을 수 있습니다.<br>
+            반드시 본인이 사용 중인 휴대전화번호를 기입하세요.
+        </li>
+      </ul>
+      <a href="javascript:;" class="close-popup close-noti-pop">닫기</a>
+    </div>
+  </div>
+
+  <section class="layer-popup popup-gallery tab01">
+    <div class="swiper-container tab01" id="tab01">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><iframe width="1200" height="674" src="https://www.youtube.com/embed/knqkGaw7Vbg?autoplay=0&rel=0" frameborder="0" allowfullscreen class="play"></iframe></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list01-01.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list01-02.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list01-03.jpg" alt="갤러리 이미지"></div>
+      </div>
+    </div>
+    <div class="swiper-button swiper-button-next"></div>
+    <div class="swiper-button swiper-button-prev"></div>
+    <a href="javascript:;" class="close-popup close-gallery"></a>
+  </section>
+
+  <section class="layer-popup popup-gallery tab02">
+    <div class="swiper-container tab02" id="tab02">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><iframe width="1200" height="674" src="" frameborder="0" allowfullscreen class="play"></iframe></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list02-01.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list02-02.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list02-03.jpg" alt="갤러리 이미지"></div>
+      </div>
+    </div>
+    <div class="swiper-button swiper-button-next"></div>
+    <div class="swiper-button swiper-button-prev"></div>
+    <a href="javascript:;" class="close-popup close-gallery"></a>
+  </section>
+
+  <section class="layer-popup popup-gallery tab03">
+    <div class="swiper-container tab03" id="tab03">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><iframe width="1200" height="674" src="" frameborder="0" allowfullscreen class="play"></iframe></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list03-01.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list03-02.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list03-03.jpg" alt="갤러리 이미지"></div>
+      </div>
+    </div>
+    <div class="swiper-button swiper-button-next"></div>
+    <div class="swiper-button swiper-button-prev"></div>
+    <a href="javascript:;" class="close-popup close-gallery"></a>
+  </section>
+
+  <section class="layer-popup popup-gallery tab04">
+    <div class="swiper-container tab04" id="tab04">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><iframe width="1200" height="674" src="" frameborder="0" allowfullscreen class="play"></iframe></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list04-01.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list04-02.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list04-03.jpg" alt="갤러리 이미지"></div>
+      </div>
+    </div>
+    <div class="swiper-button swiper-button-next"></div>
+    <div class="swiper-button swiper-button-prev"></div>
+    <a href="javascript:;" class="close-popup close-gallery"></a>
+  </section>
+
+  <section class="layer-popup popup-gallery tab05">
+    <div class="swiper-container tab05" id="tab05">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><iframe width="1200" height="674" src="" frameborder="0" allowfullscreen class="play"></iframe></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list05-01.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list05-02.jpg" alt="갤러리 이미지"></div>
+        <div class="swiper-slide"><img src="resources/images/pc/gal-list05-03.jpg" alt="갤러리 이미지"></div>
+      </div>
+    </div>
+    <div class="swiper-button swiper-button-next"></div>
+    <div class="swiper-button swiper-button-prev"></div>
+    <a href="javascript:;" class="close-popup close-gallery"></a>
+  </section>
+
+  <section class="layer-popup popup-main-video">
+    <div class="box-video">
+      <iframe width="1200" height="674" src="" class="play"></iframe>
+    </div>
+    <a href="javascript:;" class="close-popup close-video"></a>
+  </section>
+
+  <script type="text/javascript" src="resources/script/jquery.min.js"></script> <!-- 171130 제이쿼리 경로 수정 -->
+  <script src="resources/script/common.js"></script>
+  <script src="resources/script/swiper.min.js"></script>
+</body>
+</html>
