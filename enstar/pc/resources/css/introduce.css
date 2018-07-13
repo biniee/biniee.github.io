@@ -1,0 +1,11 @@
+.contents.introduce .cont {
+  min-height: 1680px;
+  background: url("../images/introduce/bg_intr.jpg") no-repeat center; }
+.contents.introduce .cont .btn-wrap {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 0; }
+.contents.introduce .cont .btn-wrap a {
+  margin: 0 5px; }

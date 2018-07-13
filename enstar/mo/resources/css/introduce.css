@@ -1,0 +1,28 @@
+.contents.introduce .cont {
+  position: relative;
+  height: 356.666vw;
+  background: url("../images/introduce/bg_introduce.jpg") no-repeat center;
+  background-size: 100% 100%; }
+
+.contents.introduce .cont .btn-wrap {
+  position: absolute;
+  bottom: 8vw;
+  width: 100%;
+  text-align: center;
+  font-size: 0; }
+
+.contents.introduce .cont .btn-wrap a {
+  display: inline-block;
+  margin: 0 0.8vw;
+  width: 36.666vw;
+  height: 12vw; }
+
+@media (min-width: 750px) {
+  .contents.introduce .cont {
+    height: 2675px; }
+  .contents.introduce .cont .btn-wrap {
+    bottom: 60px; }
+  .contents.introduce .cont .btn-wrap a {
+    margin: 0 6px;
+    width: 275px;
+    height: 90px; } }

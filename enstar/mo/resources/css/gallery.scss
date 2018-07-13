@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+@import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+
+body {
+  background: url("../images/gallery/bg_gallery.jpg") no-repeat top center;
+  background-size: contain;
+}
+
+.contents {
+  width: 89.333vw;
+  margin: 0 auto;
+  padding-top: 10.933vw;
+}
+
+.box-video {
+  height: 126.133vw;
+  .video-info-area {
+    padding-top: 28vw;
+    font-family: Nanum Square, 맑은 고딕, Malgun Gothic, AppleGothicNeoSD, Apple SD 산돌고딕 Neo, Microsoft NeoGothic,  Droid sans, sans-serif;
+    .square {
+      display: inline-block;
+      width: 11.066vw;
+      height: 5.333vw;
+      line-height: 5.333vw;
+      text-align: center;
+      font-size: 3.466vw;
+      color: #fff;
+      background: #2e3093;
+      border-radius: 10%;
+    }
+    .txt {
+      display: inline-block;
+      margin-left: 1.066vw;
+      font-size: 3.466vw;
+      font-style: italic;
+      color: #0e1472;
+    }
+    .box-sns {
+      float: right;
+      button {
+        display: inline-block;
+        width: 5.6vw;
+        height: 5.6vw;
+        &.kakao-talk {
+          background: url("../images/icn/kakaotalk.png") no-repeat center;
+          background-size: contain;
+        }
+        &.kakao-story {
+          background: url("../images/icn/kakaostory.png") no-repeat center;
+          background-size: contain;
+        }
+        &.facebook {
+          background: url("../images/icn/facebook.png") no-repeat center;
+          background-size: contain;
+        }
+        &.twitter {
+          background: url("../images/icn/twitter.png") no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  .play-video .video {
+    position: relative;
+    margin-top: 2vw;
+    font-size: 0;
+    iframe {
+      width: 100%;
+      height: 50.4vw;
+    }
+    .poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+    .btn-play {
+      position: absolute;
+      display: block;
+      width: 17.466vw;
+      height: 12.133vw;
+      top: 50%;
+      left: 50%;
+      background: url("../images/icn/btn_play.png") no-repeat center;
+      background-size: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+  .play-list {
+    margin-top: 0.933vw;
+    text-align: center;
+    font-size: 0;
+    .btn-video {
+      position: relative;
+      display: inline-block;
+      width: 32.622%;
+      &:nth-child(2) {
+        margin: 0 1.066%;
+      }
+      &.selected::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4) url(../images/icn/icn_selected.png) no-repeat center;
+        background-size: 7.866vw 7.866vw;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.box-photo {
+  height: 141.333vw;
+  margin-top: 12.533vw;
+  .photo-swiper {
+    padding-bottom: 4.8vw;
+    font-size: 0;
+    .swiper-wrapper ul li {
+      display: inline-block;
+      width: 43.733vw;
+      padding-bottom: 1.066vw;
+      &:nth-child(odd) {
+        padding-right: 0.8vw;
+      }
+      &:nth-child(even) {
+        padding-left: 0.8vw;
+      }
+      div img {
+        width: 100%;
+      }
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        width: 1.733vw;
+        height: 1.733vw;
+        background: #fff;
+        opacity: .6;
+        border: 0.133vw solid #fff6;
+        box-shadow: 0 0 0.533vw #000;
+        box-sizing: border-box;
+      }
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        width: 1.866vw;
+        height: 1.866vw;
+        background: #5b418b;
+        border: 0.133vw solid #9779be;
+        box-shadow: 0 0 0.533vw #9779be;
+      }
+    }
+  }
+}
+
+.layer-popup.layer-photo .inner {
+  background: none;
+  .popup-gallery {
+    width: 89.333vw;
+    .gallery-popup-swiper {
+      width: 75.733vw;
+      height: 42.666vw;
+      border: 0.533vw solid #fff;
+      box-shadow: 0 0 1.6vw #fff;
+      .swiper-slide img {
+        width: 100%;
+      }
+    }
+    .close {
+      width: 5.733vw;
+      height: 5.733vw;
+      top: -7.333vw;
+      right: 6vw;
+      background: url("../images/icn/close_pop.png") no-repeat center;
+      background-size: 100% 100%;
+    }
+    .swiper-button-next {
+      right: 0;
+      width: 4.8vw;
+      height: 6.933vw;
+      margin-top: -6.933vw;
+      background: url("../images/icn/arrow_right.png") no-repeat center;
+      background-size: contain;
+    }
+    .swiper-button-prev {
+      left: 0;
+      width: 4.8vw;
+      height: 6.933vw;
+      margin-top: -6.933vw;
+      background: url("../images/icn/arrow_left.png") no-repeat center;
+      background-size: contain;
+    }
+  }
+  .box-sns {
+    width: 75.733vw;
+    margin: 1.333vw auto 0;
+    font-size: 0;
+    button {
+      display: inline-block;
+      width: 5.6vw;
+      height: 5.6vw;
+      margin-right: 1.6vw;
+    }
+    .kakao-talk {
+      background: url("../images/icn/kakaotalk.png") no-repeat center;
+      background-size: contain;
+    }
+    .kakao-story {
+      background: url("../images/icn/kakaostory.png") no-repeat center;
+      background-size: contain;
+    }
+    .facebook {
+      background: url("../images/icn/facebook.png") no-repeat center;
+      background-size: contain;
+    }
+    .twitter {
+      background: url("../images/icn/twitter.png") no-repeat center;
+      background-size: contain;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .contents {
+    width: 670px;
+    margin: 0 auto;
+    padding-top: 82px;
+  }
+  .box-video {
+    height: 946px;
+    .video-info-area {
+      padding-top: 210px;
+      .square {
+        width: 83px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 26px;
+      }
+      .txt {
+        margin-left: 8px;
+        font-size: 26px;
+      }
+      .box-sns button {
+        width: 42px;
+        height: 42px;
+      }
+    }
+    .play-video .video {
+      margin-top: 15px;
+      iframe {
+        height: 378px;
+      }
+      .btn-play {
+        width: 131px;
+        height: 91px;
+      }
+    }
+    .play-list {
+      margin-top: 7px;
+      .btn-video.selected::before {
+        background-size: 59px 59px;
+      }
+    }
+  }
+  .box-photo {
+    height: 1060px;
+    margin-top: 94px;
+    .photo-swiper {
+      padding-bottom: 36px;
+      .swiper-wrapper ul li {
+        width: 328px;
+        padding-bottom: 8px;
+        &:nth-child(odd) {
+          padding-right: 6px;
+        }
+        &:nth-child(even) {
+          padding-left: 6px;
+        }
+      }
+      .swiper-pagination {
+        .swiper-pagination-bullet {
+          width: 13px;
+          height: 13px;
+          border: 1px solid #fff6;
+          box-shadow: 0 0 4px #000;
+        }
+        .swiper-pagination-bullet-active {
+          width: 14px;
+          height: 14px;
+          border: 1px solid #9779be;
+          box-shadow: 0 0 4px #9779be;
+        }
+      }
+    }
+  }
+  .layer-popup.layer-photo .inner .popup-gallery {
+    width: 670px;
+    .gallery-popup-swiper {
+      width: 568px;
+      height: 320px;
+      border: 4px solid #fff;
+      box-shadow: 0 0 12px #fff;
+    }
+    .close {
+      width: 43px;
+      height: 43px;
+      top: -55px;
+      right: 45px;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      width: 36px;
+      height: 52px;
+      margin-top: -52px;
+    }
+    .box-sns {
+      width: 568px;
+      margin: 10px auto 0;
+      button {
+        width: 42px;
+        height: 42px;
+        margin-right: 12px;
+      }
+    }
+  }
+}

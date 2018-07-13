@@ -1,0 +1,297 @@
+@-webkit-keyframes bg_change {
+  0% { opacity: 1; }
+  17% { opacity: 1; }
+  25% { opacity: 0; }
+  92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bg_change {
+  0% { opacity: 1; }
+  17% { opacity: 1; }
+  25% { opacity: 0; }
+  92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+body {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.contents.main {
+  position: relative;
+  height: 100vh;
+  min-height: 177.866vw;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-animation: bg_change 10s linear infinite;
+    animation: bg_change 10s linear infinite;
+  }
+  .bg_1 {
+    background-image: url("../images/main/bg_1.png");
+    background-size: cover;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  .bg_2 {
+    background-image: url("../images/main/bg_2.png");
+    background-size: cover;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  .bg_3 {
+    background-image: url("../images/main/bg_3.png");
+    background-size: cover;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+  .bg_4 {
+    background-image: url("../images/main/bg_4.png");
+    background-size: cover;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+  }
+  .bg_5 {
+    background-image: url("../images/main/bg_5.png");
+    background-size: cover;
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+  }
+  .wrap {
+    position: absolute;
+    top: 17.066vw;
+    width: 100%;
+    .stars {
+      position: absolute;
+      width: 100%;
+    }
+    .title {
+      display: block;
+      position: relative;
+      top: 2.266vw;
+      width: 72.533vw;
+      margin: 0 auto;
+    }
+    .btn-reservation {
+      display: block;
+      position: relative;
+      top: 7.333vw;
+      width: 39.466vw;
+      margin: 0 auto;
+      z-index: 1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .swiper-container {
+    width: 180%;
+    left: -40%;
+    height: 100%;
+    z-index: 0;
+    .swiper-slide {
+      height: 100%;
+      .character {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+      &.unit-1 .character {
+        background-image: url("../images/main/character_1.png");
+      }
+      &.unit-2 .character {
+        background-image: url("../images/main/character_2.png");
+      }
+      &.unit-3 .character {
+        background-image: url("../images/main/character_3.png");
+      }
+      &.unit-4 .character {
+        background-image: url("../images/main/character_4.png");
+      }
+      &.unit-5 .character {
+        background-image: url("../images/main/character_5.png");
+      }
+      &.unit-6 .character {
+        background-image: url("../images/main/character_6.png");
+      }
+      &.unit-7 .character {
+        background-image: url("../images/main/character_7.png");
+      }
+      &.unit-8 .character {
+        background-image: url("../images/main/character_8.png");
+      }
+    }
+    .swiper-pagination {
+      top: 95.066vw;
+      bottom: auto;
+      .swiper-pagination-bullet {
+        width: 2.133vw;
+        height: 2.133vw;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+        margin: 0 0.933vw;
+        box-shadow: 0 0 0.666vw #000;
+      }
+      .swiper-pagination-bullet-active {
+        background: #5b418b;
+        box-shadow: 0 0 0.4vw #5b418b;
+      }
+    }
+  }
+  .go-reservation {
+    position: absolute;
+    display: block;
+    width: 24.8vw;
+    height: 23.2vw;
+    bottom: 1%;
+    right: 1%;
+    background: url('../images/icn/go-reservation.png') no-repeat center;
+    background-size: 100%;
+  }
+}
+
+.layer-video {
+  .inner {
+    width: 89.333vw;
+    height: 50.133vw;
+    -webkit-box-shadow: 0 0 3.333vw 0.133vw #fff;
+    box-shadow: 0 0 3.333vw 0.133vw #fff;
+    .video {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .poster {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+    .btn-play {
+      position: absolute;
+      display: block;
+      width: 17.2vw;
+      height: 11.6vw;
+      top: 50%;
+      left: 50%;
+      background: url("../images/icn/btn_play.png") no-repeat center;
+      background-size: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+    .close {
+      width: 4.8vw;
+      height: 4.8vw;
+      top: -7.466vw;
+      right: 0;
+      background: url("../images/icn/close_pop.png") no-repeat center;
+      background-size: 100%;
+    }
+    .cookie-wrap {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 1.333vw;
+      label {
+        margin-right: 2.133vw;
+        img {
+          width: 20.8vw;
+          vertical-align: middle;
+        }
+      }
+      input[type=checkbox] {
+        width: 6.133vw;
+        height: 6.133vw;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .contents.main {
+    height: 1334px;
+    min-height: 1334px;
+    .wrap {
+      top: 128px;
+      .title {
+        top: 17px;
+        width: 544px;
+      }
+      .btn-reservation {
+        top: 55px;
+        width: 296px;
+      }
+    }
+    .swiper-container .swiper-pagination {
+      top: 713px;
+      bottom: auto;
+      .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        margin: 0 7px;
+        box-shadow: 0 0 5px #000;
+      }
+      .swiper-pagination-bullet-active {
+        box-shadow: 0 0 3px #5b418b;
+      }
+    }
+    .go-reservation {
+      width: 186px;
+      height: 174px;
+    }
+  }
+  .layer-video {
+    .inner {
+      width: 670px;
+      height: 376px;
+      -webkit-box-shadow: 0 0 25px 1px #fff;
+      box-shadow: 0 0 25px 1px #fff;
+      .btn-play {
+        width: 129px;
+        height: 87px;
+      }
+      .close {
+        width: 36px;
+        height: 36px;
+        top: -56px;
+      }
+      .cookie-wrap {
+        margin-top: 10px;
+        label {
+          margin-right: 16px;
+          img {
+            width: 156px;
+          }
+        }
+        input[type=checkbox] {
+          width: 46px;
+          height: 46px;
+        }
+      }
+    }
+  }
+}

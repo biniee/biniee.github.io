@@ -1,0 +1,148 @@
+html, body {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  max-width: 750px;
+  height: 10.933vw;
+  line-height: 10.933vw;
+  padding-bottom: 0.266vw;
+  background: url("../images/bg_header.png") no-repeat;
+  background-size: 100% 100%;
+  z-index: 10;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  > a {
+    position: relative;
+    img {
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+  .left-side {
+    left: 2.8vw;
+    float: left;
+    width: 15.333vw;
+    img {
+      padding-bottom: 0.8vw;
+    }
+  }
+  .right-side {
+    right: 2.533vw;
+    float: right;
+    width: 18.666vw;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  &.header-hide {
+    margin-top: -11.2vw;
+    .right-side {
+      width: 18.666vw;
+      margin-top: 10.933vw;
+    }
+    .close {
+      width: 8.533vw;
+      margin-top: 10.933vw;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  height: 12vw;
+  line-height: 12vw;
+  text-align: center;
+  background: url("../images/bg_footer.png") no-repeat;
+  background-size: 100% 100%;
+  .copyright {
+    width: 64.933vw;
+  }
+}
+
+/* =============================
+           layer
+============================= */
+
+.layer-popup {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  .bg {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .inner {
+    position: inherit;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    .close {
+      position: absolute;
+      display: block;
+      text-indent: -9999px;
+      width: 9.2vw;
+      height: 9.2vw;
+      top: -9.6vw;
+      right: 0.8vw;
+      background: url("../images/icn/close_pop.png") no-repeat center;
+      background-size: 100%;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .header {
+    height: 82px;
+    line-height: 82px;
+    padding-bottom: 2px;
+    .left-side {
+      left: 21px;
+      width: 115px;
+      img {
+        padding-bottom: 6px;
+      }
+    }
+    .right-side {
+      right: 19px;
+      width: 140px;
+    }
+    &.header-hide {
+      margin-top: -84px;
+      .right-side {
+        width: 140px;
+        margin-top: 82px;
+      }
+      .close {
+        width: 64px;
+      }
+    }
+  }
+  .footer {
+    height: 90px;
+    line-height: 90px;
+    .copyright {
+      width: 487px;
+    }
+  }
+  .layer-popup .inner .close {
+    width: 69px;
+    height: 69px;
+    top: -72px;
+    right: 6px;
+  }
+}

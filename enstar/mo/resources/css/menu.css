@@ -1,0 +1,105 @@
+body {
+  background: url("../images/menu/bg_menu.png") no-repeat center;
+  background-size: 100%; }
+
+.contents {
+  padding-top: 10.933vw; }
+
+.title {
+  width: 93.33vw;
+  margin: 0 auto; }
+
+.title img {
+  width: 100%; }
+
+.gnb {
+  width: 52vw;
+  margin: 5.333vw auto 0;
+  padding-bottom: 11.066vw;
+  background: url("../images/menu/line.png") no-repeat bottom; }
+
+.gnb li {
+  margin-bottom: 6.933vw; }
+
+.gnb li.main {
+  background: url("../images/menu/btn_main.png") no-repeat center;
+  background-size: contain; }
+
+.gnb li.reservation {
+  background: url("../images/menu/btn_reservation.png") no-repeat center;
+  background-size: contain; }
+
+.gnb li.intro {
+  background: url("../images/menu/btn_introduce.png") no-repeat center;
+  background-size: contain; }
+
+.gnb li.gallery {
+  background: url("../images/menu/btn_gallery.png") no-repeat center;
+  background-size: contain; }
+
+.gnb li.community {
+  background: url("../images/menu/btn_community.png") no-repeat center;
+  background-size: contain; }
+
+.gnb li.twitter {
+  background: url("../images/menu/btn_twitter.png") no-repeat center;
+  background-size: contain; }
+
+.gnb li:last-child {
+  margin-bottom: 0; }
+
+.gnb li a {
+  display: block;
+  height: 6.933vw;
+  text-indent: -9999px; }
+
+.box-sns {
+  margin: 4.533vw 0;
+  text-align: center; }
+
+.box-sns button {
+  display: inline-block;
+  width: 6.933vw;
+  height: 6.933vw;
+  margin-right: 3.733vw; }
+
+.box-sns button:last-child {
+  margin-right: 0; }
+
+.box-sns .kakao-talk {
+  background: url("../images/icn/kakaotalk.png") no-repeat center;
+  background-size: contain; }
+
+.box-sns .kakao-story {
+  background: url("../images/icn/kakaostory.png") no-repeat center;
+  background-size: contain; }
+
+.box-sns .facebook {
+  background: url("../images/icn/facebook.png") no-repeat center;
+  background-size: contain; }
+
+.box-sns .twitter {
+  background: url("../images/icn/twitter.png") no-repeat center;
+  background-size: contain; }
+
+@media (min-width: 750px) {
+  .contents {
+    padding-top: 82px; }
+  .title {
+    width: 700px; }
+  .gnb {
+    width: 390px;
+    margin: 40px auto 0;
+    padding-bottom: 83px; }
+  .gnb li {
+    margin-bottom: 52px; }
+  .gnb li a {
+    height: 52px; }
+  .box-sns {
+    margin: 34px 0; }
+  .box-sns button {
+    width: 52px;
+    height: 52px;
+    margin-right: 28px; }
+  .box-sns button:last-child {
+    margin-right: 0; } }

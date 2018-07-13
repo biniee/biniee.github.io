@@ -1,0 +1,119 @@
+body {
+  background: url("../images/menu/bg_menu.png") no-repeat center;
+  background-size: 100%;
+}
+
+.contents {
+  padding-top: 10.933vw;
+}
+
+.title {
+  width: 93.33vw;
+  margin: 0 auto;
+  img {
+    width: 100%;
+  }
+}
+
+.gnb {
+  width: 52vw;
+  margin: 5.333vw auto 0;
+  padding-bottom: 11.066vw;
+  background: url("../images/menu/line.png") no-repeat bottom;
+  li {
+    margin-bottom: 6.933vw;
+    &.main {
+      background: url("../images/menu/btn_main.png") no-repeat center;
+      background-size: contain;
+    }
+    &.reservation {
+      background: url("../images/menu/btn_reservation.png") no-repeat center;
+      background-size: contain;
+    }
+    &.intro {
+      background: url("../images/menu/btn_introduce.png") no-repeat center;
+      background-size: contain;
+    }
+    &.gallery {
+      background: url("../images/menu/btn_gallery.png") no-repeat center;
+      background-size: contain;
+    }
+    &.community {
+      background: url("../images/menu/btn_community.png") no-repeat center;
+      background-size: contain;
+    }
+    &.twitter {
+      background: url("../images/menu/btn_twitter.png") no-repeat center;
+      background-size: contain;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      display: block;
+      height: 6.933vw;
+      text-indent: -9999px;
+    }
+  }
+}
+
+.box-sns {
+  margin: 4.533vw 0;
+  text-align: center;
+  button {
+    display: inline-block;
+    width: 6.933vw;
+    height: 6.933vw;
+    margin-right: 3.733vw;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .kakao-talk {
+    background: url("../images/icn/kakaotalk.png") no-repeat center;
+    background-size: contain;
+  }
+  .kakao-story {
+    background: url("../images/icn/kakaostory.png") no-repeat center;
+    background-size: contain;
+  }
+  .facebook {
+    background: url("../images/icn/facebook.png") no-repeat center;
+    background-size: contain;
+  }
+  .twitter {
+    background: url("../images/icn/twitter.png") no-repeat center;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 750px) {
+  .contents {
+    padding-top: 82px;
+  }
+  .title {
+    width: 700px;
+  }
+  .gnb {
+    width: 390px;
+    margin: 40px auto 0;
+    padding-bottom: 83px;
+    li {
+      margin-bottom: 52px;
+      a {
+        height: 52px;
+      }
+    }
+  }
+  .box-sns {
+    margin: 34px 0;
+    button {
+      width: 52px;
+      height: 52px;
+      margin-right: 28px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

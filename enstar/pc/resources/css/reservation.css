@@ -1,0 +1,84 @@
+@-webkit-keyframes shiny-star {
+  0%, 100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@keyframes shiny-star {
+  0%, 100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+.contents.reservation .cont-1 {
+  min-height: 1007px;
+  background: url("../images/reservation/bg_reservation_cont1_1.jpg") no-repeat top; }
+
+.contents.reservation .cont-1::before {
+  content: '';
+  display: block;
+  min-height: 1007px;
+  background: url("../images/reservation/bg_reservation_cont1_2.jpg") no-repeat top;
+  -webkit-animation: shiny-star 2s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+  animation: shiny-star 2s cubic-bezier(0.39, 0.58, 0.57, 1) infinite; }
+
+.contents.reservation .cont-1 .resv-click-area {
+  display: block;
+  position: absolute;
+  top: 567px;
+  left: 50%;
+  margin-left: 392px;
+  width: 270px;
+  height: 250px; }
+
+.contents.reservation .cont-2 {
+  min-height: 2855px;
+  background: url("../images/reservation/bg_reservation_cont2.jpg") no-repeat center; }
+
+.contents.reservation .cont-2 .btn_goresvpage {
+  position: absolute;
+  left: 50%;
+  top: 49.7%;
+  margin-left: 220px; }
+
+.contents.reservation .cont-2 .link-sns-site {
+  position: absolute;
+  left: 50%;
+  top: 69.3%;
+  margin-left: -384px;
+  width: 160px;
+  height: 150px; }
+
+.contents.reservation .cont-2 .link-sns-site a {
+  display: block;
+  width: 100%;
+  height: 33%;
+  margin-bottom: 1%; }
+
+.contents.reservation .cont-2 .btn-nickname {
+  position: absolute;
+  right: 50%;
+  bottom: 10.7%;
+  margin-right: 267px; }
+
+.layer-popup.layer-privacy .bg {
+  background-color: rgba(189, 215, 238, 0.7); }
+
+.layer-popup.layer-privacy .inner {
+  padding: 20px;
+  background-color: #44546a;
+  color: #fff; }
+
+.layer-popup.layer-nickname .inner {
+  top: 53%;
+  background: none; }
+
+.layer-popup.layer-nickname .inner img {
+  max-height: 90vh; }
+
+.layer-popup.layer-nickname .close {
+  width: 43px;
+  height: 43px;
+  top: -42px;
+  right: 6px;
+  background: url("../images/icn/close_gal_pop.png") no-repeat center; }

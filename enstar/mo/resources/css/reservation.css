@@ -1,0 +1,89 @@
+@-webkit-keyframes shiny-star {
+  0%, 100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@keyframes shiny-star {
+  0%, 100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+.contents.reservation .cont-1 {
+  position: relative;
+  height: 233.066vw;
+  background: url("../images/reservation/bg_reservation_cont1_1.jpg") no-repeat top;
+  background-size: 100% 100%; }
+
+.contents.reservation .cont-1::before {
+  content: '';
+  display: block;
+  height: 233.066vw;
+  background: url("../images/reservation/bg_reservation_cont1_2.jpg") no-repeat top;
+  background-size: 100% 100%;
+  -webkit-animation: shiny-star 2s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+  animation: shiny-star 2s cubic-bezier(0.39, 0.58, 0.57, 1) infinite; }
+
+.contents.reservation .cont-1 .resv-click-area {
+  display: block;
+  position: absolute;
+  top: 37.5%;
+  right: 3%;
+  width: 41%;
+  height: 17%; }
+
+.contents.reservation .cont-2 {
+  position: relative;
+  height: 534.1vw;
+  background: #603e90 url("../images/reservation/bg_reservation_cont2.jpg") no-repeat center top;
+  background-size: 100%; }
+
+.contents.reservation .cont-2 .btn_goresvpage {
+  position: absolute;
+  top: 32.8%;
+  left: 29.7%;
+  width: 40.6%; }
+
+.contents.reservation .cont-2 .btn_goresvpage img {
+  width: 100%; }
+
+.contents.reservation .cont-2 .btn-nickname {
+  position: absolute;
+  bottom: 19.5%;
+  left: 18.1%;
+  width: 27%; }
+
+.contents.reservation .cont-2 .btn-nickname img {
+  width: 100%; }
+
+.layer-popup.layer-nickname .inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-y: scroll;
+  background: none; }
+
+.layer-popup.layer-nickname .inner .close {
+  top: 4.666vw;
+  right: 4.8vw; }
+
+.layer-popup.layer-nickname .inner img {
+  width: 91.733vw;
+  padding: 15.066vw 0 10vw; }
+
+@media (min-width: 750px) {
+  .contents.reservation .cont-1 {
+    height: 1748px; }
+  .contents.reservation .cont-1::before {
+    height: 1748px; }
+  .contents.reservation .cont-2 {
+    height: 4006px; }
+  .layer-popup.layer-nickname .inner {
+    width: 750px; }
+  .layer-popup.layer-nickname .inner .close {
+    top: 35px;
+    right: 36px; }
+  .layer-popup.layer-nickname .inner img {
+    width: 688px;
+    padding: 113px 0 75px; } }

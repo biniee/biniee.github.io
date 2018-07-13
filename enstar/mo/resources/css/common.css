@@ -1,0 +1,131 @@
+html, body {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto; }
+
+.hidden {
+  display: none; }
+
+.header {
+  position: fixed;
+  width: 100%;
+  max-width: 750px;
+  height: 10.933vw;
+  line-height: 10.933vw;
+  padding-bottom: 0.266vw;
+  background: url("../images/bg_header.png") no-repeat;
+  background-size: 100% 100%;
+  z-index: 10;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease; }
+
+.header > a {
+  position: relative; }
+
+.header > a img {
+  vertical-align: middle;
+  width: 100%; }
+
+.header .left-side {
+  left: 2.8vw;
+  float: left;
+  width: 15.333vw; }
+
+.header .left-side img {
+  padding-bottom: 0.8vw; }
+
+.header .right-side {
+  right: 2.533vw;
+  float: right;
+  width: 18.666vw;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease; }
+
+.header.header-hide {
+  margin-top: -11.2vw; }
+
+.header.header-hide .right-side {
+  width: 18.666vw;
+  margin-top: 10.933vw; }
+
+.header.header-hide .close {
+  width: 8.533vw;
+  margin-top: 10.933vw; }
+
+.footer {
+  position: relative;
+  height: 12vw;
+  line-height: 12vw;
+  text-align: center;
+  background: url("../images/bg_footer.png") no-repeat;
+  background-size: 100% 100%; }
+
+.footer .copyright {
+  width: 64.933vw; }
+
+/* =============================
+           layer
+============================= */
+.layer-popup {
+  display: none;
+  position: fixed;
+  z-index: 20; }
+
+.layer-popup .bg {
+  position: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); }
+
+.layer-popup .inner {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #fff; }
+
+.layer-popup .inner .close {
+  position: absolute;
+  display: block;
+  text-indent: -9999px;
+  width: 9.2vw;
+  height: 9.2vw;
+  top: -9.6vw;
+  right: 0.8vw;
+  background: url("../images/icn/close_pop.png") no-repeat center;
+  background-size: 100%; }
+
+@media (min-width: 750px) {
+  .header {
+    height: 82px;
+    line-height: 82px;
+    padding-bottom: 2px; }
+  .header .left-side {
+    left: 21px;
+    width: 115px; }
+  .header .left-side img {
+    padding-bottom: 6px; }
+  .header .right-side {
+    right: 19px;
+    width: 140px; }
+  .header.header-hide {
+    margin-top: -84px; }
+  .header.header-hide .right-side {
+    width: 140px;
+    margin-top: 82px; }
+  .header.header-hide .close {
+    width: 64px; }
+  .footer {
+    height: 90px;
+    line-height: 90px; }
+  .footer .copyright {
+    width: 487px; }
+  .layer-popup .inner .close {
+    width: 69px;
+    height: 69px;
+    top: -72px;
+    right: 6px; } }
