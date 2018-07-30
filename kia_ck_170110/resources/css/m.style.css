@@ -20,6 +20,24 @@ br.mobile{display:block;}
 #main{background:url('../images/mobile/main_visual02.jpg') no-repeat center;background-size:cover;height:86.7vw}
 #main .main-visual .logo{width:46.8vw;height:5.4vw;background-size:100%;top:13.8vw;left:50%;margin-left:-23.4vw}
 
+/* films
+************************************************************************************************/
+#films{min-width:320px;max-width:767px;width:100%;}
+#films .films-pc{display:none;}
+#films .films-mobile{display:block;}
+#films .ep-list li{background:none;height:auto;}
+#films .ep-list li:before{background:none;}
+#films .ep-list li span{font-size:4.3vw;font-weight:700;top:30.6%;left:50%;margin-left:-9.1%}
+#films .ep-list li .t_bg{display:none;}
+#films a.play{position:absolute;top:44.3%;left:50%;margin-left:-9.4%;width:18.8%;display:block;}
+#films .bx-controls{position:absolute;bottom:11.6%;left:0;width:100%;text-align:center;}
+#films .bx-controls .bx-pager-item{display:inline-block;margin:0 0.8%;}
+#films .bx-controls .bx-pager-item a{display:block;width:9.3vw;height:3px;background:#FFF;font-size:0;text-indent:-9999px;opacity:0.2;}
+#films .bx-controls .bx-pager-item a.active{opacity: 1;}
+#films .comsonTxt{position:absolute;top:44.2%;width:100%;}
+#films .comsonTxt div{margin-right:26.6%}
+#films .comsonTxt div{margin-left:26.6%;}
+#films .comsonTxt p{font-size:5vw;}
 
 /* live webcast
 ************************************************************************************************/
